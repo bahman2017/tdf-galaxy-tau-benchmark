@@ -1,0 +1,3 @@
+galaxy_id,model_name,n_points,number_of_parameters,rmse_kms,chi_square,reduced_chi_square,aic,bic,smoothness_penalty,data_mode,negative_residual_policy
+Galaxy_A,baryonic,5,0,8.96741322790469,44.67472222222222,11.168680555555556,44.67472222222222,44.67472222222222,0.0,mock,allow_signed
+Galaxy_B,baryonic,5,0,8.96741322790469,44.67472222222222,11.168680555555556,44.67472222222222,44.67472222222222,0.0,mock,allow_signed

@@ -1,0 +1,9 @@
+models:
+  baryonic:
+    parameter_count: 0
+  nfw:
+    parameter_count: 2
+  burkert:
+    parameter_count: 2
+comparison:
+  smoothness_penalty_weight: 0.0

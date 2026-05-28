@@ -1,0 +1,9 @@
+input_csv: data/processed/sparc_subset_processed.csv
+output_tau_profiles: outputs/tables/sparc_subset_tau_profiles.csv
+output_model_comparison: outputs/tables/model_comparison.csv
+output_figure_dir: outputs/figures
+k_tau: 1.0
+allow_mock_data: true
+mock_galaxies:
+  - Galaxy_A
+  - Galaxy_B

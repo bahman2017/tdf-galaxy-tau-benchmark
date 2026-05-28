@@ -1,0 +1,16 @@
+k_tau: 1.0
+k_tau_note: "Normalization/calibration parameter; not a measured universal constant."
+radius_unit: "kpc"
+velocity_unit: "km/s"
+velocity_squared_unit: "km^2/s^2"
+negative_residual_policy: "allow_signed"
+allowed_negative_residual_policies:
+  - allow_signed
+  - clip_to_zero
+  - mask_negative
+integration:
+  tau0: 0.0
+regularization:
+  enabled: false
+  method: moving_average
+  window: 3

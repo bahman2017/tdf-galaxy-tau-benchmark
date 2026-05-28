@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: tdf-galaxy-tau-benchmark
+Version: 0.1.0
+Summary: Multi-galaxy SPARC benchmark for TDF tau reconstruction
+Author: TDF Galaxy Tau Benchmark
+License: MIT
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=2.0
+Requires-Dist: scipy>=1.10
+Requires-Dist: PyYAML>=6.0
+Provides-Extra: plots
+Requires-Dist: matplotlib>=3.7; extra == "plots"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+
+# tdf-galaxy-tau-benchmark
+
+Multi-galaxy benchmark framework for extending the M33 TDF tau-geometry workflow to a controlled SPARC subset and then the broader SPARC sample.
+
+## Project objective
+
+This repository tests whether the same **reconstruction law** used in M33 can produce **galaxy-specific** reconstructed tau profiles across multiple galaxies.
+
+Core relation used per galaxy:
+
+- `v_obs^2(r) = v_bar^2(r) + v_tau^2(r)`
+- `v_tau^2(r) = r K_tau d_tau/dr`
+- `d_tau/dr = [v_obs^2(r) - v_bar^2(r)] / [r K_tau]`
+
+Each galaxy has its own reconstructed tau profile or tau map. The universal pieces are the reconstruction law, regularization protocol, model comparison protocol, metrics, and reproducibility standards.
+
+## Relationship to `TDF_m33`
+
+- This project is a multi-galaxy extension, not a replacement.
+- M33 remains the first case study and source of the initial radial reconstruction workflow.
+- M33-specific assumptions are documented as transition notes, not universal laws.
+
+## Relationship to `tdf-benchmark-lab`
+
+- Reuses only focused benchmark utilities that are clean and relevant for SPARC ingestion, metrics, and plotting patterns.
+- Excludes unrelated domains (black hole, CMB, redshift, quantum, and broad cosmology experiments).
+
+## Conservative scientific claim
+
+This repository does **not** claim dark matter is disproven. Rotation-curve reconstruction alone is not independent proof. TDF should be compared against baryonic-only, NFW, and Burkert baselines under transparent assumptions.
+
+## Quickstart
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -e .
+python3 -m pytest
+python3 scripts/run_sparc_subset.py --config configs/sparc_subset.yaml
+```
+
+## Reproducibility
+
+- Use config-driven runs from `configs/`.
+- Keep raw inputs in `data/raw/` and processed tables in `data/processed/`.
+- Write outputs to `outputs/figures/`, `outputs/tables/`, and `outputs/reports/`.
+- Keep claims aligned with evidence and limitations in `docs/`.
+
+## Repository structure
+
+See directory layout in the project tree and `docs/project_plan.md`.
