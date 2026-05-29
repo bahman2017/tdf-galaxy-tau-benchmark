@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\caption{Even/odd holdout test RMSE [km/s] for expansion\_20 (train-only refit).}
+\label{tab:holdout-rmse}
+\scriptsize
+\begin{tabular}{@{}l l r r r r@{}}
+\toprule
+Galaxy & Classification & \texttt{tdf\_3knot} & NFW & MOND & \texttt{tdf\_5knot} \\
+\midrule
+DDO154 & Robust TDF success & 2.03 & 3.56 & 3.98 & 1.44 \\
+DDO161 & Robust TDF success & 0.72 & 3.87 & 6.55 & 0.78 \\
+IC2574 & Robust TDF success & 2.98 & 6.39 & 6.29 & 1.73 \\
+NGC0289 & Robust TDF success & 19.81 & 21.91 & 22.95 & 19.54 \\
+NGC2403 & Robust TDF success & 8.66 & 9.76 & 14.24 & 3.44 \\
+NGC3198 & Robust TDF success & 10.45 & 12.00 & 14.34 & 8.24 \\
+NGC5055 & Sensitivity recovery & 142.86 & 56.87 & 55.37 & 19.56 \\
+NGC6015 & Robust TDF success & 7.13 & 8.27 & 13.45 & 4.86 \\
+NGC6503 & Robust TDF success & 9.33 & 10.14 & 12.39 & 4.90 \\
+NGC7793 & Robust TDF success & 4.57 & 8.15 & 8.47 & 3.80 \\
+NGC7814 & TDF failure mode & 155.80 & 24.89 & 27.85 & 113.25 \\
+UGC00128 & Mixed result & 3.00 & 2.72 & 6.24 & 5.06 \\
+UGC02953 & Robust TDF success & 37.80 & 41.40 & 44.21 & 26.25 \\
+UGC05253 & Sensitivity recovery & 48.52 & 36.15 & 37.38 & 16.46 \\
+UGC06787 & Robust TDF success & 38.29 & 38.58 & 43.09 & 30.78 \\
+UGC07524 & Robust TDF success & 1.63 & 2.82 & 3.58 & 1.52 \\
+UGC08490 & Robust TDF success & 1.13 & 1.57 & 1.82 & 1.15 \\
+UGC09133 & Robust TDF success & 33.24 & 36.27 & 37.96 & 25.74 \\
+UGC11455 & Robust TDF success & 15.81 & 39.35 & 39.40 & 15.97 \\
+UGC12506 & Sensitivity recovery & 11.92 & 8.00 & 20.14 & 5.76 \\
+\bottomrule
+\end{tabular}
+\vspace{0.4em}
+{\footnotesize
+\par\noindent\textbf{Source:} \texttt{expansion20\_failure\_mode\_summary.csv}.
+\par\noindent\textbf{Caveat:} Primary gate uses \texttt{tdf\_3knot}; \texttt{tdf\_5knot} is sensitivity only.
+\par
+}
+\end{table}

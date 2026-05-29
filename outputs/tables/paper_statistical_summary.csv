@@ -1,0 +1,10 @@
+cohort,metric_id,description,value,n_galaxies,count,ci_lower_95_descriptive,ci_upper_95_descriptive,units,notes
+expansion_20,robust_success_fraction,robust_tdf_success fraction,0.75,20,15.0,0.55,0.9,fraction,Bootstrap percentile interval (descriptive; not a significance test)
+expansion_20,sensitivity_recovery_fraction,sensitivity_recovery fraction,0.15,20,3.0,0.0,0.3,fraction,Bootstrap percentile interval (descriptive; not a significance test)
+expansion_20,failure_fraction,tdf_failure_mode fraction,0.05,20,1.0,0.0,0.15,fraction,Bootstrap percentile interval (descriptive; not a significance test)
+expansion_20,mixed_fraction,mixed_result fraction,0.05,20,1.0,0.0,0.15,fraction,Bootstrap percentile interval (descriptive; not a significance test)
+expansion_20,tdf_3knot_beats_nfw_fraction,tdf_3knot beats NFW (holdout),0.75,20,15.0,0.55,0.9,fraction,Bootstrap percentile interval (descriptive; not a significance test)
+expansion_20,tdf_3knot_beats_mond_fraction,tdf_3knot beats MOND (holdout),0.85,20,17.0,0.7,1.0,fraction,Bootstrap percentile interval (descriptive; not a significance test)
+expansion_20,median_delta_rmse_tdf3_minus_nfw,Median RMSE(tdf_3knot) - RMSE(NFW),-1.1654801207036696,20,,-14.073203143230081,109.5746429786667,km/s,Negative values favor tdf_3knot (lower holdout RMSE)
+expansion_20,median_delta_rmse_tdf3_minus_mond,Median RMSE(tdf_3knot) - RMSE(MOND),-3.602945059349265,20,,-16.292813771236023,108.73571294412943,km/s,Negative values favor tdf_3knot (lower holdout RMSE)
+expansion_20,classification_counts,Per-class counts,,20,,,,count,"{'robust_tdf_success': 15, 'sensitivity_recovery': 3, 'tdf_failure_mode': 1, 'mixed_result': 1}"

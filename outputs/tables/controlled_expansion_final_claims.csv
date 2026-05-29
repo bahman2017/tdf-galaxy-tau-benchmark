@@ -1,0 +1,10 @@
+claim_id,claim_text,status,allowed_language,prohibited_language
+C20-A,expansion_20 cohort processed reproducibly through frozen pipeline.,supported,reproducible expansion_20 controlled benchmark,full-SPARC validation; universal processing of all SPARC
+C20-B,Primary tdf_3knot robust holdout success in 15 of 20 galaxies.,supported_with_caveat,15/20 robust_tdf_success at fixed baryons and K_tau,all galaxies pass; TDF validated on SPARC
+C20-C,tdf_5knot improves sensitivity-recovery cases.,supported_sensitivity_only,three sensitivity_recovery cases; tdf_5knot diagnostic improvement,tdf_5knot primary success; count flex recovery as robust win
+C20-D,NGC7814 remains all-TDF holdout failure.,supported,canonical all-TDF failure; mandated label,NGC7814 solved; TDF works for NGC7814
+C20-E,TDF validated on full SPARC.,not_supported,expansion_20 controlled cohort only,validated on SPARC; SPARC validates TDF
+C20-F,Dark matter is disproven.,prohibited,does not disprove dark matter,dark matter disproven; DM is wrong
+C20-G,Lensing confirms TDF.,not_tested,lensing not tested,lensing confirmed; lensing validates TDF
+C20-H,Universal τ-profile discovered.,not_supported,per-galaxy τ diagnostics on controlled cohort,universal τ-profile; τ law for all galaxies
+FINAL-E20,"In the pre-registered controlled expansion_20 cohort, the primary conservative tdf_3knot model achieves robust holdout success in 15 of 20 galaxies. Three additional galaxies show sensitivity-recovery where tdf_5knot improves substantially but is not counted as primary success. NGC7814 remains the only all-TDF holdout failure, and UGC00128 remains a mixed near-tie case.",supported_with_caveats,15/20 robust; 3 sensitivity_recovery; NGC7814 failure; UGC00128 mixed,full SPARC; DM disproof; tdf_5knot as primary

@@ -1,7 +1,54 @@
 # Assumptions
 
-- The reconstruction law is universal, but each galaxy has its own reconstructed tau profile/map.
-- `K_tau` is a run-level normalization/calibration parameter, not a measured universal constant.
-- Negative residual handling is explicit and policy-driven (`allow_signed`, `clip_to_zero`, `mask_negative`).
-- `dtaudr_reconstructed` is a reconstruction quantity derived from rotation-curve residuals.
-- No universal closed-form tau profile is introduced.
+- Baseline fitting is per galaxy and uses the same selected six-galaxy subset from Phase 1B.
+- Baryonic convention is fixed: `v_bar^2 = v_gas^2 + v_disk^2 + v_bulge^2` (no M/L fitting in Phase 3A).
+- Weighted residuals are used: `(v_obs_kms - v_model_kms) / v_err_kms`.
+- NFW baseline uses parameters `(rho_s, r_s)` with positive bounded search:
+  - `rho_s` in Msun/kpc^3
+  - `r_s` in kpc
+- Burkert baseline uses parameters `(rho_0, r_0)` with positive bounded search:
+  - `rho_0` in Msun/kpc^3
+  - `r_0` in kpc
+- Halo velocity formulas use `G = 4.30091e-6 kpc km^2 s^-2 Msun^-1`.
+- AIC/BIC parameter counts are fixed in this phase:
+  - baryonic-only: `n_parameters = 0`
+  - NFW: `n_parameters = 2`
+  - Burkert: `n_parameters = 2`
+- TDF is not fitted in Phase 3A and is excluded from AIC/BIC model table.
+- Baseline audit uses a 1% parameter-range tolerance for boundary detection and flags reduced chi-square > 5 (high) or > 20 (very high).
+- Phase 3A-R robust refit fits halo parameters in log10 space (`log10_rho`, `log10_r`) and reports physical units (`rho_*_msun_kpc3`, `r_*_kpc`).
+- Robust refit bounds (log10): density [2.0, 11.0] (~1e2–1e11 Msun/kpc³), scale radius [-1.3, 3.0] kpc (~0.05–1000 kpc).
+- Robust refit uses deterministic multistart (3 corner + 1 data-informed guess) and keeps the lowest chi-square solution.
+- Legacy Phase 3A bounds are retained in config as `legacy_bounds_phase3a` for traceability.
+- Phase 3M MOND uses simple interpolation `nu(y)=0.5+sqrt(0.25+1/y)` with `y=g_bar/a0`, fixed `a0=1.2e-10 m/s^2` unless fitted.
+- Fitted-a0 MOND optimizes `log10(a0)` with bounds `[-11.5, -9.5]` (approx. `3e-12`–`3e-10 m/s^2`).
+- Unit path: `r_kpc`→meters, `v_kms`→m/s, `g=v^2/r`, then `v_model=sqrt(g_obs*r)` back to km/s.
+- Optional RAR uses `g_dagger=1.2e-10 m/s^2` with no extra parameters.
+- No stellar M/L, distance, or inclination fitting in Phase 3M.
+- Phase 3B TDF knot model fits piecewise-linear dτ/dr with fixed knot radii per galaxy; K_tau fixed from config.
+- Knot amplitudes initialized from Phase 2A direct reconstruction (diagnostic); bounds = reconstruction range × safety factor.
+- Phase 2A pointwise τ reconstruction is not an AIC/BIC competitor.
+- Phase 3C holdout fits use training radii only for knot placement, bounds, initialization, and optimization; test radii are not used in τ reconstruction for fitting.
+- Holdout splits: even/odd index, inner/middle/outer blocked (if n≥9), 5-fold radial CV (if n≥15).
+- Phase 4A failure-mode labels follow Phase 3C mandated classification (5 robust successes, NGC7814 failure mode).
+- Claim traceability matrix (claims A–H) is the authoritative language boundary for external reporting.
+- K_tau sensitivity refits tdf_3knot at K_tau ∈ {0.5, 1.0, 2.0}; bounds sensitivity at safety factors {1.0, 1.5, 2.0, 3.0}.
+- Phase 4C uses x_span = (r − r_min)/(r_max − r_min) on a 100-point grid [0, 1]; linear interpolation without extrapolation beyond observed radii.
+- Phase 4C normalizes dτ/dr, gτ = residual_v²/r, residual_v², and τ by each galaxy’s max absolute value (zero denominator → zeros).
+- Phase 4C success-group statistics include only `robust_tdf_success` galaxies; NGC7814 is compared to that mean but excluded from the mean.
+- Phase 4C `pattern_outlier_score` combines normalized RMSE and (1 − correlation) vs success-group mean (equal quarter weights for dτ/dr and gτ).
+- Phase 4D baryonic fractions use |v_component|/v_bar from fixed SPARC rotmod; negative v_gas in catalog is preserved in components plot as |v_gas|.
+- Phase 4D bulge-negligible radius: first r where v_bulge/v_bar < 0.1; inner concentration uses mean v_bar over innermost three radii / max(v_bar).
+- Phase 4D does not refit models; holdout diagnostics read Phase 3C aggregated test RMSE only.
+- Phase 4E exports test-point rows only (`train_or_test=test`); all models use `comparison_mode=train_only_holdout`.
+- Phase 4E TDF knots/bounds/Phase 2A init use training radii only; NFW/MOND parameters refit on training radii per split.
+- Phase 4E radial_region_label: inner/middle/outer by sorted radial index thirds.
+- Phase 4F: v_bar_scaled² = v_gas² + s_disk·v_disk² + s_bulge·v_bulge² (signed components); gas unscaled; τ(r_min)=0; even/odd train-only TDF holdout per cell.
+- Phase 4F plausible band: disk_scale ∈ [0.7, 1.3], bulge_scale ∈ [0.5, 1.0] (diagnostic, not fitted).
+- Phase 4G: TDF, NFW (log multistart), and MOND (log10 a0) refit on train points only at each scaled v_bar; same even/odd split for all models.
+- Phase 4I: prior weights are diagnostic placeholders over Phase 4G grid cells; no photometry ingested; no new fits.
+- Phase 4I-Audit: per-model beat-NFW fractions; interpretation split by tdf_3knot vs tdf_5knot; bulge_downweight raw_weight = max(1 - bulge + 0.5, 0.05).
+
+- Phase 4J: photometry metadata is ingested from SPARC Table-1 working copy (CDS/VizieR transport) plus rotmod distance fallback; missing fields remain NaN and no values are invented.
+- Phase 4K: photometry-informed prior weights use morphological_type, L3.6, disk scale, central SB proxy, inclination, distance, and subset bulge_dominated_proxy; weights are diagnostic only over the fixed Phase 4G grid.
+- Phase 4L: K_tau is varied as fixed values {0.5, 1.0, 2.0}; only TDF knot amplitudes are refit; NFW/MOND RMSE held from Phase 4G; K_tau is not measured or fitted.

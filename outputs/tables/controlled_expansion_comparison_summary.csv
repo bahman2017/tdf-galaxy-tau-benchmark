@@ -1,0 +1,9 @@
+metric,expansion_12,expansion_20,notes
+cohort_size,12.0,20.0,expansion_12 ⊂ expansion_20 (same original six + overlapping additions)
+robust_tdf_success,8.0,15.0,Primary conservative success (tdf_3knot beats NFW and MOND on holdout for e20)
+sensitivity_recovery,0.0,3.0,Phase 5C class; not counted as primary success in e20
+tdf_failure_mode,2.0,1.0,NGC7814 all-TDF failure in both cohorts
+mixed_result,2.0,1.0,UGC00128 near-tie in both
+tdf_3knot_beats_nfw_holdout,8.0,15.0,even/odd holdout; train-only refit
+tdf_3knot_beats_mond_holdout,9.0,17.0,Required for robust_tdf_success in expansion_20
+primary_success_fraction,0.667,0.75,robust_tdf_success / cohort_size

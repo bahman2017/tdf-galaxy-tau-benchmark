@@ -1,0 +1,7 @@
+galaxy_id,canonical_classification,distance_mpc,inclination_deg,luminosity_3p6_lsun,disk_scale_length_kpc,morphological_type,has_bulge_proxy,bulge_dominated_proxy,notes_for_ml_prior
+DDO154,robust_tdf_success,4.04,64.0,0.053,0.37,10.0,False,False,Disk-dominated dwarf/spiral; future priors may favor near-unity disk M/L.
+NGC2403,robust_tdf_success,3.16,63.0,10.041,1.39,6.0,False,False,Disk-dominated dwarf/spiral; future priors may favor near-unity disk M/L.
+NGC3198,robust_tdf_success,13.8,73.0,38.279,3.14,5.0,False,False,Disk-dominated dwarf/spiral; future priors may favor near-unity disk M/L.
+NGC6503,robust_tdf_success,6.26,74.0,12.845,2.16,6.0,False,False,Disk-dominated dwarf/spiral; future priors may favor near-unity disk M/L.
+IC2574,robust_tdf_success,3.91,75.0,1.016,2.78,9.0,False,False,Disk-dominated dwarf/spiral; future priors may favor near-unity disk M/L.
+NGC7814,tdf_failure_mode,14.4,90.0,74.529,2.54,2.0,True,True,"Sa-type (Type~2), high L3.6 and SBdisk; bulge-dominated proxy True. Supports photometry-informed downweight of bulge M/L in future priors; does not change canonical tdf_3knot failure."

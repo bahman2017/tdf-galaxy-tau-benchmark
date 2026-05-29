@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Classification and holdout comparison: expansion\_12 vs expansion\_20.}
+\label{tab:classification}
+\footnotesize
+\begin{tabular}{@{}l r r p{4.5cm}@{}}
+\toprule
+Metric & expansion\_12 & expansion\_20 & Notes \\
+\midrule
+Cohort size & 12 & 20 & expansion\_12 ⊂ expansion\_20 (same original six + overlapping additions) \\
+Robust TDF success (primary) & 8 & 15 & Primary conservative success (tdf\_3knot beats NFW and MOND on holdout for e20) \\
+Sensitivity recovery & 0 & 3 & Phase 5C class; not counted as primary success in e20 \\
+TDF failure mode & 2 & 1 & NGC7814 all-TDF failure in both cohorts \\
+Mixed result & 2 & 1 & UGC00128 near-tie in both \\
+Primary beats NFW (holdout) & 8 & 15 & even/odd holdout; train-only refit \\
+Primary beats MOND (holdout) & 9 & 17 & Required for robust\_tdf\_success in expansion\_20 \\
+\bottomrule
+\end{tabular}
+\vspace{0.4em}
+{\footnotesize
+\par\noindent\textbf{Source:} \texttt{controlled\_expansion\_comparison\_summary.csv}.
+\par\noindent\textbf{Caveat:} Robust TDF success requires primary \texttt{tdf\_3knot} to beat both NFW and MOND on holdout.
+\par
+}
+\end{table}

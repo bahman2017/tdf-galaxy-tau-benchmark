@@ -1,0 +1,7 @@
+claim_id,claim_text,status,allowed_language,prohibited_language
+E20-A,Radial τ reconstruction for all expansion_20 galaxies.,supported,τ reconstruction on controlled expansion_20 cohort,full-SPARC validation; universal τ-profile
+E20-B,Primary tdf_3knot holdout success on expansion_20.,partially_supported,count robust_tdf_success only (tdf_3knot beats NFW and MOND),count tdf_5knot as primary success; all galaxies pass
+E20-C,sensitivity_recovery equals scientific validation.,not_supported,report sensitivity_recovery separately from robust success,tdf_5knot validates TDF; flex recovery is primary win
+E20-D,TDF validated on full SPARC.,not_supported,expansion_20 controlled cohort only,validated on SPARC; SPARC validates TDF
+E20-E,Dark matter is disproven.,prohibited,does not disprove dark matter,dark matter disproven; DM is wrong; ΛCDM replaced
+E20-F,Lensing confirms TDF.,not_tested,lensing not tested,lensing confirmed

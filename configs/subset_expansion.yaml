@@ -1,0 +1,71 @@
+protocol_version: phase_5a_preregistration
+protocol_label: controlled_sparc_subset_expansion
+
+original_subset_galaxy_ids:
+  - DDO154
+  - IC2574
+  - NGC2403
+  - NGC3198
+  - NGC6503
+  - NGC7814
+
+cohorts:
+  expansion_12:
+    description: Original six galaxies plus six additional (twelve total).
+    total_galaxies: 12
+    additional_count: 6
+  expansion_20:
+    description: Original six galaxies plus fourteen additional (twenty total).
+    total_galaxies: 20
+    additional_count: 14
+
+selection_criteria:
+  min_radial_points: 12
+  min_radial_coverage_kpc: 5.0
+  max_median_v_err_kms: 20.0
+  require_finite_rotmod_columns:
+    - r_kpc
+    - v_obs_kms
+    - v_err_kms
+    - v_gas_kms
+    - v_disk_kms
+    - v_bulge_kms
+    - v_bar_kms
+    - residual_v2_kms2
+  require_positive_columns:
+    - r_kpc
+    - v_obs_kms
+    - v_err_kms
+  require_photometry_fields:
+    - morphological_type
+    - inclination_deg
+    - luminosity_3p6_lsun
+    - disk_scale_length_kpc
+  photometry_quality_flags_allowed:
+    - vizier_table1
+
+morphology_diversity:
+  disk_dominated_type_min: 7.0
+  early_type_max: 2.0
+  quotas_expansion_20:
+    disk_dominated: 5
+    intermediate: 5
+    early_bulge: 4
+  quotas_expansion_12:
+    disk_dominated: 2
+    intermediate: 2
+    early_bulge: 2
+
+scoring:
+  weights:
+    n_points: 0.30
+    radial_coverage_kpc: 0.25
+    photometry_completeness: 0.20
+    inverse_median_v_err: 0.15
+    n_points_per_coverage: 0.10
+  note: Scores use QC and photometry only; no TDF/NFW/MOND outcomes.
+
+anti_cherry_picking:
+  exclude_original_six: true
+  prohibit_fit_metrics_in_selection: true
+  statement: Expansion cohorts must not be tuned on prior TDF holdout success.

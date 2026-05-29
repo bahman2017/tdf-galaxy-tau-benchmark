@@ -1,0 +1,21 @@
+disk_scale,bulge_scale,plausible_scale_flag,tdf_3knot_rmse,tdf_5knot_rmse,nfw_scaled_rmse,mond_scaled_rmse,best_model,tdf_beats_nfw,tdf_beats_mond,interpretation
+0.5,0.2,False,16.84530567428187,8.730468200636338,12.211250843245665,36.08330694799349,tdf_5knot,False,True,Outside plausible diagnostic band. Scaled NFW competitive or better than TDF.
+0.5,0.5,False,3.357105151328925,2.8213839834611925,3.177729997852722,2.708209726714242,mond_fit_a0_scaled,False,False,Outside plausible diagnostic band. mond_fit_a0_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+0.5,0.7,False,6.795993382088692,3.0764427550823346,7.586675769167646,9.994190279137086,tdf_5knot,True,True,Outside plausible diagnostic band. TDF beats scaled NFW.
+0.5,1.0,False,155.80326824723204,113.25002759189151,22.17202740687029,25.363496827796684,nfw_refit_scaled,False,False,Outside plausible diagnostic band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+0.5,1.3,False,155.80650286181742,113.25847658694195,37.731490553516686,40.150234920973055,nfw_refit_scaled,False,False,Outside plausible diagnostic band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+0.7,0.2,False,16.90109758283086,8.884075488489467,13.284977347965052,28.241072264885435,tdf_5knot,False,True,Outside plausible diagnostic band. Scaled NFW competitive or better than TDF.
+0.7,0.5,True,3.3801669190547763,2.9477505027012088,3.3222417788207297,3.05510206244502,tdf_5knot,False,False,Plausible diagnostic M/L band. Scaled NFW competitive or better than TDF.
+0.7,0.7,True,6.774286184870132,2.9601192380480574,7.78648329287727,10.538540665117875,tdf_5knot,True,True,Plausible diagnostic M/L band. TDF beats scaled NFW.
+0.7,1.0,True,155.8027270007603,113.25020543174729,22.99714361104921,26.23797288341024,nfw_refit_scaled,False,False,Plausible diagnostic M/L band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+0.7,1.3,False,155.80657267658637,113.25863112391751,39.141617485978635,41.25674936795135,nfw_refit_scaled,False,False,Outside plausible diagnostic band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+1.0,0.2,False,16.9940721725951,9.122820443645102,14.898703475596603,21.355090391621875,tdf_5knot,False,True,Outside plausible diagnostic band. Scaled NFW competitive or better than TDF.
+1.0,0.5,True,3.459797337793205,3.165556795391009,3.420563122998117,3.9574542393398717,tdf_5knot,False,True,Plausible diagnostic M/L band. Scaled NFW competitive or better than TDF.
+1.0,0.7,True,6.7641416677352675,2.817253358356396,8.433762983219795,11.848172089517295,tdf_5knot,True,True,Plausible diagnostic M/L band. TDF beats scaled NFW.
+1.0,1.0,True,155.80246506165764,113.2509558944865,24.889421235840032,27.846169052533394,nfw_refit_scaled,False,False,Plausible diagnostic M/L band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+1.0,1.3,False,155.8072312384682,113.25935113473682,41.47945917483368,43.12840687410351,nfw_refit_scaled,False,False,Outside plausible diagnostic band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+1.3,0.2,False,17.09799323495873,9.370804911753861,16.473724067111384,21.10015119115092,tdf_5knot,False,True,Outside plausible diagnostic band. Scaled NFW competitive or better than TDF.
+1.3,0.5,True,3.58997326168183,3.41128673338831,3.4115233484852885,5.364423240148703,tdf_5knot,False,True,Plausible diagnostic M/L band. Scaled NFW competitive or better than TDF.
+1.3,0.7,True,6.780926686327,2.7173519778947353,9.574186577671805,13.63672854438525,tdf_5knot,True,True,Plausible diagnostic M/L band. TDF beats scaled NFW.
+1.3,1.0,True,155.80286465942834,113.252277028125,27.279149527287963,29.77039224186705,nfw_refit_scaled,False,False,Plausible diagnostic M/L band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.
+1.3,1.3,False,155.8085561042647,113.26064739670962,44.0355961410005,45.23496542947239,nfw_refit_scaled,False,False,Outside plausible diagnostic band. nfw_refit_scaled wins at this scale. Scaled NFW competitive or better than TDF.

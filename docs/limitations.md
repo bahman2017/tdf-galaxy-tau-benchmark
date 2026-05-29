@@ -1,8 +1,51 @@
 # Limitations
 
 - This repository does not disprove dark matter.
-- Rotation-curve reconstruction alone is not independent proof of geometric origin.
-- Current scaffold outputs may be generated from mock data and are non-observational.
-- TDF is not yet validated on SPARC in this phase.
-- Lensing consistency testing should occur later using frozen tau maps.
-- Collision-system dynamics require additional tau-memory/dynamical modeling not included here.
+- Baseline halo fits are sensitive to baryonic decomposition assumptions.
+- Fitted NFW/Burkert parameters can be boundary-limited and should not be overinterpreted in isolation.
+- Phase 3A does not fit TDF and therefore cannot claim TDF-vs-halo performance.
+- Phase 3A-Audit documented boundary-limited legacy halo fits; Phase 3A-R may reduce but not eliminate bound hits or high reduced chi-square.
+- Halo models remain degenerate with baryonic decomposition; refit improvements in RMSE do not validate TDF or disprove dark matter.
+- Carry both legacy and refit audit caveats into Phase 3B TDF comparison.
+- MOND/RAR here is a rotation-curve empirical baseline only, not a cosmological or lensing validation of MOND.
+- MOND performance depends on the fixed SPARC baryonic decomposition; it does not replace ΛCDM as a complete theory.
+- TDF knot AIC/BIC comparisons are conditional on fixed K_tau, fixed baryons, six-galaxy subset, and rotation curves only.
+- Higher knot counts (4, 5) increase overfitting risk relative to tdf_3knot.
+- No lensing or independent dynamical validation in Phase 3B.
+- Phase 3C holdout audits six galaxies only; strong full-sample AIC gains for tdf_5knot may reflect extra flexibility rather than robust predictive power.
+- Smoothness metrics in Phase 3C are diagnostic only and are not used as fit penalties.
+- Phase 4A: NGC7814 is an explicit TDF holdout failure mode; five other subset galaxies are robust successes under even/odd holdout.
+- Claims that TDF disproves dark matter, replaces ΛCDM, or validates on full SPARC are prohibited by project claim policy (Phase 4B: `docs/paper_ready_claims.md`).
+- Phase 4B reporting is documentation-only; publication summary does not add new fits or change Phase 3 metrics.
+- External summaries must use **tdf_3knot** as the primary conservative TDF model; citing **tdf_5knot** alone overstates parsimony without holdout/flexibility caveats.
+- **5 of 6 holdout success** applies only to the controlled six-galaxy subset under even/odd split and fixed inputs — not a universal SPARC statement.
+- **NGC7814** must appear in any subset summary as **one explicit failure mode**; omitting it violates project reporting policy.
+- **Lensing is not tested**; any lensing statement is future work after frozen τ-map validation.
+- Phase 4C normalized pattern analysis uses Phase 2A diagnostic τ profiles only (not Phase 3B knot fits); max-abs normalization is shape-only and removes amplitude information.
+- **Candidate τ-gradient family** language is exploratory; do not infer a **universal τ-profile** from six galaxies.
+- Phase 4C distinguishes **holdout failure mode** (Phase 4A) from **normalized-profile outlier** (per-metric RMSE ranks); NGC7814 is not forced to be rank-1 in every normalized quantity.
+- NGC7814 pattern metrics may align with holdout failure in some quantities but not others; no automatic causation claim.
+- Phase 4E: per-point holdout residuals use train-only refits per split; radial regions are index-thirds, not physical components.
+- Phase 4D table-level holdout discussion is superseded for radial maps by Phase 4E `sparc_holdout_point_residuals.csv`.
+- Phase 4D hypotheses (bulge dominance, knot placement) are not validated by refits or M/L sensitivity in this phase.
+- Phase 4F M/L scaling is a diagnostic grid only; best-case scaled TDF for NGC7814 can beat canonical NFW at non-canonical scales — does not replace canonical Phase 4A failure label.
+- Phase 4F does not re-scale NFW/MOND holdout; TDF-vs-baseline comparisons at scaled baryons are asymmetric.
+- Phase 4G fair comparison still uses a diagnostic M/L grid, not photometric calibration; canonical failure labels at M/L=1 unchanged.
+- Phase 4H: post-M/L prose must not imply NGC7814 is solved, M/L-calibrated, or unique TDF benefit; claims K, L, N are not supported.
+- Phase 4I: prior scenarios are placeholders; prior-weighted summaries do not constitute photometric M/L calibration (claim O: framework required first).
+- Phase 4I-Audit: do not cite generic “TDF recovery” from priors when only tdf_5knot wins weighted cells; primary tdf_3knot can remain unsupported.
+- Radial τ reconstruction from rotation curves alone is not independent proof of geometric origin.
+- Lensing consistency testing should occur later using frozen τ maps.
+- Collision-system dynamics require additional τ-memory/dynamical modeling not included here.
+
+- Phase 4J metadata ingestion does not calibrate final M/L priors; Table-1 working copy fields can be incomplete and must be validated against official SPARC provenance before external claims.
+- Phase 4K: photometry-informed priors are a diagnostic scaffold (claim Q not supported); no explicit bulge luminosity; morphology proxies are not stellar-population calibration; tdf_5knot can gain weighted support without primary tdf_3knot recovery.
+- Phase 4L: K_tau shifts are partially degenerate with dτ/dr amplitude; conclusions are normalization-sensitivity audits only, not physical measurement of K_tau.
+- Phase 4M: final audit consolidates Phases 1A–4L for external handoff; expanding the subset or claiming full-SPARC validation requires a new claim review and traceability update.
+- Phase 5A: expansion cohort lists are pre-registered from QC/photometry only; proposed galaxies are not validated by new TDF fits until a later phase; still not full SPARC.
+- Phase 5B: expansion_12 results extend the six-galaxy benchmark but remain a controlled cohort; failure-mode labels for new galaxies use the same holdout rules; not full-SPARC validation.
+- Phase 5B-Audit: NGC5055 is not equivalent to NGC7814 (tdf_5knot flex-recovery vs all-TDF failure); UGC00128/UGC05253 mixed cases need cautious expansion_20 selection; audit uses existing fits only.
+- Phase 5B-R: radial maps show tdf_3knot errors concentrated in worst radial thirds with tdf_5knot regional recovery; knot-flexibility tension for NGC5055; UGC05253 mixed baryonic+knot; not expansion_20 validation.
+- Phase 5C: expansion_20 extends controlled subset; primary success is tdf_3knot only; sensitivity_recovery is not robust success; still not full SPARC.
+- Phase 5D: UGC12506 is mild NGC5055-style knot-flexibility sensitivity-recovery; NGC7814 remains all-TDF failure; UGC00128 near-tie mixed; audit only.
+- Phase 5E: final package states 15/20 robust tdf_3knot success; 3 sensitivity-recovery; not full SPARC; documentation only.

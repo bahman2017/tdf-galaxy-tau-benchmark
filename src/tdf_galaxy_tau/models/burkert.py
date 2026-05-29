@@ -10,18 +10,40 @@ _R_EPS = 1.0e-8
 
 @dataclass(frozen=True)
 class BurkertParams:
+    """Burkert parameters.
+
+    rho0 units: Msun / kpc^3
+    r0 units: kpc
+    """
+
     rho0: float
     r0: float
 
 
+def burkert_params_from_log10(log10_rho_0: float, log10_r_0: float) -> BurkertParams:
+    """Build physical Burkert parameters from log10 density and scale radius."""
+    return BurkertParams(rho0=float(10.0 ** log10_rho_0), r0=float(10.0 ** log10_r_0))
+
+
+def burkert_log10_from_params(params: BurkertParams) -> tuple[float, float]:
+    return float(np.log10(params.rho0)), float(np.log10(params.r0))
+
+
 def burkert_mass_enclosed(radius: np.ndarray, params: BurkertParams) -> np.ndarray:
+    if params.rho0 <= 0 or params.r0 <= 0:
+        raise ValueError("Burkert parameters must be positive")
     r = np.asarray(radius, dtype=float)
+    if np.any(r <= 0):
+        raise ValueError("radius must be strictly positive")
     x = np.maximum(r / params.r0, 0.0)
     inner = np.log1p(x) + np.arctan(x) - 0.5 * np.log1p(x**2)
     return 4.0 * np.pi * params.rho0 * params.r0**3 * inner
 
 
 def burkert_velocity(radius: np.ndarray, params: BurkertParams) -> np.ndarray:
-    r = np.maximum(np.asarray(radius, dtype=float), _R_EPS)
+    r = np.asarray(radius, dtype=float)
+    if np.any(r <= 0):
+        raise ValueError("radius must be strictly positive")
+    r = np.maximum(r, _R_EPS)
     mass = burkert_mass_enclosed(r, params)
     return np.sqrt(np.maximum(G_KPC * mass / r, 0.0))

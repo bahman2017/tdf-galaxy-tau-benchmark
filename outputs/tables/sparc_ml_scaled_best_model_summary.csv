@@ -1,0 +1,7 @@
+galaxy_id,canonical_classification,best_model_canonical,best_model_best_plausible_scale,best_plausible_disk_scale,best_plausible_bulge_scale,best_plausible_rmse_kms,tdf_success_stable_under_plausible_scaling,nfw_or_mond_wins_any_plausible_scale,caveat
+DDO154,robust_tdf_success,tdf_5knot,tdf_5knot,1.3,0.5,1.4350332000805521,True,False,Fair comparison: all models use same scaled baryons and even/odd holdout. Diagnostic M/L grid only; not final calibration.
+NGC2403,robust_tdf_success,tdf_5knot,tdf_5knot,0.7,0.5,3.3571324261373414,True,False,Fair comparison: all models use same scaled baryons and even/odd holdout. Diagnostic M/L grid only; not final calibration.
+NGC3198,robust_tdf_success,tdf_5knot,tdf_5knot,0.7,0.5,6.818723424989798,True,False,Fair comparison: all models use same scaled baryons and even/odd holdout. Diagnostic M/L grid only; not final calibration.
+NGC6503,robust_tdf_success,tdf_5knot,tdf_5knot,0.7,0.5,3.2074218859365513,True,False,Fair comparison: all models use same scaled baryons and even/odd holdout. Diagnostic M/L grid only; not final calibration.
+IC2574,robust_tdf_success,tdf_5knot,tdf_5knot,0.7,0.5,1.7005811809053477,True,False,Fair comparison: all models use same scaled baryons and even/odd holdout. Diagnostic M/L grid only; not final calibration.
+NGC7814,tdf_failure_mode,nfw_refit,tdf_5knot,1.3,0.7,2.7173519778947353,False,True,Fair comparison: all models use same scaled baryons and even/odd holdout. Diagnostic M/L grid only; not final calibration.

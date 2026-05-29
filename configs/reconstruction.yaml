@@ -8,9 +8,44 @@ allowed_negative_residual_policies:
   - allow_signed
   - clip_to_zero
   - mask_negative
+
+radial_tau_reconstruction:
+  K_tau: 1.0
+  negative_residual_policy: allow_signed
+  integration_boundary: tau_at_r_min_zero
+  smoothing:
+    enabled: true
+    method: gaussian
+    sigma_points: 1.0
+    diagnostic_only: true
+
 integration:
   tau0: 0.0
+
 regularization:
   enabled: false
   method: moving_average
   window: 3
+
+tdf_knot:
+  K_tau: 1.0
+  amplitude_bound_safety_factor: 2.0
+  negative_v2_penalty: 1000.0
+  variants:
+    - tdf_3knot
+    - tdf_4knot
+    - tdf_5knot
+
+photometry_prior_ktau_sensitivity:
+  k_tau_values: [0.5, 1.0, 2.0]
+  optional_k_tau_values: [0.25, 4.0]
+  include_optional: false
+  reference_k_tau: 1.0
+  stability_rtol: 0.15
+  win_fraction_tol: 0.12
+
+tdf_robustness_audit:
+  k_tau_values: [0.5, 1.0, 2.0]
+  bounds_safety_factors: [1.0, 1.5, 2.0, 3.0]
+  delta_aic_large_improvement_threshold: 10.0
+  holdout_tdf_models: [tdf_3knot, tdf_5knot]

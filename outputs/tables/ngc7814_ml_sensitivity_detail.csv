@@ -1,0 +1,21 @@
+disk_scale,bulge_scale,tdf_3knot_total_rmse,tdf_3knot_inner_rmse,tdf_5knot_total_rmse,tdf_5knot_inner_rmse,negative_residual_fraction_inner,best_tdf_setting_flag,plausible_scale_flag,interpretation
+0.5,0.2,16.84530567428187,28.952924049198884,8.730468200636338,14.822227796733838,0.0,False,False,Outside plausible diagnostic band (may be extreme). Moderate inner TDF RMSE at this scale.
+0.5,0.5,3.357105151328925,4.434614768557477,2.8213839834611925,3.9251805602747893,0.0,True,False,Outside plausible diagnostic band (may be extreme). Moderate inner TDF RMSE at this scale.
+0.5,0.7,6.795993382088692,10.74787905139436,3.0764427550823346,4.2754104224308325,0.3333333333333333,False,False,Outside plausible diagnostic band (may be extreme). Moderate inner TDF RMSE at this scale.
+0.5,1.0,155.80326824723204,236.20894705041692,113.25002759189151,196.13400608330122,0.6666666666666666,False,False,Outside plausible diagnostic band (may be extreme). Inner TDF RMSE remains elevated.
+0.5,1.3,155.80650286181742,236.20894705041692,113.25847658694195,196.14673504660706,1.0,False,False,Outside plausible diagnostic band (may be extreme). Inner TDF RMSE remains elevated.
+0.7,0.2,16.90109758283086,29.090150298906334,8.884075488489467,15.117370572939985,0.0,False,False,Outside plausible diagnostic band (may be extreme). Moderate inner TDF RMSE at this scale.
+0.7,0.5,3.3801669190547763,4.62988574721875,2.9477505027012088,4.20976116499876,0.0,False,True,Plausible diagnostic scale band. Moderate inner TDF RMSE at this scale.
+0.7,0.7,6.774286184870132,10.738874843338914,2.9601192380480574,3.9869444638619282,0.3333333333333333,False,True,Plausible diagnostic scale band. Moderate inner TDF RMSE at this scale.
+0.7,1.0,155.8027270007603,236.20894705041692,113.25020543174729,196.13305126439238,0.6666666666666666,False,True,Plausible diagnostic scale band. Inner TDF RMSE remains elevated.
+0.7,1.3,155.80657267658637,236.20894705041692,113.25863112391751,196.14489043646662,1.0,False,False,Outside plausible diagnostic band (may be extreme). Inner TDF RMSE remains elevated.
+1.0,0.2,16.9940721725951,29.30280396167977,9.122820443645102,15.56457028214779,0.0,False,False,Outside plausible diagnostic band (may be extreme). Moderate inner TDF RMSE at this scale.
+1.0,0.5,3.459797337793205,4.952997056032933,3.165556795391009,4.654530677982312,0.0,False,True,Plausible diagnostic scale band. Moderate inner TDF RMSE at this scale.
+1.0,0.7,6.7641416677352675,10.745424141991478,2.817253358356396,3.573101380073388,0.5,False,True,Plausible diagnostic scale band. Moderate inner TDF RMSE at this scale.
+1.0,1.0,155.80246506165764,236.20894705041692,113.2509558944865,196.13183278786636,0.8333333333333334,False,True,Plausible diagnostic scale band. Inner TDF RMSE remains elevated.
+1.0,1.3,155.8072312384682,236.20894705041692,113.25935113473682,196.14235004313622,1.0,False,False,Outside plausible diagnostic band (may be extreme). Inner TDF RMSE remains elevated.
+1.3,0.2,17.09799323495873,29.52343078526564,9.370804911753861,16.016681964812985,0.0,False,False,Outside plausible diagnostic band (may be extreme). Moderate inner TDF RMSE at this scale.
+1.3,0.5,3.58997326168183,5.306224780235817,3.41128673338831,5.115737203118465,0.0,False,True,Plausible diagnostic scale band. Moderate inner TDF RMSE at this scale.
+1.3,0.7,6.780926686327,10.77591082696217,2.7173519778947353,3.1896106929445907,0.6666666666666666,False,True,Plausible diagnostic scale band. Moderate inner TDF RMSE at this scale.
+1.3,1.0,155.80286465942834,236.20894705041692,113.252277028125,196.13086072259065,1.0,False,True,Plausible diagnostic scale band. Inner TDF RMSE remains elevated.
+1.3,1.3,155.8085561042647,236.20894705041692,113.26064739670962,196.14007159393,1.0,False,False,Outside plausible diagnostic band (may be extreme). Inner TDF RMSE remains elevated.

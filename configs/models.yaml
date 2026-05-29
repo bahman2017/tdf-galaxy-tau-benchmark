@@ -3,7 +3,47 @@ models:
     parameter_count: 0
   nfw:
     parameter_count: 2
+    rho_s_bounds_msun_kpc3: [100000.0, 1000000000.0]
+    r_s_bounds_kpc: [0.1, 100.0]
   burkert:
     parameter_count: 2
+    rho_0_bounds_msun_kpc3: [100000.0, 1000000000.0]
+    r_0_bounds_kpc: [0.1, 100.0]
+legacy_bounds_phase3a:
+  nfw:
+    rho_s_bounds_msun_kpc3: [100000.0, 1000000000.0]
+    r_s_bounds_kpc: [0.1, 100.0]
+  burkert:
+    rho_0_bounds_msun_kpc3: [100000.0, 1000000000.0]
+    r_0_bounds_kpc: [0.1, 100.0]
+robust_fit:
+  fitting_mode: log_multistart
+  multistart_count: 4
+  nfw:
+  # log10 density ~ 1e2–1e11 Msun/kpc^3; log10 scale radius ~ 0.05–1000 kpc
+    log10_rho_s_bounds_msun_kpc3: [2.0, 11.0]
+    log10_r_s_bounds_kpc: [-1.3, 3.0]
+  burkert:
+    log10_rho_0_bounds_msun_kpc3: [2.0, 11.0]
+    log10_r_0_bounds_kpc: [-1.3, 3.0]
 comparison:
   smoothness_penalty_weight: 0.0
+fitting:
+  method: least_squares
+  use_weighted_residuals: true
+  uncertainty_column: v_err_kms
+mond:
+  a0_fixed_m_s2: 1.2e-10
+  g_dagger_fixed_m_s2: 1.2e-10
+  log10_a0_bounds_m_s2: [-11.5, -9.5]
+  log10_a0_initial: -10.0
+  enable_rar_fixed: true
+  models:
+    - mond_fixed_a0_simple
+    - mond_fit_a0_simple
+    - rar_fixed
+audit:
+  boundary_tolerance_fraction: 0.01
+  high_reduced_chi_square_threshold: 5.0
+  very_high_reduced_chi_square_threshold: 20.0
+  poor_rmse_fraction_of_median_v_obs: 0.20

@@ -1,0 +1,2 @@
+raw_files_found,galaxies_parsed_successfully,galaxies_failed,total_radial_points,min_r_kpc,max_r_kpc,min_v_obs_kms,max_v_obs_kms,galaxies_with_bulge,rows_negative_residual_v2
+175,175,0,3391,0.08,108.31,1.41,383.0,32,1053

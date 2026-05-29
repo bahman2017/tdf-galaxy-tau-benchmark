@@ -1,0 +1,7 @@
+claim_id,claim_text,status,allowed_language,prohibited_language
+E12-A,Radial τ reconstruction can be generated for all expansion_12 galaxies.,supported,direct radial τ reconstruction for expansion_12 cohort,full-SPARC validation; universal τ-profile
+E12-B,TDF knot models are competitive in-sample on expansion_12.,supported_with_caveat,competitive on controlled expansion_12 subset (in-sample),validated on SPARC; TDF disproves dark matter
+E12-C,Primary tdf_3knot holdout performance on expansion_12.,partially_supported,holdout success/failure per galaxy; count primary tdf_3knot wins,TDF validated on SPARC; all galaxies success
+E12-D,TDF validates on full SPARC.,not_supported,expansion_12 controlled cohort only,validated on SPARC; SPARC validates TDF
+E12-E,Dark matter is disproven.,prohibited,does not disprove dark matter,dark matter disproven; DM is wrong
+E12-F,Lensing confirms TDF.,not_tested,lensing not tested,lensing confirmed

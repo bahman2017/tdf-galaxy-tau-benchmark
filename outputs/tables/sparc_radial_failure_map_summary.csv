@@ -1,0 +1,233 @@
+galaxy_id,model_name,split_name,radial_region_label,n_test_points,rmse_kms,median_abs_residual_kms,max_abs_residual_kms,mean_normalized_abs_residual,worst_radius_kpc,worst_region_label,negative_v2_count,interpretation
+DDO154,mond_fit_a0_simple,even_odd_index,inner,2,6.763087815665637,5.9923961734185625,9.127766152097877,8.561880039800421,0.99,inner,0,Moderate regional holdout errors on this subset.
+DDO154,mond_fit_a0_simple,even_odd_index,middle,2,0.2919959617848696,0.2486389108293565,0.4017412743651931,1.2431945541467826,3.95,middle,0,Moderate regional holdout errors on this subset.
+DDO154,mond_fit_a0_simple,even_odd_index,outer,2,1.337423853047411,1.3000967440133273,1.6138657974684565,1.7242449686178924,4.94,outer,0,Moderate regional holdout errors on this subset.
+DDO154,mond_fit_a0_simple,inner_middle_outer_blocked,middle,4,0.6993071665053374,0.6712803293416911,0.8732411223263981,2.8337092690373433,2.47,middle,0,Moderate regional holdout errors on this subset.
+DDO154,nfw_refit,even_odd_index,inner,2,4.5154899699466515,3.7813386398254956,6.24935966073506,5.219167406875344,0.99,inner,0,Moderate regional holdout errors on this subset.
+DDO154,nfw_refit,even_odd_index,middle,2,0.5134026397683246,0.4932340476079631,0.6357206954082031,2.4661702380398154,2.96,middle,0,Moderate regional holdout errors on this subset.
+DDO154,nfw_refit,even_odd_index,outer,2,4.172480761109265,3.2897321826584154,5.8562975662417855,2.8550611400914296,5.92,outer,0,Moderate regional holdout errors on this subset.
+DDO154,nfw_refit,inner_middle_outer_blocked,middle,4,2.118843737855132,2.0696133227104525,2.5560991228309575,9.40012682500055,2.96,middle,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_3knot,even_odd_index,inner,2,1.9218121150448673,1.753604922790558,2.5398819606709395,2.5547541103295135,0.99,inner,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_3knot,even_odd_index,middle,2,0.4037227519691774,0.3313139340129361,0.5620153375336727,1.6565696700646804,2.96,middle,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_3knot,even_odd_index,outer,2,2.9127195563821258,2.299581123786986,4.087278488906001,1.998599986930745,5.92,outer,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_3knot,inner_middle_outer_blocked,middle,4,1.290026206348486,1.1817748746074876,1.9639867559351032,5.448231783210393,3.46,middle,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_5knot,even_odd_index,inner,2,0.28656429338500267,0.2770000115397373,0.3504172292085599,0.42259356212626464,0.99,inner,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_5knot,even_odd_index,middle,2,0.1146762363597176,0.09185024289086735,0.1605100715137126,0.459251214454337,3.95,middle,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_5knot,even_odd_index,outer,2,2.4761273917829425,2.0286553134921057,3.448431520990333,1.8337190707604112,5.92,outer,0,Moderate regional holdout errors on this subset.
+DDO154,tdf_5knot,inner_middle_outer_blocked,middle,4,6.949194562592761,6.713137759632023,9.013649298018136,30.398401288257553,3.46,middle,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,even_odd_index,inner,5,3.559751747495848,1.7404908332444862,5.592955939889203,1.8315492248102856,1.14,inner,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,even_odd_index,middle,6,3.0912503994570515,2.18754981671977,4.942406131682112,1.034522559586085,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,even_odd_index,outer,6,9.59859456385576,9.447496398589358,12.14640966974268,2.3812212914655,8.52,outer,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,inner_middle_outer_blocked,middle,11,2.922204743304513,1.337789493456917,5.310683779105716,1.5941930590735764,6.83,middle,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,radial_kfold_5_fold1,inner,7,5.781027269349122,5.8853924509015485,7.691358360171652,6.898896403784001,1.99,inner,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,radial_kfold_5_fold2,inner,4,1.2106928369539247,1.3000075167792282,1.4518470089827673,0.807979828495218,2.84,inner,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,radial_kfold_5_fold2,middle,3,2.99548379179249,2.0110991500126403,4.7649323468958755,0.3446472473589115,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,radial_kfold_5_fold3,middle,7,2.0071486611556297,0.8906218314261523,4.329524513739919,1.8270032345925855,6.54,middle,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,radial_kfold_5_fold4,middle,1,5.963624523735646,5.963624523735646,5.963624523735646,2.839821201778879,6.83,middle,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,radial_kfold_5_fold4,outer,6,8.676457110766426,7.733105908794251,13.395079986672563,4.319464934268439,8.52,outer,0,Moderate regional holdout errors on this subset.
+IC2574,mond_fit_a0_simple,radial_kfold_5_fold5,outer,6,10.920470599466523,11.299458856896354,12.741447267814834,3.2847897402941335,9.38,outer,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,even_odd_index,inner,5,3.5276055556526127,1.769605239763571,5.72954710604837,1.714562576494534,1.14,inner,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,even_odd_index,middle,6,3.3275036258749324,2.6399513838867215,5.537086369574261,1.3875295168814092,6.83,middle,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,even_odd_index,outer,6,9.704131477937825,9.42579902175515,12.281339711768254,2.466299657938618,8.52,outer,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,inner_middle_outer_blocked,middle,11,3.494297064476987,2.0970059107448336,6.372682279022577,2.4137172735038614,6.83,middle,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,radial_kfold_5_fold1,inner,7,6.0637729367651,6.517481463315335,7.699390773336251,7.513289464095635,1.99,inner,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,radial_kfold_5_fold2,inner,4,1.122026993190047,1.0658074268572761,1.4599625295012473,0.7354214315120783,3.41,inner,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,radial_kfold_5_fold2,middle,3,2.66702228767432,1.901133389911493,4.207891751078343,0.3004412011733989,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,radial_kfold_5_fold3,middle,7,2.7544974019615136,1.4277031363043091,5.541888131829751,3.0231174979568762,6.54,middle,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,radial_kfold_5_fold4,middle,1,6.546104912335579,6.546104912335579,6.546104912335579,3.1171928153978947,6.83,middle,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,radial_kfold_5_fold4,outer,6,8.92862201837639,8.064122832040038,13.441550338937487,4.5597878296084415,8.52,outer,0,Moderate regional holdout errors on this subset.
+IC2574,nfw_refit,radial_kfold_5_fold5,outer,6,10.647843450779993,11.05968253285003,12.432048024423288,3.2057630384247857,9.38,outer,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,even_odd_index,inner,5,3.015771897810317,3.1121201300142296,4.971688378974264,2.2238173462005846,3.41,inner,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,even_odd_index,middle,6,3.085794198395608,0.8276498012509421,6.75188311528678,0.460181342152112,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,even_odd_index,outer,6,2.8370986912438902,2.78512950507805,3.9332006961771526,0.5114752348721451,9.1,outer,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,inner_middle_outer_blocked,middle,11,3.5492609947262834,3.82419228894873,5.049120610147298,3.3806904553553596,5.68,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,radial_kfold_5_fold1,inner,7,3.4299022703044466,3.4534952437171107,4.554518086819302,4.161095250664656,1.14,inner,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,radial_kfold_5_fold2,inner,4,4.184391294281675,4.280560704462621,4.906345915528185,2.7466756664658547,3.41,inner,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,radial_kfold_5_fold2,middle,3,4.41484905781375,3.1684858344094735,6.7233809661436155,0.5882501170432602,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,radial_kfold_5_fold3,middle,7,4.069624767409798,4.508846163485643,4.972174443446995,5.031656067877776,5.68,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,radial_kfold_5_fold4,middle,1,0.7194719124722297,0.7194719124722297,0.7194719124722297,0.3426056726058237,6.83,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,radial_kfold_5_fold4,outer,6,2.826518106889458,1.532683048757594,5.898375099013535,0.5031333856057176,8.25,outer,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_3knot,radial_kfold_5_fold5,outer,6,1.510319372022682,1.437267862291506,2.343487517581707,0.4733395555814444,9.38,outer,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,even_odd_index,inner,5,0.8877023437350167,0.8443635485673013,1.099543390512288,0.6644953169140076,3.41,inner,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,even_odd_index,middle,6,1.750244297402212,0.4629980237169029,3.890827376326236,0.27792511246140866,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,even_odd_index,outer,6,2.186228553380258,2.0731875177876127,3.271408208981768,0.3648266725696448,9.1,outer,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,inner_middle_outer_blocked,middle,11,1.3183555751516562,0.7254969974805263,3.2313380486487375,0.5348533405110418,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,radial_kfold_5_fold1,inner,7,6.111419913321898,6.5693792549807455,7.757593116720571,7.568906853288095,1.99,inner,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,radial_kfold_5_fold2,inner,4,0.4906071665351511,0.28636178389443145,0.8340534798420265,0.2060488094190359,2.84,inner,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,radial_kfold_5_fold2,middle,3,2.1803409530536344,1.373415831205925,3.42473874278199,0.2732142986716395,3.98,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,radial_kfold_5_fold3,middle,7,1.0949886760964764,0.6552994301482613,2.421565876598727,0.9639691545148947,4.84,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,radial_kfold_5_fold4,middle,1,0.5020968691016847,0.5020968691016847,0.5020968691016847,0.2390937471912784,6.83,middle,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,radial_kfold_5_fold4,outer,6,4.092541503029142,1.5901024449380117,8.595228146426848,1.1353605836319842,8.25,outer,0,Moderate regional holdout errors on this subset.
+IC2574,tdf_5knot,radial_kfold_5_fold5,outer,6,1.519558756200834,1.111752273874167,2.4746783400938384,0.38096886014703046,9.1,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,mond_fit_a0_simple,even_odd_index,inner,12,16.185032712711802,12.784845518101825,26.420818600715847,10.44779360012288,2.47,inner,0,Regional holdout RMSE diagnostic.
+NGC2403,mond_fit_a0_simple,even_odd_index,middle,12,16.700983326001953,14.171171947381083,25.50464004193502,8.212724530672348,2.68,middle,0,Regional holdout RMSE diagnostic.
+NGC2403,mond_fit_a0_simple,even_odd_index,outer,12,8.2185343722068,7.467853978523891,12.064853242305489,2.751841392092597,20.37,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,mond_fit_a0_simple,inner_middle_outer_blocked,middle,24,17.575278992422387,16.216643708884007,25.91898465352516,8.124124627563283,2.78,middle,0,Regional holdout RMSE diagnostic.
+NGC2403,mond_fit_a0_simple,radial_kfold_5_fold1,inner,15,10.12205350368052,10.227245115839793,13.620917078883991,6.8126337730765805,1.57,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,mond_fit_a0_simple,radial_kfold_5_fold2,inner,9,21.46061482009176,20.23154859755165,25.93949695592285,14.916243715545798,2.47,inner,0,Regional holdout RMSE diagnostic.
+NGC2403,mond_fit_a0_simple,radial_kfold_5_fold2,middle,6,24.06746470721583,24.551014332746135,25.038603797103107,13.370724146637349,2.57,middle,0,Regional holdout RMSE diagnostic.
+NGC2403,mond_fit_a0_simple,radial_kfold_5_fold3,middle,15,15.018144239099449,11.550426023392331,24.338008678042996,6.122694388701635,3.29,middle,0,Regional holdout RMSE diagnostic.
+NGC2403,mond_fit_a0_simple,radial_kfold_5_fold4,middle,3,4.287794931826428,3.9661229975933168,5.27695334428482,9.242204723481274,8.45,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,mond_fit_a0_simple,radial_kfold_5_fold4,outer,11,8.696627983525484,8.273944085704187,11.905911652709236,6.556504690991656,13.91,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,mond_fit_a0_simple,radial_kfold_5_fold5,outer,14,13.628251860554393,13.92369020993236,16.59943110044746,6.1216508724987895,19.87,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,even_odd_index,inner,12,11.77319737051537,9.112732910996979,20.337741806851454,7.442493931653715,2.47,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,even_odd_index,middle,12,11.635028485730503,7.345874065583332,19.263683591088498,5.080728788895732,2.68,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,even_odd_index,outer,12,3.4038835015628033,1.7217292331312848,7.338367015507316,0.8087467819212385,20.37,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,inner_middle_outer_blocked,middle,24,10.804156038420398,6.698238933503923,17.584966106551533,6.720477023706111,2.57,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,radial_kfold_5_fold1,inner,15,7.171639300905175,7.170321985551567,9.516858991614384,4.811432375276872,1.57,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,radial_kfold_5_fold2,inner,9,17.03943800978453,15.74512692784728,21.11565209269915,11.806924379745983,2.47,inner,0,Regional holdout RMSE diagnostic.
+NGC2403,nfw_refit,radial_kfold_5_fold2,middle,6,19.122708909679112,19.594830731757234,20.16398281616469,10.664876111211713,2.57,middle,0,Regional holdout RMSE diagnostic.
+NGC2403,nfw_refit,radial_kfold_5_fold3,middle,15,9.283417051855283,4.017973061747128,17.125047743775426,3.7821773027195182,3.29,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,radial_kfold_5_fold4,middle,3,4.4829642844084345,4.558515663356843,4.649598783001977,10.320415687799029,8.45,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,radial_kfold_5_fold4,outer,11,2.4992536294000884,2.2188152904426346,4.886611502405245,1.76787435739535,8.94,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,nfw_refit,radial_kfold_5_fold5,outer,14,11.838939120645977,9.68651097786261,19.231476389337615,4.212372511565662,20.87,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,even_odd_index,inner,12,10.647135018962842,8.106886405066735,18.82575598365416,6.641862126844084,2.47,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,even_odd_index,middle,12,10.481443731875762,6.164778973809831,17.6797563306979,5.693729716949818,2.68,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,even_odd_index,outer,12,1.3062288812638638,0.7710929868350433,2.4802774946538477,0.48389650164938675,17.39,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,inner_middle_outer_blocked,middle,24,11.941998802131614,8.52044893127696,20.751815319248465,14.19170768558925,6.46,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,radial_kfold_5_fold1,inner,15,6.725498605480685,6.613371015959828,8.943789029145066,4.502078963628976,1.57,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,radial_kfold_5_fold2,inner,9,16.647472286651244,15.34754209905195,20.70151542112997,11.528359010673176,2.47,inner,0,Regional holdout RMSE diagnostic.
+NGC2403,tdf_3knot,radial_kfold_5_fold2,middle,6,18.69562600259985,19.165054848922644,19.74472668630635,10.431136947303848,2.57,middle,0,Regional holdout RMSE diagnostic.
+NGC2403,tdf_3knot,radial_kfold_5_fold3,middle,15,7.365388194857818,6.040629534786376,13.493281245759746,5.1864726436416815,3.29,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,radial_kfold_5_fold4,middle,3,4.1023182775836755,3.8770848748152105,5.796002652498601,7.727927828774977,8.45,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,radial_kfold_5_fold4,outer,11,14.478085486039268,13.798309579379747,19.720204796159067,15.04831617401308,10.43,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_3knot,radial_kfold_5_fold5,outer,14,4.774267681541221,4.656654469168927,7.801239290889086,2.909900807401304,14.91,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,even_odd_index,inner,12,4.733618438641213,4.408546396072545,7.023415231939637,2.7886071653686115,0.86,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,even_odd_index,middle,12,3.4536656975650555,2.5058556723820473,6.079388848612325,2.0919060432797436,3.29,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,even_odd_index,outer,12,1.054207933157699,1.0182196504896837,1.870610302468549,0.373279040018708,17.39,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,inner_middle_outer_blocked,middle,24,5.15767355299975,4.902305711134126,7.352185284654098,5.393454254572888,6.46,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,radial_kfold_5_fold1,inner,15,2.4148925392002023,2.103553372169614,3.5964660425243267,1.4810289660468852,0.86,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,radial_kfold_5_fold2,inner,9,7.520046196214021,5.757653906536362,11.038821559173712,4.828982200087299,2.47,inner,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,radial_kfold_5_fold2,middle,6,9.160689442340772,9.548850912456295,10.062143089119571,5.169939083173948,2.57,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,radial_kfold_5_fold3,middle,15,3.095790941864031,1.6348211227074074,6.0651235490171445,1.4906023578557916,3.29,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,radial_kfold_5_fold4,middle,3,2.973636185055716,3.0300309392550844,3.88870563689926,6.207107999909428,8.45,middle,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,radial_kfold_5_fold4,outer,11,8.773186610893875,7.530155407866403,12.954189396380883,9.405095742774348,10.43,outer,0,Moderate regional holdout errors on this subset.
+NGC2403,tdf_5knot,radial_kfold_5_fold5,outer,14,11.213523926379832,8.947290947036848,18.68892277901125,3.8191194525304293,20.87,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,even_odd_index,inner,7,20.576941352596997,15.656696214093955,34.38426015397545,1.8354968831458085,0.64,inner,0,Regional holdout RMSE diagnostic.
+NGC3198,mond_fit_a0_simple,even_odd_index,middle,7,12.308312714933413,13.303442962966074,18.034379685476154,7.948778423368231,6.43,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,even_odd_index,outer,7,6.471473040239753,7.1853037447286,7.58023146013025,2.9925424120908546,38.19,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,inner_middle_outer_blocked,middle,14,15.45764815996654,16.227798876678136,21.119069891826054,8.327542979688552,6.43,middle,0,Regional holdout RMSE diagnostic.
+NGC3198,mond_fit_a0_simple,radial_kfold_5_fold1,inner,9,26.53358903402413,22.72196748308245,41.06585201557906,1.8112583071834325,0.32,inner,0,Regional holdout RMSE diagnostic.
+NGC3198,mond_fit_a0_simple,radial_kfold_5_fold2,inner,5,10.827854826400669,9.038504483299208,15.929992713709597,1.7271252395447374,4.5,inner,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,radial_kfold_5_fold2,middle,4,14.397493208913378,14.241475221027727,15.995633393706754,7.458357647730484,5.78,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,radial_kfold_5_fold3,middle,9,13.195858629761366,12.389900356507669,19.06511269250427,7.384483567203339,6.43,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,radial_kfold_5_fold4,middle,1,6.4343261924427395,6.4343261924427395,6.4343261924427395,3.2171630962213698,14.05,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,radial_kfold_5_fold4,outer,7,12.174563609585872,12.641961039295126,14.06071621782101,6.0162702125203635,22.12,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,mond_fit_a0_simple,radial_kfold_5_fold5,outer,8,15.872653348017026,16.234630513560163,17.467548019542733,7.213827020595307,40.1,outer,0,Regional holdout RMSE diagnostic.
+NGC3198,nfw_refit,even_odd_index,inner,7,18.238991437058445,11.64547671220194,32.85429960751047,1.3942340550867531,0.64,inner,0,Regional holdout RMSE diagnostic.
+NGC3198,nfw_refit,even_odd_index,middle,7,8.366921557209434,8.23586275641253,12.25787387191474,5.735747665075792,6.43,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,even_odd_index,outer,7,5.402552515962361,4.126250002799395,9.042977638653523,2.045394189433005,18.13,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,inner_middle_outer_blocked,middle,14,12.067114007281475,13.249663614961321,17.200458060888252,6.2224660084355525,6.43,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,radial_kfold_5_fold1,inner,9,24.700444092658955,19.91681002124723,40.09407439175457,1.5339700387948458,0.32,inner,0,Regional holdout RMSE diagnostic.
+NGC3198,nfw_refit,radial_kfold_5_fold2,inner,5,6.728817111784622,4.701999708412345,11.178362122648394,1.0111389918222826,4.5,inner,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,radial_kfold_5_fold2,middle,4,9.193689210405072,9.118339975138454,10.518054616658162,4.833101886664433,5.78,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,radial_kfold_5_fold3,middle,9,8.106231780704297,5.402495191122512,12.700054533004504,4.602000287680265,6.43,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,radial_kfold_5_fold4,middle,1,12.506853814931503,12.506853814931503,12.506853814931503,6.253426907465752,14.05,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,radial_kfold_5_fold4,outer,7,13.137700170047545,13.060017532801965,16.1514988317343,6.4258377577763195,20.05,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,nfw_refit,radial_kfold_5_fold5,outer,8,10.239239440290348,9.137938634569991,16.560595387577024,4.080448393176541,44.08,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_3knot,even_odd_index,inner,7,16.359577143937024,7.496158061230275,31.511945421799297,1.0066822465621044,0.64,inner,0,Regional holdout RMSE diagnostic.
+NGC3198,tdf_3knot,even_odd_index,middle,7,6.699160495671216,6.834348687081899,9.39255140185398,4.343660099177929,14.05,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_3knot,even_odd_index,outer,7,3.865181323089558,2.8700042862182045,6.851519883331292,1.4834940021634935,18.13,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_3knot,inner_middle_outer_blocked,middle,14,9.336646331141324,9.971282065830124,13.92013576016737,4.851705794119678,6.43,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_3knot,radial_kfold_5_fold1,inner,9,23.342161050847448,17.448996806630873,39.42084668883317,1.4815420426448436,0.32,inner,0,Regional holdout RMSE diagnostic.
+NGC3198,tdf_3knot,radial_kfold_5_fold2,inner,5,3.478498933694726,1.9342080849701233,6.6272319462702285,0.47363580173528685,4.5,inner,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_3knot,radial_kfold_5_fold2,middle,4,4.683379840216178,4.550795686329607,5.933489873991391,2.5852566414454987,5.78,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_3knot,radial_kfold_5_fold3,middle,9,6.846645888425893,5.587447998449022,10.417458416079713,3.568371148411092,11.04,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_3knot,radial_kfold_5_fold4,middle,1,157.0,157.0,157.0,78.5,14.05,middle,1,Regional holdout RMSE diagnostic.
+NGC3198,tdf_3knot,radial_kfold_5_fold4,outer,7,100.48781827907715,10.719917592045135,154.0,34.30872029303878,20.05,outer,3,Regional holdout RMSE diagnostic.
+NGC3198,tdf_3knot,radial_kfold_5_fold5,outer,8,9.051027414823164,7.6926745144414355,15.506103085728055,3.4203523957246356,44.08,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,even_odd_index,inner,7,14.07153894800755,6.835896929755478,28.237103023895884,0.9145399899337628,0.64,inner,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,even_odd_index,middle,7,1.8643214086843465,1.3474309466259058,3.5763645039194216,1.1170252089929233,6.43,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,even_odd_index,outer,7,1.4560676006121571,1.28709599625671,2.486568668437968,0.6365261857129532,30.08,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,inner_middle_outer_blocked,middle,14,114.60825123491725,133.0,147.0,56.52363211000393,8.04,middle,9,Regional holdout RMSE diagnostic.
+NGC3198,tdf_5knot,radial_kfold_5_fold1,inner,9,21.63403354109877,13.249712055450589,38.31069735229707,1.4346886951057771,0.32,inner,0,Regional holdout RMSE diagnostic.
+NGC3198,tdf_5knot,radial_kfold_5_fold2,inner,5,9.11404741947037,9.459187144174107,12.53933421259903,1.3289757543956369,3.21,inner,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,radial_kfold_5_fold2,middle,4,3.318104241276166,3.1585823401801107,4.544621232746209,0.8812987710593039,5.15,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,radial_kfold_5_fold3,middle,9,112.46180820232559,140.0,147.0,58.52648185674012,8.04,middle,5,Regional holdout RMSE diagnostic.
+NGC3198,tdf_5knot,radial_kfold_5_fold4,middle,1,2.798348494362841,2.798348494362841,2.798348494362841,1.3991742471814206,14.05,middle,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,radial_kfold_5_fold4,outer,7,6.895931750877189,6.602790986931581,10.263656180427091,3.2117269274724913,22.12,outer,0,Moderate regional holdout errors on this subset.
+NGC3198,tdf_5knot,radial_kfold_5_fold5,outer,8,9.69031853391822,8.382560154725724,16.283214226636687,3.7316677608215922,44.08,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,even_odd_index,inner,5,20.529087124753307,11.446670905959335,31.25568425879291,6.668477550010044,1.52,inner,0,Regional holdout RMSE diagnostic.
+NGC6503,mond_fit_a0_simple,even_odd_index,middle,5,2.876888215928775,2.207355201602965,4.302835235778488,2.6620854735103365,15.18,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,even_odd_index,outer,5,5.543020599600602,4.570532956597191,8.548924900123254,2.1635378253011686,22.76,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,inner_middle_outer_blocked,middle,10,3.497584209726679,3.261817169361535,5.7720037294753865,3.152790271159465,15.18,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,radial_kfold_5_fold1,inner,7,25.484016361748523,19.330628103245573,43.62745865524431,9.367279812689171,2.28,inner,0,Regional holdout RMSE diagnostic.
+NGC6503,mond_fit_a0_simple,radial_kfold_5_fold2,inner,3,7.494729043497161,7.265594025677359,9.197408519430596,3.6737637173516853,6.07,inner,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,radial_kfold_5_fold2,middle,3,3.514541196851888,3.4125920114648096,4.724372820641804,3.298317125282589,8.35,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,radial_kfold_5_fold3,middle,6,3.227280005260944,2.9947983618776988,4.367666593508858,3.1414937196193335,12.12,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,radial_kfold_5_fold4,middle,1,4.891625181249182,4.891625181249182,4.891625181249182,4.891625181249182,15.18,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,radial_kfold_5_fold4,outer,5,4.029039785354166,3.948418422981902,4.3593604628718765,2.4433620025710554,18.23,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,mond_fit_a0_simple,radial_kfold_5_fold5,outer,6,5.834770399998636,5.530533814356687,8.498899649598116,1.934859642553164,22.76,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,even_odd_index,inner,5,17.22143647021527,5.627221300152186,28.25933125215695,4.523993772781371,1.52,inner,0,Regional holdout RMSE diagnostic.
+NGC6503,nfw_refit,even_odd_index,middle,5,2.427450083783023,1.445776530519666,3.8646609702604735,2.140426784839525,12.12,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,even_odd_index,outer,5,2.4937161313025595,2.327325748745963,3.134386222740048,1.1014559143876688,21.29,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,inner_middle_outer_blocked,middle,10,7.628009278792423,7.635985530451933,9.601153361241655,7.469644694769585,12.12,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,radial_kfold_5_fold1,inner,7,22.55524569710681,14.82570281454963,40.41766974592943,7.801157306326111,2.28,inner,0,Regional holdout RMSE diagnostic.
+NGC6503,nfw_refit,radial_kfold_5_fold2,inner,3,1.5157254609006343,0.8188405932519771,2.459916797531136,0.615295208863787,6.07,inner,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,radial_kfold_5_fold2,middle,3,1.5046166421566989,1.2160755265975354,2.2230296555689364,1.349377201646656,9.86,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,radial_kfold_5_fold3,middle,6,3.859275279662236,4.161051889873676,5.232868438006832,3.562147561974084,12.12,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,radial_kfold_5_fold4,middle,1,0.7114491776238197,0.7114491776238197,0.7114491776238197,0.7114491776238197,15.18,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,radial_kfold_5_fold4,outer,5,3.0530588025359595,2.833231023309395,4.703978329255719,1.4510294395283552,18.97,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,nfw_refit,radial_kfold_5_fold5,outer,6,6.97046857445035,6.688030078612989,9.002247936434046,2.386733930057718,23.5,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,even_odd_index,inner,5,15.374663762667511,4.130893311705407,25.946534445986075,3.982224835238237,1.52,inner,0,Regional holdout RMSE diagnostic.
+NGC6503,tdf_3knot,even_odd_index,middle,5,1.9934202802857905,1.9643988233057996,3.150948527617601,1.5860875110939645,9.11,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,even_odd_index,outer,5,4.552727577796594,1.57480974209399,8.927021917542248,1.2119919466402564,22.76,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,inner_middle_outer_blocked,middle,10,4.533622305080443,2.5258817535383002,8.25207260380951,3.519775292094151,8.35,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,radial_kfold_5_fold1,inner,7,21.364847025103373,13.049848687929682,38.97629690147494,7.203211727275746,2.28,inner,0,Regional holdout RMSE diagnostic.
+NGC6503,tdf_3knot,radial_kfold_5_fold2,inner,3,12.270072146637274,12.585973344840257,12.859946113416385,6.125713732978542,7.59,inner,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,radial_kfold_5_fold2,middle,3,10.123538390967358,10.075298745996406,11.55318327535008,10.047145619222945,8.35,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,radial_kfold_5_fold3,middle,6,2.883057520886383,2.457319383290816,4.508944117274709,2.5394376942405423,14.44,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,radial_kfold_5_fold4,middle,1,1.1631544952020363,1.1631544952020505,1.1631544952020505,1.1631544952020505,15.18,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,radial_kfold_5_fold4,outer,5,2.2574910289255143,2.273142813487283,2.7366309966682394,1.3110229854819608,16.65,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_3knot,radial_kfold_5_fold5,outer,6,1.832904833524451,1.0040983928531872,3.8113354769787264,0.3623247956133056,23.5,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,even_odd_index,inner,5,8.221934780009512,3.5285914611967684,14.51725676737685,2.5345530232109956,4.55,inner,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,even_odd_index,middle,5,1.0531972021268936,1.0990407247314948,1.4701722600097469,0.983837441305036,12.12,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,even_odd_index,outer,5,1.8525997900476154,0.6530290170722566,3.7315268051876274,0.4783407783008329,22.76,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,inner_middle_outer_blocked,middle,10,1.9107638187807467,1.1474633324356063,4.0725578255957515,1.4599621289226477,8.35,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,radial_kfold_5_fold1,inner,7,20.4849353662888,11.337425392625905,38.05240359045388,6.568363963682565,2.28,inner,0,Regional holdout RMSE diagnostic.
+NGC6503,tdf_5knot,radial_kfold_5_fold2,inner,3,11.224118381513431,11.775618918101586,13.304128416868735,5.495225780017637,6.83,inner,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,radial_kfold_5_fold2,middle,3,9.07490239672407,9.178667398497367,10.90472281442598,8.90304881529183,8.35,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,radial_kfold_5_fold3,middle,6,1.1533444721017378,1.051176355355068,1.9585516176025235,1.0308933658525419,12.12,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,radial_kfold_5_fold4,middle,1,2.226656729358524,2.22665672935851,2.22665672935851,2.22665672935851,15.18,middle,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,radial_kfold_5_fold4,outer,5,2.479680034264489,2.079119415235553,3.2442456282380903,1.3962342132182044,18.23,outer,0,Moderate regional holdout errors on this subset.
+NGC6503,tdf_5knot,radial_kfold_5_fold5,outer,6,3.0767664485334443,1.9859693192220718,5.780947931201325,0.7022277764552087,23.5,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,mond_fit_a0_simple,even_odd_index,inner,3,46.57481618138347,41.186605618298415,66.50614126527302,4.879272140935007,1.72,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,mond_fit_a0_simple,even_odd_index,middle,3,3.7805103329478897,2.6232621063790873,5.994740301110937,0.9991854175773932,8.37,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,mond_fit_a0_simple,even_odd_index,outer,3,11.94661592249541,11.76902342408664,15.499679229703077,2.483747605066151,19.53,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,mond_fit_a0_simple,inner_middle_outer_blocked,middle,6,7.76014623123922,5.8517529864390525,13.751401632417355,1.9365066358571694,7.26,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,mond_fit_a0_simple,radial_kfold_5_fold1,inner,4,63.93762307762299,60.66633417517528,84.7829919643936,6.010888112473298,0.63,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,mond_fit_a0_simple,radial_kfold_5_fold2,inner,2,27.239901843380082,26.6712210383659,32.20820765200426,5.046792948643931,5.03,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,mond_fit_a0_simple,radial_kfold_5_fold2,middle,2,10.696687681925685,10.370129807171907,12.993016603636022,2.384895434750627,7.26,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,mond_fit_a0_simple,radial_kfold_5_fold3,middle,4,3.287827466360088,3.28765210493259,4.487159592632594,0.984687255614823,9.5,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,mond_fit_a0_simple,radial_kfold_5_fold4,outer,3,9.225726453911085,9.162225025289873,11.461960386386435,2.3895228015473964,16.18,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,mond_fit_a0_simple,radial_kfold_5_fold5,outer,3,16.25041534561883,16.269516333427617,18.030898774619004,3.3040971563399952,19.53,outer,0,Regional holdout RMSE diagnostic.
+NGC7814,nfw_refit,even_odd_index,inner,3,43.075058817713,35.94229567153184,64.03593243993504,4.132464881309425,1.72,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,nfw_refit,even_odd_index,middle,3,0.6246609217505895,0.3437246646935818,1.0236701413007268,0.17009484991075485,10.65,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,nfw_refit,even_odd_index,outer,3,1.612133663397009,1.570704872907129,2.277926747332458,0.3392916471862893,15.09,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,nfw_refit,inner_middle_outer_blocked,middle,6,2.205445520297561,1.0943475240977847,4.735998183950244,0.4064386889753966,7.26,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,nfw_refit,radial_kfold_5_fold1,inner,4,61.18732131284442,57.24044849282643,83.85151884451,5.590711552969206,0.63,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,nfw_refit,radial_kfold_5_fold2,inner,2,20.10346292258231,19.243597749076002,25.06022625289154,3.63441731107302,5.03,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,nfw_refit,radial_kfold_5_fold2,middle,2,3.723881215375507,2.831762498779085,5.2501116168211865,0.5108308173973412,7.26,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,nfw_refit,radial_kfold_5_fold3,middle,4,1.3647938443285108,1.171159909522416,1.9578717873317544,0.4211875418800839,9.5,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,nfw_refit,radial_kfold_5_fold4,outer,3,3.046258862181485,3.0796027657910656,3.2585703920562423,0.833059015033648,15.09,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,nfw_refit,radial_kfold_5_fold5,outer,3,1.2155200235871335,1.04411724047975,1.8258946396454403,0.19912843140255057,17.36,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_3knot,even_odd_index,inner,3,236.20894705041692,230.0,250.0,32.17054263565891,1.72,inner,3,Large inner-region holdout errors for TDF on NGC7814 (exploratory).
+NGC7814,tdf_3knot,even_odd_index,middle,3,130.491706864661,2.1877521430293996,226.0,25.61121900713172,8.37,middle,1,Elevated regional holdout RMSE for TDF on NGC7814.
+NGC7814,tdf_3knot,even_odd_index,outer,3,0.6871177103394146,0.5310334399684393,1.017999622911674,0.1373981810703633,17.36,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_3knot,inner_middle_outer_blocked,middle,6,148.77570387550693,87.95656960754947,227.0,26.687001886252244,7.26,middle,2,Regional holdout RMSE diagnostic.
+NGC7814,tdf_3knot,radial_kfold_5_fold1,inner,4,59.37763562696415,54.97711040365235,83.31658146569873,5.286976612194714,0.63,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,tdf_3knot,radial_kfold_5_fold2,inner,2,31.002000579254833,30.462745292585506,36.21993116375344,5.810014669565897,6.14,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,tdf_3knot,radial_kfold_5_fold2,middle,2,33.328216187772526,33.0325549031473,37.46203690779092,7.920548926500691,7.26,middle,0,Regional holdout RMSE diagnostic.
+NGC7814,tdf_3knot,radial_kfold_5_fold3,middle,4,86.89115067319814,2.1523610729871763,173.7480077941749,11.643297700918716,9.5,middle,0,Regional holdout RMSE diagnostic.
+NGC7814,tdf_3knot,radial_kfold_5_fold4,outer,3,0.6138447200466705,0.655337723931467,0.7726066921865709,0.1586798381112907,16.18,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_3knot,radial_kfold_5_fold5,outer,3,0.9020595761518565,1.0071104635080417,1.1911739994052368,0.15396971085396408,19.53,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_5knot,even_odd_index,inner,3,196.13183278786636,230.0,250.0,17.555370014338845,1.72,inner,2,Large inner-region holdout errors for TDF on NGC7814 (exploratory).
+NGC7814,tdf_5knot,even_odd_index,middle,3,2.914967646249592,1.0856608368023617,4.92643311877822,0.7130513887286541,8.37,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_5knot,even_odd_index,outer,3,1.069655990736625,0.8141884333657856,1.6327432733868363,0.20811001089010825,19.53,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_5knot,inner_middle_outer_blocked,middle,6,4.904352359187901,4.064937782623062,8.260995053793948,1.0755751103424211,8.37,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_5knot,radial_kfold_5_fold1,inner,4,55.594213115274115,49.905779379467646,82.13866592911802,4.599199007192312,0.63,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,tdf_5knot,radial_kfold_5_fold2,inner,2,26.45121924802187,25.662203632106653,32.07455924071226,4.851753380975919,5.03,inner,0,Regional holdout RMSE diagnostic.
+NGC7814,tdf_5knot,radial_kfold_5_fold2,middle,2,7.81023800132488,7.132763406619432,10.314508811665178,1.5267276477088447,7.26,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_5knot,radial_kfold_5_fold3,middle,4,7.8463621911152694,7.68524967534303,9.886321282231393,2.696616966292752,10.65,middle,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_5knot,radial_kfold_5_fold4,outer,3,3.626749464934178,3.4612908265569047,4.329403472679303,0.9793654372545054,15.09,outer,0,Moderate regional holdout errors on this subset.
+NGC7814,tdf_5knot,radial_kfold_5_fold5,outer,3,2.792401335991607,2.48276220226262,3.898273656599883,0.5336748089109759,19.53,outer,0,Moderate regional holdout errors on this subset.

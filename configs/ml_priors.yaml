@@ -1,0 +1,90 @@
+framework_label: diagnostic_placeholder_priors
+framework_version: phase_4k
+plausible_band:
+  disk_scale:
+  - 0.7
+  - 1.3
+  bulge_scale:
+  - 0.5
+  - 1.0
+prior_ranges:
+  disk_scale:
+  - 0.5
+  - 1.3
+  bulge_scale:
+  - 0.2
+  - 1.3
+canonical_ml:
+  disk_scale: 1.0
+  bulge_scale: 1.0
+models:
+- tdf_3knot
+- tdf_5knot
+- nfw_refit_scaled
+- mond_fit_a0_scaled
+tdf_primary_model: tdf_3knot
+tdf_sensitivity_model: tdf_5knot
+scenarios:
+  uniform_plausible_band:
+    description: Uniform diagnostic weight over plausible-band Phase 4G grid cells
+      only.
+    grid_scope: plausible_only
+    weighting: uniform
+  conservative_bulge_downweight_test:
+    description: Diagnostic test — higher prior weight at lower bulge_scale within
+      plausible band.
+    grid_scope: plausible_only
+    weighting: bulge_downweight
+    bulge_reference: 1.0
+  canonical_delta_prior:
+    description: Diagnostic delta-like weight centered at disk=1, bulge=1 on full
+      Phase 4G grid.
+    grid_scope: all_grid
+    weighting: gaussian_delta
+    sigma_disk: 0.2
+    sigma_bulge: 0.2
+photometry_metadata_status:
+  source: SPARC Table1 (Lelli+2016) via VizieR working copy J/AJ/152/157/table1; rotmod
+    distance fallback
+  available_fields:
+  - distance_mpc
+  - inclination_deg
+  - luminosity_3p6_lsun
+  - disk_scale_length_kpc
+  - central_surface_brightness
+  - morphological_type
+  missing_fields:
+  - effective_radius_or_disk_scale_length_alt
+  - bulge_luminosity_3p6
+  - explicit_photometry_quality_flags_per_galaxy
+  usable_for_final_priors: false
+  note: Metadata ingested for prior scaffolding only; no final M/L calibration is
+    performed.
+photometry_informed_scenarios:
+  photometry_uniform_plausible:
+    description: Uniform diagnostic weight over plausible-band Phase 4G grid cells
+      (photometry-informed scaffold).
+    grid_scope: plausible_only
+    weighting: uniform
+    metadata_basis: uniform plausible band [disk 0.7-1.3, bulge 0.5-1.0]; no morphology tilt
+  morphology_aware_conservative:
+    description: Morphology-aware diagnostic prior using morphological_type and
+      bulge_dominated_proxy; early-type systems do not auto-favor extreme low bulge_scale.
+    grid_scope: plausible_only
+    weighting: morphology_aware
+    metadata_basis: morphological_type, bulge_dominated_proxy, central-concentration context
+  ngc7814_bulge_sensitivity_diagnostic:
+    description: NGC7814-only diagnostic — tests lower-bulge_scale cell support; not
+      calibrated bulge M/L.
+    grid_scope: plausible_only
+    weighting: ngc7814_bulge_diagnostic
+    galaxy_filter: NGC7814
+    metadata_basis: NGC7814 Sa-type bulge-proxy; diagnostic lower-bulge emphasis only
+  canonical_anchor_prior:
+    description: Gaussian anchor at canonical disk=bulge=1.0 to preserve reference
+      interpretation at fixed SPARC decomposition.
+    grid_scope: all_grid
+    weighting: gaussian_anchor
+    metadata_basis: canonical M/L=1 anchor; not photometry-calibrated
+    sigma_disk: 0.15
+    sigma_bulge: 0.15

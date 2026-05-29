@@ -1,9 +1,32 @@
-input_csv: data/processed/sparc_subset_processed.csv
-output_tau_profiles: outputs/tables/sparc_subset_tau_profiles.csv
-output_model_comparison: outputs/tables/model_comparison.csv
-output_figure_dir: outputs/figures
-k_tau: 1.0
-allow_mock_data: true
-mock_galaxies:
-  - Galaxy_A
-  - Galaxy_B
+input_standardized_csv: data/processed/sparc/sparc_rotmod_standardized.csv
+output_subset_selection_csv: outputs/tables/sparc_subset_selection.csv
+output_subset_selection_report: outputs/reports/sparc_subset_selection_report.md
+
+candidate_galaxies:
+  - DDO154
+  - NGC2403
+  - NGC3198
+  - NGC6503
+  - IC2574
+  - NGC7814
+
+selection_criteria:
+  min_radial_points: 12
+  min_radial_coverage_kpc: 5.0
+  require_finite_values:
+    - r_kpc
+    - v_obs_kms
+    - v_err_kms
+    - v_gas_kms
+    - v_disk_kms
+    - v_bulge_kms
+    - v_bar_kms
+    - residual_v2_kms2
+  require_positive:
+    - r_kpc
+    - v_obs_kms
+    - v_err_kms
+  allow_negative_residual_v2: true
+
+max_selected_galaxies: 6
+allow_mock_data: false

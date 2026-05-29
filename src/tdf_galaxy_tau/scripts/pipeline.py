@@ -12,8 +12,11 @@ from tdf_galaxy_tau.metrics.information_criteria import aic, bic, model_paramete
 from tdf_galaxy_tau.models.baryonic import add_baryonic_column
 from tdf_galaxy_tau.plotting.diagnostics import write_plot_warning_report
 from tdf_galaxy_tau.plotting.rotation_curves import plot_rotation_curve
-from tdf_galaxy_tau.plotting.tau_profiles import plot_tau_profile
-from tdf_galaxy_tau.reconstruction.radial_tau import TauReconstructionConfig, reconstruct_radial_tau_profile
+from tdf_galaxy_tau.plotting.tau_profiles import plot_tau_profile_diagnostic
+from tdf_galaxy_tau.reconstruction.radial_tau import (
+    load_reconstruction_config,
+    reconstruct_radial_tau_profile,
+)
 
 
 MOCK_WARNING = "No observational claim can be made from mock data."
@@ -30,7 +33,7 @@ def run_pipeline(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     run_config = _load_config(Path(args.config))
-    recon_config = _load_config(Path("configs/reconstruction.yaml"))
+    recon_cfg = load_reconstruction_config(Path("configs/reconstruction.yaml"))
 
     input_csv = Path(run_config.get("input_csv", "data/processed/sparc_subset_processed.csv"))
 
@@ -52,15 +55,8 @@ def run_pipeline(argv: list[str] | None = None) -> int:
     tau_rows = []
     metric_rows = []
     figure_dir = Path(run_config.get("output_figure_dir", "outputs/figures"))
-    k_tau = float(recon_config.get("k_tau", 1.0))
-    negative_policy = str(recon_config.get("negative_residual_policy", "allow_signed"))
-
     for galaxy_id, group in data.groupby("galaxy_id", sort=False):
-        recon = reconstruct_radial_tau_profile(
-            group,
-            galaxy_id,
-            TauReconstructionConfig(k_tau=k_tau, negative_residual_policy=negative_policy),
-        )
+        recon = reconstruct_radial_tau_profile(group, galaxy_id, recon_cfg)
         tau_rows.append(recon)
 
         model_v = group["v_bar_kms"].to_numpy()
@@ -83,7 +79,7 @@ def run_pipeline(argv: list[str] | None = None) -> int:
                 "bic": bic(chi2, n_points, n_params),
                 "smoothness_penalty": 0.0,
                 "data_mode": "mock" if using_mock else "observational",
-                "negative_residual_policy": negative_policy,
+                "negative_residual_policy": recon_cfg.negative_residual_policy,
             }
         )
 
@@ -94,11 +90,11 @@ def run_pipeline(argv: list[str] | None = None) -> int:
             v_bar=model_v,
             output_path=figure_dir / f"{galaxy_id}_rotation.png",
         )
-        _ = plot_tau_profile(
-            galaxy_id=galaxy_id,
-            radius=recon["r_kpc"].to_numpy(),
-            tau=recon["tau_reconstructed"].to_numpy(),
-            output_path=figure_dir / f"{galaxy_id}_tau.png",
+        _ = plot_tau_profile_diagnostic(
+            galaxy_id,
+            recon["r_kpc"].to_numpy(),
+            recon["tau_reconstructed"].to_numpy(),
+            figure_dir / f"{galaxy_id}_tau.png",
         )
 
     tau_df = pd.concat(tau_rows, ignore_index=True)

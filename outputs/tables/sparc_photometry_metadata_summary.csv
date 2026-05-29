@@ -1,0 +1,8 @@
+field,n_total,n_finite,n_missing,fraction_missing
+distance_mpc,175,175,0,0.0
+inclination_deg,175,175,0,0.0
+luminosity_3p6_lsun,175,175,0,0.0
+disk_scale_length_kpc,175,175,0,0.0
+central_surface_brightness,175,175,0,0.0
+morphological_type,175,175,0,0.0
+n_galaxies,175,175,0,0.0

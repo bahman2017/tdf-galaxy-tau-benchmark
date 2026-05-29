@@ -1,0 +1,70 @@
+\begin{thebibliography}{10}
+
+\bibitem{akaike1974}
+Hirotugu Akaike.
+\newblock A new look at the statistical model identification.
+\newblock {\em IEEE Transactions on Automatic Control}, 19:716--723, 1974.
+
+\bibitem{arlot2010}
+Sylvain Arlot and Alain Celisse.
+\newblock {\em A Survey of Cross-Validation Procedures for Model Selection},
+  volume~4.
+\newblock 2010.
+
+\bibitem{burkert1995}
+A.~Burkert.
+\newblock The structure of dark matter halos in dwarf galaxies.
+\newblock {\em Astrophysical Journal Letters}, 447:L25--L28, 1995.
+
+\bibitem{famaey2012}
+Benoit Famaey and Stacy~S. McGaugh.
+\newblock Modified newtonian dynamics (mond): Observational phenomenology and
+  relativistic extensions.
+\newblock {\em Living Reviews in Relativity}, 15:10, 2012.
+
+\bibitem{geisser1975}
+Seymour Geisser.
+\newblock The predictive sample reuse method with applications.
+\newblock {\em Journal of the American Statistical Association}, 70:320--328,
+  1975.
+
+\bibitem{lelli2016sparc}
+Federico Lelli, Stacy~S. McGaugh, and James~M. Schombert.
+\newblock {SPARC}: Mass models for 175 disk galaxies with spitzer photometry
+  and accurate rotation curves.
+\newblock {\em Astronomical Journal}, 152(6):157, 2016.
+
+\bibitem{tdf_benchmark2026}
+Bahman Masarrat.
+\newblock Tdf galaxy tau benchmark: Controlled sparc expansion pipeline.
+\newblock Software repository (tdf-galaxy-tau-benchmark), 2026.
+\newblock Reproducible benchmark code and frozen audit outputs; Phases 5B--5E.
+
+\bibitem{mcgaugh2016}
+Stacy~S. McGaugh, Federico Lelli, and James~M. Schombert.
+\newblock Radial acceleration relation in rotationally supported galaxies.
+\newblock {\em Physical Review Letters}, 117:201101, 2016.
+
+\bibitem{milgrom1983}
+Mordehai Milgrom.
+\newblock A modification of the newtonian dynamics as a possible alternative to
+  the hidden mass hypothesis.
+\newblock {\em Astrophysical Journal}, 270:365--370, 1983.
+
+\bibitem{navarro1997}
+Julio~F. Navarro, Carlos~S. Frenk, and Simon D.~M. White.
+\newblock A universal density profile from hierarchical clustering.
+\newblock {\em Astrophysical Journal}, 490:493--508, 1997.
+
+\bibitem{schwarz1978}
+Gideon~E. Schwarz.
+\newblock Estimating the dimension of a model.
+\newblock {\em Annals of Statistics}, 6:461--464, 1978.
+
+\bibitem{stone1974}
+Mervyn Stone.
+\newblock Cross-validatory choice and assessment of statistical predictions.
+\newblock {\em Journal of the Royal Statistical Society Series B}, 36:111--147,
+  1974.
+
+\end{thebibliography}

@@ -1,0 +1,403 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+import pandas as pd
+
+CORE_STATEMENT = (
+    "In the pre-registered controlled expansion_20 cohort, the primary conservative "
+    "tdf_3knot model achieves robust holdout success in 15 of 20 galaxies. Three "
+    "additional galaxies show sensitivity-recovery where tdf_5knot improves "
+    "substantially but is not counted as primary success. NGC7814 remains the only "
+    "all-TDF holdout failure, and UGC00128 remains a mixed near-tie case."
+)
+
+PROHIBITED_PHRASES = (
+    "dark matter is disproven",
+    "ΛCDM is replaced",
+    "full SPARC validation",
+    "lensing confirmed",
+    "universal τ-profile discovered",
+)
+
+def latex_tdf_model(knot: str) -> str:
+    """Safe inline model name with trailing space (knot is ``3knot`` or ``5knot``)."""
+    return rf"\texttt{{tdf\_{knot}}}\ "
+
+
+def latex_cohort_name(name: str) -> str:
+    """Escape cohort identifiers for LaTeX (e.g. expansion_20)."""
+    return name.replace("_", r"\_")
+
+
+REQUIRED_CAVEAT_PHRASES = (
+    "controlled expansion_20",
+    "full-sparc validation",
+    "does not disprove dark matter",
+    "does not replace",
+    "lensing is not tested",
+    "no universal",
+    "tdf_3knot",
+    "primary",
+    "tdf_5knot",
+    "sensitivity",
+    "no final m/l calibration",
+    "not measured",
+)
+
+# Figure blocks in journal order (Fig.1--Fig.7)
+FIG_WORKFLOW = r"""
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/fig1_benchmark_workflow.png}
+  \caption{End-to-end benchmark workflow (ingestion through claim reconciliation).
+  The solid path is the primary conservative pipeline (\texttt{tdf\_3knot}); the dashed
+  branch is the high-flexibility sensitivity pipeline (\texttt{tdf\_5knot}), which is
+  audited separately and excluded from primary success counts.}
+  \label{fig:workflow}
+\end{figure}
+"""
+
+FIG_EXPANSION_SUMMARY = r"""
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.92\linewidth]{figures/fig2_expansion12_vs_20_summary.png}
+  \caption{Failure-mode counts for expansion-12 ($n{=}12$) and expansion-20
+  ($n{=}20$). \textbf{Robust TDF success} (primary, \texttt{tdf\_3knot}) is shown separately
+  from \textbf{sensitivity-recovery} (\texttt{tdf\_5knot} diagnostic only).}
+  \label{fig:expansion-summary}
+\end{figure}
+"""
+
+FIG_SUCCESSES = r"""
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/fig3_representative_successes.png}
+  \caption{Representative robust-success examples (DDO154, NGC2403, NGC3198). Panels are
+  illustrative subset cases only, not a complete census of successes.}
+  \label{fig:successes}
+\end{figure}
+"""
+
+FIG_NGC7814 = r"""
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/fig4_ngc7814_failure.png}
+  \caption{NGC7814 canonical all-TDF even/odd holdout failure. This is a
+  \emph{descriptive} benchmark label for external reporting, not causal proof about
+  baryons, halos, or dark matter.}
+  \label{fig:ngc7814}
+\end{figure}
+"""
+
+FIG_SENSITIVITY = r"""
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/fig5_sensitivity_recovery_cases.png}
+  \caption{Sensitivity-recovery galaxies (NGC5055, UGC05253, UGC12506).
+  Improved \texttt{tdf\_5knot} holdout performance is shown for diagnosis only and is
+  \textbf{not} counted toward the 15/20 primary robust-success total.}
+  \label{fig:sensitivity}
+\end{figure}
+"""
+
+FIG_HOLDOUT_RMSE = r"""
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth]{figures/fig6_holdout_rmse_comparison.png}
+  \caption{Expansion-20 even/odd holdout RMSE by galaxy. Solid bars:
+  \texttt{tdf\_3knot} (primary), NFW, and MOND; \textbf{hatched}
+  \texttt{tdf\_5knot} bars are sensitivity-only and not used for primary claims.}
+  \label{fig:holdout-rmse}
+\end{figure}
+"""
+
+FIG_CLAIMS = r"""
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.95\linewidth]{figures/fig7_claim_boundary_map.png}
+  \caption{External claim-boundary map for audited claims C20-A--C20-H (supported,
+  caveat, sensitivity-only, not supported, prohibited).}
+  \label{fig:claims}
+\end{figure}
+"""
+
+
+def _core_latex(*, hyphenate_expansion_cohort: bool = False) -> str:
+    s = CORE_STATEMENT
+    if hyphenate_expansion_cohort:
+        s = s.replace("controlled expansion_20 cohort", "controlled expansion-20 cohort")
+    else:
+        s = s.replace("expansion_20", latex_cohort_name("expansion_20"))
+    s = s.replace("tdf_5knot", latex_tdf_model("5knot"))
+    s = s.replace("tdf_3knot", latex_tdf_model("3knot"))
+    return s
+
+
+TDF_EQUATIONS_BLOCK = r"""
+\subsection{Benchmark definition}
+We decompose the observed rotation curve into baryonic and TDF-mediated contributions,
+\begin{equation}
+  v_{\mathrm{obs}}^2(r) = v_{\mathrm{bar}}^2(r) + v_{\tau}^2(r),
+  \label{eq:vobs}
+\end{equation}
+with fixed catalog baryons $v_{\mathrm{bar}}^2 = v_{\mathrm{gas}}^2 + v_{\mathrm{disk}}^2 + v_{\mathrm{bulge}}^2$.
+The TDF closure used in this benchmark is
+\begin{equation}
+  v_{\tau}^2(r) = r\, K_{\tau}\,\frac{d\tau}{dr},
+  \label{eq:vtau}
+\end{equation}
+where $K_{\tau}$ is a fixed dimensionless coupling held constant across the cohort in the primary
+analysis. Given $v_{\mathrm{obs}}(r)$ and $v_{\mathrm{bar}}(r)$, the direct reconstruction law is
+\begin{equation}
+  \frac{d\tau}{dr} = \frac{v_{\mathrm{obs}}^2(r) - v_{\mathrm{bar}}^2(r)}{r\, K_{\tau}}.
+  \label{eq:dtaudr}
+\end{equation}
+Equation~(\ref{eq:dtaudr}) defines a \emph{galaxy-specific} $\tau(r)$ profile for each system.
+The algebraic reconstruction law is universal; we do \textbf{not} claim a universal functional
+$\tau(r)$ shape across galaxies. Repository diagnostic pointwise reconstruction from
+Eq.~(\ref{eq:dtaudr}) is not used as a primary fitted competitor.
+
+\subsection{Fitted knot regularization}
+Fitted models (\texttt{tdf\_3knot}, \texttt{tdf\_5knot}) are low-parameter piecewise-linear
+regularizations of $d\tau/dr$ with knot amplitudes optimized on training radii during holdout
+evaluation. \texttt{tdf\_3knot} is the \textbf{primary conservative} parameterization;
+\texttt{tdf\_5knot} increases flexibility and is reported only as a sensitivity diagnostic.
+"""
+
+BURKERT_SCOPE_BLOCK = r"""
+\paragraph{Burkert baseline scope.}
+Burkert \cite{burkert1995} halos are implemented for completeness but are not emphasized in the
+primary holdout gate because, under the frozen log-space multistart halo protocol, Burkert fits frequently exhibit
+boundary-limited parameters and high reduced $\chi^2$ on this subset. NFW \cite{navarro1997} and
+MOND \cite{milgrom1983,famaey2012} are the headline non-TDF comparators for
+\texttt{robust\_tdf\_success}; Burkert results remain in pipeline tables for reproducibility.
+"""
+
+
+def _load_stat_prose(root: Path | str | None) -> str:
+    if root is None:
+        return ""
+    root = Path(root)
+    from tdf_galaxy_tau.analysis.reviewer_analysis import (
+        build_statistical_summary,
+        format_statistical_prose,
+    )
+
+    stats_path = root / "outputs/tables/paper_statistical_summary.csv"
+    if stats_path.is_file():
+        return format_statistical_prose(pd.read_csv(stats_path))
+    failure_path = root / "outputs/tables/expansion20_failure_mode_summary.csv"
+    if failure_path.is_file():
+        return format_statistical_prose(build_statistical_summary(pd.read_csv(failure_path)))
+    return ""
+
+
+def build_manuscript_body(*, stat_prose: str = "") -> str:
+    core = _core_latex()
+    abstract_core = _core_latex(hyphenate_expansion_cohort=True)
+    stat_block = stat_prose if stat_prose else (
+        r"Descriptive holdout statistics are reported in "
+        r"\texttt{outputs/tables/paper\_statistical\_summary.csv} (Phase~5F-E)."
+    )
+    return rf"""
+\maketitle
+
+\begin{{abstract}}
+We benchmark a Time-Delay Field (TDF) radial reconstruction framework on a pre-registered,
+controlled subset of SPARC rotation curves \cite{{lelli2016sparc}}. This is \emph{{not}}
+full-SPARC validation: results apply to the expansion-20 cohort ($n{{=}}20$) and the nested
+expansion-12 cohort ($n{{=}}12$). The primary model is \texttt{{tdf\_3knot}};
+\texttt{{tdf\_5knot}} is a sensitivity/high-flexibility diagnostic only. We use train-only
+even/odd holdout comparisons against NFW \cite{{navarro1997}} and MOND \cite{{milgrom1983}}
+baselines at fixed canonical baryons and fixed $K_\tau$. {abstract_core} The analysis does not
+disprove dark matter, does not replace $\Lambda$CDM, does not test lensing, claims no
+universal $\tau$-profile, and makes no final $M/L$ calibration claim.
+\end{{abstract}}
+
+\section{{Introduction}}
+Galaxy rotation curves provide a disciplined test of how well models reproduce observed
+circular speeds beyond the baryonic contribution \cite{{lelli2016sparc}}. This paper is a
+\emph{{controlled benchmark}} of TDF as a reconstruction framework---not a dark-matter-disproof
+or $\Lambda$CDM-replacement study. Predictive holdout validation matters because in-sample
+fits can reward extra flexibility; we therefore require \texttt{{tdf\_3knot}} to perform on
+held-out radii against standard baselines before counting primary success. We extend an earlier six-galaxy pilot benchmark (repository history) that established an
+explicit NGC7814 failure mode to pre-registered expansion-12 and expansion-20 cohorts with
+frozen failure-mode taxonomy \cite{{tdf_benchmark2026}}.
+
+Many rotation-curve studies optimize in-sample fit quality. Here we prioritize predictive
+holdout consistency to reduce flexibility-driven overfitting \cite{{geisser1975,arlot2010}}.
+We do not claim that holdout success ``proves'' TDF at cosmological level; it is a conservative
+empirical gate on the controlled subset.
+
+\section{{TDF reconstruction framework}}
+TDF reconstructs a radial $\tau(r)$ from rotation-curve residuals relative to fixed SPARC
+baryonic components \cite{{lelli2016sparc,mcgaugh2016}}.
+{TDF_EQUATIONS_BLOCK}
+
+\section{{Controlled SPARC benchmark protocol}}
+The pipeline ingests SPARC \texttt{{rotmod}} data, applies the frozen expansion plan, reconstructs
+$\tau$, fits NFW/Burkert/MOND baselines, fits TDF knot models, runs holdout validation, audits
+failure modes, and reconciles claims (Figure~\ref{{fig:workflow}}). All expansion\_20 numbers
+are taken from frozen pipeline outputs; this editing phase does not rerun fits or alter tables.
+
+{FIG_WORKFLOW}
+
+\section{{Data and cohort selection}}
+Galaxies enter expansion\_20 in a pre-registered order (Table~\ref{{tab:cohort}}).
+expansion\_12 is the nested twelve-galaxy subset used for intermediate auditing; expansion\_20
+is the main reported cohort. Membership is fixed in \texttt{{sparc\_subset\_expansion\_plan.csv}}
+with no post-hoc cherry-picking.
+
+\input{{tables/table1_cohort_summary.tex}}
+
+\section{{Baseline models}}
+\subsection{{Baryonic-only}}
+$v_{{\mathrm{{bar}}}}^2 = v_{{\mathrm{{gas}}}}^2 + v_{{\mathrm{{disk}}}}^2 + v_{{\mathrm{{bulge}}}}^2$
+from catalog inputs without fitting $M/L$ in the primary benchmark.
+\subsection{{NFW and Burkert}}
+NFW \cite{{navarro1997}} and Burkert \cite{{burkert1995}} halos use log-space multistart refits;
+boundary-limited solutions and high reduced $\chi^2$ may occur and should not be overinterpreted.
+\subsection{{MOND and RAR}}
+MOND \cite{{milgrom1983,famaey2012}} with fitted $a_0$ and optional RAR \cite{{mcgaugh2016}}
+are empirical rotation-curve baselines only, not cosmological or lensing validations of MOND.
+{BURKERT_SCOPE_BLOCK}
+
+\section{{Holdout validation methodology}}
+\textbf{{Primary split:}} even/odd index holdout with train-only refit. \textbf{{Classification
+definitions (expansion\_20):}}
+\begin{{itemize}}
+  \item \textbf{{robust\_tdf\_success:}} \texttt{{tdf\_3knot}} beats both NFW refit and MOND
+  fit-$a_0$ on even/odd holdout RMSE (primary success).
+  \item \textbf{{sensitivity\_recovery:}} \texttt{{tdf\_3knot}} fails the primary gate but
+  \texttt{{tdf\_5knot}} improves substantially (not primary success).
+  \item \textbf{{tdf\_failure\_mode:}} all TDF knot variants fail the primary holdout gate
+  (NGC7814).
+  \item \textbf{{mixed\_result:}} near-tie among models without a clear primary win (UGC00128).
+\end{{itemize}}
+Additional splits (blocked radial thirds, $k$-fold) are diagnostic
+\cite{{stone1974,arlot2010}}. Model parsimony is summarized with AIC/BIC in pipeline tables
+\cite{{akaike1974,schwarz1978}}; the primary gate here is predictive holdout RMSE, not in-sample
+information criteria alone. Table~\ref{{tab:holdout-rmse}} lists per-galaxy even/odd RMSE.
+
+\input{{tables/table2_holdout_rmse.tex}}
+
+\subsection{{Descriptive holdout statistics}}
+{stat_block}
+We report bootstrap percentile intervals for cohort fractions as \emph{{descriptive}} uncertainty
+brackets only; they are not hypothesis tests and do not establish cosmological significance.
+
+\section{{Results}}
+\subsection{{expansion\_20 (main cohort)}}
+{core}
+Table~\ref{{tab:classification}} summarizes cohort-level counts. Figure~\ref{{fig:expansion-summary}}
+contrasts expansion\_12 and expansion\_20 classifications. Representative robust-success rotation
+curves (subset examples only) appear in Figure~\ref{{fig:successes}}.
+
+\input{{tables/table3_classification_summary.tex}}
+
+{FIG_EXPANSION_SUMMARY}
+
+{FIG_SUCCESSES}
+
+\subsection{{Primary success counts and Table~2 interpretation}}
+Primary success is defined only through \texttt{{tdf\_3knot}}: 15/20 robust successes. Seventeen
+galaxies show \texttt{{tdf\_3knot}} beating MOND and fifteen beating NFW on even/odd holdout, but
+robust success requires \textbf{{both}}. Table~\ref{{tab:holdout-rmse}} shows a heterogeneous
+distribution: most robust-success galaxies exhibit primary RMSE at or below NFW/MOND, while
+\textbf{{NGC7814}} is a decisive counterexample where all TDF variants remain poor on holdout
+despite competitive in-sample flexibility. Three \texttt{{sensitivity\_recovery}} galaxies
+(NGC5055, UGC05253, UGC12506) illustrate why \texttt{{tdf\_5knot}} is reported separately: large
+holdout gains can reflect added knot freedom rather than validated primary-model superiority.
+We do not extrapolate cohort fractions to the full SPARC catalog.
+
+\subsection{{expansion\_12 (nested context)}}
+expansion-12 ($n{{=}}12$) is a nested audit cohort: eight robust primary successes before
+the expansion-20 taxonomy refinements (e.g.\ NGC5055 reclassified as sensitivity-recovery in
+expansion-20). We report expansion-12 for continuity but treat expansion-20 as the main result.
+
+\section{{Failure modes and sensitivity recovery}}
+\textbf{{NGC7814}} remains the sole canonical all-TDF holdout failure (Figure~\ref{{fig:ngc7814}}).
+\textbf{{NGC5055}}, \textbf{{UGC05253}}, and \textbf{{UGC12506}} exhibit sensitivity-recovery:
+\texttt{{tdf\_5knot}} reduces holdout error markedly but these are \textbf{{not}} primary successes
+(Figure~\ref{{fig:sensitivity}}). \textbf{{UGC00128}} is a mixed near-tie (NFW marginally best).
+Per-galaxy holdout RMSE for all twenty galaxies is shown in Figure~\ref{{fig:holdout-rmse}}.
+Table~\ref{{tab:nonrobust}} lists the five non-robust cases.
+
+\input{{tables/table4_nonrobust_diagnostics.tex}}
+
+{FIG_NGC7814}
+
+{FIG_SENSITIVITY}
+
+{FIG_HOLDOUT_RMSE}
+
+\section{{Limitations}}
+\begin{{itemize}}
+  \item \textbf{{Scope:}} controlled expansion\_20 only---not full-SPARC validation.
+  \item \textbf{{Baryons and $M/L$:}} fixed canonical decomposition; no final M/L calibration claim.
+  \item \textbf{{$K_\tau$:}} held fixed in the benchmark; $K_\tau$ is not measured or inferred in this study.
+  \item \textbf{{Cosmology and lensing:}} does not disprove dark matter; does not replace
+  $\Lambda$CDM; lensing is not tested.
+  \item \textbf{{Flexibility:}} \texttt{{tdf\_5knot}} carries higher overfitting/flexibility risk and
+  is sensitivity-only.
+  \item \textbf{{$\tau$ universality:}} per-galaxy diagnostics only; no universal $\tau$-profile claim.
+\end{{itemize}}
+
+\input{{tables/table6_assumptions_limitations.tex}}
+
+\section{{Future work}}
+Full-catalog processing, lensing tests, two-dimensional $\tau$ maps, and photometry-calibrated
+$M/L$ priors require protocol amendments. Blocked-holdout maps for UGC12506 may localize radial
+failure without changing frozen primary labels.
+
+\section{{Conclusion}}
+On the pre-registered controlled expansion\_20 subset, \texttt{{tdf\_3knot}} achieves robust
+even/odd holdout success in 15 of 20 galaxies at fixed baryons and $K_\tau$, with three
+sensitivity-recovery cases, one all-TDF failure (NGC7814), and one mixed near-tie (UGC00128).
+TDF is a benchmarked reconstruction framework within explicit claim boundaries, not a
+cosmology-replacement or dark-matter-disproof result.
+
+\appendix
+\section{{Reproducibility appendix}}
+Benchmark: \texttt{{python3 scripts/run\_expansion20\_pipeline.py}}; audit:
+\texttt{{python3 scripts/build\_controlled\_expansion\_final\_audit.py}}; tables:
+\texttt{{python3 scripts/export\_paper\_tables.py}}; figures:
+\texttt{{python3 scripts/build\_paper\_figures.py}}; PDF:
+\texttt{{python3 scripts/compile\_paper\_pdf.py}}. Repository: \cite{{tdf_benchmark2026}}.
+
+\section{{Claim-boundary appendix}}
+Table~\ref{{tab:claims-matrix}} and Figure~\ref{{fig:claims}} document claims C20-A--C20-H.
+Prohibited external language includes full-SPARC validation, dark-matter disproof, $\Lambda$CDM
+replacement, lensing confirmation, and universal $\tau$-profile discovery.
+
+\input{{tables/table5_claim_traceability.tex}}
+
+{FIG_CLAIMS}
+
+\bibliographystyle{{plain}}
+\bibliography{{references}}
+"""
+
+
+def build_manuscript_tex(root: Path | str | None = None) -> str:
+    stat_prose = _load_stat_prose(root)
+    preamble = r"""\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{url}
+
+\title{TDF Radial Reconstruction on a Preregistered Controlled SPARC Subset:\\
+Holdout Validation, Failure Modes, and Sensitivity-Recovery Cases}
+\author{Bahman Masarrat\\
+Independent Researcher\\
+\href{mailto:bmasarrat@gmail.com}{bmasarrat@gmail.com}}
+\date{\today}
+
+\begin{document}
+"""
+    return preamble + build_manuscript_body(stat_prose=stat_prose) + "\n\\end{document}\n"
