@@ -69,4 +69,5 @@ Zenodo deposit draft: `docs/zenodo_release_notes.md`.
 
 ## Citation
 
-See `CITATION.cff`. Zenodo DOI to be assigned on upload.
+- **Manuscript (Zenodo preprint):** https://doi.org/10.5281/zenodo.20437254  
+- **Software metadata:** `CITATION.cff` (GitHub tag `v0.1.0-expansion20-paper`)

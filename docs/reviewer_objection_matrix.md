@@ -27,4 +27,4 @@ Honest responses for a controlled expansion_20 benchmark. This matrix does not e
 | R21 | Is 15/20 statistically strong? | We report descriptive fractions with bootstrap intervals, not discovery claims. | paper_statistical_summary.csv; no p-value language. | Larger preregistered cohort. |
 | R22 | Why UGC00128 mixed? | NFW marginally best; tdf_5knot worse than tdf_3knot on holdout. | mixed_result class; excluded from primary success. | Finer radial splits for near-tie cases. |
 | R23 | Can TDF win in-sample but fail holdout? | Yes; NGC5055-style cases motivated sensitivity_recovery class. | Holdout-first primary gate; in-sample AIC not primary. | Publish in-sample vs holdout delta table in supplement. |
-| R24 | Is the code reproducible? | Yes—frozen scripts and CSV lineage from ingestion to audit. | Reproducibility appendix; repository misc citation. | Zenodo DOI at release. |
+| R24 | Is the code reproducible? | Yes—frozen scripts and CSV lineage from ingestion to audit. | Reproducibility appendix; repository misc citation. | Manuscript preprint DOI [10.5281/zenodo.20437254](https://doi.org/10.5281/zenodo.20437254). |

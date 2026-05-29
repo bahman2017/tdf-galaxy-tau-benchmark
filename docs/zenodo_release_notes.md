@@ -52,16 +52,33 @@ python3 scripts/compile_paper_pdf.py
 
 ## Citation
 
+**Published Zenodo preprint (manuscript PDF):**
+
+- **DOI:** [10.5281/zenodo.20437254](https://doi.org/10.5281/zenodo.20437254)
+- **Record:** https://zenodo.org/records/20437254
+
+```bibtex
+@misc{masarrat2026tdf_preprint,
+  author       = {Masarrat, Bahman},
+  title        = {TDF Galaxy Tau Benchmark: Controlled SPARC Expansion-20 Rotation-Curve Benchmark with Holdout Validation, Failure Modes, and Sensitivity-Recovery Analysis},
+  year         = {2026},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.20437254},
+  url          = {https://doi.org/10.5281/zenodo.20437254}
+}
+```
+
+**Software repository** (separate from the preprint deposit):
+
 ```bibtex
 @software{tdf_galaxy_tau_benchmark2026,
   title  = {tdf-galaxy-tau-benchmark: Controlled SPARC expansion-20 TDF holdout benchmark},
   author = {Masarrat, Bahman},
   year   = {2026},
-  url    = {https://github.com/bahman2017/tdf-galaxy-tau-benchmark}
+  url    = {https://github.com/bahman2017/tdf-galaxy-tau-benchmark},
+  version = {v0.1.0-expansion20-paper}
 }
 ```
-
-**Zenodo DOI:** *placeholder — assign on upload.*
 
 ## Version
 

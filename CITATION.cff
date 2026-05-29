@@ -10,6 +10,12 @@ authors:
 repository-code: "https://github.com/bahman2017/tdf-galaxy-tau-benchmark"
 url: "https://github.com/bahman2017/tdf-galaxy-tau-benchmark"
 license: MIT
+related-identifiers:
+  - type: doi
+    relation: isSupplementTo
+    value: 10.5281/zenodo.20437254
+    description: Zenodo preprint (manuscript PDF)
+    resource-type: publication-preprint
 abstract: >-
   Controlled rotation-curve benchmark for Time-Delay Field (TDF) radial tau
   reconstruction on a pre-registered 20-galaxy SPARC subset (expansion-20), with

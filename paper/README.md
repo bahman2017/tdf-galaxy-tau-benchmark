@@ -67,6 +67,8 @@ Uses `latexmk` or `pdflatex`/`bibtex` when available; otherwise reports LaTeX un
 
 Authoritative claim language: `docs/paper_ready_claims.md`, `outputs/tables/controlled_expansion_final_claims.csv`.
 
+**Zenodo preprint:** https://doi.org/10.5281/zenodo.20437254
+
 ## Claim boundaries
 
 Do **not** state in the manuscript:
