@@ -1,0 +1,638 @@
+rel_path,category,size_bytes,referenced,reference_hits,action,notes
+.gitignore,keep_core,330,True,.gitignore,keep,project metadata
+CITATION.cff,keep_core,1136,False,,keep,default keep
+README.md,keep_core,4733,True,README.md,keep,project metadata
+RELEASE_NOTES.md,keep_core,2558,False,,keep,default keep
+archive/README.md,keep_docs,1256,True,README.md,keep,archived historical artifact
+archive/docs/TDF_Radial_Reconstruction_on_a_Preregistered_Controlled_SPARC_Subset.pdf,keep_docs,1094660,False,,keep,archived historical artifact
+archive/outputs/figures/Galaxy_A_rotation.png,keep_docs,40912,False,,keep,archived historical artifact
+archive/outputs/figures/Galaxy_A_tau.png,keep_docs,43451,False,,keep,archived historical artifact
+archive/outputs/figures/Galaxy_B_rotation.png,keep_docs,41173,False,,keep,archived historical artifact
+archive/outputs/figures/Galaxy_B_tau.png,keep_docs,47721,False,,keep,archived historical artifact
+configs/ml_priors.yaml,keep_core,2981,True,configs/ml_priors.yaml; ml_priors.yaml,keep,run configuration
+configs/models.yaml,keep_core,1367,True,configs/models.yaml; models.yaml,keep,run configuration
+configs/reconstruction.yaml,keep_core,1167,True,configs/reconstruction.yaml; reconstruction.yaml,keep,run configuration
+configs/sparc_subset.yaml,keep_core,701,True,configs/sparc_subset.yaml; sparc_subset.yaml,keep,run configuration
+configs/subset_expansion.yaml,keep_core,1666,True,configs/subset_expansion.yaml; subset_expansion.yaml,keep,run configuration
+data/processed/README.md,keep_data,50,True,README.md,keep,SPARC raw or processed inputs
+data/processed/sparc/sparc_photometry_metadata.csv,keep_data,40454,True,data/processed/sparc/sparc_photometry_metadata.csv; sparc_photometry_metadata.csv,keep,SPARC raw or processed inputs
+data/processed/sparc/sparc_rotmod_standardized.csv,keep_data,540593,True,data/processed/sparc/sparc_rotmod_standardized.csv; sparc_rotmod_standardized.csv,keep,SPARC raw or processed inputs
+data/raw/README.md,keep_core,43,True,README.md,keep,default keep
+data/raw/sparc/README.md,keep_data,730,True,README.md; data/raw/sparc/README.md,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/CamB_rotmod.dat,keep_data,490,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/D512-2_rotmod.dat,keep_data,283,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/D564-8_rotmod.dat,keep_data,359,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/D631-7_rotmod.dat,keep_data,802,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/DDO064_rotmod.dat,keep_data,714,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/DDO154_rotmod.dat,keep_data,622,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/DDO161_rotmod.dat,keep_data,1458,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/DDO168_rotmod.dat,keep_data,545,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/DDO170_rotmod.dat,keep_data,459,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/ESO079-G014_rotmod.dat,keep_data,797,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/ESO116-G012_rotmod.dat,keep_data,777,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/ESO444-G084_rotmod.dat,keep_data,413,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/ESO563-G021_rotmod.dat,keep_data,1512,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F561-1_rotmod.dat,keep_data,376,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F563-1_rotmod.dat,keep_data,866,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F563-V1_rotmod.dat,keep_data,371,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F563-V2_rotmod.dat,keep_data,556,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F565-V2_rotmod.dat,keep_data,417,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F567-2_rotmod.dat,keep_data,333,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F568-1_rotmod.dat,keep_data,650,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F568-3_rotmod.dat,keep_data,905,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F568-V1_rotmod.dat,keep_data,786,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F571-8_rotmod.dat,keep_data,688,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F571-V1_rotmod.dat,keep_data,420,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F574-1_rotmod.dat,keep_data,722,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F574-2_rotmod.dat,keep_data,333,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F579-V1_rotmod.dat,keep_data,747,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F583-1_rotmod.dat,keep_data,1201,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/F583-4_rotmod.dat,keep_data,627,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/IC2574_rotmod.dat,keep_data,1570,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/IC4202_rotmod.dat,keep_data,1669,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/KK98-251_rotmod.dat,keep_data,742,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0024_rotmod.dat,keep_data,1402,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0055_rotmod.dat,keep_data,1030,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0100_rotmod.dat,keep_data,1027,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0247_rotmod.dat,keep_data,1258,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0289_rotmod.dat,keep_data,1399,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0300_rotmod.dat,keep_data,1200,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0801_rotmod.dat,keep_data,721,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC0891_rotmod.dat,keep_data,992,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC1003_rotmod.dat,keep_data,1714,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC1090_rotmod.dat,keep_data,1225,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC1705_rotmod.dat,keep_data,720,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2366_rotmod.dat,keep_data,1231,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2403_rotmod.dat,keep_data,3384,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2683_rotmod.dat,keep_data,640,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2841_rotmod.dat,keep_data,2532,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2903_rotmod.dat,keep_data,1691,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2915_rotmod.dat,keep_data,1414,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2955_rotmod.dat,keep_data,1313,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2976_rotmod.dat,keep_data,1310,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC2998_rotmod.dat,keep_data,721,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3109_rotmod.dat,keep_data,1180,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3198_rotmod.dat,keep_data,2075,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3521_rotmod.dat,keep_data,2069,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3726_rotmod.dat,keep_data,671,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3741_rotmod.dat,keep_data,993,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3769_rotmod.dat,keep_data,662,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3877_rotmod.dat,keep_data,718,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3893_rotmod.dat,keep_data,582,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3917_rotmod.dat,keep_data,886,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3949_rotmod.dat,keep_data,441,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3953_rotmod.dat,keep_data,487,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3972_rotmod.dat,keep_data,562,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC3992_rotmod.dat,keep_data,531,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4010_rotmod.dat,keep_data,651,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4013_rotmod.dat,keep_data,1810,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4051_rotmod.dat,keep_data,440,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4068_rotmod.dat,keep_data,371,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4085_rotmod.dat,keep_data,436,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4088_rotmod.dat,keep_data,670,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4100_rotmod.dat,keep_data,1226,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4138_rotmod.dat,keep_data,447,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4157_rotmod.dat,keep_data,924,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4183_rotmod.dat,keep_data,1143,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4214_rotmod.dat,keep_data,722,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4217_rotmod.dat,keep_data,1021,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4389_rotmod.dat,keep_data,386,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC4559_rotmod.dat,keep_data,1564,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC5005_rotmod.dat,keep_data,1020,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC5033_rotmod.dat,keep_data,1162,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC5055_rotmod.dat,keep_data,1412,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC5371_rotmod.dat,keep_data,998,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC5585_rotmod.dat,keep_data,1157,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC5907_rotmod.dat,keep_data,994,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC5985_rotmod.dat,keep_data,1717,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC6015_rotmod.dat,keep_data,2126,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC6195_rotmod.dat,keep_data,1255,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC6503_rotmod.dat,keep_data,1509,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC6674_rotmod.dat,keep_data,824,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC6789_rotmod.dat,keep_data,288,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC6946_rotmod.dat,keep_data,2877,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC7331_rotmod.dat,keep_data,1841,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC7793_rotmod.dat,keep_data,2154,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/NGC7814_rotmod.dat,keep_data,982,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/PGC51017_rotmod.dat,keep_data,373,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC00128_rotmod.dat,keep_data,1099,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC00191_rotmod.dat,keep_data,502,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC00634_rotmod.dat,keep_data,291,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC00731_rotmod.dat,keep_data,628,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC00891_rotmod.dat,keep_data,329,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC01230_rotmod.dat,keep_data,614,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC01281_rotmod.dat,keep_data,1188,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC02023_rotmod.dat,keep_data,332,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC02259_rotmod.dat,keep_data,459,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC02455_rotmod.dat,keep_data,466,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC02487_rotmod.dat,keep_data,947,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC02885_rotmod.dat,keep_data,1040,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC02916_rotmod.dat,keep_data,2214,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC02953_rotmod.dat,keep_data,5833,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC03205_rotmod.dat,keep_data,2445,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC03546_rotmod.dat,keep_data,1588,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC03580_rotmod.dat,keep_data,2284,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC04278_rotmod.dat,keep_data,1198,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC04305_rotmod.dat,keep_data,1063,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC04325_rotmod.dat,keep_data,460,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC04483_rotmod.dat,keep_data,447,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC04499_rotmod.dat,keep_data,503,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05005_rotmod.dat,keep_data,603,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05253_rotmod.dat,keep_data,3734,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05414_rotmod.dat,keep_data,374,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05716_rotmod.dat,keep_data,633,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05721_rotmod.dat,keep_data,1112,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05750_rotmod.dat,keep_data,595,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05764_rotmod.dat,keep_data,542,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05829_rotmod.dat,keep_data,587,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05918_rotmod.dat,keep_data,454,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05986_rotmod.dat,keep_data,779,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC05999_rotmod.dat,keep_data,334,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06399_rotmod.dat,keep_data,503,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06446_rotmod.dat,keep_data,847,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06614_rotmod.dat,keep_data,748,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06628_rotmod.dat,keep_data,419,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06667_rotmod.dat,keep_data,498,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06786_rotmod.dat,keep_data,2289,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06787_rotmod.dat,keep_data,3584,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06818_rotmod.dat,keep_data,459,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06917_rotmod.dat,keep_data,598,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06923_rotmod.dat,keep_data,376,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06930_rotmod.dat,keep_data,558,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06973_rotmod.dat,keep_data,539,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC06983_rotmod.dat,keep_data,866,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07089_rotmod.dat,keep_data,634,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07125_rotmod.dat,keep_data,682,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07151_rotmod.dat,keep_data,597,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07232_rotmod.dat,keep_data,288,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07261_rotmod.dat,keep_data,415,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07323_rotmod.dat,keep_data,550,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07399_rotmod.dat,keep_data,550,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07524_rotmod.dat,keep_data,1456,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07559_rotmod.dat,keep_data,411,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07577_rotmod.dat,keep_data,490,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07603_rotmod.dat,keep_data,630,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07608_rotmod.dat,keep_data,455,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07690_rotmod.dat,keep_data,418,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC07866_rotmod.dat,keep_data,413,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC08286_rotmod.dat,keep_data,850,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC08490_rotmod.dat,keep_data,1411,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC08550_rotmod.dat,keep_data,587,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC08699_rotmod.dat,keep_data,2076,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC08837_rotmod.dat,keep_data,460,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC09037_rotmod.dat,keep_data,1136,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC09133_rotmod.dat,keep_data,3437,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC09992_rotmod.dat,keep_data,330,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC10310_rotmod.dat,keep_data,416,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC11455_rotmod.dat,keep_data,1795,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC11557_rotmod.dat,keep_data,642,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC11820_rotmod.dat,keep_data,547,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC11914_rotmod.dat,keep_data,3380,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC12506_rotmod.dat,keep_data,1586,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC12632_rotmod.dat,keep_data,761,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGC12732_rotmod.dat,keep_data,809,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGCA281_rotmod.dat,keep_data,412,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGCA442_rotmod.dat,keep_data,457,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/Rotmod_LTG/UGCA444_rotmod.dat,keep_data,1616,False,,keep,SPARC raw or processed inputs
+data/raw/sparc/photometry/README.md,keep_data,971,True,README.md,keep,SPARC raw or processed inputs
+data/raw/sparc/photometry/SPARC_Table1_vizier_working_copy.tsv,keep_data,11111,True,SPARC_Table1_vizier_working_copy.tsv; data/raw/sparc/photometry/SPARC_Table1_vizier_working_copy.tsv,keep,SPARC raw or processed inputs
+docs/assumptions.md,keep_docs,5393,True,assumptions.md; docs/assumptions.md,keep,project documentation
+docs/controlled_expansion_results.md,keep_docs,1774,True,controlled_expansion_results.md; docs/controlled_expansion_results.md,keep,project documentation
+docs/controlled_subset_audit.md,keep_docs,2702,True,controlled_subset_audit.md; docs/controlled_subset_audit.md,keep,project documentation
+docs/cursor_work_log.md,keep_docs,19893,True,cursor_work_log.md; docs/cursor_work_log.md,keep,project documentation
+docs/data_sources.md,keep_docs,1984,True,data_sources.md; docs/data_sources.md,keep,project documentation
+docs/expansion12_failure_mode_analysis.md,keep_docs,1640,True,docs/expansion12_failure_mode_analysis.md; expansion12_failure_mode_analysis.md,keep,project documentation
+docs/expansion12_radial_residual_maps.md,keep_docs,1513,True,docs/expansion12_radial_residual_maps.md; expansion12_radial_residual_maps.md,keep,project documentation
+docs/expansion12_results.md,keep_docs,1558,True,docs/expansion12_results.md; expansion12_results.md,keep,project documentation
+docs/expansion20_failure_mode_analysis.md,keep_docs,1393,True,docs/expansion20_failure_mode_analysis.md; expansion20_failure_mode_analysis.md,keep,project documentation
+docs/expansion20_results.md,keep_docs,1901,True,docs/expansion20_results.md; expansion20_results.md,keep,project documentation
+docs/failure_mode_analysis.md,keep_docs,1881,True,docs/failure_mode_analysis.md; failure_mode_analysis.md,keep,project documentation
+docs/ktau_sensitivity.md,keep_docs,1283,True,docs/ktau_sensitivity.md; ktau_sensitivity.md,keep,project documentation
+docs/limitations.md,keep_docs,6473,True,docs/limitations.md; limitations.md,keep,project documentation
+docs/m33_to_multigalaxy_transition.md,keep_docs,768,False,,keep,project documentation
+docs/ml_prior_framework.md,keep_docs,3415,True,docs/ml_prior_framework.md; ml_prior_framework.md,keep,project documentation
+docs/ml_scaled_baseline_comparison.md,keep_docs,2236,True,docs/ml_scaled_baseline_comparison.md; ml_scaled_baseline_comparison.md,keep,project documentation
+docs/ml_sensitivity_audit.md,keep_docs,1527,True,docs/ml_sensitivity_audit.md; ml_sensitivity_audit.md,keep,project documentation
+docs/ngc7814_failure_mode.md,keep_docs,6152,True,docs/ngc7814_failure_mode.md; ngc7814_failure_mode.md,keep,project documentation
+docs/normalized_tau_patterns.md,keep_docs,3159,True,docs/normalized_tau_patterns.md; normalized_tau_patterns.md,keep,project documentation
+docs/paper_outline.md,keep_docs,2762,True,docs/paper_outline.md; paper_outline.md,keep,project documentation
+docs/paper_ready_claims.md,keep_docs,8410,True,docs/paper_ready_claims.md; paper_ready_claims.md,keep,project documentation
+docs/photometry_informed_ml_priors.md,keep_docs,1673,True,docs/photometry_informed_ml_priors.md; photometry_informed_ml_priors.md,keep,project documentation
+docs/pre_submission_checklist.md,keep_docs,1309,True,docs/pre_submission_checklist.md; pre_submission_checklist.md,keep,project documentation
+docs/project_plan.md,keep_docs,1019,False,,keep,project documentation
+docs/project_status.md,keep_docs,5079,True,docs/project_status.md; project_status.md,keep,project documentation
+docs/repository_cleanup_plan.md,keep_docs,3357,True,docs/repository_cleanup_plan.md; repository_cleanup_plan.md,keep,project documentation
+docs/repository_map.md,keep_docs,3139,True,docs/repository_map.md; repository_map.md,keep,project documentation
+docs/reproducibility_commands.md,keep_docs,1647,True,docs/reproducibility_commands.md; reproducibility_commands.md,keep,project documentation
+docs/results_summary.md,keep_docs,6683,True,docs/results_summary.md; results_summary.md,keep,project documentation
+docs/reviewer_objection_matrix.md,keep_docs,5336,True,docs/reviewer_objection_matrix.md; reviewer_objection_matrix.md,keep,project documentation
+docs/roadmap.md,keep_docs,326,False,,keep,project documentation
+docs/sparc_subset_selection.md,keep_docs,1793,True,docs/sparc_subset_selection.md; sparc_subset_selection.md,keep,project documentation
+docs/subset_expansion_protocol.md,keep_docs,1470,True,docs/subset_expansion_protocol.md; subset_expansion_protocol.md,keep,project documentation
+docs/theory_summary.md,keep_docs,655,False,,keep,project documentation
+docs/zenodo_release_notes.md,keep_docs,2425,True,docs/zenodo_release_notes.md; zenodo_release_notes.md,keep,project documentation
+outputs/figures/README.md,keep_outputs_frozen,41,True,README.md,keep,referenced output artifact
+outputs/figures/sparc_subset/DDO154_baseline_rotation_comparison.png,keep_outputs_frozen,65673,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_baseline_rotation_comparison_refit.png,keep_outputs_frozen,67062,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_baseline_with_mond_rotation_comparison.png,keep_outputs_frozen,88339,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_full_model_rotation_comparison.png,keep_outputs_frozen,105056,True,DDO154_full_model_rotation_comparison.png; figures/sparc_subset/DDO154_full_model_rotation_comparison.png; outputs/figures/sparc_subset/DDO154_full_model_rotation_comparison.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_rotation_baryonic_residual.png,keep_outputs_frozen,78733,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_tau_gradient.png,keep_outputs_frozen,73455,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_tau_profile.png,keep_outputs_frozen,66433,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_tdf_knot_tau_gradient.png,keep_outputs_frozen,66251,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/DDO154_tdf_knot_tau_profile.png,keep_outputs_frozen,60567,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_baseline_rotation_comparison.png,keep_outputs_frozen,74416,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_baseline_rotation_comparison_refit.png,keep_outputs_frozen,76465,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_baseline_with_mond_rotation_comparison.png,keep_outputs_frozen,95254,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_full_model_rotation_comparison.png,keep_outputs_frozen,113514,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_rotation_baryonic_residual.png,keep_outputs_frozen,96064,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_tau_gradient.png,keep_outputs_frozen,83639,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_tau_profile.png,keep_outputs_frozen,62561,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_tdf_knot_tau_gradient.png,keep_outputs_frozen,75469,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/IC2574_tdf_knot_tau_profile.png,keep_outputs_frozen,63480,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_baseline_rotation_comparison.png,keep_outputs_frozen,81016,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_baseline_rotation_comparison_refit.png,keep_outputs_frozen,81363,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_baseline_with_mond_rotation_comparison.png,keep_outputs_frozen,103529,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_full_model_rotation_comparison.png,keep_outputs_frozen,112734,True,NGC2403_full_model_rotation_comparison.png; figures/sparc_subset/NGC2403_full_model_rotation_comparison.png; outputs/figures/sparc_subset/NGC2403_full_model_rotation_comparison.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_rotation_baryonic_residual.png,keep_outputs_frozen,89625,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_tau_gradient.png,keep_outputs_frozen,74522,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_tau_profile.png,keep_outputs_frozen,64684,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_tdf_knot_tau_gradient.png,keep_outputs_frozen,63472,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC2403_tdf_knot_tau_profile.png,keep_outputs_frozen,65833,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_baseline_rotation_comparison.png,keep_outputs_frozen,75102,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_baseline_rotation_comparison_refit.png,keep_outputs_frozen,75569,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_baseline_with_mond_rotation_comparison.png,keep_outputs_frozen,96058,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_full_model_rotation_comparison.png,keep_outputs_frozen,109416,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_rotation_baryonic_residual.png,keep_outputs_frozen,79437,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_tau_gradient.png,keep_outputs_frozen,59944,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_tau_profile.png,keep_outputs_frozen,78660,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_tdf_knot_tau_gradient.png,keep_outputs_frozen,53056,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC3198_tdf_knot_tau_profile.png,keep_outputs_frozen,59858,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_baseline_rotation_comparison.png,keep_outputs_frozen,80906,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_baseline_rotation_comparison_refit.png,keep_outputs_frozen,81409,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_baseline_with_mond_rotation_comparison.png,keep_outputs_frozen,107449,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_full_model_rotation_comparison.png,keep_outputs_frozen,123731,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_rotation_baryonic_residual.png,keep_outputs_frozen,83702,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_tau_gradient.png,keep_outputs_frozen,66842,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_tau_profile.png,keep_outputs_frozen,78619,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_tdf_knot_tau_gradient.png,keep_outputs_frozen,56468,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC6503_tdf_knot_tau_profile.png,keep_outputs_frozen,62132,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_baseline_rotation_comparison.png,keep_outputs_frozen,79713,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_baseline_rotation_comparison_refit.png,keep_outputs_frozen,81362,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_baseline_with_mond_rotation_comparison.png,keep_outputs_frozen,105165,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_full_model_rotation_comparison.png,keep_outputs_frozen,118347,True,NGC7814_full_model_rotation_comparison.png; figures/sparc_subset/NGC7814_full_model_rotation_comparison.png; outputs/figures/sparc_subset/NGC7814_full_model_rotation_comparison.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_rotation_baryonic_residual.png,keep_outputs_frozen,87623,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_tau_gradient.png,keep_outputs_frozen,69325,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_tau_profile.png,keep_outputs_frozen,66377,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_tdf_knot_tau_gradient.png,keep_outputs_frozen,52927,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/NGC7814_tdf_knot_tau_profile.png,keep_outputs_frozen,54657,False,,keep,benchmark or publication output
+outputs/figures/sparc_subset/expansion12_failure_case_residuals.png,keep_outputs_frozen,171053,True,expansion12_failure_case_residuals.png; figures/sparc_subset/expansion12_failure_case_residuals.png; outputs/figures/sparc_subset/expansion12_failure_case_residuals.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/expansion12_flex_recovery_radial_comparison.png,keep_outputs_frozen,115493,True,expansion12_flex_recovery_radial_comparison.png; figures/sparc_subset/expansion12_flex_recovery_radial_comparison.png; outputs/figures/sparc_subset/expansion12_flex_recovery_radial_comparison.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/expansion12_tdf3_vs_tdf5_gap.png,keep_outputs_frozen,62982,True,expansion12_tdf3_vs_tdf5_gap.png; figures/sparc_subset/expansion12_tdf3_vs_tdf5_gap.png; outputs/figures/sparc_subset/expansion12_tdf3_vs_tdf5_gap.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/expansion20_failure_case_residuals.png,keep_outputs_frozen,171497,True,expansion20_failure_case_residuals.png; figures/sparc_subset/expansion20_failure_case_residuals.png; outputs/figures/sparc_subset/expansion20_failure_case_residuals.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/expansion20_tdf3_vs_tdf5_gap.png,keep_outputs_frozen,52247,True,expansion20_tdf3_vs_tdf5_gap.png; figures/sparc_subset/expansion20_tdf3_vs_tdf5_gap.png; outputs/figures/sparc_subset/expansion20_tdf3_vs_tdf5_gap.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/holdout_residual_maps_all_galaxies.png,keep_outputs_frozen,89317,True,figures/sparc_subset/holdout_residual_maps_all_galaxies.png; holdout_residual_maps_all_galaxies.png; outputs/figures/sparc_subset/holdout_residual_maps_all_galaxies.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ktau_sensitivity_summary.png,keep_outputs_frozen,69527,True,figures/sparc_subset/ktau_sensitivity_summary.png; ktau_sensitivity_summary.png; outputs/figures/sparc_subset/ktau_sensitivity_summary.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ml_prior_weighted_success_summary.png,keep_outputs_frozen,34717,True,figures/sparc_subset/ml_prior_weighted_success_summary.png; ml_prior_weighted_success_summary.png; outputs/figures/sparc_subset/ml_prior_weighted_success_summary.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ml_scaled_model_winners_heatmap.png,keep_outputs_frozen,32677,True,figures/sparc_subset/ml_scaled_model_winners_heatmap.png; ml_scaled_model_winners_heatmap.png; outputs/figures/sparc_subset/ml_scaled_model_winners_heatmap.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ml_scaled_success_stability.png,keep_outputs_frozen,46571,True,figures/sparc_subset/ml_scaled_success_stability.png; ml_scaled_success_stability.png; outputs/figures/sparc_subset/ml_scaled_success_stability.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ml_sensitivity_success_vs_failure_summary.png,keep_outputs_frozen,53474,True,ml_sensitivity_success_vs_failure_summary.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc5055_radial_holdout_residuals.png,keep_outputs_frozen,103083,True,figures/sparc_subset/ngc5055_radial_holdout_residuals.png; ngc5055_radial_holdout_residuals.png; outputs/figures/sparc_subset/ngc5055_radial_holdout_residuals.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_baryonic_components.png,keep_outputs_frozen,86188,True,figures/sparc_subset/ngc7814_baryonic_components.png; ngc7814_baryonic_components.png; outputs/figures/sparc_subset/ngc7814_baryonic_components.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_holdout_residuals.png,keep_outputs_frozen,48617,True,ngc7814_holdout_residuals.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_ktau_sensitivity.png,keep_outputs_frozen,43460,True,figures/sparc_subset/ngc7814_ktau_sensitivity.png; ngc7814_ktau_sensitivity.png; outputs/figures/sparc_subset/ngc7814_ktau_sensitivity.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_ml_prior_weighted_model_support.png,keep_outputs_frozen,60715,True,figures/sparc_subset/ngc7814_ml_prior_weighted_model_support.png; ngc7814_ml_prior_weighted_model_support.png; outputs/figures/sparc_subset/ngc7814_ml_prior_weighted_model_support.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_ml_scaled_fair_comparison.png,keep_outputs_frozen,55542,True,figures/sparc_subset/ngc7814_ml_scaled_fair_comparison.png; ngc7814_ml_scaled_fair_comparison.png; outputs/figures/sparc_subset/ngc7814_ml_scaled_fair_comparison.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_ml_sensitivity_inner_residuals.png,keep_outputs_frozen,41927,True,figures/sparc_subset/ngc7814_ml_sensitivity_inner_residuals.png; ngc7814_ml_sensitivity_inner_residuals.png; outputs/figures/sparc_subset/ngc7814_ml_sensitivity_inner_residuals.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_ml_sensitivity_tau_profiles.png,keep_outputs_frozen,74153,True,ngc7814_ml_sensitivity_tau_profiles.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_photometry_prior_weight_distribution.png,keep_outputs_frozen,71097,True,figures/sparc_subset/ngc7814_photometry_prior_weight_distribution.png; ngc7814_photometry_prior_weight_distribution.png; outputs/figures/sparc_subset/ngc7814_photometry_prior_weight_distribution.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_prior_weight_distribution.png,keep_outputs_frozen,59523,True,figures/sparc_subset/ngc7814_prior_weight_distribution.png; ngc7814_prior_weight_distribution.png; outputs/figures/sparc_subset/ngc7814_prior_weight_distribution.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_prior_weighted_rmse_by_scenario.png,keep_outputs_frozen,95325,True,figures/sparc_subset/ngc7814_prior_weighted_rmse_by_scenario.png; ngc7814_prior_weighted_rmse_by_scenario.png; outputs/figures/sparc_subset/ngc7814_prior_weighted_rmse_by_scenario.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_radial_holdout_residual_map.png,keep_outputs_frozen,91857,True,figures/sparc_subset/ngc7814_radial_holdout_residual_map.png; ngc7814_radial_holdout_residual_map.png; outputs/figures/sparc_subset/ngc7814_radial_holdout_residual_map.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_residual_structure.png,keep_outputs_frozen,89167,True,ngc7814_residual_structure.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ngc7814_tau_vs_success_mean.png,keep_outputs_frozen,120977,True,ngc7814_tau_vs_success_mean.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/normalized_missing_acceleration_overlay.png,keep_outputs_frozen,172417,True,figures/sparc_subset/normalized_missing_acceleration_overlay.png; normalized_missing_acceleration_overlay.png; outputs/figures/sparc_subset/normalized_missing_acceleration_overlay.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/normalized_tau_gradient_overlay.png,keep_outputs_frozen,167953,True,figures/sparc_subset/normalized_tau_gradient_overlay.png; normalized_tau_gradient_overlay.png; outputs/figures/sparc_subset/normalized_tau_gradient_overlay.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/photometry_prior_model_support_summary.png,keep_outputs_frozen,46779,True,figures/sparc_subset/photometry_prior_model_support_summary.png; outputs/figures/sparc_subset/photometry_prior_model_support_summary.png; photometry_prior_model_support_summary.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/tau_pattern_similarity_heatmap.png,keep_outputs_frozen,62572,True,figures/sparc_subset/tau_pattern_similarity_heatmap.png; outputs/figures/sparc_subset/tau_pattern_similarity_heatmap.png; tau_pattern_similarity_heatmap.png,keep,benchmark or publication output
+outputs/figures/sparc_subset/ugc05253_radial_holdout_residuals.png,keep_outputs_frozen,109752,True,figures/sparc_subset/ugc05253_radial_holdout_residuals.png; outputs/figures/sparc_subset/ugc05253_radial_holdout_residuals.png; ugc05253_radial_holdout_residuals.png,keep,benchmark or publication output
+outputs/reports/README.md,keep_outputs_frozen,49,True,README.md,keep,benchmark or publication output
+outputs/reports/controlled_expansion20_final_audit_report.md,keep_outputs_frozen,5943,True,controlled_expansion20_final_audit_report.md; outputs/reports/controlled_expansion20_final_audit_report.md; reports/controlled_expansion20_final_audit_report.md,keep,benchmark or publication output
+outputs/reports/expansion12_benchmark_report.md,keep_outputs_frozen,2378,True,expansion12_benchmark_report.md; outputs/reports/expansion12_benchmark_report.md; reports/expansion12_benchmark_report.md,keep,benchmark or publication output
+outputs/reports/expansion12_failure_mode_analysis_report.md,keep_outputs_frozen,5070,True,expansion12_failure_mode_analysis_report.md; outputs/reports/expansion12_failure_mode_analysis_report.md; reports/expansion12_failure_mode_analysis_report.md,keep,benchmark or publication output
+outputs/reports/expansion12_radial_residual_map_report.md,keep_outputs_frozen,3623,True,expansion12_radial_residual_map_report.md; outputs/reports/expansion12_radial_residual_map_report.md; reports/expansion12_radial_residual_map_report.md,keep,benchmark or publication output
+outputs/reports/expansion20_benchmark_report.md,keep_outputs_frozen,3814,True,expansion20_benchmark_report.md; outputs/reports/expansion20_benchmark_report.md; reports/expansion20_benchmark_report.md,keep,benchmark or publication output
+outputs/reports/expansion20_failure_mode_analysis_report.md,keep_outputs_frozen,4542,True,expansion20_failure_mode_analysis_report.md; outputs/reports/expansion20_failure_mode_analysis_report.md; reports/expansion20_failure_mode_analysis_report.md,keep,benchmark or publication output
+outputs/reports/ml_prior_weighting_audit_report.md,keep_outputs_frozen,3617,True,ml_prior_weighting_audit_report.md; outputs/reports/ml_prior_weighting_audit_report.md; reports/ml_prior_weighting_audit_report.md,keep,benchmark or publication output
+outputs/reports/mock_data_warning.txt,keep_outputs_frozen,51,True,mock_data_warning.txt; outputs/reports/mock_data_warning.txt; reports/mock_data_warning.txt,keep,benchmark or publication output
+outputs/reports/ngc7814_failure_mode_report.md,keep_outputs_frozen,4280,True,ngc7814_failure_mode_report.md; outputs/reports/ngc7814_failure_mode_report.md; reports/ngc7814_failure_mode_report.md,keep,benchmark or publication output
+outputs/reports/paper_figures_report.md,keep_outputs_frozen,1642,True,outputs/reports/paper_figures_report.md; paper_figures_report.md; reports/paper_figures_report.md,keep,benchmark or publication output
+outputs/reports/paper_manuscript_draft_report.md,keep_outputs_frozen,1117,True,outputs/reports/paper_manuscript_draft_report.md; paper_manuscript_draft_report.md; reports/paper_manuscript_draft_report.md,keep,benchmark or publication output
+outputs/reports/paper_package_scaffold_report.md,keep_outputs_frozen,2202,True,outputs/reports/paper_package_scaffold_report.md; paper_package_scaffold_report.md; reports/paper_package_scaffold_report.md,keep,benchmark or publication output
+outputs/reports/paper_pre_submission_qa_report.md,keep_outputs_frozen,1175,True,outputs/reports/paper_pre_submission_qa_report.md; paper_pre_submission_qa_report.md; reports/paper_pre_submission_qa_report.md,keep,benchmark or publication output
+outputs/reports/paper_referee_readiness_report.md,keep_outputs_frozen,863,True,outputs/reports/paper_referee_readiness_report.md; paper_referee_readiness_report.md; reports/paper_referee_readiness_report.md,keep,benchmark or publication output
+outputs/reports/paper_scientific_edit_report.md,keep_outputs_frozen,1583,True,outputs/reports/paper_scientific_edit_report.md; paper_scientific_edit_report.md; reports/paper_scientific_edit_report.md,keep,benchmark or publication output
+outputs/reports/repository_cleanup_audit_report.md,keep_outputs_frozen,2141,True,outputs/reports/repository_cleanup_audit_report.md; reports/repository_cleanup_audit_report.md; repository_cleanup_audit_report.md,keep,benchmark or publication output
+outputs/reports/sparc_baseline_fit_audit_refit_report.md,keep_outputs_frozen,3010,False,,keep,benchmark or publication output
+outputs/reports/sparc_baseline_fit_audit_report.md,keep_outputs_frozen,3167,True,outputs/reports/sparc_baseline_fit_audit_report.md; reports/sparc_baseline_fit_audit_report.md; sparc_baseline_fit_audit_report.md,keep,benchmark or publication output
+outputs/reports/sparc_baseline_model_comparison_report.md,keep_outputs_frozen,674,True,outputs/reports/sparc_baseline_model_comparison_report.md; reports/sparc_baseline_model_comparison_report.md; sparc_baseline_model_comparison_report.md,keep,benchmark or publication output
+outputs/reports/sparc_baseline_refit_report.md,keep_outputs_frozen,1671,True,outputs/reports/sparc_baseline_refit_report.md; reports/sparc_baseline_refit_report.md; sparc_baseline_refit_report.md,keep,benchmark or publication output
+outputs/reports/sparc_claim_traceability_report.md,keep_outputs_frozen,4458,True,outputs/reports/sparc_claim_traceability_report.md; reports/sparc_claim_traceability_report.md; sparc_claim_traceability_report.md,keep,benchmark or publication output
+outputs/reports/sparc_controlled_subset_final_audit_report.md,keep_outputs_frozen,6870,True,outputs/reports/sparc_controlled_subset_final_audit_report.md; reports/sparc_controlled_subset_final_audit_report.md; sparc_controlled_subset_final_audit_report.md,keep,benchmark or publication output
+outputs/reports/sparc_controlled_subset_results_summary.md,keep_outputs_frozen,5750,True,outputs/reports/sparc_controlled_subset_results_summary.md; reports/sparc_controlled_subset_results_summary.md; sparc_controlled_subset_results_summary.md,keep,benchmark or publication output
+outputs/reports/sparc_failure_mode_analysis_report.md,keep_outputs_frozen,3657,True,outputs/reports/sparc_failure_mode_analysis_report.md; reports/sparc_failure_mode_analysis_report.md; sparc_failure_mode_analysis_report.md,keep,benchmark or publication output
+outputs/reports/sparc_full_model_comparison_report.md,keep_outputs_frozen,5626,True,outputs/reports/sparc_full_model_comparison_report.md; reports/sparc_full_model_comparison_report.md; sparc_full_model_comparison_report.md,keep,benchmark or publication output
+outputs/reports/sparc_ingestion_report.md,keep_outputs_frozen,749,True,outputs/reports/sparc_ingestion_report.md; reports/sparc_ingestion_report.md; sparc_ingestion_report.md,keep,benchmark or publication output
+outputs/reports/sparc_ktau_sensitivity_report.md,keep_outputs_frozen,4847,True,outputs/reports/sparc_ktau_sensitivity_report.md; reports/sparc_ktau_sensitivity_report.md; sparc_ktau_sensitivity_report.md,keep,benchmark or publication output
+outputs/reports/sparc_ml_prior_framework_report.md,keep_outputs_frozen,2318,True,outputs/reports/sparc_ml_prior_framework_report.md; reports/sparc_ml_prior_framework_report.md; sparc_ml_prior_framework_report.md,keep,benchmark or publication output
+outputs/reports/sparc_ml_scaled_baseline_comparison_report.md,keep_outputs_frozen,2811,True,outputs/reports/sparc_ml_scaled_baseline_comparison_report.md; reports/sparc_ml_scaled_baseline_comparison_report.md; sparc_ml_scaled_baseline_comparison_report.md,keep,benchmark or publication output
+outputs/reports/sparc_ml_sensitivity_audit_report.md,keep_outputs_frozen,2802,True,outputs/reports/sparc_ml_sensitivity_audit_report.md; reports/sparc_ml_sensitivity_audit_report.md; sparc_ml_sensitivity_audit_report.md,keep,benchmark or publication output
+outputs/reports/sparc_mond_baseline_report.md,keep_outputs_frozen,3075,True,outputs/reports/sparc_mond_baseline_report.md; reports/sparc_mond_baseline_report.md; sparc_mond_baseline_report.md,keep,benchmark or publication output
+outputs/reports/sparc_normalized_tau_pattern_report.md,keep_outputs_frozen,4953,True,outputs/reports/sparc_normalized_tau_pattern_report.md; reports/sparc_normalized_tau_pattern_report.md; sparc_normalized_tau_pattern_report.md,keep,benchmark or publication output
+outputs/reports/sparc_photometry_informed_prior_report.md,keep_outputs_frozen,5522,True,outputs/reports/sparc_photometry_informed_prior_report.md; reports/sparc_photometry_informed_prior_report.md; sparc_photometry_informed_prior_report.md,keep,benchmark or publication output
+outputs/reports/sparc_photometry_metadata_ingestion_report.md,keep_outputs_frozen,3018,True,outputs/reports/sparc_photometry_metadata_ingestion_report.md; reports/sparc_photometry_metadata_ingestion_report.md; sparc_photometry_metadata_ingestion_report.md,keep,benchmark or publication output
+outputs/reports/sparc_post_ml_claim_reconciliation_report.md,keep_outputs_frozen,3650,True,outputs/reports/sparc_post_ml_claim_reconciliation_report.md; reports/sparc_post_ml_claim_reconciliation_report.md; sparc_post_ml_claim_reconciliation_report.md,keep,benchmark or publication output
+outputs/reports/sparc_post_ml_controlled_subset_results_summary.md,keep_outputs_frozen,1841,True,outputs/reports/sparc_post_ml_controlled_subset_results_summary.md; reports/sparc_post_ml_controlled_subset_results_summary.md; sparc_post_ml_controlled_subset_results_summary.md,keep,benchmark or publication output
+outputs/reports/sparc_radial_holdout_failure_report.md,keep_outputs_frozen,2933,True,outputs/reports/sparc_radial_holdout_failure_report.md; reports/sparc_radial_holdout_failure_report.md; sparc_radial_holdout_failure_report.md,keep,benchmark or publication output
+outputs/reports/sparc_radial_tau_reconstruction_report.md,keep_outputs_frozen,2659,True,outputs/reports/sparc_radial_tau_reconstruction_report.md; reports/sparc_radial_tau_reconstruction_report.md; sparc_radial_tau_reconstruction_report.md,keep,benchmark or publication output
+outputs/reports/sparc_subset_expansion_protocol_report.md,keep_outputs_frozen,2054,True,outputs/reports/sparc_subset_expansion_protocol_report.md; reports/sparc_subset_expansion_protocol_report.md; sparc_subset_expansion_protocol_report.md,keep,benchmark or publication output
+outputs/reports/sparc_subset_selection_report.md,keep_outputs_frozen,917,True,outputs/reports/sparc_subset_selection_report.md; reports/sparc_subset_selection_report.md; sparc_subset_selection_report.md,keep,benchmark or publication output
+outputs/reports/sparc_tdf_robustness_audit_report.md,keep_outputs_frozen,3765,True,outputs/reports/sparc_tdf_robustness_audit_report.md; reports/sparc_tdf_robustness_audit_report.md; sparc_tdf_robustness_audit_report.md,keep,benchmark or publication output
+outputs/tables/README.md,keep_outputs_frozen,51,True,README.md,keep,benchmark or publication output
+outputs/tables/controlled_expansion_comparison_summary.csv,keep_outputs_frozen,664,True,controlled_expansion_comparison_summary.csv; outputs/tables/controlled_expansion_comparison_summary.csv; tables/controlled_expansion_comparison_summary.csv,keep,benchmark or publication output
+outputs/tables/controlled_expansion_final_claims.csv,keep_outputs_frozen,1784,True,controlled_expansion_final_claims.csv; outputs/tables/controlled_expansion_final_claims.csv; tables/controlled_expansion_final_claims.csv,keep,benchmark or publication output
+outputs/tables/expansion12_case_review_summary.csv,keep_outputs_frozen,2269,True,expansion12_case_review_summary.csv; outputs/tables/expansion12_case_review_summary.csv; tables/expansion12_case_review_summary.csv,keep,benchmark or publication output
+outputs/tables/expansion12_claim_traceability.csv,keep_outputs_frozen,944,True,expansion12_claim_traceability.csv; outputs/tables/expansion12_claim_traceability.csv; tables/expansion12_claim_traceability.csv,keep,benchmark or publication output
+outputs/tables/expansion12_failure_diagnostics.csv,keep_outputs_frozen,4720,True,expansion12_failure_diagnostics.csv; outputs/tables/expansion12_failure_diagnostics.csv; tables/expansion12_failure_diagnostics.csv,keep,benchmark or publication output
+outputs/tables/expansion12_failure_mode_summary.csv,keep_outputs_frozen,3577,True,expansion12_failure_mode_summary.csv; outputs/tables/expansion12_failure_mode_summary.csv; tables/expansion12_failure_mode_summary.csv,keep,benchmark or publication output
+outputs/tables/expansion12_holdout_point_residuals.csv,keep_outputs_frozen,226175,True,expansion12_holdout_point_residuals.csv; outputs/tables/expansion12_holdout_point_residuals.csv; tables/expansion12_holdout_point_residuals.csv,keep,benchmark or publication output
+outputs/tables/expansion12_holdout_validation.csv,keep_outputs_frozen,48944,True,expansion12_holdout_validation.csv; outputs/tables/expansion12_holdout_validation.csv; tables/expansion12_holdout_validation.csv,keep,benchmark or publication output
+outputs/tables/expansion12_model_comparison.csv,keep_outputs_frozen,22458,True,expansion12_model_comparison.csv; outputs/tables/expansion12_model_comparison.csv; tables/expansion12_model_comparison.csv,keep,benchmark or publication output
+outputs/tables/expansion12_radial_failure_map_summary.csv,keep_outputs_frozen,17530,True,expansion12_radial_failure_map_summary.csv; outputs/tables/expansion12_radial_failure_map_summary.csv; tables/expansion12_radial_failure_map_summary.csv,keep,benchmark or publication output
+outputs/tables/expansion12_subset_selection.csv,keep_outputs_frozen,1150,True,expansion12_subset_selection.csv; outputs/tables/expansion12_subset_selection.csv; tables/expansion12_subset_selection.csv,keep,benchmark or publication output
+outputs/tables/expansion12_tau_profiles.csv,keep_outputs_frozen,117640,True,expansion12_tau_profiles.csv; outputs/tables/expansion12_tau_profiles.csv; tables/expansion12_tau_profiles.csv,keep,benchmark or publication output
+outputs/tables/expansion20_case_review_summary.csv,keep_outputs_frozen,2184,True,expansion20_case_review_summary.csv; outputs/tables/expansion20_case_review_summary.csv; tables/expansion20_case_review_summary.csv,keep,benchmark or publication output
+outputs/tables/expansion20_claim_traceability.csv,keep_outputs_frozen,933,True,expansion20_claim_traceability.csv; outputs/tables/expansion20_claim_traceability.csv; tables/expansion20_claim_traceability.csv,keep,benchmark or publication output
+outputs/tables/expansion20_failure_diagnostics.csv,keep_outputs_frozen,4984,True,expansion20_failure_diagnostics.csv; outputs/tables/expansion20_failure_diagnostics.csv; tables/expansion20_failure_diagnostics.csv,keep,benchmark or publication output
+outputs/tables/expansion20_failure_mode_summary.csv,keep_outputs_frozen,6393,True,expansion20_failure_mode_summary.csv; outputs/tables/expansion20_failure_mode_summary.csv; tables/expansion20_failure_mode_summary.csv,keep,benchmark or publication output
+outputs/tables/expansion20_holdout_validation.csv,keep_outputs_frozen,83596,True,expansion20_holdout_validation.csv; outputs/tables/expansion20_holdout_validation.csv; tables/expansion20_holdout_validation.csv,keep,benchmark or publication output
+outputs/tables/expansion20_model_comparison.csv,keep_outputs_frozen,37393,True,expansion20_model_comparison.csv; outputs/tables/expansion20_model_comparison.csv; tables/expansion20_model_comparison.csv,keep,benchmark or publication output
+outputs/tables/expansion20_subset_selection.csv,keep_outputs_frozen,1861,True,expansion20_subset_selection.csv; outputs/tables/expansion20_subset_selection.csv; tables/expansion20_subset_selection.csv,keep,benchmark or publication output
+outputs/tables/expansion20_tau_profiles.csv,keep_outputs_frozen,200329,True,expansion20_tau_profiles.csv; outputs/tables/expansion20_tau_profiles.csv; tables/expansion20_tau_profiles.csv,keep,benchmark or publication output
+outputs/tables/ml_prior_weight_audit.csv,keep_outputs_frozen,4870,True,ml_prior_weight_audit.csv; outputs/tables/ml_prior_weight_audit.csv; tables/ml_prior_weight_audit.csv,keep,benchmark or publication output
+outputs/tables/model_comparison.csv,keep_outputs_frozen,420,True,model_comparison.csv; outputs/tables/model_comparison.csv; tables/model_comparison.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_failure_diagnostics.csv,keep_outputs_frozen,2816,True,ngc7814_failure_diagnostics.csv; outputs/tables/ngc7814_failure_diagnostics.csv; tables/ngc7814_failure_diagnostics.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_ktau_sensitivity.csv,keep_outputs_frozen,6683,True,ngc7814_ktau_sensitivity.csv; outputs/tables/ngc7814_ktau_sensitivity.csv; tables/ngc7814_ktau_sensitivity.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_ml_prior_weighted_interpretation.csv,keep_outputs_frozen,2669,True,ngc7814_ml_prior_weighted_interpretation.csv; outputs/tables/ngc7814_ml_prior_weighted_interpretation.csv; tables/ngc7814_ml_prior_weighted_interpretation.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_ml_scaled_fair_comparison.csv,keep_outputs_frozen,4165,True,ngc7814_ml_scaled_fair_comparison.csv; outputs/tables/ngc7814_ml_scaled_fair_comparison.csv; tables/ngc7814_ml_scaled_fair_comparison.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_ml_sensitivity_detail.csv,keep_outputs_frozen,3832,True,ngc7814_ml_sensitivity_detail.csv; outputs/tables/ngc7814_ml_sensitivity_detail.csv; tables/ngc7814_ml_sensitivity_detail.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_photometry_prior_interpretation.csv,keep_outputs_frozen,2293,True,ngc7814_photometry_prior_interpretation.csv; outputs/tables/ngc7814_photometry_prior_interpretation.csv; tables/ngc7814_photometry_prior_interpretation.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_prior_scenario_breakdown.csv,keep_outputs_frozen,6817,True,ngc7814_prior_scenario_breakdown.csv; outputs/tables/ngc7814_prior_scenario_breakdown.csv; tables/ngc7814_prior_scenario_breakdown.csv,keep,benchmark or publication output
+outputs/tables/ngc7814_vs_success_group_diagnostics.csv,keep_outputs_frozen,3266,True,ngc7814_vs_success_group_diagnostics.csv; outputs/tables/ngc7814_vs_success_group_diagnostics.csv; tables/ngc7814_vs_success_group_diagnostics.csv,keep,benchmark or publication output
+outputs/tables/paper_figure_inventory.csv,keep_outputs_frozen,2448,True,outputs/tables/paper_figure_inventory.csv; paper_figure_inventory.csv; tables/paper_figure_inventory.csv,keep,benchmark or publication output
+outputs/tables/paper_statistical_summary.csv,keep_outputs_frozen,1664,True,outputs/tables/paper_statistical_summary.csv; paper_statistical_summary.csv; tables/paper_statistical_summary.csv,keep,benchmark or publication output
+outputs/tables/paper_table_inventory.csv,keep_outputs_frozen,1785,True,outputs/tables/paper_table_inventory.csv; paper_table_inventory.csv; tables/paper_table_inventory.csv,keep,benchmark or publication output
+outputs/tables/repository_cleanup_candidates.csv,keep_outputs_frozen,58,True,outputs/tables/repository_cleanup_candidates.csv; repository_cleanup_candidates.csv; tables/repository_cleanup_candidates.csv,keep,benchmark or publication output
+outputs/tables/repository_file_inventory.csv,keep_outputs_frozen,96306,True,outputs/tables/repository_file_inventory.csv; repository_file_inventory.csv; tables/repository_file_inventory.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_fit_audit.csv,keep_outputs_frozen,4840,True,outputs/tables/sparc_baseline_fit_audit.csv; sparc_baseline_fit_audit.csv; tables/sparc_baseline_fit_audit.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_fit_audit_refit.csv,keep_outputs_frozen,5197,True,outputs/tables/sparc_baseline_fit_audit_refit.csv; sparc_baseline_fit_audit_refit.csv; tables/sparc_baseline_fit_audit_refit.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_fit_parameters.csv,keep_outputs_frozen,1572,True,outputs/tables/sparc_baseline_fit_parameters.csv; sparc_baseline_fit_parameters.csv; tables/sparc_baseline_fit_parameters.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_fit_parameters_refit.csv,keep_outputs_frozen,2829,True,outputs/tables/sparc_baseline_fit_parameters_refit.csv; sparc_baseline_fit_parameters_refit.csv; tables/sparc_baseline_fit_parameters_refit.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_legacy_vs_refit_delta.csv,keep_outputs_frozen,4508,True,outputs/tables/sparc_baseline_legacy_vs_refit_delta.csv; sparc_baseline_legacy_vs_refit_delta.csv; tables/sparc_baseline_legacy_vs_refit_delta.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_model_comparison.csv,keep_outputs_frozen,3669,True,outputs/tables/sparc_baseline_model_comparison.csv; sparc_baseline_model_comparison.csv; tables/sparc_baseline_model_comparison.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_model_comparison_refit.csv,keep_outputs_frozen,3683,True,outputs/tables/sparc_baseline_model_comparison_refit.csv; sparc_baseline_model_comparison_refit.csv; tables/sparc_baseline_model_comparison_refit.csv,keep,benchmark or publication output
+outputs/tables/sparc_baseline_with_mond_comparison.csv,keep_outputs_frozen,7482,True,outputs/tables/sparc_baseline_with_mond_comparison.csv; sparc_baseline_with_mond_comparison.csv; tables/sparc_baseline_with_mond_comparison.csv,keep,benchmark or publication output
+outputs/tables/sparc_best_baseline_with_mond_summary.csv,keep_outputs_frozen,856,True,outputs/tables/sparc_best_baseline_with_mond_summary.csv; sparc_best_baseline_with_mond_summary.csv; tables/sparc_best_baseline_with_mond_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_best_model_summary.csv,keep_outputs_frozen,1267,True,outputs/tables/sparc_best_model_summary.csv; sparc_best_model_summary.csv; tables/sparc_best_model_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_claim_traceability_matrix.csv,keep_outputs_frozen,2446,True,outputs/tables/sparc_claim_traceability_matrix.csv; sparc_claim_traceability_matrix.csv; tables/sparc_claim_traceability_matrix.csv,keep,benchmark or publication output
+outputs/tables/sparc_claim_traceability_matrix_updated.csv,keep_outputs_frozen,4633,True,outputs/tables/sparc_claim_traceability_matrix_updated.csv; sparc_claim_traceability_matrix_updated.csv; tables/sparc_claim_traceability_matrix_updated.csv,keep,benchmark or publication output
+outputs/tables/sparc_controlled_subset_final_claims.csv,keep_outputs_frozen,5562,True,outputs/tables/sparc_controlled_subset_final_claims.csv; sparc_controlled_subset_final_claims.csv; tables/sparc_controlled_subset_final_claims.csv,keep,benchmark or publication output
+outputs/tables/sparc_controlled_subset_final_status.csv,keep_outputs_frozen,5107,True,outputs/tables/sparc_controlled_subset_final_status.csv; sparc_controlled_subset_final_status.csv; tables/sparc_controlled_subset_final_status.csv,keep,benchmark or publication output
+outputs/tables/sparc_failure_mode_summary.csv,keep_outputs_frozen,2927,True,outputs/tables/sparc_failure_mode_summary.csv; sparc_failure_mode_summary.csv; tables/sparc_failure_mode_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_full_model_comparison.csv,keep_outputs_frozen,10917,True,outputs/tables/sparc_full_model_comparison.csv; sparc_full_model_comparison.csv; tables/sparc_full_model_comparison.csv,keep,benchmark or publication output
+outputs/tables/sparc_holdout_point_residuals.csv,keep_outputs_frozen,432142,True,outputs/tables/sparc_holdout_point_residuals.csv; sparc_holdout_point_residuals.csv; tables/sparc_holdout_point_residuals.csv,keep,benchmark or publication output
+outputs/tables/sparc_ingestion_summary.csv,keep_outputs_frozen,221,True,outputs/tables/sparc_ingestion_summary.csv; sparc_ingestion_summary.csv; tables/sparc_ingestion_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_ktau_sensitivity_summary.csv,keep_outputs_frozen,32330,True,outputs/tables/sparc_ktau_sensitivity_summary.csv; sparc_ktau_sensitivity_summary.csv; tables/sparc_ktau_sensitivity_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_ml_prior_weighted_summary.csv,keep_outputs_frozen,12879,True,outputs/tables/sparc_ml_prior_weighted_summary.csv; sparc_ml_prior_weighted_summary.csv; tables/sparc_ml_prior_weighted_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_ml_scaled_best_model_summary.csv,keep_outputs_frozen,1495,True,outputs/tables/sparc_ml_scaled_best_model_summary.csv; sparc_ml_scaled_best_model_summary.csv; tables/sparc_ml_scaled_best_model_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_ml_scaled_model_comparison.csv,keep_outputs_frozen,103828,True,outputs/tables/sparc_ml_scaled_model_comparison.csv; sparc_ml_scaled_model_comparison.csv; tables/sparc_ml_scaled_model_comparison.csv,keep,benchmark or publication output
+outputs/tables/sparc_ml_sensitivity_holdout_comparison.csv,keep_outputs_frozen,1986,True,outputs/tables/sparc_ml_sensitivity_holdout_comparison.csv; sparc_ml_sensitivity_holdout_comparison.csv; tables/sparc_ml_sensitivity_holdout_comparison.csv,keep,benchmark or publication output
+outputs/tables/sparc_ml_sensitivity_summary.csv,keep_outputs_frozen,65934,True,outputs/tables/sparc_ml_sensitivity_summary.csv; sparc_ml_sensitivity_summary.csv; tables/sparc_ml_sensitivity_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_mond_fit_parameters.csv,keep_outputs_frozen,2069,True,outputs/tables/sparc_mond_fit_parameters.csv; sparc_mond_fit_parameters.csv; tables/sparc_mond_fit_parameters.csv,keep,benchmark or publication output
+outputs/tables/sparc_mond_model_comparison.csv,keep_outputs_frozen,3883,True,outputs/tables/sparc_mond_model_comparison.csv; sparc_mond_model_comparison.csv; tables/sparc_mond_model_comparison.csv,keep,benchmark or publication output
+outputs/tables/sparc_normalized_tau_patterns.csv,keep_outputs_frozen,132344,True,outputs/tables/sparc_normalized_tau_patterns.csv; sparc_normalized_tau_patterns.csv; tables/sparc_normalized_tau_patterns.csv,keep,benchmark or publication output
+outputs/tables/sparc_photometry_informed_prior_weights.csv,keep_outputs_frozen,107725,True,outputs/tables/sparc_photometry_informed_prior_weights.csv; sparc_photometry_informed_prior_weights.csv; tables/sparc_photometry_informed_prior_weights.csv,keep,benchmark or publication output
+outputs/tables/sparc_photometry_metadata_summary.csv,keep_outputs_frozen,276,True,outputs/tables/sparc_photometry_metadata_summary.csv; sparc_photometry_metadata_summary.csv; tables/sparc_photometry_metadata_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_photometry_prior_weighted_summary.csv,keep_outputs_frozen,15575,True,outputs/tables/sparc_photometry_prior_weighted_summary.csv; sparc_photometry_prior_weighted_summary.csv; tables/sparc_photometry_prior_weighted_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_post_ml_results_summary_table.csv,keep_outputs_frozen,2740,True,outputs/tables/sparc_post_ml_results_summary_table.csv; sparc_post_ml_results_summary_table.csv; tables/sparc_post_ml_results_summary_table.csv,keep,benchmark or publication output
+outputs/tables/sparc_publication_summary_table.csv,keep_outputs_frozen,1154,True,outputs/tables/sparc_publication_summary_table.csv; sparc_publication_summary_table.csv; tables/sparc_publication_summary_table.csv,keep,benchmark or publication output
+outputs/tables/sparc_radial_failure_map_summary.csv,keep_outputs_frozen,42285,True,outputs/tables/sparc_radial_failure_map_summary.csv; sparc_radial_failure_map_summary.csv; tables/sparc_radial_failure_map_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_subset_expansion_candidates.csv,keep_outputs_frozen,25415,True,outputs/tables/sparc_subset_expansion_candidates.csv; sparc_subset_expansion_candidates.csv; tables/sparc_subset_expansion_candidates.csv,keep,benchmark or publication output
+outputs/tables/sparc_subset_expansion_plan.csv,keep_outputs_frozen,1746,True,outputs/tables/sparc_subset_expansion_plan.csv; sparc_subset_expansion_plan.csv; tables/sparc_subset_expansion_plan.csv,keep,benchmark or publication output
+outputs/tables/sparc_subset_photometry_context.csv,keep_outputs_frozen,1121,True,outputs/tables/sparc_subset_photometry_context.csv; sparc_subset_photometry_context.csv; tables/sparc_subset_photometry_context.csv,keep,benchmark or publication output
+outputs/tables/sparc_subset_selection.csv,keep_outputs_frozen,25867,True,outputs/tables/sparc_subset_selection.csv; sparc_subset_selection.csv; tables/sparc_subset_selection.csv,keep,benchmark or publication output
+outputs/tables/sparc_subset_tau_profiles.csv,keep_outputs_frozen,48523,True,outputs/tables/sparc_subset_tau_profiles.csv; sparc_subset_tau_profiles.csv; tables/sparc_subset_tau_profiles.csv,keep,benchmark or publication output
+outputs/tables/sparc_tau_pattern_outlier_scores.csv,keep_outputs_frozen,2728,True,outputs/tables/sparc_tau_pattern_outlier_scores.csv; sparc_tau_pattern_outlier_scores.csv; tables/sparc_tau_pattern_outlier_scores.csv,keep,benchmark or publication output
+outputs/tables/sparc_tau_pattern_similarity_matrix.csv,keep_outputs_frozen,1716,True,outputs/tables/sparc_tau_pattern_similarity_matrix.csv; sparc_tau_pattern_similarity_matrix.csv; tables/sparc_tau_pattern_similarity_matrix.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_bounds_sensitivity.csv,keep_outputs_frozen,2220,True,outputs/tables/sparc_tdf_bounds_sensitivity.csv; sparc_tdf_bounds_sensitivity.csv; tables/sparc_tdf_bounds_sensitivity.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_holdout_validation.csv,keep_outputs_frozen,23036,True,outputs/tables/sparc_tdf_holdout_validation.csv; sparc_tdf_holdout_validation.csv; tables/sparc_tdf_holdout_validation.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_knot_fit_parameters.csv,keep_outputs_frozen,10225,True,outputs/tables/sparc_tdf_knot_fit_parameters.csv; sparc_tdf_knot_fit_parameters.csv; tables/sparc_tdf_knot_fit_parameters.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_knot_model_comparison.csv,keep_outputs_frozen,3594,True,outputs/tables/sparc_tdf_knot_model_comparison.csv; sparc_tdf_knot_model_comparison.csv; tables/sparc_tdf_knot_model_comparison.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_ktau_sensitivity.csv,keep_outputs_frozen,1679,True,outputs/tables/sparc_tdf_ktau_sensitivity.csv; sparc_tdf_ktau_sensitivity.csv; tables/sparc_tdf_ktau_sensitivity.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_negative_v2_audit.csv,keep_outputs_frozen,686,True,sparc_tdf_negative_v2_audit.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_robust_best_model_summary.csv,keep_outputs_frozen,1640,True,outputs/tables/sparc_tdf_robust_best_model_summary.csv; sparc_tdf_robust_best_model_summary.csv; tables/sparc_tdf_robust_best_model_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_robustness_summary.csv,keep_outputs_frozen,1654,True,outputs/tables/sparc_tdf_robustness_summary.csv; sparc_tdf_robustness_summary.csv; tables/sparc_tdf_robustness_summary.csv,keep,benchmark or publication output
+outputs/tables/sparc_tdf_smoothness_diagnostics.csv,keep_outputs_frozen,1301,True,outputs/tables/sparc_tdf_smoothness_diagnostics.csv; sparc_tdf_smoothness_diagnostics.csv; tables/sparc_tdf_smoothness_diagnostics.csv,keep,benchmark or publication output
+outputs/tables/tau_profiles/DDO154_tau_profile.csv,keep_outputs_frozen,2945,False,,keep,benchmark or publication output
+outputs/tables/tau_profiles/IC2574_tau_profile.csv,keep_outputs_frozen,7892,False,,keep,benchmark or publication output
+outputs/tables/tau_profiles/NGC2403_tau_profile.csv,keep_outputs_frozen,17101,False,,keep,benchmark or publication output
+outputs/tables/tau_profiles/NGC3198_tau_profile.csv,keep_outputs_frozen,10107,False,,keep,benchmark or publication output
+outputs/tables/tau_profiles/NGC6503_tau_profile.csv,keep_outputs_frozen,7327,False,,keep,benchmark or publication output
+outputs/tables/tau_profiles/NGC7814_tau_profile.csv,keep_outputs_frozen,4396,False,,keep,benchmark or publication output
+paper/README.md,keep_paper,2691,True,README.md; paper/README.md,keep,manuscript package asset
+paper/figures/.gitkeep,keep_paper,0,True,.gitkeep,keep,manuscript package asset
+paper/figures/fig1_benchmark_workflow.png,keep_paper,61663,True,fig1_benchmark_workflow.png; paper/figures/fig1_benchmark_workflow.png,keep,manuscript package asset
+paper/figures/fig2_expansion12_vs_20_summary.png,keep_paper,58112,True,fig2_expansion12_vs_20_summary.png,keep,manuscript package asset
+paper/figures/fig3_representative_successes.png,keep_paper,194279,True,fig3_representative_successes.png,keep,manuscript package asset
+paper/figures/fig4_ngc7814_failure.png,keep_paper,174057,True,fig4_ngc7814_failure.png,keep,manuscript package asset
+paper/figures/fig5_sensitivity_recovery_cases.png,keep_paper,133353,True,fig5_sensitivity_recovery_cases.png,keep,manuscript package asset
+paper/figures/fig6_holdout_rmse_comparison.png,keep_paper,102662,True,fig6_holdout_rmse_comparison.png,keep,manuscript package asset
+paper/figures/fig7_claim_boundary_map.png,keep_paper,91359,True,fig7_claim_boundary_map.png,keep,manuscript package asset
+paper/manuscript.aux,cleanup_candidate,9749,False,,delete,LaTeX build artifact (regenerated by compile)
+paper/manuscript.bbl,cleanup_candidate,2453,False,,delete,LaTeX build artifact (regenerated by compile)
+paper/manuscript.blg,cleanup_candidate,957,False,,delete,LaTeX build artifact (regenerated by compile)
+paper/manuscript.fdb_latexmk,cleanup_candidate,15267,False,,delete,LaTeX build artifact (regenerated by compile)
+paper/manuscript.fls,cleanup_candidate,15441,False,,delete,LaTeX build artifact (regenerated by compile)
+paper/manuscript.log,cleanup_candidate,23031,False,,delete,LaTeX build artifact (regenerated by compile)
+paper/manuscript.out,cleanup_candidate,3663,False,,delete,LaTeX build artifact (regenerated by compile)
+paper/manuscript.pdf,keep_paper,1041009,True,manuscript.pdf; paper/manuscript.pdf,keep,manuscript package asset
+paper/manuscript.tex,keep_paper,16078,True,manuscript.tex; paper/manuscript.tex,keep,manuscript package asset
+paper/references.bib,keep_paper,3554,True,paper/references.bib; references.bib,keep,manuscript package asset
+paper/tables/.gitkeep,keep_paper,0,True,.gitkeep,keep,manuscript package asset
+paper/tables/table1_cohort_summary.tex,keep_paper,1331,True,paper/tables/table1_cohort_summary.tex; table1_cohort_summary.tex,keep,manuscript package asset
+paper/tables/table2_holdout_rmse.tex,keep_paper,1800,True,table2_holdout_rmse.tex,keep,manuscript package asset
+paper/tables/table3_classification_summary.tex,keep_paper,1152,True,table3_classification_summary.tex,keep,manuscript package asset
+paper/tables/table4_nonrobust_diagnostics.tex,keep_paper,829,True,table4_nonrobust_diagnostics.tex,keep,manuscript package asset
+paper/tables/table5_claim_traceability.tex,keep_paper,1026,True,table5_claim_traceability.tex,keep,manuscript package asset
+paper/tables/table6_assumptions_limitations.tex,keep_paper,1839,True,paper/tables/table6_assumptions_limitations.tex; table6_assumptions_limitations.tex,keep,manuscript package asset
+pyproject.toml,keep_core,642,True,pyproject.toml,keep,project metadata
+requirements.txt,keep_core,76,True,requirements.txt,keep,project metadata
+scripts/analyze_expansion12_failure_modes.py,keep_core,2672,True,analyze_expansion12_failure_modes.py; scripts/analyze_expansion12_failure_modes.py,keep,reproducibility script
+scripts/analyze_expansion12_radial_residual_maps.py,keep_core,2847,True,analyze_expansion12_radial_residual_maps.py; scripts/analyze_expansion12_radial_residual_maps.py,keep,reproducibility script
+scripts/analyze_expansion20_failure_modes.py,keep_core,2743,True,analyze_expansion20_failure_modes.py; scripts/analyze_expansion20_failure_modes.py,keep,reproducibility script
+scripts/analyze_ngc7814_failure_mode.py,keep_core,2883,True,analyze_ngc7814_failure_mode.py; scripts/analyze_ngc7814_failure_mode.py,keep,reproducibility script
+scripts/analyze_normalized_tau_patterns.py,keep_core,2829,True,analyze_normalized_tau_patterns.py; scripts/analyze_normalized_tau_patterns.py,keep,reproducibility script
+scripts/analyze_radial_holdout_failure_maps.py,keep_core,1829,True,analyze_radial_holdout_failure_maps.py; scripts/analyze_radial_holdout_failure_maps.py,keep,reproducibility script
+scripts/analyze_sparc_failure_modes.py,keep_core,2098,True,analyze_sparc_failure_modes.py; scripts/analyze_sparc_failure_modes.py,keep,reproducibility script
+scripts/apply_ml_prior_weighting.py,keep_core,1629,True,apply_ml_prior_weighting.py; scripts/apply_ml_prior_weighting.py,keep,reproducibility script
+scripts/apply_photometry_informed_prior_weighting.py,keep_core,3091,True,apply_photometry_informed_prior_weighting.py; scripts/apply_photometry_informed_prior_weighting.py,keep,reproducibility script
+scripts/audit_ml_prior_weighting.py,keep_core,2425,True,audit_ml_prior_weighting.py; scripts/audit_ml_prior_weighting.py,keep,reproducibility script
+scripts/audit_sparc_baseline_fits.py,keep_core,7322,True,audit_sparc_baseline_fits.py; scripts/audit_sparc_baseline_fits.py,keep,reproducibility script
+scripts/audit_sparc_tdf_robustness.py,keep_core,15593,True,audit_sparc_tdf_robustness.py; scripts/audit_sparc_tdf_robustness.py,keep,reproducibility script
+scripts/build_claim_traceability_matrix.py,keep_core,780,True,build_claim_traceability_matrix.py; scripts/build_claim_traceability_matrix.py,keep,reproducibility script
+scripts/build_controlled_expansion_final_audit.py,keep_core,1085,True,build_controlled_expansion_final_audit.py; scripts/build_controlled_expansion_final_audit.py,keep,reproducibility script
+scripts/build_controlled_subset_final_audit.py,keep_core,961,True,build_controlled_subset_final_audit.py; scripts/build_controlled_subset_final_audit.py,keep,reproducibility script
+scripts/build_paper_figures.py,keep_core,442,True,build_paper_figures.py; scripts/build_paper_figures.py,keep,reproducibility script
+scripts/build_paper_package_scaffold.py,keep_core,801,True,build_paper_package_scaffold.py; scripts/build_paper_package_scaffold.py,keep,reproducibility script
+scripts/build_photometry_informed_ml_priors.py,keep_core,1648,True,build_photometry_informed_ml_priors.py; scripts/build_photometry_informed_ml_priors.py,keep,reproducibility script
+scripts/build_referee_readiness_report.py,keep_core,500,True,build_referee_readiness_report.py; scripts/build_referee_readiness_report.py,keep,reproducibility script
+scripts/build_repository_cleanup_audit.py,keep_core,1488,True,build_repository_cleanup_audit.py; scripts/build_repository_cleanup_audit.py,keep,reproducibility script
+scripts/compare_sparc_baselines_with_mond.py,keep_core,5111,True,compare_sparc_baselines_with_mond.py; scripts/compare_sparc_baselines_with_mond.py,keep,reproducibility script
+scripts/compare_sparc_models.py,keep_core,9440,True,compare_sparc_models.py; scripts/compare_sparc_models.py,keep,reproducibility script
+scripts/compile_paper_pdf.py,keep_core,405,True,compile_paper_pdf.py; scripts/compile_paper_pdf.py,keep,reproducibility script
+scripts/export_paper_tables.py,keep_core,2441,True,export_paper_tables.py; scripts/export_paper_tables.py,keep,reproducibility script
+scripts/export_sparc_holdout_residuals.py,keep_core,1894,True,export_sparc_holdout_residuals.py; scripts/export_sparc_holdout_residuals.py,keep,reproducibility script
+scripts/fit_sparc_baselines.py,keep_core,21875,True,fit_sparc_baselines.py; scripts/fit_sparc_baselines.py,keep,reproducibility script
+scripts/fit_sparc_mond_baseline.py,keep_core,10693,True,fit_sparc_mond_baseline.py; scripts/fit_sparc_mond_baseline.py,keep,reproducibility script
+scripts/fit_sparc_tdf_knot_model.py,keep_core,7323,True,fit_sparc_tdf_knot_model.py; scripts/fit_sparc_tdf_knot_model.py,keep,reproducibility script
+scripts/ingest_sparc_photometry_metadata.py,keep_core,1483,True,ingest_sparc_photometry_metadata.py; scripts/ingest_sparc_photometry_metadata.py,keep,reproducibility script
+scripts/ingest_sparc_rotmod.py,keep_core,3695,True,ingest_sparc_rotmod.py,keep,reproducibility script
+scripts/plan_sparc_subset_expansion.py,keep_core,1347,True,plan_sparc_subset_expansion.py; scripts/plan_sparc_subset_expansion.py,keep,reproducibility script
+scripts/reconstruct_sparc_subset_tau.py,keep_core,6599,True,reconstruct_sparc_subset_tau.py,keep,reproducibility script
+scripts/run_expansion12_pipeline.py,keep_core,1496,True,run_expansion12_pipeline.py; scripts/run_expansion12_pipeline.py,keep,reproducibility script
+scripts/run_expansion20_pipeline.py,keep_core,1768,True,run_expansion20_pipeline.py; scripts/run_expansion20_pipeline.py,keep,reproducibility script
+scripts/run_photometry_prior_ktau_sensitivity.py,keep_core,2563,True,run_photometry_prior_ktau_sensitivity.py; scripts/run_photometry_prior_ktau_sensitivity.py,keep,reproducibility script
+scripts/run_post_ml_claim_reconciliation.py,keep_core,2054,True,run_post_ml_claim_reconciliation.py; scripts/run_post_ml_claim_reconciliation.py,keep,reproducibility script
+scripts/run_sparc_ml_scaled_baseline_comparison.py,keep_core,3273,True,run_sparc_ml_scaled_baseline_comparison.py; scripts/run_sparc_ml_scaled_baseline_comparison.py,keep,reproducibility script
+scripts/run_sparc_ml_sensitivity_audit.py,keep_core,3149,True,run_sparc_ml_sensitivity_audit.py; scripts/run_sparc_ml_sensitivity_audit.py,keep,reproducibility script
+scripts/run_sparc_subset.py,keep_core,159,True,run_sparc_subset.py; scripts/run_sparc_subset.py,keep,reproducibility script
+scripts/run_sparc_tdf_holdout_validation.py,keep_core,1747,True,run_sparc_tdf_holdout_validation.py; scripts/run_sparc_tdf_holdout_validation.py,keep,reproducibility script
+scripts/select_sparc_subset.py,keep_core,4172,False,,keep,reproducibility script
+scripts/setup_project.py,keep_core,92,False,,keep,reproducibility script
+src/tdf_galaxy_tau/__init__.py,keep_core,77,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/analysis/__init__.py,keep_core,645,True,__init__.py; src/tdf_galaxy_tau/analysis/__init__.py,keep,library source
+src/tdf_galaxy_tau/analysis/controlled_expansion_audit.py,keep_core,16915,True,controlled_expansion_audit.py; src/tdf_galaxy_tau/analysis/controlled_expansion_audit.py,keep,library source
+src/tdf_galaxy_tau/analysis/controlled_subset_audit.py,keep_core,16262,True,controlled_subset_audit.py; src/tdf_galaxy_tau/analysis/controlled_subset_audit.py,keep,library source
+src/tdf_galaxy_tau/analysis/expansion12_diagnostics.py,keep_core,23485,True,expansion12_diagnostics.py; src/tdf_galaxy_tau/analysis/expansion12_diagnostics.py,keep,library source
+src/tdf_galaxy_tau/analysis/expansion12_radial_maps.py,keep_core,18190,True,expansion12_radial_maps.py; src/tdf_galaxy_tau/analysis/expansion12_radial_maps.py,keep,library source
+src/tdf_galaxy_tau/analysis/expansion20_diagnostics.py,keep_core,20954,True,expansion20_diagnostics.py; src/tdf_galaxy_tau/analysis/expansion20_diagnostics.py,keep,library source
+src/tdf_galaxy_tau/analysis/ktau_sensitivity.py,keep_core,26654,True,ktau_sensitivity.py; src/tdf_galaxy_tau/analysis/ktau_sensitivity.py,keep,library source
+src/tdf_galaxy_tau/analysis/manuscript_text.py,keep_core,18094,True,manuscript_text.py; src/tdf_galaxy_tau/analysis/manuscript_text.py,keep,library source
+src/tdf_galaxy_tau/analysis/ml_priors.py,keep_core,42739,True,ml_priors.py; src/tdf_galaxy_tau/analysis/ml_priors.py,keep,library source
+src/tdf_galaxy_tau/analysis/ml_scaled_baseline_comparison.py,keep_core,29115,True,ml_scaled_baseline_comparison.py; src/tdf_galaxy_tau/analysis/ml_scaled_baseline_comparison.py,keep,library source
+src/tdf_galaxy_tau/analysis/ml_sensitivity.py,keep_core,26143,True,ml_sensitivity.py; src/tdf_galaxy_tau/analysis/ml_sensitivity.py,keep,library source
+src/tdf_galaxy_tau/analysis/ngc7814_diagnostics.py,keep_core,25219,True,ngc7814_diagnostics.py; src/tdf_galaxy_tau/analysis/ngc7814_diagnostics.py,keep,library source
+src/tdf_galaxy_tau/analysis/normalized_patterns.py,keep_core,29981,True,normalized_patterns.py; src/tdf_galaxy_tau/analysis/normalized_patterns.py,keep,library source
+src/tdf_galaxy_tau/analysis/paper_compile.py,keep_core,2778,True,paper_compile.py; src/tdf_galaxy_tau/analysis/paper_compile.py,keep,library source
+src/tdf_galaxy_tau/analysis/paper_figures.py,keep_core,18282,True,paper_figures.py; src/tdf_galaxy_tau/analysis/paper_figures.py,keep,library source
+src/tdf_galaxy_tau/analysis/paper_package.py,keep_core,10456,True,paper_package.py; src/tdf_galaxy_tau/analysis/paper_package.py,keep,library source
+src/tdf_galaxy_tau/analysis/paper_tables.py,keep_core,13923,True,paper_tables.py; src/tdf_galaxy_tau/analysis/paper_tables.py,keep,library source
+src/tdf_galaxy_tau/analysis/photometry_informed_priors.py,keep_core,25198,True,photometry_informed_priors.py; src/tdf_galaxy_tau/analysis/photometry_informed_priors.py,keep,library source
+src/tdf_galaxy_tau/analysis/post_ml_claim_reconciliation.py,keep_core,16435,True,post_ml_claim_reconciliation.py; src/tdf_galaxy_tau/analysis/post_ml_claim_reconciliation.py,keep,library source
+src/tdf_galaxy_tau/analysis/pre_submission_qa.py,keep_core,7106,True,pre_submission_qa.py; src/tdf_galaxy_tau/analysis/pre_submission_qa.py,keep,library source
+src/tdf_galaxy_tau/analysis/radial_holdout_maps.py,keep_core,12391,True,radial_holdout_maps.py; src/tdf_galaxy_tau/analysis/radial_holdout_maps.py,keep,library source
+src/tdf_galaxy_tau/analysis/repository_cleanup.py,keep_core,15424,False,,keep,library source
+src/tdf_galaxy_tau/analysis/reviewer_analysis.py,keep_core,9748,True,reviewer_analysis.py; src/tdf_galaxy_tau/analysis/reviewer_analysis.py,keep,library source
+src/tdf_galaxy_tau/cli/__init__.py,keep_core,0,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/cli/compare_models.py,keep_core,211,False,,keep,library source
+src/tdf_galaxy_tau/cli/reconstruct_galaxy.py,keep_core,200,False,,keep,library source
+src/tdf_galaxy_tau/cli/run_sparc_subset.py,keep_core,198,True,run_sparc_subset.py,keep,library source
+src/tdf_galaxy_tau/data/__init__.py,keep_core,0,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/data/schema.py,keep_core,444,False,,keep,library source
+src/tdf_galaxy_tau/data/sparc_loader.py,keep_core,1968,False,,keep,library source
+src/tdf_galaxy_tau/data/sparc_metadata_join.py,keep_core,12544,True,sparc_metadata_join.py; src/tdf_galaxy_tau/data/sparc_metadata_join.py,keep,library source
+src/tdf_galaxy_tau/data/sparc_photometry_parser.py,keep_core,5157,True,sparc_photometry_parser.py; src/tdf_galaxy_tau/data/sparc_photometry_parser.py,keep,library source
+src/tdf_galaxy_tau/data/sparc_rotmod_parser.py,keep_core,5154,False,,keep,library source
+src/tdf_galaxy_tau/data/subset_expansion.py,keep_core,17518,True,src/tdf_galaxy_tau/data/subset_expansion.py; subset_expansion.py,keep,library source
+src/tdf_galaxy_tau/data/subset_selection.py,keep_core,6258,False,,keep,library source
+src/tdf_galaxy_tau/data/validation.py,keep_core,1212,True,validation.py,keep,library source
+src/tdf_galaxy_tau/metrics/__init__.py,keep_core,0,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/metrics/comparison.py,keep_core,6114,True,comparison.py; src/tdf_galaxy_tau/metrics/comparison.py,keep,library source
+src/tdf_galaxy_tau/metrics/information_criteria.py,keep_core,890,False,,keep,library source
+src/tdf_galaxy_tau/models/__init__.py,keep_core,0,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/models/baryonic.py,keep_core,816,False,,keep,library source
+src/tdf_galaxy_tau/models/burkert.py,keep_core,1501,False,,keep,library source
+src/tdf_galaxy_tau/models/fitting.py,keep_core,36082,True,fitting.py; src/tdf_galaxy_tau/models/fitting.py,keep,library source
+src/tdf_galaxy_tau/models/mond.py,keep_core,3671,True,mond.py,keep,library source
+src/tdf_galaxy_tau/models/nfw.py,keep_core,1420,False,,keep,library source
+src/tdf_galaxy_tau/models/tdf_knot.py,keep_core,6907,False,,keep,library source
+src/tdf_galaxy_tau/plotting/__init__.py,keep_core,0,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/plotting/diagnostics.py,keep_core,1822,True,diagnostics.py,keep,library source
+src/tdf_galaxy_tau/plotting/rotation_curves.py,keep_core,5509,False,,keep,library source
+src/tdf_galaxy_tau/plotting/tau_profiles.py,keep_core,4625,False,,keep,library source
+src/tdf_galaxy_tau/reconstruction/__init__.py,keep_core,0,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/reconstruction/radial_tau.py,keep_core,7060,False,,keep,library source
+src/tdf_galaxy_tau/reconstruction/regularization.py,keep_core,1306,False,,keep,library source
+src/tdf_galaxy_tau/reconstruction/smoothing.py,keep_core,995,False,,keep,library source
+src/tdf_galaxy_tau/scripts/__init__.py,keep_core,1,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/scripts/expansion_pipeline.py,keep_core,42207,True,expansion_pipeline.py; src/tdf_galaxy_tau/scripts/expansion_pipeline.py,keep,library source
+src/tdf_galaxy_tau/scripts/pipeline.py,keep_core,4429,True,pipeline.py,keep,library source
+src/tdf_galaxy_tau/validation/__init__.py,keep_core,60,True,__init__.py,keep,library source
+src/tdf_galaxy_tau/validation/failure_modes.py,keep_core,17658,True,failure_modes.py,keep,library source
+src/tdf_galaxy_tau/validation/holdout.py,keep_core,3039,True,holdout.py; src/tdf_galaxy_tau/validation/holdout.py,keep,library source
+src/tdf_galaxy_tau/validation/holdout_residuals.py,keep_core,12416,True,holdout_residuals.py,keep,library source
+src/tdf_galaxy_tau/validation/robustness.py,keep_core,5121,True,robustness.py,keep,library source
+src/tdf_galaxy_tau/validation/tdf_holdout_runner.py,keep_core,8305,True,tdf_holdout_runner.py,keep,library source
+src/tdf_galaxy_tau_benchmark.egg-info/PKG-INFO,keep_core,2574,False,,keep,library source
+src/tdf_galaxy_tau_benchmark.egg-info/SOURCES.txt,keep_core,1437,False,,keep,library source
+src/tdf_galaxy_tau_benchmark.egg-info/dependency_links.txt,keep_core,1,False,,keep,library source
+src/tdf_galaxy_tau_benchmark.egg-info/requires.txt,keep_core,92,False,,keep,library source
+src/tdf_galaxy_tau_benchmark.egg-info/top_level.txt,keep_core,15,False,,keep,library source
+tests/test_claim_traceability.py,keep_core,836,False,,keep,test suite
+tests/test_controlled_expansion_final_audit.py,keep_core,3419,True,test_controlled_expansion_final_audit.py; tests/test_controlled_expansion_final_audit.py,keep,test suite
+tests/test_controlled_subset_audit.py,keep_core,2452,True,test_controlled_subset_audit.py; tests/test_controlled_subset_audit.py,keep,test suite
+tests/test_expansion12_failure_diagnostics.py,keep_core,4949,True,test_expansion12_failure_diagnostics.py; tests/test_expansion12_failure_diagnostics.py,keep,test suite
+tests/test_expansion12_pipeline.py,keep_core,3187,True,test_expansion12_pipeline.py; tests/test_expansion12_pipeline.py,keep,test suite
+tests/test_expansion12_radial_maps.py,keep_core,4581,True,test_expansion12_radial_maps.py; tests/test_expansion12_radial_maps.py,keep,test suite
+tests/test_expansion20_failure_diagnostics.py,keep_core,3841,True,test_expansion20_failure_diagnostics.py; tests/test_expansion20_failure_diagnostics.py,keep,test suite
+tests/test_expansion20_pipeline.py,keep_core,5877,True,test_expansion20_pipeline.py; tests/test_expansion20_pipeline.py,keep,test suite
+tests/test_holdout_point_residuals.py,keep_core,2331,True,test_holdout_point_residuals.py; tests/test_holdout_point_residuals.py,keep,test suite
+tests/test_ktau_sensitivity.py,keep_core,3263,True,test_ktau_sensitivity.py; tests/test_ktau_sensitivity.py,keep,test suite
+tests/test_latex_rendering.py,keep_core,1563,False,,keep,test suite
+tests/test_manuscript_claims.py,keep_core,4070,True,test_manuscript_claims.py; tests/test_manuscript_claims.py,keep,test suite
+tests/test_metrics.py,keep_core,730,False,,keep,test suite
+tests/test_ml_prior_weighting_audit.py,keep_core,3789,True,test_ml_prior_weighting_audit.py; tests/test_ml_prior_weighting_audit.py,keep,test suite
+tests/test_ml_priors.py,keep_core,3269,True,test_ml_priors.py; tests/test_ml_priors.py,keep,test suite
+tests/test_ml_scaled_baseline_comparison.py,keep_core,3956,True,test_ml_scaled_baseline_comparison.py; tests/test_ml_scaled_baseline_comparison.py,keep,test suite
+tests/test_ml_sensitivity.py,keep_core,2688,True,test_ml_sensitivity.py; tests/test_ml_sensitivity.py,keep,test suite
+tests/test_models.py,keep_core,1114,False,,keep,test suite
+tests/test_mond_model.py,keep_core,1945,False,,keep,test suite
+tests/test_ngc7814_failure_diagnostics.py,keep_core,2708,True,test_ngc7814_failure_diagnostics.py; tests/test_ngc7814_failure_diagnostics.py,keep,test suite
+tests/test_normalized_tau_patterns.py,keep_core,3610,True,test_normalized_tau_patterns.py; tests/test_normalized_tau_patterns.py,keep,test suite
+tests/test_paper_figures.py,keep_core,2427,True,test_paper_figures.py; tests/test_paper_figures.py,keep,test suite
+tests/test_paper_layout.py,keep_core,2332,True,test_paper_layout.py; tests/test_paper_layout.py,keep,test suite
+tests/test_paper_package.py,keep_core,4759,True,test_paper_package.py; tests/test_paper_package.py,keep,test suite
+tests/test_paper_tables.py,keep_core,1284,True,test_paper_tables.py; tests/test_paper_tables.py,keep,test suite
+tests/test_photometry_informed_priors.py,keep_core,5857,True,test_photometry_informed_priors.py; tests/test_photometry_informed_priors.py,keep,test suite
+tests/test_post_ml_claim_reconciliation.py,keep_core,3706,True,test_post_ml_claim_reconciliation.py; tests/test_post_ml_claim_reconciliation.py,keep,test suite
+tests/test_pre_submission_qa.py,keep_core,3328,True,test_pre_submission_qa.py; tests/test_pre_submission_qa.py,keep,test suite
+tests/test_radial_failure_maps.py,keep_core,1663,True,test_radial_failure_maps.py; tests/test_radial_failure_maps.py,keep,test suite
+tests/test_radial_tau.py,keep_core,3629,False,,keep,test suite
+tests/test_referee_readiness.py,keep_core,2786,True,test_referee_readiness.py; tests/test_referee_readiness.py,keep,test suite
+tests/test_repository_cleanup.py,keep_core,1479,False,,keep,test suite
+tests/test_schema.py,keep_core,740,False,,keep,test suite
+tests/test_sparc_baseline_fit_audit.py,keep_core,4687,True,test_sparc_baseline_fit_audit.py; tests/test_sparc_baseline_fit_audit.py,keep,test suite
+tests/test_sparc_baseline_fitting.py,keep_core,4804,False,,keep,test suite
+tests/test_sparc_failure_modes.py,keep_core,3006,False,,keep,test suite
+tests/test_sparc_ingestion.py,keep_core,909,False,,keep,test suite
+tests/test_sparc_metadata_join.py,keep_core,1542,True,test_sparc_metadata_join.py; tests/test_sparc_metadata_join.py,keep,test suite
+tests/test_sparc_mond_baseline.py,keep_core,2355,False,,keep,test suite
+tests/test_sparc_photometry_parser.py,keep_core,1228,True,test_sparc_photometry_parser.py; tests/test_sparc_photometry_parser.py,keep,test suite
+tests/test_sparc_rotmod_parser.py,keep_core,995,False,,keep,test suite
+tests/test_sparc_subset_selection.py,keep_core,3783,False,,keep,test suite
+tests/test_sparc_tau_reconstruction.py,keep_core,2623,False,,keep,test suite
+tests/test_sparc_tdf_holdout_validation.py,keep_core,1969,False,,keep,test suite
+tests/test_sparc_tdf_model_comparison.py,keep_core,2165,False,,keep,test suite
+tests/test_subset_expansion.py,keep_core,4093,True,test_subset_expansion.py; tests/test_subset_expansion.py,keep,test suite
+tests/test_tdf_knot_model.py,keep_core,2242,False,,keep,test suite
+tests/test_tdf_robustness.py,keep_core,2302,False,,keep,test suite
