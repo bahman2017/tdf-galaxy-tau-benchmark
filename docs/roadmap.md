@@ -23,9 +23,15 @@
 - Rejects `kappa_tau` as projection; rejects conflicting dual keys
 - Frozen CSV column names and outputs **not** renamed
 
-#### Phase 5G-B — internal rename (planned)
+#### Phase 5G-B — compatibility regression lock (**complete**)
 
-**Goal:** Align code, configs, and report generators with updated notation without changing frozen benchmark numbers.
+- Proves `k_g`/`K_g` and legacy `k_tau`/`K_tau` load to identical effective projection at config-loader level
+- `tests/test_notation_compatibility_regression.py` + fixtures under `tests/fixtures/notation/`
+- **Not** a full internal rename; dataclass fields and CSV columns unchanged
+
+#### Phase 5G-C — internal rename (planned)
+
+**Goal:** Optional rename of internal `k_tau` attributes to `k_g` with backward-compatible properties, plus report-generator prose updates — only after 5G-B lock passes.
 
 **Scope:**
 

@@ -1,0 +1,9 @@
+# Legacy K_tau notation (Phase 5G-B compatibility fixture; equivalent to reconstruction_k_g.yaml).
+k_tau: 1.25
+radial_tau_reconstruction:
+  K_tau: 1.25
+  negative_residual_policy: allow_signed
+  integration_boundary: tau_at_r_min_zero
+tdf_knot:
+  K_tau: 1.25
+  amplitude_bound_safety_factor: 2.0

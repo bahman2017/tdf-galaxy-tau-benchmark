@@ -2,11 +2,19 @@
 
 ## Current phase
 
+**Phase 5G-B — compatibility regression lock (K_g ≡ legacy K_tau loaders)** — **complete**
+
 **Phase 5G-A — notation alias layer (K_g / legacy K_tau)** — **complete**
 
 **Phase 5E/5F — controlled expansion-20 publication package and scientific consistency audit** — complete
 
 Publication package (manuscript PDF, paper figures/tables, reviewer matrix, pre-submission QA) is complete. Phase **5G-A** adds a backward-compatible config alias layer: **`k_g` / `K_g`** (preferred) and legacy **`k_tau` / `K_tau`** both resolve to the same projection coefficient; **`kappa_tau`** is never mapped to projection. Frozen benchmark outputs and CSV column names unchanged.
+
+### Phase 5G-B deliverables
+
+- `tests/test_notation_compatibility_regression.py` — loader-level equivalence lock
+- `tests/fixtures/notation/reconstruction_k_g.yaml` and `reconstruction_k_tau_legacy.yaml`
+- No internal field rename; frozen CSV columns unchanged
 
 ### Phase 5G-A deliverables
 
@@ -76,7 +84,7 @@ See `docs/theory_summary.md` for equations and `docs/roadmap.md` (Phase 5G) for 
 
 ## Next recommended tasks
 
-1. **Phase 5G-B:** optional internal variable rename and report-string updates (after alias tests on frozen tables).
+1. **Phase 5G-C:** optional internal `k_tau` field rename with property alias; report-string updates (after compatibility lock).
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

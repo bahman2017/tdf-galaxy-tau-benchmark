@@ -6,6 +6,31 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5G-B: compatibility regression tests locking k_g ≡ legacy k_tau loader equivalence.
+
+## Files changed (Phase 5G-B)
+
+- `tests/test_notation_compatibility_regression.py`
+- `tests/fixtures/notation/reconstruction_k_g.yaml`, `reconstruction_k_tau_legacy.yaml`
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/ktau_sensitivity.md`, `docs/reproducibility_commands.md`
+
+## Tests run (Phase 5G-B)
+
+- `python3 -m pytest -q`
+
+## Notes
+
+- No frozen outputs modified; no expansion20 rerun.
+- Internal dataclass fields still named `k_tau`.
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5G-A: backward-compatible K_g / legacy K_tau projection coefficient alias layer (no benchmark rerun).
 
 ## Files changed (Phase 5G-A)

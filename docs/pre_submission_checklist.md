@@ -40,7 +40,7 @@ python3 scripts/compile_paper_pdf.py
 
 - Controlled expansion-20 cohort only (not full SPARC)
 - Fixed baryons; no final M/L calibration
-- Legacy **K_tau** (\(K_g\)-like projection) fixed, not measured; distinct from κ_tau
+- K_tau fixed, not measured
 - Lensing not tested
 - NGC7814 canonical failure retained
 - tdf_5knot sensitivity-only
