@@ -4,8 +4,7 @@ rel_path,category,size_bytes,referenced,reference_hits,action,notes
 .pytest_cache/.gitignore,cleanup_candidate,37,True,.gitignore,delete,cache directory
 .pytest_cache/CACHEDIR.TAG,cleanup_candidate,191,False,,delete,cache directory
 .pytest_cache/README.md,cleanup_candidate,302,True,README.md,delete,cache directory
-.pytest_cache/v/cache/lastfailed,cleanup_candidate,117,False,,delete,cache directory
-.pytest_cache/v/cache/nodeids,cleanup_candidate,19184,False,,delete,cache directory
+.pytest_cache/v/cache/nodeids,cleanup_candidate,16472,False,,delete,cache directory
 CITATION.cff,keep_core,1325,True,CITATION.cff,keep,default keep
 README.md,keep_core,5682,True,README.md,keep,project metadata
 RELEASE_NOTES.md,keep_core,2659,False,,keep,default keep
@@ -204,20 +203,20 @@ data/raw/sparc/photometry/README.md,keep_data,971,True,README.md,keep,SPARC raw 
 data/raw/sparc/photometry/SPARC_Table1_vizier_working_copy.tsv,keep_data,11111,True,SPARC_Table1_vizier_working_copy.tsv; data/raw/sparc/photometry/SPARC_Table1_vizier_working_copy.tsv,keep,SPARC raw or processed inputs
 docs/assumptions.md,keep_docs,5814,True,assumptions.md; docs/assumptions.md,keep,project documentation
 docs/controlled_expansion_results.md,keep_docs,2113,True,controlled_expansion_results.md; docs/controlled_expansion_results.md,keep,project documentation
-docs/controlled_subset_audit.md,keep_docs,2771,True,controlled_subset_audit.md; docs/controlled_subset_audit.md,keep,project documentation
-docs/cursor_work_log.md,keep_docs,21276,True,cursor_work_log.md; docs/cursor_work_log.md,keep,project documentation
+docs/controlled_subset_audit.md,keep_docs,2702,True,controlled_subset_audit.md; docs/controlled_subset_audit.md,keep,project documentation
+docs/cursor_work_log.md,keep_docs,19893,True,cursor_work_log.md; docs/cursor_work_log.md,keep,project documentation
 docs/data_sources.md,keep_docs,2186,True,data_sources.md; docs/data_sources.md,keep,project documentation
 docs/expansion12_failure_mode_analysis.md,keep_docs,1640,True,docs/expansion12_failure_mode_analysis.md; expansion12_failure_mode_analysis.md,keep,project documentation
 docs/expansion12_radial_residual_maps.md,keep_docs,1513,True,docs/expansion12_radial_residual_maps.md; expansion12_radial_residual_maps.md,keep,project documentation
 docs/expansion12_results.md,keep_docs,1558,True,docs/expansion12_results.md; expansion12_results.md,keep,project documentation
 docs/expansion20_failure_mode_analysis.md,keep_docs,1393,True,docs/expansion20_failure_mode_analysis.md; expansion20_failure_mode_analysis.md,keep,project documentation
 docs/expansion20_results.md,keep_docs,1901,True,docs/expansion20_results.md; expansion20_results.md,keep,project documentation
-docs/failure_mode_analysis.md,keep_docs,1918,True,docs/failure_mode_analysis.md; failure_mode_analysis.md,keep,project documentation
-docs/ktau_sensitivity.md,keep_docs,2089,True,docs/ktau_sensitivity.md; ktau_sensitivity.md,keep,project documentation
+docs/failure_mode_analysis.md,keep_docs,1881,True,docs/failure_mode_analysis.md; failure_mode_analysis.md,keep,project documentation
+docs/ktau_sensitivity.md,keep_docs,1645,True,docs/ktau_sensitivity.md; ktau_sensitivity.md,keep,project documentation
 docs/limitations.md,keep_docs,6737,True,docs/limitations.md; limitations.md,keep,project documentation
 docs/m33_to_multigalaxy_transition.md,keep_docs,1139,False,,keep,project documentation
 docs/ml_prior_framework.md,keep_docs,3415,True,docs/ml_prior_framework.md; ml_prior_framework.md,keep,project documentation
-docs/ml_scaled_baseline_comparison.md,keep_docs,2257,True,docs/ml_scaled_baseline_comparison.md; ml_scaled_baseline_comparison.md,keep,project documentation
+docs/ml_scaled_baseline_comparison.md,keep_docs,2236,True,docs/ml_scaled_baseline_comparison.md; ml_scaled_baseline_comparison.md,keep,project documentation
 docs/ml_sensitivity_audit.md,keep_docs,1527,True,docs/ml_sensitivity_audit.md; ml_sensitivity_audit.md,keep,project documentation
 docs/ngc7814_failure_mode.md,keep_docs,6152,True,docs/ngc7814_failure_mode.md; ngc7814_failure_mode.md,keep,project documentation
 docs/normalized_tau_patterns.md,keep_docs,3159,True,docs/normalized_tau_patterns.md; normalized_tau_patterns.md,keep,project documentation
@@ -226,13 +225,13 @@ docs/paper_ready_claims.md,keep_docs,8801,True,docs/paper_ready_claims.md; paper
 docs/photometry_informed_ml_priors.md,keep_docs,1673,True,docs/photometry_informed_ml_priors.md; photometry_informed_ml_priors.md,keep,project documentation
 docs/pre_submission_checklist.md,keep_docs,1309,True,docs/pre_submission_checklist.md; pre_submission_checklist.md,keep,project documentation
 docs/project_plan.md,keep_docs,1019,False,,keep,project documentation
-docs/project_status.md,keep_docs,7120,True,docs/project_status.md; project_status.md,keep,project documentation
+docs/project_status.md,keep_docs,6371,True,docs/project_status.md; project_status.md,keep,project documentation
 docs/repository_cleanup_plan.md,keep_docs,3357,True,docs/repository_cleanup_plan.md; repository_cleanup_plan.md,keep,project documentation
 docs/repository_map.md,keep_docs,3139,True,docs/repository_map.md; repository_map.md,keep,project documentation
-docs/reproducibility_commands.md,keep_docs,2255,True,docs/reproducibility_commands.md; reproducibility_commands.md,keep,project documentation
+docs/reproducibility_commands.md,keep_docs,1936,True,docs/reproducibility_commands.md; reproducibility_commands.md,keep,project documentation
 docs/results_summary.md,keep_docs,7217,True,docs/results_summary.md; results_summary.md,keep,project documentation
 docs/reviewer_objection_matrix.md,keep_docs,5405,True,docs/reviewer_objection_matrix.md; reviewer_objection_matrix.md,keep,project documentation
-docs/roadmap.md,keep_docs,2738,True,docs/roadmap.md; roadmap.md,keep,project documentation
+docs/roadmap.md,keep_docs,2031,True,docs/roadmap.md; roadmap.md,keep,project documentation
 docs/sparc_subset_selection.md,keep_docs,1793,True,docs/sparc_subset_selection.md; sparc_subset_selection.md,keep,project documentation
 docs/subset_expansion_protocol.md,keep_docs,1470,True,docs/subset_expansion_protocol.md; subset_expansion_protocol.md,keep,project documentation
 docs/theory_summary.md,keep_docs,1844,True,docs/theory_summary.md; theory_summary.md,keep,project documentation
@@ -338,7 +337,7 @@ outputs/reports/paper_package_scaffold_report.md,keep_outputs_frozen,2202,True,o
 outputs/reports/paper_pre_submission_qa_report.md,keep_outputs_frozen,1175,True,outputs/reports/paper_pre_submission_qa_report.md; paper_pre_submission_qa_report.md; reports/paper_pre_submission_qa_report.md,keep,benchmark or publication output
 outputs/reports/paper_referee_readiness_report.md,keep_outputs_frozen,863,True,outputs/reports/paper_referee_readiness_report.md; paper_referee_readiness_report.md; reports/paper_referee_readiness_report.md,keep,benchmark or publication output
 outputs/reports/paper_scientific_edit_report.md,keep_outputs_frozen,1583,True,outputs/reports/paper_scientific_edit_report.md; paper_scientific_edit_report.md; reports/paper_scientific_edit_report.md,keep,benchmark or publication output
-outputs/reports/repository_cleanup_audit_report.md,keep_outputs_frozen,2491,True,outputs/reports/repository_cleanup_audit_report.md; reports/repository_cleanup_audit_report.md; repository_cleanup_audit_report.md,keep,benchmark or publication output
+outputs/reports/repository_cleanup_audit_report.md,keep_outputs_frozen,2253,True,outputs/reports/repository_cleanup_audit_report.md; reports/repository_cleanup_audit_report.md; repository_cleanup_audit_report.md,keep,benchmark or publication output
 outputs/reports/sparc_baseline_fit_audit_refit_report.md,keep_outputs_frozen,3010,False,,keep,benchmark or publication output
 outputs/reports/sparc_baseline_fit_audit_report.md,keep_outputs_frozen,3167,True,outputs/reports/sparc_baseline_fit_audit_report.md; reports/sparc_baseline_fit_audit_report.md; sparc_baseline_fit_audit_report.md,keep,benchmark or publication output
 outputs/reports/sparc_baseline_model_comparison_report.md,keep_outputs_frozen,674,True,outputs/reports/sparc_baseline_model_comparison_report.md; reports/sparc_baseline_model_comparison_report.md; sparc_baseline_model_comparison_report.md,keep,benchmark or publication output
@@ -398,8 +397,8 @@ outputs/tables/ngc7814_vs_success_group_diagnostics.csv,keep_outputs_frozen,3266
 outputs/tables/paper_figure_inventory.csv,keep_outputs_frozen,2448,True,outputs/tables/paper_figure_inventory.csv; paper_figure_inventory.csv; tables/paper_figure_inventory.csv,keep,benchmark or publication output
 outputs/tables/paper_statistical_summary.csv,keep_outputs_frozen,1664,True,outputs/tables/paper_statistical_summary.csv; paper_statistical_summary.csv; tables/paper_statistical_summary.csv,keep,benchmark or publication output
 outputs/tables/paper_table_inventory.csv,keep_outputs_frozen,1785,True,outputs/tables/paper_table_inventory.csv; paper_table_inventory.csv; tables/paper_table_inventory.csv,keep,benchmark or publication output
-outputs/tables/repository_cleanup_candidates.csv,keep_outputs_frozen,1153,True,outputs/tables/repository_cleanup_candidates.csv; repository_cleanup_candidates.csv; tables/repository_cleanup_candidates.csv,keep,benchmark or publication output
-outputs/tables/repository_file_inventory.csv,keep_outputs_frozen,98606,True,outputs/tables/repository_file_inventory.csv; repository_file_inventory.csv; tables/repository_file_inventory.csv,keep,benchmark or publication output
+outputs/tables/repository_cleanup_candidates.csv,keep_outputs_frozen,766,True,outputs/tables/repository_cleanup_candidates.csv; repository_cleanup_candidates.csv; tables/repository_cleanup_candidates.csv,keep,benchmark or publication output
+outputs/tables/repository_file_inventory.csv,keep_outputs_frozen,97161,True,outputs/tables/repository_file_inventory.csv; repository_file_inventory.csv; tables/repository_file_inventory.csv,keep,benchmark or publication output
 outputs/tables/sparc_baseline_fit_audit.csv,keep_outputs_frozen,4840,True,outputs/tables/sparc_baseline_fit_audit.csv; sparc_baseline_fit_audit.csv; tables/sparc_baseline_fit_audit.csv,keep,benchmark or publication output
 outputs/tables/sparc_baseline_fit_audit_refit.csv,keep_outputs_frozen,5197,True,outputs/tables/sparc_baseline_fit_audit_refit.csv; sparc_baseline_fit_audit_refit.csv; tables/sparc_baseline_fit_audit_refit.csv,keep,benchmark or publication output
 outputs/tables/sparc_baseline_fit_parameters.csv,keep_outputs_frozen,1572,True,outputs/tables/sparc_baseline_fit_parameters.csv; sparc_baseline_fit_parameters.csv; tables/sparc_baseline_fit_parameters.csv,keep,benchmark or publication output
@@ -553,8 +552,6 @@ src/tdf_galaxy_tau/cli/__init__.py,keep_core,0,True,__init__.py,keep,library sou
 src/tdf_galaxy_tau/cli/compare_models.py,keep_core,211,False,,keep,library source
 src/tdf_galaxy_tau/cli/reconstruct_galaxy.py,keep_core,200,False,,keep,library source
 src/tdf_galaxy_tau/cli/run_sparc_subset.py,keep_core,198,True,run_sparc_subset.py,keep,library source
-src/tdf_galaxy_tau/config/__init__.py,keep_core,465,True,__init__.py; src/tdf_galaxy_tau/config/__init__.py,keep,library source
-src/tdf_galaxy_tau/config/notation.py,keep_core,4370,True,notation.py; src/tdf_galaxy_tau/config/notation.py,keep,library source
 src/tdf_galaxy_tau/data/__init__.py,keep_core,0,True,__init__.py,keep,library source
 src/tdf_galaxy_tau/data/schema.py,keep_core,444,False,,keep,library source
 src/tdf_galaxy_tau/data/sparc_loader.py,keep_core,1968,False,,keep,library source
@@ -573,13 +570,13 @@ src/tdf_galaxy_tau/models/burkert.py,keep_core,1501,False,,keep,library source
 src/tdf_galaxy_tau/models/fitting.py,keep_core,36082,True,fitting.py; src/tdf_galaxy_tau/models/fitting.py,keep,library source
 src/tdf_galaxy_tau/models/mond.py,keep_core,3671,True,mond.py,keep,library source
 src/tdf_galaxy_tau/models/nfw.py,keep_core,1420,False,,keep,library source
-src/tdf_galaxy_tau/models/tdf_knot.py,keep_core,6993,True,src/tdf_galaxy_tau/models/tdf_knot.py; tdf_knot.py,keep,library source
+src/tdf_galaxy_tau/models/tdf_knot.py,keep_core,6907,False,,keep,library source
 src/tdf_galaxy_tau/plotting/__init__.py,keep_core,0,True,__init__.py,keep,library source
 src/tdf_galaxy_tau/plotting/diagnostics.py,keep_core,1822,True,diagnostics.py,keep,library source
 src/tdf_galaxy_tau/plotting/rotation_curves.py,keep_core,5509,False,,keep,library source
 src/tdf_galaxy_tau/plotting/tau_profiles.py,keep_core,4625,False,,keep,library source
 src/tdf_galaxy_tau/reconstruction/__init__.py,keep_core,0,True,__init__.py,keep,library source
-src/tdf_galaxy_tau/reconstruction/radial_tau.py,keep_core,7181,True,radial_tau.py; src/tdf_galaxy_tau/reconstruction/radial_tau.py,keep,library source
+src/tdf_galaxy_tau/reconstruction/radial_tau.py,keep_core,7060,False,,keep,library source
 src/tdf_galaxy_tau/reconstruction/regularization.py,keep_core,1306,False,,keep,library source
 src/tdf_galaxy_tau/reconstruction/smoothing.py,keep_core,995,False,,keep,library source
 src/tdf_galaxy_tau/scripts/__init__.py,keep_core,1,True,__init__.py,keep,library source
@@ -596,8 +593,6 @@ src/tdf_galaxy_tau_benchmark.egg-info/SOURCES.txt,keep_core,1437,False,,keep,lib
 src/tdf_galaxy_tau_benchmark.egg-info/dependency_links.txt,keep_core,1,False,,keep,library source
 src/tdf_galaxy_tau_benchmark.egg-info/requires.txt,keep_core,92,False,,keep,library source
 src/tdf_galaxy_tau_benchmark.egg-info/top_level.txt,keep_core,15,False,,keep,library source
-tests/fixtures/notation/reconstruction_k_g.yaml,keep_core,285,True,reconstruction_k_g.yaml; tests/fixtures/notation/reconstruction_k_g.yaml,keep,test suite
-tests/fixtures/notation/reconstruction_k_tau_legacy.yaml,keep_core,296,True,reconstruction_k_tau_legacy.yaml,keep,test suite
 tests/test_claim_traceability.py,keep_core,836,False,,keep,test suite
 tests/test_controlled_expansion_final_audit.py,keep_core,3419,True,test_controlled_expansion_final_audit.py; tests/test_controlled_expansion_final_audit.py,keep,test suite
 tests/test_controlled_subset_audit.py,keep_core,2452,True,test_controlled_subset_audit.py; tests/test_controlled_subset_audit.py,keep,test suite
@@ -619,8 +614,6 @@ tests/test_models.py,keep_core,1114,False,,keep,test suite
 tests/test_mond_model.py,keep_core,1945,False,,keep,test suite
 tests/test_ngc7814_failure_diagnostics.py,keep_core,2708,True,test_ngc7814_failure_diagnostics.py; tests/test_ngc7814_failure_diagnostics.py,keep,test suite
 tests/test_normalized_tau_patterns.py,keep_core,3610,True,test_normalized_tau_patterns.py; tests/test_normalized_tau_patterns.py,keep,test suite
-tests/test_notation_aliases.py,keep_core,4337,True,test_notation_aliases.py; tests/test_notation_aliases.py,keep,test suite
-tests/test_notation_compatibility_regression.py,keep_core,5662,True,test_notation_compatibility_regression.py; tests/test_notation_compatibility_regression.py,keep,test suite
 tests/test_paper_figures.py,keep_core,2427,True,test_paper_figures.py; tests/test_paper_figures.py,keep,test suite
 tests/test_paper_layout.py,keep_core,2332,True,test_paper_layout.py; tests/test_paper_layout.py,keep,test suite
 tests/test_paper_package.py,keep_core,4759,True,test_paper_package.py; tests/test_paper_package.py,keep,test suite
