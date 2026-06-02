@@ -6,6 +6,31 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5G-C-A: internal K_g rename audit (read-only); classify remaining k_tau / K_tau references for 5G-C-B.
+
+## Files changed
+
+- `docs/phase5g_internal_rename_audit.md` (new)
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/cursor_work_log.md`
+
+## Tests run
+
+- `python3 -m pytest -q`
+
+## Notes
+
+- No code, dataclass, benchmark, or frozen output changes.
+- Audit: ~52 internal_projection_candidate, ~350+ sensitivity_sweep_legacy_axis, frozen CSV columns must stay `K_tau`.
+- Next: Phase 5G-C-B dataclass rename + `.k_tau` property alias per audit.
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5G-B status synchronization: align `project_status.md` with completed regression lock.
 
 ## Files changed

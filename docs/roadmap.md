@@ -9,11 +9,12 @@
 - **Phase 5A–5E:** pre-registered expansion_12 / expansion_20 cohorts and final audit (C20 claims)
 - **Phase 5F:** publication package (manuscript, figures, tables, QA) and Zenodo preprint
 - **Phase 5G-A:** K_g / legacy K_tau config alias layer (**complete**; tag `v0.1.2-notation-aliases`)
-- **Phase 5G-B:** loader compatibility regression lock (**complete**)
+- **Phase 5G-B:** loader compatibility regression lock (**complete**; tag `v0.1.3-notation-compatibility`)
+- **Phase 5G-C-A:** internal rename audit (**complete**; `docs/phase5g_internal_rename_audit.md`)
 
 ## Current
 
-- **Phase 5G-B complete; Phase 5G-C planned:** notation alias layer and loader equivalence are locked; optional internal rename and report-string updates remain.
+- **Phase 5G-C-A complete; Phase 5G-C-B planned:** audit maps ~52 internal projection candidates; frozen CSV columns and sensitivity tables remain legacy **K_tau**.
 
 ## Planned
 
@@ -31,17 +32,26 @@
 - `tests/test_notation_compatibility_regression.py` + fixtures under `tests/fixtures/notation/`
 - **Not** a full internal rename; dataclass fields and CSV columns unchanged
 
-#### Phase 5G-C — internal rename (planned)
+#### Phase 5G-C-A — internal rename audit (**complete**)
 
-**Goal:** Optional rename of internal `k_tau` attributes to `k_g` with backward-compatible properties, plus report-generator prose updates — only after 5G-B lock passes.
+- Read-only reference map: `docs/phase5g_internal_rename_audit.md`
+- Classifies ~85 files; no code or frozen output changes
 
-**Scope:**
+#### Phase 5G-C-B — internal rename (planned)
 
-1. Introduce **K_g** as the primary symbol in documentation strings and user-facing prose generators.
-2. Retain **K_tau** as a **backward-compatible alias** in configs and CSV readers (map `K_tau` → `K_g` internally).
-3. Add tests that alias paths reproduce identical holdout metrics on frozen expansion_20 tables.
-4. Explicitly document that **κ_tau** is reserved for mother-field stiffness and is **not** renamed from legacy **K_tau**.
-5. Do **not** rewrite historical `outputs/tables/*.csv` column headers without a versioned migration pass.
+**Goal:** Rename internal `k_tau` dataclass fields and function parameters to `k_g` with read-only `.k_tau` property aliases — per audit; only after 5G-B lock.
+
+**Scope (from audit):**
+
+1. `TauReconstructionConfig.k_tau` → `k_g`; `TdfKnotConfig.k_tau` → `k_g`; deprecated `.k_tau` property.
+2. Internal API params (`tdf_velocity_*`, `fit_tdf_knot_model`, holdout runners) primary `k_g`; optional deprecated `k_tau=` kwarg.
+3. Docstrings and report-generator source prefer **K_g**; frozen CSV writers keep column name **`K_tau`**.
+4. Tests: extend 5G-B regression; property alias test; CSV column name unchanged.
+5. **κ_tau** guards unchanged; **no** in-place frozen CSV header renames.
+
+#### Phase 5G-C-C — optional production config migration (future)
+
+- Migrate `configs/reconstruction.yaml` to `k_g` keys; regenerate reports under explicit rerun policy only.
 
 **Out of scope for 5G:** new fits, cohort expansion, or claim-boundary changes.
 

@@ -2,11 +2,12 @@
 
 ## Current phase
 
-**Phase 5G-B — K_g / legacy K_tau compatibility regression lock** — **complete**
+**Phase 5G-C-A — internal K_g rename audit (read-only)** — **complete**
 
 Supporting notation steps (also complete):
 
-- **Phase 5G-A — notation alias layer (K_g / legacy K_tau)**
+- **Phase 5G-A — notation alias layer (K_g / legacy K_tau)** — tag `v0.1.2-notation-aliases`
+- **Phase 5G-B — K_g / legacy K_tau compatibility regression lock** — tag `v0.1.3-notation-compatibility`
 - **Phase 5E/5F — controlled expansion-20 publication package and scientific consistency audit**
 
 Publication package (manuscript PDF, paper figures/tables, reviewer matrix, pre-submission QA) is complete. Phase **5G-A** added a backward-compatible config alias layer: **`k_g` / `K_g`** (preferred projection coefficient) and legacy **`k_tau` / `K_tau`** (same role). Phase **5G-B** regression-locks loader-level equivalence before any internal rename. **`kappa_tau` / κ_tau** is field stiffness only and is never mapped to projection. Frozen benchmark outputs and CSV column names unchanged.
@@ -35,7 +36,12 @@ In the pre-registered controlled **expansion_20** cohort:
 
 Authoritative claims: `docs/paper_ready_claims.md` (C20-A–C20-H), `docs/controlled_expansion_results.md`, `outputs/tables/controlled_expansion_final_claims.csv`.
 
-### Notation (Phase 5G-A / 5G-B complete; 5G-C planned)
+### Phase 5G-C-A deliverables
+
+- `docs/phase5g_internal_rename_audit.md` — classified inventory of remaining `k_tau` / `K_tau` references
+- No dataclass field rename; no benchmark rerun; no frozen output changes
+
+### Notation (Phase 5G-A / 5G-B complete; 5G-C-B planned)
 
 | Symbol | Role |
 | --- | --- |
@@ -43,7 +49,7 @@ Authoritative claims: `docs/paper_ready_claims.md` (C20-A–C20-H), `docs/contro
 | **κ_tau** | **Dynamical stiffness** in the mother field equation; **not** interchangeable with \(K_g\). |
 | **K_tau** (legacy) | Historical benchmark/config label and frozen CSV column name for the projection coefficient. |
 
-See `docs/theory_summary.md` and `docs/roadmap.md` (Phase **5G-C** internal rename planned).
+See `docs/theory_summary.md`, `docs/phase5g_internal_rename_audit.md`, and `docs/roadmap.md` (Phase **5G-C-B** internal rename planned).
 
 ## Completed tasks
 
@@ -78,7 +84,8 @@ See `docs/theory_summary.md` and `docs/roadmap.md` (Phase **5G-C** internal rena
 - Phase 5E: expansion_12 vs expansion_20 final audit package (`docs/controlled_expansion_results.md`; claims C20-A–H).
 - Phase 5F-A–F: paper scaffold, figures, LaTeX tables, manuscript PDF, scientific edit, referee readiness, pre-submission QA (`docs/pre_submission_checklist.md`).
 - Phase 5G-A: `normalize_projection_coefficient` alias layer (`src/tdf_galaxy_tau/config/notation.py`; tag `v0.1.2-notation-aliases`).
-- Phase 5G-B: compatibility regression lock (`tests/test_notation_compatibility_regression.py`; commits `863e153`, `74f92b6`).
+- Phase 5G-B: compatibility regression lock (`tests/test_notation_compatibility_regression.py`; tag `v0.1.3-notation-compatibility`).
+- Phase 5G-C-A: internal rename audit (`docs/phase5g_internal_rename_audit.md`; no code changes).
 - Release prep: repository cleanup audit, Git tag `v0.1.0-expansion20-paper`, Zenodo preprint DOI [10.5281/zenodo.20437254](https://doi.org/10.5281/zenodo.20437254).
 
 ## Current blockers
@@ -88,12 +95,11 @@ See `docs/theory_summary.md` and `docs/roadmap.md` (Phase **5G-C** internal rena
 
 ## Next recommended tasks
 
-1. **Phase 5G-C:** optional internal rename from `k_tau` dataclass fields to `k_g` with backward-compatible `.k_tau` property alias; report-string updates.
-2. **Tag `v0.1.3-notation-compatibility`** on `main` after this status sync (points at 5G-B regression lock).
-3. Author/journal formatting review of `paper/manuscript.pdf`.
-4. Optional blocked-holdout for UGC12506.
-5. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.
-6. Full SPARC and lensing deferred per claim boundaries.
+1. **Phase 5G-C-B:** internal rename per `docs/phase5g_internal_rename_audit.md` — dataclass `k_tau` → `k_g` with read-only `.k_tau` property alias; function-param rename; report-generator label updates only (no frozen CSV column renames).
+2. Author/journal formatting review of `paper/manuscript.pdf`.
+3. Optional blocked-holdout for UGC12506.
+4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.
+5. Full SPARC and lensing deferred per claim boundaries.
 
 ## Latest validation/test results
 
