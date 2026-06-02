@@ -9,6 +9,8 @@ import pandas as pd
 import yaml
 from scipy.integrate import cumulative_trapezoid
 
+from tdf_galaxy_tau.config.notation import merge_projection_from_yaml_blocks
+
 from .regularization import SmoothingConfig, apply_diagnostic_smoothing
 
 
@@ -39,7 +41,7 @@ PHASE_2A_OUTPUT_COLUMNS = [
 class TauReconstructionConfig:
     """Radial τ reconstruction settings (Phase 2A).
 
-    K_tau is a normalization/calibration parameter, not a measured universal constant.
+    ``k_tau`` stores the gravitational projection coefficient (K_g); legacy config key name.
     dtaudr_reconstructed is inferred from rotation residuals, not a directly measured field.
     """
 
@@ -66,8 +68,9 @@ def load_reconstruction_config(path: str | Path) -> TauReconstructionConfig:
         window=int(smooth_raw.get("window", 3)),
         diagnostic_only=bool(smooth_raw.get("diagnostic_only", True)),
     )
+    projection = merge_projection_from_yaml_blocks(raw, block)
     return TauReconstructionConfig(
-        k_tau=float(block.get("K_tau", block.get("k_tau", 1.0))),
+        k_tau=float(projection["k_g"]),
         negative_residual_policy=str(
             block.get("negative_residual_policy", raw.get("negative_residual_policy", "allow_signed"))
         ),

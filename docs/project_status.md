@@ -2,9 +2,17 @@
 
 ## Current phase
 
-**Phase 5E/5F — controlled expansion-20 publication package and scientific consistency audit**
+**Phase 5G-A — notation alias layer (K_g / legacy K_tau)** — **complete**
 
-Publication package (manuscript PDF, paper figures/tables, reviewer matrix, pre-submission QA) is complete. Current work is **documentation-only** alignment with the updated conservative effective-gravity notation (**K_g**, **κ_tau**) while **frozen benchmark outputs** retain legacy **K_tau** labels. No refitting or metric changes in this pass.
+**Phase 5E/5F — controlled expansion-20 publication package and scientific consistency audit** — complete
+
+Publication package (manuscript PDF, paper figures/tables, reviewer matrix, pre-submission QA) is complete. Phase **5G-A** adds a backward-compatible config alias layer: **`k_g` / `K_g`** (preferred) and legacy **`k_tau` / `K_tau`** both resolve to the same projection coefficient; **`kappa_tau`** is never mapped to projection. Frozen benchmark outputs and CSV column names unchanged.
+
+### Phase 5G-A deliverables
+
+- `src/tdf_galaxy_tau/config/notation.py` — `normalize_projection_coefficient`, `merge_projection_from_yaml_blocks`
+- `load_reconstruction_config` and `load_tdf_knot_config` use the alias layer
+- `tests/test_notation_aliases.py`
 
 ### expansion_20 headline (frozen)
 
@@ -68,7 +76,7 @@ See `docs/theory_summary.md` for equations and `docs/roadmap.md` (Phase 5G) for 
 
 ## Next recommended tasks
 
-1. **Phase 5G:** notation migration from legacy `K_tau` to `K_g` with backward-compatible aliases and tests (see `docs/roadmap.md`).
+1. **Phase 5G-B:** optional internal variable rename and report-string updates (after alias tests on frozen tables).
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

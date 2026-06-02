@@ -2,6 +2,33 @@
 
 ## Date/time
 
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
+Phase 5G-A: backward-compatible K_g / legacy K_tau projection coefficient alias layer (no benchmark rerun).
+
+## Files changed (Phase 5G-A)
+
+- `src/tdf_galaxy_tau/config/notation.py`, `src/tdf_galaxy_tau/config/__init__.py`
+- `src/tdf_galaxy_tau/reconstruction/radial_tau.py` — `load_reconstruction_config`
+- `src/tdf_galaxy_tau/models/tdf_knot.py` — `load_tdf_knot_config`
+- `tests/test_notation_aliases.py`
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/ktau_sensitivity.md`, `docs/reproducibility_commands.md`
+
+## Tests run (Phase 5G-A)
+
+- `python3 -m pytest -q`
+
+## Notes
+
+- Frozen CSV columns and `outputs/tables/*` not modified.
+- `kappa_tau` rejected if used alone as projection key.
+
+---
+
+## Date/time
+
 Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary

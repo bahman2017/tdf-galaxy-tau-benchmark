@@ -17,6 +17,14 @@
 
 ### Phase 5G — notation migration (K_tau → K_g)
 
+#### Phase 5G-A — alias layer (**complete**)
+
+- `normalize_projection_coefficient()` accepts `k_g`/`K_g` and legacy `k_tau`/`K_tau`
+- Rejects `kappa_tau` as projection; rejects conflicting dual keys
+- Frozen CSV column names and outputs **not** renamed
+
+#### Phase 5G-B — internal rename (planned)
+
 **Goal:** Align code, configs, and report generators with updated notation without changing frozen benchmark numbers.
 
 **Scope:**

@@ -6,6 +6,8 @@ import numpy as np
 import pandas as pd
 from scipy.integrate import cumulative_trapezoid
 
+from tdf_galaxy_tau.config.notation import merge_projection_from_yaml_blocks
+
 # Large penalty scale when v_model^2 < 0 during optimization
 DEFAULT_NEGATIVE_V2_PENALTY = 1000.0
 
@@ -154,10 +156,10 @@ def integrate_tau_profile(
 def load_tdf_knot_config(reconstruction_yaml: dict) -> TdfKnotConfig:
     block = reconstruction_yaml.get("tdf_knot", {})
     radial = reconstruction_yaml.get("radial_tau_reconstruction", {})
-    k_tau = float(block.get("K_tau", radial.get("K_tau", reconstruction_yaml.get("k_tau", 1.0))))
+    projection = merge_projection_from_yaml_blocks(reconstruction_yaml, radial, block)
     variants = tuple(block.get("variants", ["tdf_3knot", "tdf_4knot", "tdf_5knot"]))
     return TdfKnotConfig(
-        k_tau=k_tau,
+        k_tau=float(projection["k_g"]),
         amplitude_bound_safety_factor=float(block.get("amplitude_bound_safety_factor", 2.0)),
         negative_v2_penalty=float(block.get("negative_v2_penalty", DEFAULT_NEGATIVE_V2_PENALTY)),
         variants=variants,

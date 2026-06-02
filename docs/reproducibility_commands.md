@@ -56,10 +56,14 @@ python3 scripts/build_repository_cleanup_audit.py --apply-cleanup
 
 ## Notation
 
-Frozen benchmark tables use legacy **K_tau** for the fixed projection coefficient. Updated
-documentation uses **K_g** (projection) and **κ_tau** (field stiffness). See
-[`theory_summary.md`](theory_summary.md). Planned code migration: Phase 5G in
-[`roadmap.md`](roadmap.md).
+Frozen benchmark tables use legacy **K_tau** column names. Config loaders accept **both**:
+
+- Preferred: `k_g` / `K_g` (gravitational projection coefficient)
+- Legacy: `k_tau` / `K_tau` (same role; backward compatible)
+
+`kappa_tau` is field stiffness and is **not** accepted as a projection alias. See
+[`theory_summary.md`](theory_summary.md) and `src/tdf_galaxy_tau/config/notation.py`.
+Planned internal rename: Phase 5G-B in [`roadmap.md`](roadmap.md).
 
 ## Expected headline artifacts
 
