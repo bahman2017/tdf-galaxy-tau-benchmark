@@ -54,7 +54,7 @@ def _fit_tdf_holdout_row(
     train_idx: np.ndarray,
     test_idx: np.ndarray,
     *,
-    k_tau: float,
+    k_g: float,
     safety_factor: float,
     negative_v2_penalty: float,
 ) -> dict[str, object]:
@@ -76,7 +76,7 @@ def _fit_tdf_holdout_row(
         knot_r_kpc=knot_r,
         initial_knot_dtaudr=x0,
         dtaudr_bounds=bounds,
-        k_tau=k_tau,
+        k_g=k_g,
         negative_v2_penalty=negative_v2_penalty,
         train_mask=train_mask,
     )
@@ -90,7 +90,7 @@ def _fit_tdf_holdout_row(
         "test_n": int(test_mask.sum()),
         "fit_success": fit.fit_success,
         "fit_status": fit.fit_status,
-        "K_tau": k_tau,
+        "K_tau": k_g,
         "bounds_safety_factor": safety_factor,
         **tm,
     }
@@ -227,7 +227,7 @@ def run_holdout_validation(
                         split.name,
                         split.train_indices,
                         split.test_indices,
-                        k_tau=tdf_cfg.k_tau,
+                        k_g=tdf_cfg.k_g,
                         safety_factor=tdf_cfg.amplitude_bound_safety_factor,
                         negative_v2_penalty=tdf_cfg.negative_v2_penalty,
                     )

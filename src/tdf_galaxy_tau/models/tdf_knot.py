@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from scipy.integrate import cumulative_trapezoid
 
-from tdf_galaxy_tau.config.notation import merge_projection_from_yaml_blocks
+from tdf_galaxy_tau.config.notation import merge_projection_from_yaml_blocks, resolve_projection_coefficient_kwarg
 
 # Large penalty scale when v_model^2 < 0 during optimization
 DEFAULT_NEGATIVE_V2_PENALTY = 1000.0
@@ -26,10 +26,15 @@ _KNOT_RULE_LABEL = {
 
 @dataclass(frozen=True)
 class TdfKnotConfig:
-    k_tau: float = 1.0
+    k_g: float = 1.0
     amplitude_bound_safety_factor: float = 2.0
     negative_v2_penalty: float = DEFAULT_NEGATIVE_V2_PENALTY
     variants: tuple[str, ...] = ("tdf_3knot", "tdf_4knot", "tdf_5knot")
+
+    @property
+    def k_tau(self) -> float:
+        """Deprecated alias for gravitational projection coefficient K_g."""
+        return self.k_g
 
 
 def n_knots_for_model(model_name: str) -> int:
@@ -84,13 +89,15 @@ def tdf_velocity_squared_kms2(
     knot_r_kpc: np.ndarray,
     knot_dtaudr: np.ndarray,
     *,
-    k_tau: float,
+    k_g: float | None = None,
+    k_tau: float | None = None,
 ) -> np.ndarray:
-    """v_tdf^2 = v_bar^2 + r * K_tau * dτ/dr_model."""
+    """v_tdf^2 = v_bar^2 + r * K_g * dτ/dr_model."""
+    kg = resolve_projection_coefficient_kwarg(k_g=k_g, k_tau=k_tau, context="tdf_velocity_squared_kms2")
     r = np.asarray(r_kpc, dtype=float)
     vbar = np.asarray(v_bar_kms, dtype=float)
     dtaudr = interpolate_dtaudr_at_radii(r, knot_r_kpc, knot_dtaudr)
-    return vbar**2 + r * float(k_tau) * dtaudr
+    return vbar**2 + r * kg * dtaudr
 
 
 def tdf_velocity_kms(
@@ -99,10 +106,13 @@ def tdf_velocity_kms(
     knot_r_kpc: np.ndarray,
     knot_dtaudr: np.ndarray,
     *,
-    k_tau: float,
+    k_g: float | None = None,
+    k_tau: float | None = None,
 ) -> tuple[np.ndarray, np.ndarray]:
     """Return (v_model_kms, v_squared_kms2); sqrt only where v^2 > 0."""
-    v2 = tdf_velocity_squared_kms2(r_kpc, v_bar_kms, knot_r_kpc, knot_dtaudr, k_tau=k_tau)
+    v2 = tdf_velocity_squared_kms2(
+        r_kpc, v_bar_kms, knot_r_kpc, knot_dtaudr, k_g=k_g, k_tau=k_tau
+    )
     v_model = np.sqrt(np.maximum(v2, 0.0))
     return v_model, v2
 
@@ -159,7 +169,7 @@ def load_tdf_knot_config(reconstruction_yaml: dict) -> TdfKnotConfig:
     projection = merge_projection_from_yaml_blocks(reconstruction_yaml, radial, block)
     variants = tuple(block.get("variants", ["tdf_3knot", "tdf_4knot", "tdf_5knot"]))
     return TdfKnotConfig(
-        k_tau=float(projection["k_g"]),
+        k_g=float(projection["k_g"]),
         amplitude_bound_safety_factor=float(block.get("amplitude_bound_safety_factor", 2.0)),
         negative_v2_penalty=float(block.get("negative_v2_penalty", DEFAULT_NEGATIVE_V2_PENALTY)),
         variants=variants,

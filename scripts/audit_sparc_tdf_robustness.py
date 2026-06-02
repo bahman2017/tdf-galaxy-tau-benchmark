@@ -43,7 +43,7 @@ def _fit_tdf3_galaxy(
     g: pd.DataFrame,
     tau_df: pd.DataFrame,
     *,
-    k_tau: float,
+    k_g: float,
     safety_factor: float,
     negative_v2_penalty: float,
 ) -> dict[str, object]:
@@ -64,14 +64,14 @@ def _fit_tdf3_galaxy(
         knot_r_kpc=knot_r,
         initial_knot_dtaudr=x0,
         dtaudr_bounds=bounds,
-        k_tau=k_tau,
+        k_g=k_g,
         negative_v2_penalty=negative_v2_penalty,
     )
     n_params = model_parameter_count("tdf_3knot")
     v_model = fit.v_model_kms if fit.fit_success else v_bar
     chi2 = chi_square(v_obs, v_model, v_err)
     theta = np.array([fit.params.get(f"knot_{i}_dtaudr", np.nan) for i in range(3)])
-    v2 = tdf_velocity_squared_kms2(r, v_bar, knot_r, theta, k_tau=k_tau) if fit.fit_success else v_bar**2
+    v2 = tdf_velocity_squared_kms2(r, v_bar, knot_r, theta, k_g=k_g) if fit.fit_success else v_bar**2
     return {
         "galaxy_id": gid,
         "fit_success": fit.fit_success,
@@ -102,7 +102,7 @@ def _ktau_sensitivity(
                 gid,
                 g,
                 tau_df,
-                k_tau=float(k),
+                k_g=float(k),
                 safety_factor=tdf_cfg.amplitude_bound_safety_factor,
                 negative_v2_penalty=tdf_cfg.negative_v2_penalty,
             )
@@ -132,7 +132,7 @@ def _bounds_sensitivity(
                 gid,
                 g,
                 tau_df,
-                k_tau=tdf_cfg.k_tau,
+                k_g=tdf_cfg.k_g,
                 safety_factor=float(sf),
                 negative_v2_penalty=tdf_cfg.negative_v2_penalty,
             )

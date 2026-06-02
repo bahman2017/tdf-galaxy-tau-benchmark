@@ -921,11 +921,17 @@ def fit_tdf_knot_baseline(
     knot_r_kpc: np.ndarray,
     initial_knot_dtaudr: np.ndarray,
     dtaudr_bounds: tuple[float, float],
-    k_tau: float,
+    k_g: float | None = None,
+    k_tau: float | None = None,
     negative_v2_penalty: float = 1000.0,
     train_mask: np.ndarray | None = None,
 ) -> FitResult:
     from .tdf_knot import n_knots_for_model, tdf_velocity_kms, tdf_velocity_squared_kms2
+    from tdf_galaxy_tau.config.notation import resolve_projection_coefficient_kwarg
+
+    kg = resolve_projection_coefficient_kwarg(
+        k_g=k_g, k_tau=k_tau, context="fit_tdf_knot_baseline"
+    )
 
     r = np.asarray(r_kpc, dtype=float)
     obs = np.asarray(v_obs_kms, dtype=float)
@@ -958,8 +964,8 @@ def fit_tdf_knot_baseline(
             raise ValueError("train_mask length must match r_kpc")
 
     def residual_fn(theta: np.ndarray) -> np.ndarray:
-        v2 = tdf_velocity_squared_kms2(r, vbar, knot_r_kpc, theta, k_tau=k_tau)
-        v_model, _ = tdf_velocity_kms(r, vbar, knot_r_kpc, theta, k_tau=k_tau)
+        v2 = tdf_velocity_squared_kms2(r, vbar, knot_r_kpc, theta, k_g=kg)
+        v_model, _ = tdf_velocity_kms(r, vbar, knot_r_kpc, theta, k_g=kg)
         base = _weighted_residual(obs[fit_mask], v_model[fit_mask], err[fit_mask])
         penalty = np.where(v2[fit_mask] < 0.0, np.sqrt(negative_v2_penalty), 0.0)
         return base + penalty
@@ -978,7 +984,7 @@ def fit_tdf_knot_baseline(
                 fitting_mode="tdf_knot",
             )
         theta = res.x
-        v_model, v2 = tdf_velocity_kms(r, vbar, knot_r_kpc, theta, k_tau=k_tau)
+        v_model, v2 = tdf_velocity_kms(r, vbar, knot_r_kpc, theta, k_g=kg)
         status = f"ok:{res.status}"
         if np.any(v2 < 0):
             status = f"{status};negative_v2_regions"

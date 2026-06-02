@@ -52,7 +52,7 @@ def _write_report(
         "and does not use lensing or independent dynamical evidence.",
         "",
         f"- Selected galaxies: {', '.join(selected_ids)}",
-        f"- Fixed K_tau: {tdf_cfg.k_tau}",
+        f"- Fixed K_g (legacy K_tau label): {tdf_cfg.k_g}",
         f"- Knot amplitude bounds (example galaxy): [{amp_bounds_example[0]:.4g}, {amp_bounds_example[1]:.4g}] "
         f"(×{tdf_cfg.amplitude_bound_safety_factor} safety on Phase 2A dτ/dr range)",
         "",
@@ -69,7 +69,7 @@ def _write_report(
         "",
         "## Parameter counts",
         "",
-        "- tdf_3knot: 3; tdf_4knot: 4; tdf_5knot: 5 (K_tau and knot radii not counted)",
+        "- tdf_3knot: 3; tdf_4knot: 4; tdf_5knot: 5 (K_g / legacy K_tau and knot radii not counted)",
         "",
         "## Caveats",
         "",
@@ -220,7 +220,7 @@ def main() -> int:
                 knot_r_kpc=kr,
                 initial_knot_dtaudr=x0,
                 dtaudr_bounds=amp_bounds,
-                k_tau=tdf_cfg.k_tau,
+                k_g=tdf_cfg.k_g,
                 negative_v2_penalty=tdf_cfg.negative_v2_penalty,
             )
 

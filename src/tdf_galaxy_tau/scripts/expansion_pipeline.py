@@ -424,7 +424,7 @@ def fit_tdf_knot_models(
                 knot_r_kpc=knot_r,
                 initial_knot_dtaudr=x0,
                 dtaudr_bounds=amp_bounds,
-                k_tau=tdf_cfg.k_tau,
+                k_g=tdf_cfg.k_g,
                 negative_v2_penalty=tdf_cfg.negative_v2_penalty,
             )
             rows.append(
@@ -688,7 +688,7 @@ def _interpretation(classification: str, galaxy_id: str) -> str:
     if classification == "robust_tdf_success":
         return (
             f"{galaxy_id}: primary tdf_3knot competitive on even/odd holdout "
-            "(expansion_12; fixed baryons, fixed K_tau)."
+            "(expansion_12; fixed baryons, fixed K_g; legacy K_tau label in frozen tables)."
         )
     if classification == "tdf_failure_mode":
         return (
@@ -702,7 +702,7 @@ def _interpretation_20(classification: str, galaxy_id: str) -> str:
     if classification == "robust_tdf_success":
         return (
             f"{galaxy_id}: primary tdf_3knot beats NFW and MOND on even/odd holdout "
-            "(expansion_20; fixed baryons, fixed K_tau)."
+            "(expansion_20; fixed baryons, fixed K_g; legacy K_tau label in frozen tables)."
         )
     if classification == "sensitivity_recovery":
         return (

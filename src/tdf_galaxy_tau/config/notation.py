@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+import warnings
 from collections.abc import Mapping
 from typing import Any
 
@@ -113,3 +114,31 @@ def merge_projection_from_yaml_blocks(*blocks: Mapping[str, Any] | None) -> dict
                 continue
             merged[key] = value
     return normalize_projection_coefficient(merged)
+
+
+def resolve_projection_coefficient_kwarg(
+    *,
+    k_g: float | None = None,
+    k_tau: float | None = None,
+    context: str = "",
+) -> float:
+    """Resolve ``k_g`` from primary and/or deprecated ``k_tau`` keyword arguments."""
+    prefix = f"{context}: " if context else ""
+    if k_g is not None and k_tau is not None:
+        kg = float(k_g)
+        kt = float(k_tau)
+        if not math.isclose(kg, kt, rel_tol=0.0, abs_tol=0.0):
+            raise ValueError(
+                f"{prefix}Conflicting projection coefficients: k_g={kg} vs k_tau={kt}"
+            )
+        return kg
+    if k_g is not None:
+        return float(k_g)
+    if k_tau is not None:
+        warnings.warn(
+            "k_tau is deprecated; use k_g for the gravitational projection coefficient K_g",
+            DeprecationWarning,
+            stacklevel=3,
+        )
+        return float(k_tau)
+    raise TypeError(f"{prefix}missing required projection coefficient keyword: k_g")

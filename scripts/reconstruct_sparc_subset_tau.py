@@ -60,7 +60,7 @@ def _write_report(
         "## Run settings",
         "",
         f"- Selected galaxies processed: {', '.join(galaxy_ids)}",
-        f"- K_tau: {cfg.k_tau}",
+        f"- K_g (legacy K_tau label): {cfg.k_g}",
         f"- Negative residual policy: {cfg.negative_residual_policy}",
         f"- Integration boundary: {cfg.integration_boundary}",
         f"- Smoothing enabled: {cfg.smoothing.enabled}",

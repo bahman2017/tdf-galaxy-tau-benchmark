@@ -28,26 +28,26 @@ def _frame() -> pd.DataFrame:
     )
 
 
-def test_k_tau_must_be_positive() -> None:
-    with pytest.raises(ValueError, match="k_tau must be positive"):
-        reconstruct_radial_tau_profile(_frame(), "G1", TauReconstructionConfig(k_tau=0.0))
+def test_k_g_must_be_positive() -> None:
+    with pytest.raises(ValueError, match="k_g must be positive"):
+        reconstruct_radial_tau_profile(_frame(), "G1", TauReconstructionConfig(k_g=0.0))
 
 
 def test_non_positive_radius_rejected() -> None:
     frame = _frame()
     frame.loc[0, "r_kpc"] = 0.0
     with pytest.raises(ValueError, match="r_kpc must be strictly positive"):
-        reconstruct_radial_tau_profile(frame, "G1", TauReconstructionConfig(k_tau=1.0))
+        reconstruct_radial_tau_profile(frame, "G1", TauReconstructionConfig(k_g=1.0))
 
 
 def test_rows_sorted_before_integration() -> None:
     frame = _frame().iloc[::-1].reset_index(drop=True)
-    out = reconstruct_radial_tau_profile(frame, "G1", TauReconstructionConfig(k_tau=1.0))
+    out = reconstruct_radial_tau_profile(frame, "G1", TauReconstructionConfig(k_g=1.0))
     assert out["r_kpc"].is_monotonic_increasing
 
 
 def test_tau_starts_at_zero() -> None:
-    out = reconstruct_radial_tau_profile(_frame(), "G1", TauReconstructionConfig(k_tau=1.0))
+    out = reconstruct_radial_tau_profile(_frame(), "G1", TauReconstructionConfig(k_g=1.0))
     assert out["tau_reconstructed"].iloc[0] == pytest.approx(0.0)
 
 
@@ -55,7 +55,7 @@ def test_allow_signed_preserves_negative_residuals() -> None:
     out = reconstruct_radial_tau_profile(
         _frame(),
         "G1",
-        TauReconstructionConfig(k_tau=1.0, negative_residual_policy="allow_signed"),
+        TauReconstructionConfig(k_g=1.0, negative_residual_policy="allow_signed"),
     )
     assert (out["residual_v2_kms2"] < 0).any()
     assert (out["dtaudr_reconstructed"] < 0).any()
@@ -65,7 +65,7 @@ def test_clip_to_zero_clips_negative_residual() -> None:
     out = reconstruct_radial_tau_profile(
         _frame(),
         "G1",
-        TauReconstructionConfig(k_tau=1.0, negative_residual_policy="clip_to_zero"),
+        TauReconstructionConfig(k_g=1.0, negative_residual_policy="clip_to_zero"),
     )
     assert (out["residual_v2_kms2"] < 0).any()
     neg_mask = out["negative_residual_flag"]
@@ -77,7 +77,7 @@ def test_mask_negative_removes_negative_rows() -> None:
     out = reconstruct_radial_tau_profile(
         frame,
         "G1",
-        TauReconstructionConfig(k_tau=1.0, negative_residual_policy="mask_negative"),
+        TauReconstructionConfig(k_g=1.0, negative_residual_policy="mask_negative"),
     )
     assert len(out) < len(frame)
     assert (out["residual_v2_kms2"] >= 0).all()
@@ -87,9 +87,11 @@ def test_phase_2a_output_columns() -> None:
     out = reconstruct_radial_tau_profile(
         _frame(),
         "G1",
-        TauReconstructionConfig(k_tau=1.0, smoothing=SmoothingConfig(enabled=True)),
+        TauReconstructionConfig(k_g=1.0, smoothing=SmoothingConfig(enabled=True)),
     )
     assert list(out.columns) == PHASE_2A_OUTPUT_COLUMNS
+    assert "K_tau" in out.columns
+    assert np.allclose(out["K_tau"].to_numpy(), 1.0)
 
 
 def test_cli_prints_mock_warning_when_input_missing(tmp_path) -> None:

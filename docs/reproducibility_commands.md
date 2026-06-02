@@ -67,7 +67,7 @@ Frozen benchmark tables use legacy **K_tau** column names. Config loaders accept
 Loader equivalence (`k_g` ≡ legacy `k_tau`) is regression-locked in Phase **5G-B** (**complete**):
 `tests/test_notation_compatibility_regression.py`.
 
-Planned internal rename: Phase **5G-C** in [`roadmap.md`](roadmap.md). Suggested release tag after status sync: **`v0.1.3-notation-compatibility`**.
+Phase **5G-C-B** (**complete**): internal dataclass fields and function parameters prefer **`k_g`**; read-only **`.k_tau`** property aliases remain. **Frozen benchmark CSV columns still use legacy `K_tau` headers.** Optional next step: Phase **5G-C-C** in [`roadmap.md`](roadmap.md). Suggested tag: **`v0.1.4-internal-kg-rename`**.
 
 ## Expected headline artifacts
 

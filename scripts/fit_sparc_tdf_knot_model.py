@@ -120,7 +120,7 @@ def main() -> int:
                 knot_r_kpc=knot_r,
                 initial_knot_dtaudr=x0,
                 dtaudr_bounds=amp_bounds,
-                k_tau=tdf_cfg.k_tau,
+                k_g=tdf_cfg.k_g,
                 negative_v2_penalty=tdf_cfg.negative_v2_penalty,
             )
             v_model = fit.v_model_kms if fit.fit_success else v_bar
@@ -148,7 +148,7 @@ def main() -> int:
                     {
                         "galaxy_id": gid,
                         "model_name": model_name,
-                        "K_tau": tdf_cfg.k_tau,
+                        "K_tau": tdf_cfg.k_g,
                         "knot_index": i,
                         "knot_r_kpc": float(knot_r[i]),
                         "knot_position_rule": knot_position_rule_label(n_knots),
@@ -188,7 +188,7 @@ def main() -> int:
     df_params.to_csv(TABLE_PARAMS, index=False)
 
     print(f"Processed galaxies: {', '.join(selected_ids)}")
-    print(f"K_tau (fixed): {tdf_cfg.k_tau}")
+    print(f"K_g (fixed; legacy K_tau label in CSV): {tdf_cfg.k_g}")
     print(f"Amplitude bounds safety factor: {tdf_cfg.amplitude_bound_safety_factor}")
     print(f"Wrote TDF comparison: {TABLE_COMPARISON}")
     print(f"Wrote TDF parameters: {TABLE_PARAMS}")

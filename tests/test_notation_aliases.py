@@ -88,6 +88,7 @@ def test_legacy_reconstruction_yaml_still_loads(root: Path | None = None) -> Non
     root = root or Path(__file__).resolve().parents[1]
     path = root / "configs/reconstruction.yaml"
     cfg = load_reconstruction_config(path)
+    assert cfg.k_g == pytest.approx(1.0)
     assert cfg.k_tau == pytest.approx(1.0)
 
 
@@ -95,6 +96,7 @@ def test_legacy_tdf_knot_yaml_still_loads(root: Path | None = None) -> None:
     root = root or Path(__file__).resolve().parents[1]
     raw = yaml.safe_load((root / "configs/reconstruction.yaml").read_text(encoding="utf-8"))
     cfg = load_tdf_knot_config(raw)
+    assert cfg.k_g == pytest.approx(1.0)
     assert cfg.k_tau == pytest.approx(1.0)
 
 
@@ -112,8 +114,10 @@ def test_new_k_g_yaml_block(tmp_path: Path) -> None:
     tau_cfg = load_reconstruction_config(cfg_path)
     raw = yaml.safe_load(cfg_path.read_text(encoding="utf-8"))
     knot_cfg = load_tdf_knot_config(raw)
-    assert tau_cfg.k_tau == pytest.approx(1.5)
-    assert knot_cfg.k_tau == pytest.approx(1.5)
+    assert tau_cfg.k_g == pytest.approx(1.5)
+    assert knot_cfg.k_g == pytest.approx(1.5)
+    assert tau_cfg.k_tau == tau_cfg.k_g
+    assert knot_cfg.k_tau == knot_cfg.k_g
 
 
 def test_merge_projection_from_yaml_blocks_order() -> None:

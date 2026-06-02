@@ -41,14 +41,19 @@ PHASE_2A_OUTPUT_COLUMNS = [
 class TauReconstructionConfig:
     """Radial τ reconstruction settings (Phase 2A).
 
-    ``k_tau`` stores the gravitational projection coefficient (K_g); legacy config key name.
+    ``k_g`` is the gravitational projection coefficient (K_g).
     dtaudr_reconstructed is inferred from rotation residuals, not a directly measured field.
     """
 
-    k_tau: float = 1.0
+    k_g: float = 1.0
     negative_residual_policy: str = "allow_signed"
     integration_boundary: str = "tau_at_r_min_zero"
     smoothing: SmoothingConfig = SmoothingConfig()
+
+    @property
+    def k_tau(self) -> float:
+        """Deprecated alias for gravitational projection coefficient K_g."""
+        return self.k_g
 
 
 def _validate_policy(policy: str) -> str:
@@ -70,7 +75,7 @@ def load_reconstruction_config(path: str | Path) -> TauReconstructionConfig:
     )
     projection = merge_projection_from_yaml_blocks(raw, block)
     return TauReconstructionConfig(
-        k_tau=float(projection["k_g"]),
+        k_g=float(projection["k_g"]),
         negative_residual_policy=str(
             block.get("negative_residual_policy", raw.get("negative_residual_policy", "allow_signed"))
         ),
@@ -90,15 +95,17 @@ def reconstruct_radial_tau_profile(
 
     Core equations (preserved):
     - v_obs^2(r) = v_bar^2(r) + v_tau^2(r)
-    - v_tau^2(r) = r K_tau dτ/dr
-    - dτ/dr = [v_obs^2(r) - v_bar^2(r)] / [r K_tau]
+    - v_tau^2(r) = r K_g dτ/dr
+    - dτ/dr = [v_obs^2(r) - v_bar^2(r)] / [r K_g]
+
+    Frozen CSV output retains legacy column label ``K_tau``.
     """
     required = ["r_kpc", "v_obs_kms", "v_bar_kms"]
     missing = [c for c in required if c not in galaxy_df.columns]
     if missing:
         raise ValueError(f"Missing required columns for reconstruction: {missing}")
-    if config.k_tau <= 0:
-        raise ValueError("k_tau must be positive")
+    if config.k_g <= 0:
+        raise ValueError("k_g must be positive")
     if config.integration_boundary != "tau_at_r_min_zero":
         raise ValueError("only integration_boundary=tau_at_r_min_zero is implemented")
 
@@ -139,7 +146,7 @@ def reconstruct_radial_tau_profile(
     else:
         residual_for_calc = residual_v2_kms2
 
-    dtaudr_reconstructed = residual_for_calc / (r_kpc * config.k_tau)
+    dtaudr_reconstructed = residual_for_calc / (r_kpc * config.k_g)
     d_for_int = np.where(np.isfinite(dtaudr_reconstructed), dtaudr_reconstructed, 0.0)
     tau_reconstructed = cumulative_trapezoid(d_for_int, r_kpc, initial=0.0)
 
@@ -162,7 +169,7 @@ def reconstruct_radial_tau_profile(
             "v_bar_kms": v_bar_kms,
             "residual_v2_kms2": residual_v2_kms2,
             "residual_policy_applied": [policy] * len(work),
-            "K_tau": [config.k_tau] * len(work),
+            "K_tau": [config.k_g] * len(work),
             "dtaudr_reconstructed": dtaudr_reconstructed,
             "tau_reconstructed": tau_reconstructed,
             "dtaudr_smoothed_diagnostic": d_smooth,

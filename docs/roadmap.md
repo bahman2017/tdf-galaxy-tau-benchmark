@@ -10,11 +10,12 @@
 - **Phase 5F:** publication package (manuscript, figures, tables, QA) and Zenodo preprint
 - **Phase 5G-A:** K_g / legacy K_tau config alias layer (**complete**; tag `v0.1.2-notation-aliases`)
 - **Phase 5G-B:** loader compatibility regression lock (**complete**; tag `v0.1.3-notation-compatibility`)
+- **Phase 5G-C-B:** internal k_g rename with legacy aliases (**complete**)
 - **Phase 5G-C-A:** internal rename audit (**complete**; `docs/phase5g_internal_rename_audit.md`)
 
 ## Current
 
-- **Phase 5G-C-A complete; Phase 5G-C-B planned:** audit maps ~52 internal projection candidates; frozen CSV columns and sensitivity tables remain legacy **K_tau**.
+- **Phase 5G-C-B complete; Phase 5G-C-C optional:** internal code prefers `k_g`; frozen CSV columns remain legacy **K_tau**.
 
 ## Planned
 
@@ -37,17 +38,12 @@
 - Read-only reference map: `docs/phase5g_internal_rename_audit.md`
 - Classifies ~85 files; no code or frozen output changes
 
-#### Phase 5G-C-B — internal rename (planned)
+#### Phase 5G-C-B — internal rename (**complete**)
 
-**Goal:** Rename internal `k_tau` dataclass fields and function parameters to `k_g` with read-only `.k_tau` property aliases — per audit; only after 5G-B lock.
-
-**Scope (from audit):**
-
-1. `TauReconstructionConfig.k_tau` → `k_g`; `TdfKnotConfig.k_tau` → `k_g`; deprecated `.k_tau` property.
-2. Internal API params (`tdf_velocity_*`, `fit_tdf_knot_model`, holdout runners) primary `k_g`; optional deprecated `k_tau=` kwarg.
-3. Docstrings and report-generator source prefer **K_g**; frozen CSV writers keep column name **`K_tau`**.
-4. Tests: extend 5G-B regression; property alias test; CSV column name unchanged.
-5. **κ_tau** guards unchanged; **no** in-place frozen CSV header renames.
+- `TauReconstructionConfig.k_g` / `TdfKnotConfig.k_g` primary fields; read-only `.k_tau` property aliases
+- `tdf_velocity_*`, `fit_tdf_knot_baseline`, holdout helpers: primary `k_g`; deprecated `k_tau=` kwarg
+- CSV writers still emit column **`K_tau`**; frozen tables not rewritten
+- `tests/test_phase5g_internal_kg_rename.py` + extended 5G-A/5G-B tests (264 tests)
 
 #### Phase 5G-C-C — optional production config migration (future)
 

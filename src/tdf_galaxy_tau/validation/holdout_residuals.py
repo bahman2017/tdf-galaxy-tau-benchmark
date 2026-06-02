@@ -117,7 +117,7 @@ def _export_tdf_test_points(
     train_idx: np.ndarray,
     test_idx: np.ndarray,
     *,
-    k_tau: float,
+    k_g: float,
     safety_factor: float,
     negative_v2_penalty: float,
     data_mode: str,
@@ -140,14 +140,14 @@ def _export_tdf_test_points(
         knot_r_kpc=knot_r,
         initial_knot_dtaudr=x0,
         dtaudr_bounds=bounds,
-        k_tau=k_tau,
+        k_g=k_g,
         negative_v2_penalty=negative_v2_penalty,
         train_mask=train_mask,
     )
     rows: list[dict[str, Any]] = []
     if fit.fit_success and fit.params:
         theta = fitted_knot_amplitudes_from_params(fit.params, n_knots)
-        v_model, v2 = tdf_velocity_kms(r, v_bar, knot_r, theta, k_tau=k_tau)
+        v_model, v2 = tdf_velocity_kms(r, v_bar, knot_r, theta, k_g=k_g)
         dtaudr_all = interpolate_dtaudr_at_radii(r, knot_r, theta)
     else:
         v_model = v_bar.copy()
@@ -340,7 +340,7 @@ def export_holdout_point_residuals(
                         split.name,
                         split.train_indices,
                         split.test_indices,
-                        k_tau=tdf_cfg.k_tau,
+                        k_g=tdf_cfg.k_g,
                         safety_factor=tdf_cfg.amplitude_bound_safety_factor,
                         negative_v2_penalty=tdf_cfg.negative_v2_penalty,
                         data_mode=data_mode,

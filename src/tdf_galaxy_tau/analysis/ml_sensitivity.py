@@ -130,7 +130,7 @@ def run_scaled_tdf_holdout(
         split.name,
         split.train_indices,
         split.test_indices,
-        k_tau=tdf_cfg.k_tau,
+        k_g=tdf_cfg.k_g,
         safety_factor=tdf_cfg.amplitude_bound_safety_factor,
         negative_v2_penalty=tdf_cfg.negative_v2_penalty,
         data_mode=data_mode,

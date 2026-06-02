@@ -6,6 +6,35 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5G-C-B: internal k_g rename with legacy k_tau property and keyword aliases.
+
+## Files changed
+
+- `src/tdf_galaxy_tau/reconstruction/radial_tau.py`, `models/tdf_knot.py`, `models/fitting.py`
+- `validation/tdf_holdout_runner.py`, `validation/holdout_residuals.py`
+- `config/notation.py` — `resolve_projection_coefficient_kwarg`
+- `analysis/ktau_sensitivity.py`, `analysis/ml_sensitivity.py` — holdout export call sites
+- `scripts/expansion_pipeline.py`, `compare_sparc_models.py`, `fit_sparc_tdf_knot_model.py`, etc.
+- `tests/test_phase5g_internal_kg_rename.py` + updated notation/radial tests
+- docs: `project_status.md`, `roadmap.md`, `reproducibility_commands.md`, `ktau_sensitivity.md`
+
+## Tests run
+
+- `python3 -m pytest -q` — 264 passed
+
+## Notes
+
+- Frozen CSV column `K_tau` unchanged; no benchmark rerun; no outputs/tables rewrite.
+- Deprecated `k_tau=` kwarg on velocity/fit functions emits DeprecationWarning.
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5G-C-A: internal K_g rename audit (read-only); classify remaining k_tau / K_tau references for 5G-C-B.
 
 ## Files changed
