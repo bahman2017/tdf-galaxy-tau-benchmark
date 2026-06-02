@@ -6,6 +6,26 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5G-B status synchronization: align `project_status.md` with completed regression lock.
+
+## Files changed
+
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/cursor_work_log.md`
+- `docs/reproducibility_commands.md`, `docs/ktau_sensitivity.md`, `README.md`
+
+## Notes
+
+- Documentation-only; no code, tests, or frozen outputs modified.
+- Recommended next tag: `v0.1.3-notation-compatibility`.
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5G-B: compatibility regression tests locking k_g ≡ legacy k_tau loader equivalence.
 
 ## Files changed (Phase 5G-B)

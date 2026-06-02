@@ -140,6 +140,6 @@ Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_not
 
 ## Status
 
-Phase **5E/5F** complete for controlled expansion-20 publication package. See
+Phase **5E/5F** publication package and Phase **5G-A** / **5G-B** notation compatibility (alias layer + regression lock) are complete. See
 [`docs/project_status.md`](docs/project_status.md), [`docs/controlled_expansion_results.md`](docs/controlled_expansion_results.md),
-and [`docs/theory_summary.md`](docs/theory_summary.md) (notation: **K_g**, **κ_tau**, legacy **K_tau**).
+and [`docs/theory_summary.md`](docs/theory_summary.md) (**K_g** preferred; **κ_tau** field stiffness; legacy **K_tau** in frozen outputs).

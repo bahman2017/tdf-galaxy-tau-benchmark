@@ -64,10 +64,10 @@ Frozen benchmark tables use legacy **K_tau** column names. Config loaders accept
 `kappa_tau` is field stiffness and is **not** accepted as a projection alias. See
 [`theory_summary.md`](theory_summary.md) and `src/tdf_galaxy_tau/config/notation.py`.
 
-Loader equivalence (`k_g` ≡ legacy `k_tau`) is regression-locked in Phase **5G-B**:
+Loader equivalence (`k_g` ≡ legacy `k_tau`) is regression-locked in Phase **5G-B** (**complete**):
 `tests/test_notation_compatibility_regression.py`.
 
-Planned internal rename: Phase 5G-C in [`roadmap.md`](roadmap.md).
+Planned internal rename: Phase **5G-C** in [`roadmap.md`](roadmap.md). Suggested release tag after status sync: **`v0.1.3-notation-compatibility`**.
 
 ## Expected headline artifacts
 

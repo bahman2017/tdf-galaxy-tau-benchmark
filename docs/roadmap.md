@@ -8,10 +8,12 @@
 - **Phase 4:** failure modes, M/L diagnostics, photometry-informed priors, controlled six-galaxy audit
 - **Phase 5A–5E:** pre-registered expansion_12 / expansion_20 cohorts and final audit (C20 claims)
 - **Phase 5F:** publication package (manuscript, figures, tables, QA) and Zenodo preprint
+- **Phase 5G-A:** K_g / legacy K_tau config alias layer (**complete**; tag `v0.1.2-notation-aliases`)
+- **Phase 5G-B:** loader compatibility regression lock (**complete**)
 
 ## Current
 
-- **Phase 5E/5F (maintenance):** controlled expansion-20 publication package; documentation consistency with updated TDF effective-gravity notation (**K_g**, **κ_tau** vs legacy **K_tau** in frozen outputs).
+- **Phase 5G-B complete; Phase 5G-C planned:** notation alias layer and loader equivalence are locked; optional internal rename and report-string updates remain.
 
 ## Planned
 
