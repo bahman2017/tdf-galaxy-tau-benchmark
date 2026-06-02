@@ -320,7 +320,8 @@ def export_table6_assumptions_limitations(
             "Halo and MOND baselines remain degenerate with baryonic assumptions.",
         ),
         (
-            "$K_\\tau$ is fixed across the cohort and is not measured or inferred here.",
+            "$K_g$ is fixed across the cohort (legacy benchmark label $K_\\tau$ in frozen tables); "
+            "not measured or inferred; distinct from field stiffness $\\kappa_\\tau$.",
             "Higher knot count (\\texttt{tdf\\_5knot}) increases flexibility and overfitting risk.",
         ),
         (

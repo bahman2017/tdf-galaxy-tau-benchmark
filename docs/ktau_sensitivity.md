@@ -1,18 +1,25 @@
-# K_tau Sensitivity on Photometry-Informed M/L Harness (Phase 4L)
+# Legacy K_tau (K_g projection) sensitivity on photometry-informed M/L harness (Phase 4L)
 
-Phase 4L tests whether six-galaxy TDF conclusions under **Phase 4K photometry-informed prior weighting** are stable when **K_tau** is varied as a **fixed normalization convention**. Knot amplitudes are refit at each K_tau; K_tau is **not** fitted.
+> **Notation:** Phase 4L and frozen CSVs use **K_tau** as the historical benchmark label for the fixed **gravitational projection coefficient** (\(K_g\) in updated TDF prose). **κ_tau** denotes mother-field stiffness and is **not** varied in this phase. See `docs/theory_summary.md`.
 
-## Inputs
+Phase 4L tests whether six-galaxy TDF conclusions under **Phase 4K photometry-informed prior weighting** are stable when legacy **K_tau** is varied as a **fixed normalization convention**. Knot amplitudes are refit at each K_tau; K_tau is **not** fitted.
 
-- Phase 4G scaled holdout grid (`sparc_ml_scaled_model_comparison.csv`) for **NFW/MOND reference** RMSE
-- Phase 4K photometry-informed prior weights
-- Standardized rotmod + six-galaxy subset
+## Scope
 
-## K_tau values
+- Six-galaxy controlled subset only
+- Photometry-informed prior scenarios from Phase 4K
+- TDF knot amplitude refit only; NFW/MOND holdout RMSE from Phase 4G grid
 
-Default: `0.5`, `1.0`, `2.0` (`configs/reconstruction.yaml` → `photometry_prior_ktau_sensitivity`).
+## K_tau values (legacy label; K_g-like role)
 
-Optional extended values `0.25`, `4.0` via `--include-optional-ktau`.
+`{0.5, 1.0, 2.0}` — config key `K_tau` unchanged in frozen outputs
+
+## Key outputs
+
+- `outputs/tables/sparc_ktau_sensitivity_summary.csv`
+- `outputs/tables/sparc_tdf_ktau_sensitivity.csv`
+- `outputs/tables/ngc7814_ktau_sensitivity.csv`
+- `outputs/reports/sparc_ktau_sensitivity_report.md`
 
 ## Command
 
@@ -20,15 +27,15 @@ Optional extended values `0.25`, `4.0` via `--include-optional-ktau`.
 python3 scripts/run_photometry_prior_ktau_sensitivity.py
 ```
 
-## Outputs
+## Interpretation
 
-- `outputs/tables/sparc_ktau_sensitivity_summary.csv`
-- `outputs/tables/ngc7814_ktau_sensitivity.csv`
-- `outputs/reports/sparc_ktau_sensitivity_report.md`
-- Figures under `outputs/figures/sparc_subset/`
-
-## Interpretation guardrails
-
-- K_tau is partially degenerate with dτ/dr amplitude.
+- Legacy **K_tau** is partially degenerate with dτ/dr amplitude.
 - NGC7814 remains a **canonical tdf_3knot failure** at M/L=1 regardless of K_tau audit.
-- **tdf_5knot** diagnostic recovery language must be distinguished from primary **tdf_3knot** claims.
+- Qualitative six-galaxy claims stable over tested values; not a measurement of \(K_g\) or κ_tau.
+
+## Claim boundaries
+
+- Not full-SPARC validation
+- No dark-matter disproof; no ΛCDM replacement
+- Lensing not tested
+- No final M/L calibration

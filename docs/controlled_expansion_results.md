@@ -34,6 +34,10 @@ python3 scripts/build_controlled_expansion_final_audit.py
 - **tdf_3knot** primary; **tdf_5knot** sensitivity only
 - No final M/L calibration
 
+## Notation (documentation-only)
+
+Frozen benchmark CSVs and configs use legacy **K_tau** for the fixed radial projection coefficient. Updated TDF documentation uses **K_g** for that role and **κ_tau** for mother-field stiffness (distinct). See `docs/theory_summary.md` and Phase 5G in `docs/roadmap.md`. **Benchmark numbers unchanged.**
+
 ## Outputs
 
 - `outputs/tables/controlled_expansion_comparison_summary.csv`

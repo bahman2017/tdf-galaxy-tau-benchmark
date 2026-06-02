@@ -7,13 +7,16 @@ the manuscript *TDF Radial Reconstruction on a Preregistered Controlled SPARC Su
 ## Project objective
 
 Test whether the M33-style reconstruction law produces **galaxy-specific** reconstructed τ
-profiles on a controlled cohort using fixed canonical baryons and fixed \(K_\tau\), with
+profiles on a controlled cohort using fixed canonical baryons and a fixed gravitational
+projection coefficient (**K_g**; legacy benchmark label **K_tau** in frozen outputs), with
 train-only even/odd radial holdout validation against NFW and MOND baselines.
 
-Core relations (per galaxy):
+Core relations (per galaxy; see [`docs/theory_summary.md`](docs/theory_summary.md)):
 
 - \(v_{\mathrm{obs}}^2(r) = v_{\mathrm{bar}}^2(r) + v_\tau^2(r)\)
-- \(v_\tau^2(r) = r K_\tau \, d\tau/dr\)
+- \(v_\tau^2(r) = r K_g \, d\tau/dr\) *(frozen CSVs/config: legacy `K_tau`)*
+
+**κ_tau** (field stiffness in the mother equation) is distinct from **K_g** and is not varied in this benchmark.
 
 No universal closed-form τ profile is assumed.
 
@@ -138,4 +141,5 @@ Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_not
 ## Status
 
 Phase **5E/5F** complete for controlled expansion-20 publication package. See
-[`docs/project_status.md`](docs/project_status.md) and [`docs/controlled_expansion_results.md`](docs/controlled_expansion_results.md).
+[`docs/project_status.md`](docs/project_status.md), [`docs/controlled_expansion_results.md`](docs/controlled_expansion_results.md),
+and [`docs/theory_summary.md`](docs/theory_summary.md) (notation: **K_g**, **κ_tau**, legacy **K_tau**).

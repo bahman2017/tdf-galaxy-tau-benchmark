@@ -25,7 +25,7 @@ full-SPARC validation: results apply to the expansion-20 cohort ($n{=}20$) and t
 expansion-12 cohort ($n{=}12$). The primary model is \texttt{tdf\_3knot};
 \texttt{tdf\_5knot} is a sensitivity/high-flexibility diagnostic only. We use train-only
 even/odd holdout comparisons against NFW \cite{navarro1997} and MOND \cite{milgrom1983}
-baselines at fixed canonical baryons and fixed $K_\tau$. In the pre-registered controlled expansion-20 cohort, the primary conservative \texttt{tdf\_3knot}\  model achieves robust holdout success in 15 of 20 galaxies. Three additional galaxies show sensitivity-recovery where \texttt{tdf\_5knot}\  improves substantially but is not counted as primary success. NGC7814 remains the only all-TDF holdout failure, and UGC00128 remains a mixed near-tie case. The analysis does not
+baselines at fixed canonical baryons and fixed $K_g$ (legacy benchmark notation $K_\tau$). In the pre-registered controlled expansion-20 cohort, the primary conservative \texttt{tdf\_3knot}\  model achieves robust holdout success in 15 of 20 galaxies. Three additional galaxies show sensitivity-recovery where \texttt{tdf\_5knot}\  improves substantially but is not counted as primary success. NGC7814 remains the only all-TDF holdout failure, and UGC00128 remains a mixed near-tie case. The analysis does not
 disprove dark matter, does not replace $\Lambda$CDM, does not test lensing, claims no
 universal $\tau$-profile, and makes no final $M/L$ calibration claim.
 \end{abstract}
@@ -58,13 +58,16 @@ We decompose the observed rotation curve into baryonic and TDF-mediated contribu
 with fixed catalog baryons $v_{\mathrm{bar}}^2 = v_{\mathrm{gas}}^2 + v_{\mathrm{disk}}^2 + v_{\mathrm{bulge}}^2$.
 The TDF closure used in this benchmark is
 \begin{equation}
-  v_{\tau}^2(r) = r\, K_{\tau}\,\frac{d\tau}{dr},
+  v_{\tau}^2(r) = r\, K_g\,\frac{d\tau}{dr},
   \label{eq:vtau}
 \end{equation}
-where $K_{\tau}$ is a fixed dimensionless coupling held constant across the cohort in the primary
-analysis. Given $v_{\mathrm{obs}}(r)$ and $v_{\mathrm{bar}}(r)$, the direct reconstruction law is
+where $K_g$ is the fixed gravitational projection coefficient held constant across the cohort.
+Frozen repository configs and benchmark tables use the legacy label $K_{\tau}$ for the same
+projection role; numerical values are unchanged. The dynamical stiffness $\kappa_{\tau}$ in the
+mother field equation is \emph{not} the same parameter as $K_g$ and is not varied here.
+Given $v_{\mathrm{obs}}(r)$ and $v_{\mathrm{bar}}(r)$, the direct reconstruction law is
 \begin{equation}
-  \frac{d\tau}{dr} = \frac{v_{\mathrm{obs}}^2(r) - v_{\mathrm{bar}}^2(r)}{r\, K_{\tau}}.
+  \frac{d\tau}{dr} = \frac{v_{\mathrm{obs}}^2(r) - v_{\mathrm{bar}}^2(r)}{r\, K_g}.
   \label{eq:dtaudr}
 \end{equation}
 Equation~(\ref{eq:dtaudr}) defines a \emph{galaxy-specific} $\tau(r)$ profile for each system.
@@ -241,7 +244,7 @@ Table~\ref{tab:nonrobust} lists the five non-robust cases.
 \begin{itemize}
   \item \textbf{Scope:} controlled expansion\_20 only---not full-SPARC validation.
   \item \textbf{Baryons and $M/L$:} fixed canonical decomposition; no final M/L calibration claim.
-  \item \textbf{$K_\tau$:} held fixed in the benchmark; $K_\tau$ is not measured or inferred in this study.
+  \item \textbf{$K_g$ (legacy $K_\tau$):} gravitational projection coefficient held fixed; not measured or inferred; distinct from field stiffness $\kappa_\tau$.
   \item \textbf{Cosmology and lensing:} does not disprove dark matter; does not replace
   $\Lambda$CDM; lensing is not tested.
   \item \textbf{Flexibility:} \texttt{tdf\_5knot} carries higher overfitting/flexibility risk and
@@ -258,7 +261,7 @@ failure without changing frozen primary labels.
 
 \section{Conclusion}
 On the pre-registered controlled expansion\_20 subset, \texttt{tdf\_3knot} achieves robust
-even/odd holdout success in 15 of 20 galaxies at fixed baryons and $K_\tau$, with three
+even/odd holdout success in 15 of 20 galaxies at fixed baryons and $K_g$, with three
 sensitivity-recovery cases, one all-TDF failure (NGC7814), and one mixed near-tie (UGC00128).
 TDF is a benchmarked reconstruction framework within explicit claim boundaries, not a
 cosmology-replacement or dark-matter-disproof result.

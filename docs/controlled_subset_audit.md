@@ -42,7 +42,7 @@ python3 scripts/build_controlled_subset_final_audit.py
 | Prior scaffold | 4I, 4I-Audit | `docs/ml_prior_framework.md` |
 | Photometry metadata | 4J | `sparc_photometry_metadata.csv` |
 | Photometry priors | 4K | `docs/photometry_informed_ml_priors.md` |
-| K_tau sensitivity | 4L | `docs/ktau_sensitivity.md` |
+| Legacy **K_tau** (\(K_g\)) sensitivity | 4L | `docs/ktau_sensitivity.md` |
 
 ## Caveats (mandatory)
 
@@ -52,7 +52,7 @@ python3 scripts/build_controlled_subset_final_audit.py
 - No lensing confirmation
 - No universal τ-profile claim
 - No final M/L calibration
-- K_tau not measured
+- Legacy **K_tau** (\(K_g\)-like) not measured; distinct from κ_tau
 - **tdf_3knot** primary; **tdf_5knot** sensitivity only
 
 ## Before expanding the subset

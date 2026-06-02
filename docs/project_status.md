@@ -2,7 +2,30 @@
 
 ## Current phase
 
-**Phase 5F-F — pre-submission polish and QA**
+**Phase 5E/5F — controlled expansion-20 publication package and scientific consistency audit**
+
+Publication package (manuscript PDF, paper figures/tables, reviewer matrix, pre-submission QA) is complete. Current work is **documentation-only** alignment with the updated conservative effective-gravity notation (**K_g**, **κ_tau**) while **frozen benchmark outputs** retain legacy **K_tau** labels. No refitting or metric changes in this pass.
+
+### expansion_20 headline (frozen)
+
+In the pre-registered controlled **expansion_20** cohort:
+
+- **Primary `tdf_3knot` robust holdout success:** 15 of 20 galaxies  
+- **`tdf_5knot` sensitivity-recovery:** 3 galaxies (not primary success)  
+- **All-TDF holdout failure:** NGC7814 (canonical)  
+- **Mixed near-tie:** UGC00128  
+
+Authoritative claims: `docs/paper_ready_claims.md` (C20-A–C20-H), `docs/controlled_expansion_results.md`, `outputs/tables/controlled_expansion_final_claims.csv`.
+
+### Notation migration (documentation-only; Phase 5G planned for code)
+
+| Symbol | Role |
+| --- | --- |
+| **K_g** | Gravitational **projection coefficient** in the updated TDF effective-gravity formulation (radial closure \(v_\tau^2 = r K_g \, d\tau/dr\)). |
+| **κ_tau** | **Dynamical stiffness** in the mother field equation; **not** interchangeable with \(K_g\). |
+| **K_tau** (legacy) | Historical benchmark/config label for the fixed projection-normalization factor in frozen CSVs, configs, and reports. Numerically corresponds to the \(K_g\)-like role in this repository’s radial benchmark; **benchmark numbers are unchanged** in this documentation pass. |
+
+See `docs/theory_summary.md` for equations and `docs/roadmap.md` (Phase 5G) for planned code aliases.
 
 ## Completed tasks
 
@@ -14,51 +37,53 @@
 - Phase 3A-R: log-space multistart NFW/Burkert refit with wider documented bounds; legacy outputs preserved.
 - Phase 3M: MOND/RAR baselines (fixed and fitted a0, optional RAR) on six-galaxy subset; combined comparison with halo refit.
 - Phase 3B: TDF 3/4/5-knot fitted models with AIC/BIC comparison vs halo refit and MOND.
-- Phase 3C: holdout validation, K_tau/bounds sensitivity, knot-count stability, smoothness diagnostics.
+- Phase 3C: holdout validation, legacy **K_tau** (\(K_g\)-like) / bounds sensitivity, knot-count stability, smoothness diagnostics.
 - Phase 4A: per-galaxy failure-mode classification and claim traceability matrix (A–H).
 - Phase 4B: paper-ready results summary, publication table, and conservative claim language (`docs/results_summary.md`, `docs/paper_ready_claims.md`).
-- Phase 4C: normalized τ-pattern similarity, outlier scores, overlays (`docs/normalized_tau_patterns.md`, `scripts/analyze_normalized_tau_patterns.py`).
-- Phase 4D: NGC7814 structural/holdout/pattern diagnostics (`docs/ngc7814_failure_mode.md`, `scripts/analyze_ngc7814_failure_mode.py`).
-- Phase 4E: per-point holdout residual CSV and radial failure-map figures/reports (`scripts/export_sparc_holdout_residuals.py`).
+- Phase 4C: normalized τ-pattern similarity, outlier scores, overlays (`docs/normalized_tau_patterns.md`).
+- Phase 4D: NGC7814 structural/holdout/pattern diagnostics (`docs/ngc7814_failure_mode.md`).
+- Phase 4E: per-point holdout residual CSV and radial failure-map figures/reports.
 - Phase 4F: diagnostic disk/bulge M/L scaling grid and holdout sensitivity (`docs/ml_sensitivity_audit.md`).
 - Phase 4G: fair scaled-baseline refit (TDF + NFW + MOND) on same M/L grid (`docs/ml_scaled_baseline_comparison.md`).
 - Phase 4H: claim matrix I–N, post-M/L summary tables/reports, updated `docs/paper_ready_claims.md` (no new fits).
 - Phase 4I: diagnostic prior scaffold on Phase 4G outputs (`configs/ml_priors.yaml`, `docs/ml_prior_framework.md`).
-- Phase 4I-Audit: prior weight verification, NGC7814 layered interpretation, Phase 4I table regen (`scripts/audit_ml_prior_weighting.py`).
+- Phase 4I-Audit: prior weight verification, NGC7814 layered interpretation.
 - Phase 4J: SPARC photometry metadata ingestion (175 galaxies; subset context for six galaxies).
-- Phase 4K: photometry-informed diagnostic prior weights and re-weighted interpretation (`docs/photometry_informed_ml_priors.md`).
-- Phase 4L: K_tau sensitivity audit on Phase 4K harness (`docs/ktau_sensitivity.md`).
+- Phase 4K: photometry-informed diagnostic prior weights (`docs/photometry_informed_ml_priors.md`).
+- Phase 4L: legacy **K_tau** sensitivity audit on Phase 4K harness (`docs/ktau_sensitivity.md`).
 - Phase 4M: final controlled-subset audit package (`docs/controlled_subset_audit.md`; no new fits).
 - Phase 5A: pre-registered expansion protocol for cohorts of 12 and 20 galaxies (`docs/subset_expansion_protocol.md`; no fits).
 - Phase 5B: expansion_12 full benchmark pipeline (`docs/expansion12_results.md`; 12 galaxies).
-- Phase 5B-Audit: failure/mixed diagnostics for NGC7814, NGC5055, UGC00128, UGC05253 (`docs/expansion12_failure_mode_analysis.md`; no new fits).
-- Phase 5B-R: radial holdout residual maps for NGC5055, UGC05253 flex-recovery (`docs/expansion12_radial_residual_maps.md`; diagnostic refit only).
-- Phase 5C: expansion_20 controlled benchmark (`docs/expansion20_results.md`; 20 galaxies; sensitivity_recovery class).
-- Phase 5D: expansion_20 failure/mixed/sensitivity audit (`docs/expansion20_failure_mode_analysis.md`; 5 non-robust galaxies).
+- Phase 5B-Audit / 5B-R: failure/mixed diagnostics and radial holdout maps (expansion_12).
+- Phase 5C: expansion_20 controlled benchmark (`docs/expansion20_results.md`; sensitivity_recovery class).
+- Phase 5D: expansion_20 failure/mixed/sensitivity audit (5 non-robust galaxies).
 - Phase 5E: expansion_12 vs expansion_20 final audit package (`docs/controlled_expansion_results.md`; claims C20-A–H).
-- Phase 5F-A: paper package scaffold (`paper/manuscript.tex`, figure/table inventories; no new fits).
-- Phase 5F-B: composed paper figures in `paper/figures/` (`scripts/build_paper_figures.py`; no new fits).
-- Phase 5F-C: LaTeX tables, first-draft manuscript prose, PDF compile (`scripts/export_paper_tables.py`; no new fits).
-- Phase 5F-D: scientific edit, figure/table layout, bibliography (`scripts/export_paper_tables.py`; no new fits).
-- Phase 5F-E: equations, descriptive stats, reviewer matrix (`scripts/build_referee_readiness_report.py`; no new fits).
-- Phase 5F-F: final polish, Table 6 assumptions, pre-submission QA (`docs/pre_submission_checklist.md`; no new fits).
+- Phase 5F-A–F: paper scaffold, figures, LaTeX tables, manuscript PDF, scientific edit, referee readiness, pre-submission QA (`docs/pre_submission_checklist.md`).
+- Release prep: repository cleanup audit, Git tag `v0.1.0-expansion20-paper`, Zenodo preprint DOI [10.5281/zenodo.20437254](https://doi.org/10.5281/zenodo.20437254).
 
 ## Current blockers
+
 - Halo degeneracy and high reduced chi-square may persist after refit.
+- Root `LICENSE` file not yet added (MIT declared in `pyproject.toml` / `CITATION.cff`).
 
 ## Next recommended tasks
 
-1. Author review of `paper/manuscript.pdf`; optional prose polish and journal formatting.
-2. Optional blocked-holdout for UGC12506.
-2. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.
-3. Full SPARC and lensing deferred per claim boundaries.
+1. **Phase 5G:** notation migration from legacy `K_tau` to `K_g` with backward-compatible aliases and tests (see `docs/roadmap.md`).
+2. Author/journal formatting review of `paper/manuscript.pdf`.
+3. Optional blocked-holdout for UGC12506.
+4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.
+5. Full SPARC and lensing deferred per claim boundaries.
 
 ## Latest validation/test results
 
 - `python3 -m pytest -q`
-- `python3 scripts/fit_sparc_baselines.py ... --mode refit`
-- `python3 scripts/audit_sparc_baseline_fits.py ... --out outputs/tables/sparc_baseline_fit_audit_refit.csv`
+- `python3 scripts/compile_paper_pdf.py`
+- `python3 scripts/build_controlled_expansion_final_audit.py` (regenerates audit reports from frozen tables only)
 
-## Claim boundary
+## Claim boundary (expansion_20)
 
-Phases 4A–4M: use `docs/controlled_subset_audit.md`, `docs/paper_ready_claims.md`, and `outputs/reports/sparc_controlled_subset_final_audit_report.md`. Subset-only; 5/6 holdout success; NGC7814 canonical tdf_3knot failure; tdf_5knot sensitivity-only; no lensing; no final M/L calibration.
+- **Controlled expansion_20 cohort only** — not full-SPARC validation.
+- **15/20** primary **`tdf_3knot`** robust holdout success; **3** sensitivity-recovery; **NGC7814** all-TDF failure; **UGC00128** mixed near-tie.
+- **`tdf_5knot`** sensitivity-only; not primary success metric.
+- No dark-matter disproof; no ΛCDM replacement; **lensing not tested**; no universal τ-profile; no final M/L calibration.
+- Legacy six-galaxy subset claims (5/6) remain documented under Phases 4A–4M in `docs/controlled_subset_audit.md`.

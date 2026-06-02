@@ -44,7 +44,9 @@ def test_manuscript_contains_equations(root: Path) -> None:
     for label in ("eq:vobs", "eq:vtau", "eq:dtaudr"):
         assert f"\\label{{{label}}}" in tex
     assert "v_{\\mathrm{obs}}^2" in tex or "v_\\mathrm{obs}" in tex
-    assert "K_{\\tau}" in tex or "K_\\tau" in tex
+    assert "K_g" in tex
+    assert "K_{\\tau}" in tex or "K_\\tau" in tex  # legacy benchmark label in prose
+    assert "kappa" in tex or "\\kappa" in tex
 
 
 def test_holdout_priority_paragraph(root: Path) -> None:

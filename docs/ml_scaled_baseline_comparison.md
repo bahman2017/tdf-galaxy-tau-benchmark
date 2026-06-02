@@ -27,7 +27,7 @@ Gas is not scaled. Component velocities keep SPARC sign convention.
 - Models: `tdf_3knot`, `tdf_5knot`, `nfw_refit_scaled`, `mond_fit_a0_scaled`
 - NFW: Phase 3A-R log multistart on train points
 - MOND: log10(a0) refit on train points
-- TDF: Phase 4F train-only knot refit; fixed K_tau
+- TDF: Phase 4F train-only knot refit; legacy **K_tau** (\(K_g\)) fixed
 
 ## Run
 

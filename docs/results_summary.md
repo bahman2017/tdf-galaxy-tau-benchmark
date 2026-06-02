@@ -2,9 +2,11 @@
 
 Phase 4B publication-style summary, updated through **Phase 4H** (post-M/L claim reconciliation). **Documentation only** — no new fits after Phase 4G. Canonical numbers trace to Phase 3B/3C and Phase 4A; M/L interpretation from Phases 4F–4G.
 
+> **Notation:** Frozen tables use legacy **K_tau** for the fixed projection coefficient (\(K_g\) in updated TDF prose). **κ_tau** is field stiffness and is not used in the rotation-curve closure here. See `docs/theory_summary.md`. For the current headline cohort see `docs/controlled_expansion_results.md` (**15/20** expansion_20).
+
 ## Executive summary
 
-On a **controlled six-galaxy subset** of SPARC rotation curves, TDF piecewise-linear knot models provide **rotation-curve consistency** with tested halo and MOND baselines under **fixed canonical SPARC baryonic inputs** and fixed **K_tau**. Under **even/odd holdout** test RMSE at M/L=1, TDF achieves **5 of 6 holdout success**; **NGC7814** is **one explicit canonical failure mode** where NFW refit outperforms TDF despite strong in-sample TDF metrics.
+On a **controlled six-galaxy subset** of SPARC rotation curves, TDF piecewise-linear knot models provide **rotation-curve consistency** with tested halo and MOND baselines under **fixed canonical SPARC baryonic inputs** and fixed legacy **K_tau** (\(K_g\)-like projection). Under **even/odd holdout** test RMSE at M/L=1, TDF achieves **5 of 6 holdout success**; **NGC7814** is **one explicit canonical failure mode** where NFW refit outperforms TDF despite strong in-sample TDF metrics.
 
 **Post-M/L (Phases 4F–4G, reconciled in 4H):** NGC7814 is a **baryonic-decomposition-sensitive failure** under **diagnostic M/L scaling**. Lowering bulge_scale reduces inner TDF holdout error sharply. Under **fair scaled comparison**, NFW and MOND improve on the same scaled baryons, so improvement is **not uniquely a TDF effect**. At some **plausible lower-bulge** settings, TDF (often **tdf_5knot**) is competitive or best — **not** a final M/L calibration. The five success galaxies remain **stable** under plausible diagnostic scaling.
 
@@ -27,17 +29,17 @@ Six galaxies from Phase 1B subset selection: **DDO154, IC2574, NGC2403, NGC3198,
 | Baryonic | `baryonic_only` (fixed decomposition) |
 | Halos | `nfw_refit`, `burkert_refit` (log-space multistart, Phase 3A-R) |
 | MOND / RAR | `mond_fixed_a0_simple`, `mond_fit_a0_simple`, `rar_fixed` (Phase 3M) |
-| TDF knots | `tdf_3knot`, `tdf_4knot`, `tdf_5knot` (Phase 3B; fixed knot radii, fixed K_tau) |
+| TDF knots | `tdf_3knot`, `tdf_4knot`, `tdf_5knot` (Phase 3B; fixed knot radii, fixed legacy **K_tau** / \(K_g\)) |
 
 ## TDF reconstruction law
 
 Pointwise diagnostic (Phase 2A) and fitted knot form (Phase 3B):
 
 - `v_obs²(r) = v_bar²(r) + v_τ²(r)`
-- `v_τ²(r) = r · K_tau · dτ/dr`
+- `v_τ²(r) = r · K_g · dτ/dr` *(frozen outputs: legacy **K_tau**)*
 - `dτ/dr` piecewise-linear between fixed knot radii; amplitudes fitted with bounds from diagnostic τ range.
 
-**K_tau** is fixed (not fitted). **M/L, distance, and inclination** are not fitted.
+Legacy **K_tau** (\(K_g\)-like projection) is fixed (not fitted). **κ_tau** is not part of this radial benchmark closure. **M/L, distance, and inclination** are not fitted.
 
 ## In-sample comparison
 
@@ -87,7 +89,7 @@ Authoritative matrix: `outputs/tables/sparc_claim_traceability_matrix_updated.cs
 
 ## Next required work
 
-**Future work:** full SPARC, **photometry-informed M/L**, K_tau calibration, 2D τ-map, and lensing **only after** frozen τ-map validation.
+**Future work:** full SPARC, **photometry-informed M/L**, \(K_g\) / legacy **K_tau** calibration, 2D τ-map, and lensing **only after** frozen τ-map validation.
 
 Immediate follow-ups: prefer **tdf_3knot** in external wording; cite **tdf_5knot** only as sensitivity; expand subset only with updated claim matrix.
 

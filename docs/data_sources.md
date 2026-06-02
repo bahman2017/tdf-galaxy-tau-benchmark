@@ -60,3 +60,8 @@ No claim is made that TDF fits SPARC in this phase.
 - The VizieR TSV is a **working copy cache** for ingestion only; do not cite mirrors/caches as the scientific source.
 - Metadata ingestion output: `data/processed/sparc/sparc_photometry_metadata.csv`.
 - Phase 4J ingests metadata only; no new model fitting and no raw rotmod modification.
+
+## Related documentation
+
+- TDF notation (**K_g**, **κ_tau**, legacy **K_tau** in frozen outputs): `docs/theory_summary.md`
+- Current project phase and expansion_20 headline: `docs/project_status.md`

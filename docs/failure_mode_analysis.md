@@ -16,7 +16,7 @@ Six-galaxy controlled SPARC subset only. This document summarizes honest success
 For five galaxies, TDF knot models (often tdf_5knot in-sample) outperform or match tested baselines on **even/odd holdout test RMSE**, in addition to strong in-sample AIC/BIC. Language should remain conditional:
 
 - fixed SPARC baryonic decomposition (no M/L fitting)
-- fixed K_tau convention
+- fixed legacy **K_tau** (\(K_g\)-like projection) convention
 - six-galaxy subset only
 - rotation-curve consistency test, not lensing or cosmology
 

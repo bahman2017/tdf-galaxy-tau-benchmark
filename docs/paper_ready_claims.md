@@ -2,9 +2,11 @@
 
 Use this document with `outputs/tables/sparc_claim_traceability_matrix_updated.csv` (Phase 4H; includes claims I–N after M/L sensitivity). Phase 4B/4H — **language guardrail only**; no new fits after 4G.
 
+> **Notation:** Prose may use **K_g** for the gravitational projection coefficient. Frozen outputs and tables retain legacy **K_tau**. **κ_tau** is field stiffness and must not be conflated with **K_g** or legacy **K_tau**. See `docs/theory_summary.md`.
+
 ## Headline (allowed)
 
-> On a **controlled six-galaxy subset** of SPARC rotation curves, TDF knot models achieve **rotation-curve consistency** competitive with or better than tested NFW refit and MOND fit-a0 baselines under **even/odd holdout** in **5 of 6** cases at **fixed canonical SPARC baryons**, **conditional on fixed K_tau**, with **one explicit canonical failure mode** (NGC7814). That failure is **baryonic-decomposition-sensitive** under **diagnostic M/L scaling** (Phases 4F–4G) but is **not removed** at canonical decomposition and is **not** a final M/L calibration.
+> On a **controlled six-galaxy subset** of SPARC rotation curves, TDF knot models achieve **rotation-curve consistency** competitive with or better than tested NFW refit and MOND fit-a0 baselines under **even/odd holdout** in **5 of 6** cases at **fixed canonical SPARC baryons**, **conditional on fixed legacy K_tau** (\(K_g\)-like projection), with **one explicit canonical failure mode** (NGC7814). That failure is **baryonic-decomposition-sensitive** under **diagnostic M/L scaling** (Phases 4F–4G) but is **not removed** at canonical decomposition and is **not** a final M/L calibration.
 
 ## Primary model recommendation
 
@@ -74,10 +76,10 @@ Use this document with `outputs/tables/sparc_claim_traceability_matrix_updated.c
 - controlled six-galaxy subset
 - 5 of 6 holdout success
 - one explicit failure mode
-- conditional on fixed baryonic inputs and fixed K_tau
+- conditional on fixed baryonic inputs and fixed legacy **K_tau** (\(K_g\)-like projection)
 - promising / competitive on this controlled subset
 - outperforms tested baselines in this controlled subset (where tables support it)
-- future work: full SPARC, **photometry ingestion into M/L priors** (beyond Phase 4I placeholders), K_tau calibration, 2D τ-map, and lensing only after frozen τ-map validation
+- future work: full SPARC, **photometry ingestion into M/L priors** (beyond Phase 4I placeholders), \(K_g\) / legacy **K_tau** calibration, 2D τ-map, and lensing only after frozen τ-map validation
 - diagnostic prior-weighted summary (Phase 4I; not calibration)
 - baryonic-decomposition-sensitive failure (NGC7814; diagnostic only)
 - fair scaled comparison (Phase 4G)
@@ -100,7 +102,7 @@ Use this document with `outputs/tables/sparc_claim_traceability_matrix_updated.c
 Results are **conditional on**:
 
 - fixed SPARC baryonic decomposition (`v_bar` from gas+disk+bulge as provided)
-- fixed **K_tau** (not fitted)
+- fixed legacy **K_tau** (\(K_g\)-like projection; not fitted; not κ_tau)
 - no M/L, distance, or inclination fitting
 - six-galaxy subset selection (Phase 1B)
 - 1D rotation curves only (no 2D τ-map, no lensing)

@@ -1,5 +1,7 @@
 # Assumptions
 
+**Notation (see `docs/theory_summary.md`):** Frozen outputs use legacy **K_tau** for the fixed radial projection coefficient. Updated TDF prose uses **K_g** for the same projection role and **κ_tau** for mother-field stiffness (distinct from \(K_g\)). This documentation pass does not change benchmark numbers.
+
 - Baseline fitting is per galaxy and uses the same selected six-galaxy subset from Phase 1B.
 - Baryonic convention is fixed: `v_bar^2 = v_gas^2 + v_disk^2 + v_bulge^2` (no M/L fitting in Phase 3A).
 - Weighted residuals are used: `(v_obs_kms - v_model_kms) / v_err_kms`.
@@ -25,14 +27,14 @@
 - Unit path: `r_kpc`→meters, `v_kms`→m/s, `g=v^2/r`, then `v_model=sqrt(g_obs*r)` back to km/s.
 - Optional RAR uses `g_dagger=1.2e-10 m/s^2` with no extra parameters.
 - No stellar M/L, distance, or inclination fitting in Phase 3M.
-- Phase 3B TDF knot model fits piecewise-linear dτ/dr with fixed knot radii per galaxy; K_tau fixed from config.
+- Phase 3B TDF knot model fits piecewise-linear dτ/dr with fixed knot radii per galaxy; legacy **K_tau** (K_g-like projection coefficient) fixed from config.
 - Knot amplitudes initialized from Phase 2A direct reconstruction (diagnostic); bounds = reconstruction range × safety factor.
 - Phase 2A pointwise τ reconstruction is not an AIC/BIC competitor.
 - Phase 3C holdout fits use training radii only for knot placement, bounds, initialization, and optimization; test radii are not used in τ reconstruction for fitting.
 - Holdout splits: even/odd index, inner/middle/outer blocked (if n≥9), 5-fold radial CV (if n≥15).
 - Phase 4A failure-mode labels follow Phase 3C mandated classification (5 robust successes, NGC7814 failure mode).
 - Claim traceability matrix (claims A–H) is the authoritative language boundary for external reporting.
-- K_tau sensitivity refits tdf_3knot at K_tau ∈ {0.5, 1.0, 2.0}; bounds sensitivity at safety factors {1.0, 1.5, 2.0, 3.0}.
+- Legacy **K_tau** (\(K_g\)-like) sensitivity refits tdf_3knot at K_tau ∈ {0.5, 1.0, 2.0}; bounds sensitivity at safety factors {1.0, 1.5, 2.0, 3.0}.
 - Phase 4C uses x_span = (r − r_min)/(r_max − r_min) on a 100-point grid [0, 1]; linear interpolation without extrapolation beyond observed radii.
 - Phase 4C normalizes dτ/dr, gτ = residual_v²/r, residual_v², and τ by each galaxy’s max absolute value (zero denominator → zeros).
 - Phase 4C success-group statistics include only `robust_tdf_success` galaxies; NGC7814 is compared to that mean but excluded from the mean.
@@ -51,4 +53,4 @@
 
 - Phase 4J: photometry metadata is ingested from SPARC Table-1 working copy (CDS/VizieR transport) plus rotmod distance fallback; missing fields remain NaN and no values are invented.
 - Phase 4K: photometry-informed prior weights use morphological_type, L3.6, disk scale, central SB proxy, inclination, distance, and subset bulge_dominated_proxy; weights are diagnostic only over the fixed Phase 4G grid.
-- Phase 4L: K_tau is varied as fixed values {0.5, 1.0, 2.0}; only TDF knot amplitudes are refit; NFW/MOND RMSE held from Phase 4G; K_tau is not measured or fitted.
+- Phase 4L: legacy **K_tau** is varied as fixed values {0.5, 1.0, 2.0}; only TDF knot amplitudes are refit; NFW/MOND RMSE held from Phase 4G; **K_tau** is not measured or fitted and is **not** κ_tau.

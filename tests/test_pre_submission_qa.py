@@ -82,7 +82,8 @@ def test_abstract_grammar(root: Path) -> None:
         assert bug not in tex
     assert "We use train-only" in tex and "even/odd holdout" in tex
     assert "expansion-20 cohort" in tex
-    assert "$K_\\tau$. In the pre-registered" in tex
+    assert "$K_g$" in tex and "legacy benchmark notation $K_\\tau$" in tex
+    assert "In the pre-registered" in tex
     assert ", In the pre-registered" not in tex
     assert "Using train-only" not in tex
 

@@ -1,5 +1,7 @@
 # Limitations
 
+**Notation:** Legacy benchmark outputs label the fixed projection factor **K_tau**; updated TDF documentation uses **K_g** for that role and **κ_tau** for field stiffness. See `docs/theory_summary.md`.
+
 - This repository does not disprove dark matter.
 - Baseline halo fits are sensitive to baryonic decomposition assumptions.
 - Fitted NFW/Burkert parameters can be boundary-limited and should not be overinterpreted in isolation.
@@ -9,7 +11,7 @@
 - Carry both legacy and refit audit caveats into Phase 3B TDF comparison.
 - MOND/RAR here is a rotation-curve empirical baseline only, not a cosmological or lensing validation of MOND.
 - MOND performance depends on the fixed SPARC baryonic decomposition; it does not replace ΛCDM as a complete theory.
-- TDF knot AIC/BIC comparisons are conditional on fixed K_tau, fixed baryons, six-galaxy subset, and rotation curves only.
+- TDF knot AIC/BIC comparisons are conditional on fixed legacy **K_tau** (\(K_g\)-like projection), fixed baryons, six-galaxy subset, and rotation curves only.
 - Higher knot counts (4, 5) increase overfitting risk relative to tdf_3knot.
 - No lensing or independent dynamical validation in Phase 3B.
 - Phase 3C holdout audits six galaxies only; strong full-sample AIC gains for tdf_5knot may reflect extra flexibility rather than robust predictive power.
@@ -40,7 +42,7 @@
 
 - Phase 4J metadata ingestion does not calibrate final M/L priors; Table-1 working copy fields can be incomplete and must be validated against official SPARC provenance before external claims.
 - Phase 4K: photometry-informed priors are a diagnostic scaffold (claim Q not supported); no explicit bulge luminosity; morphology proxies are not stellar-population calibration; tdf_5knot can gain weighted support without primary tdf_3knot recovery.
-- Phase 4L: K_tau shifts are partially degenerate with dτ/dr amplitude; conclusions are normalization-sensitivity audits only, not physical measurement of K_tau.
+- Phase 4L: legacy **K_tau** shifts are partially degenerate with dτ/dr amplitude; conclusions are normalization-sensitivity audits only, not physical measurement of \(K_g\) or κ_tau.
 - Phase 4M: final audit consolidates Phases 1A–4L for external handoff; expanding the subset or claiming full-SPARC validation requires a new claim review and traceability update.
 - Phase 5A: expansion cohort lists are pre-registered from QC/photometry only; proposed galaxies are not validated by new TDF fits until a later phase; still not full SPARC.
 - Phase 5B: expansion_12 results extend the six-galaxy benchmark but remain a controlled cohort; failure-mode labels for new galaxies use the same holdout rules; not full-SPARC validation.
