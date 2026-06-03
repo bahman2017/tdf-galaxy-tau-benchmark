@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6C-E complete** — R2+R6 regularized maps (`phase6d_*`); **0/5** pass all gates. **Phase 6D blocked.**
+- **Phase 6E complete** — negative-result decision gate documented. **Phase 6D blocked.** **Next:** Phase **6F** (reconstruction protocol design).
 
 ## Planned
 
@@ -118,6 +118,17 @@
 
 - `scripts/build_phase6d_regularized_maps.py --all-primary-pilots`
 - `docs/phase6d_regularized_map_results.md` — **0/5** `phase6d_candidate`
+
+#### Phase 6E — negative-result decision gate (**complete**)
+
+- `docs/phase6e_negative_result_decision_gate.md`
+- `outputs/reports/phase6e_negative_result_summary.md`
+- Consolidates 6A–6C-E; **6D remains blocked**; no new computation
+
+#### Phase 6F — map-smooth reconstruction protocol (planned)
+
+- Smoothness in primary fit + holdout validation; fresh pre-registration required
+- **Not** post-hoc repair on frozen `expansion20_tau_profiles.csv`
 
 #### Phase 6D — second-channel scaffold evaluation (**blocked**)
 

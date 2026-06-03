@@ -6,6 +6,30 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6E: consolidate 6C-E negative result and decision-gate report (docs only).
+
+## Files changed
+
+- `docs/phase6e_negative_result_decision_gate.md`
+- `outputs/reports/phase6e_negative_result_summary.md`
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/reproducibility_commands.md`
+
+## Tests run
+
+- `python3 -m pytest -q`
+
+## Notes
+
+- Phase 6D blocked; recommend Phase 6F (smoothness in reconstruction, not post-hoc).
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6C-E: implement pre-registered R2+R6 regularized pseudo-2D maps for five primary pilots.
 
 ## Files changed

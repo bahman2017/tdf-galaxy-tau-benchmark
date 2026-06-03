@@ -149,6 +149,15 @@ Results: `docs/phase6d_regularized_map_results.md`
 
 **Phase 6D remains blocked** — 0/5 pilots pass all hard gates after R2+R6 (negative cohort).
 
+## Phase 6E negative-result decision gate (documentation only)
+
+No builder script. Read:
+
+- `docs/phase6e_negative_result_decision_gate.md`
+- `outputs/reports/phase6e_negative_result_summary.md`
+
+Phase 6D and lensing/deflection remain **blocked**. Next planned phase: **6F** (map-smooth reconstruction protocol design).
+
 ## Expected headline artifacts
 
 | Artifact | Path |

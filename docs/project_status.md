@@ -2,13 +2,15 @@
 
 ## Current phase
 
-**Phase 6C-E — regularized pseudo-2D maps (R2+R6)** — **complete** (0/5 pilots pass all gates)
+**Phase 6E — negative-result decision gate** — **complete** (documentation only)
 
-**Phase 6C-D — regularization pre-registration** — **complete** (`b4d1f34`)
+**Phase 6C-E — regularized pseudo-2D maps (R2+R6)** — **complete** (`7286168`; 0/5 pilots pass all gates)
 
 **Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
 
-**Phase 6D — second-channel scaffold** — **blocked** (negative 6C-E cohort: 0/5 `phase6d_candidate`).
+**Phase 6D — second-channel scaffold** — **blocked** (6E decision: do not proceed; 0/5 `phase6d_candidate`).
+
+**Next scientific phase (planned):** **Phase 6F** — new reconstruction protocol with map-smoothness in primary objective/holdout (not post-hoc repair).
 
 **Phase 6C-C — frozen τ-gradient diagnostic** — **complete**
 
@@ -33,6 +35,12 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 6E deliverables
+
+- `docs/phase6e_negative_result_decision_gate.md` — consolidated 6A–6C-E + blocked 6D decision
+- `outputs/reports/phase6e_negative_result_summary.md` — cohort negative-result summary
+- **No** code, map, profile, or benchmark changes
 
 ### Phase 6C-E deliverables
 
@@ -172,8 +180,9 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. Document **6C-E negative cohort** (0/5 regularized map gates) in manuscript supplement; do **not** open Phase 6D on R2+R6 repair without new pre-registration.
-2. Author/journal formatting review of `paper/manuscript.pdf`.
+1. **Phase 6F:** pre-register reconstruction where map-smoothness is in the primary objective and holdout (see `docs/phase6e_negative_result_decision_gate.md`).
+2. Manuscript supplement: cite 6E negative result; Phase 6D/7 remain blocked on current maps.
+3. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.
 5. Full SPARC and lensing deferred per claim boundaries.
