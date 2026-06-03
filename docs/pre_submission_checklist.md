@@ -36,10 +36,6 @@ python3 scripts/build_referee_readiness_report.py
 python3 scripts/compile_paper_pdf.py
 ```
 
-## Phase 5H-A note (2026-05-29)
-
-Publication readiness freeze audit: [`phase5h_publication_readiness_freeze.md`](phase5h_publication_readiness_freeze.md). Scientific package **ready**; sync `CITATION.cff` version and add root `LICENSE` before new Zenodo software deposit.
-
 ## Known remaining limitations
 
 - Controlled expansion-20 cohort only (not full SPARC)

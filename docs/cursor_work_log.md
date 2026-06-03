@@ -6,6 +6,30 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5H-B: metadata hygiene (LICENSE, CITATION.cff, pyproject.toml) before v0.1.6-publication-freeze tag.
+
+## Files changed
+
+- `LICENSE` (new), `CITATION.cff`, `pyproject.toml`
+- `README.md`, docs: `project_status.md`, `roadmap.md`, `reproducibility_commands.md`, `phase5h_publication_readiness_freeze.md`, `pre_submission_checklist.md`, `cursor_work_log.md`
+
+## Tests run
+
+- `python3 -m pytest -q` — 264 passed
+
+## Notes
+
+- Metadata-only; no benchmark rerun or frozen output changes.
+- Ready to tag `v0.1.6-publication-freeze`.
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5H-A: publication readiness freeze audit after Phase 5G (release stack, claims, artifacts, blockers).
 
 ## Files changed

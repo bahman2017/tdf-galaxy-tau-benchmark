@@ -13,11 +13,12 @@
 - **Phase 5G-C-B:** internal k_g rename with legacy aliases (**complete**; tag `v0.1.4-internal-kg-rename`)
 - **Phase 5G-C-A:** internal rename audit (**complete**; `docs/phase5g_internal_rename_audit.md`)
 - **Phase 5G-D:** final notation QA (**complete**; tag `v0.1.5-notation-qa`)
-- **Phase 5H-A:** publication readiness freeze audit (**complete**; `docs/phase5h_publication_readiness_freeze.md`)
+- **Phase 5H-B:** metadata hygiene (**complete**; LICENSE, CITATION.cff, pyproject `0.1.6`)
+- **Phase 5H-A:** publication readiness freeze audit (**complete**)
 
 ## Current
 
-- **Phase 5H-A complete.** Scientific package ready for publication/Zenodo snapshot; minor metadata blockers (LICENSE, CITATION.cff version sync). Optional **5G-C-C** or **Phase 6** per scope change.
+- **Phase 5H-B complete.** Ready to tag **`v0.1.6-publication-freeze`**. Optional **5G-C-C** or **Phase 6** per scope change.
 
 ## Planned
 
@@ -66,6 +67,11 @@
 - `docs/phase5h_publication_readiness_freeze.md`
 - Verdict: **ready with minor metadata blockers** (LICENSE, version metadata sync)
 - No benchmark rerun; frozen expansion_20 claims unchanged
+
+#### Phase 5H-B — metadata hygiene (**complete**)
+
+- Root MIT `LICENSE`; `CITATION.cff` `v0.1.6-publication-freeze`; `pyproject.toml` `0.1.6`
+- Metadata blockers from 5H-A cleared; ready for publication-freeze tag
 
 ### Phase 6 — optional 2D τ-map reconstruction
 

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using these metadata."
 title: "TDF Galaxy Tau Benchmark: Controlled SPARC Expansion-20 Rotation-Curve Benchmark with Holdout Validation"
-version: v0.1.0-expansion20-paper
+version: v0.1.6-publication-freeze
 date-released: 2026-05-29
 authors:
   - family-names: Masarrat
@@ -20,9 +20,11 @@ abstract: >-
   Controlled rotation-curve benchmark for Time-Delay Field (TDF) radial tau
   reconstruction on a pre-registered 20-galaxy SPARC subset (expansion-20), with
   train-only even/odd holdout validation against NFW and MOND at fixed canonical
-  baryons and fixed K_tau. Primary model tdf_3knot achieves robust holdout success
-  in 15 of 20 galaxies; tdf_5knot is sensitivity-only. Subset-only; not full-SPARC
-  validation; no dark-matter disproof; no LCDM replacement; no lensing tests.
+  baryons and fixed K_g (gravitational projection coefficient; legacy benchmark
+  label K_tau in frozen outputs and configs). Primary model tdf_3knot achieves
+  robust holdout success in 15 of 20 galaxies; tdf_5knot is sensitivity-only.
+  Controlled cohort only; not full-SPARC validation; no dark-matter disproof; no
+  LCDM replacement; no lensing confirmation.
 keywords:
   - rotation curves
   - SPARC

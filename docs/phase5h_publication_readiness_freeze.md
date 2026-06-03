@@ -184,4 +184,22 @@ The **scientific benchmark package** (frozen expansion_20 tables, conservative c
 
 ### Zenodo / paper snapshot statement
 
-**Yes** — the repository is ready for a **paper-readiness / Zenodo software snapshot** at the scientific level. Existing Zenodo preprint DOI covers the manuscript; a **new software deposit** should reference tags through `v0.1.5-notation-qa` and updated `CITATION.cff` if metadata blockers are cleared.
+**Yes** — the repository is ready for a **paper-readiness / Zenodo software snapshot**. Existing Zenodo preprint DOI covers the manuscript.
+
+---
+
+## 9. Phase 5H-B addendum — metadata hygiene (2026-05-29)
+
+Phase **5H-B** cleared the metadata blockers identified in §8:
+
+| Item (was blocker) | Status after 5H-B |
+| --- | --- |
+| No root `LICENSE` file | **Cleared** — MIT `LICENSE` at repo root (Copyright 2026 Bahman Masarrat) |
+| `CITATION.cff` version stale | **Cleared** — `v0.1.6-publication-freeze`; K_g abstract; DOI `10.5281/zenodo.20437254` preserved |
+| `pyproject.toml` version `0.1.0` | **Cleared** — version `0.1.6` |
+
+**Updated verdict:** **Ready** for tag **`v0.1.6-publication-freeze`**.
+
+| Item | Status |
+| --- | --- |
+| `controlled_expansion_final_metrics.csv` absent | Informational only — unchanged |

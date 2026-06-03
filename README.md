@@ -129,7 +129,7 @@ Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_not
   author = {Masarrat, Bahman},
   year   = {2026},
   url    = {https://github.com/bahman2017/tdf-galaxy-tau-benchmark},
-  version = {v0.1.5-notation-qa}
+  version = {v0.1.6-publication-freeze}
 }
 ```
 
@@ -140,7 +140,7 @@ Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_not
 
 ## Status
 
-Phase **5E/5F** publication package, Phase **5G** notation migration (through **`v0.1.5-notation-qa`**), and Phase **5H-A** publication readiness freeze audit are complete. See
+Phase **5E/5F** publication package, Phase **5G** notation migration, Phase **5H-A** publication readiness audit, and Phase **5H-B** metadata hygiene are complete. Target release tag: **`v0.1.6-publication-freeze`**. See
 [`docs/project_status.md`](docs/project_status.md), [`docs/phase5h_publication_readiness_freeze.md`](docs/phase5h_publication_readiness_freeze.md),
 [`docs/controlled_expansion_results.md`](docs/controlled_expansion_results.md),
 and [`docs/theory_summary.md`](docs/theory_summary.md) (**K_g** preferred; **κ_tau** field stiffness; legacy **K_tau** in frozen outputs).

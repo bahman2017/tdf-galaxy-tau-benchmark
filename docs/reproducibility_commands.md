@@ -67,9 +67,9 @@ Frozen benchmark tables use legacy **K_tau** column names. Config loaders accept
 Loader equivalence (`k_g` ≡ legacy `k_tau`) is regression-locked in Phase **5G-B** (**complete**):
 `tests/test_notation_compatibility_regression.py`.
 
-Release tags: `v0.1.0-expansion20-paper` → … → **`v0.1.5-notation-qa`** (`91eea5c`).
+Release tags: `v0.1.0-expansion20-paper` → … → **`v0.1.5-notation-qa`** → target **`v0.1.6-publication-freeze`** (after Phase 5H-B metadata hygiene).
 
-Phase **5H-A** (**complete**): publication readiness freeze — [`phase5h_publication_readiness_freeze.md`](phase5h_publication_readiness_freeze.md). Suggested tag after audit: **`v0.1.6-publication-freeze`**.
+Phase **5H-B** (**complete**): LICENSE, `CITATION.cff`, `pyproject.toml` version sync — [`phase5h_publication_readiness_freeze.md`](phase5h_publication_readiness_freeze.md) §9.
 
 **Safe commands (no refit):** `pytest`, `build_controlled_expansion_final_audit.py`, `export_paper_tables.py`, `build_paper_figures.py`, `compile_paper_pdf.py`.
 
