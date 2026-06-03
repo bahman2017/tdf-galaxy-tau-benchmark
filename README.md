@@ -87,7 +87,7 @@ PDF output: [`paper/manuscript.pdf`](paper/manuscript.pdf).
 | [`outputs/figures/sparc_subset/`](outputs/figures/sparc_subset/) | Diagnostic rotation-curve figures |
 | [`paper/`](paper/) | Manuscript TeX/PDF, figures, LaTeX tables |
 | [`docs/`](docs/) | Assumptions, limitations, claims, reviewer matrix |
-| [`tests/`](tests/) | Pytest suite (224+ tests) |
+| [`tests/`](tests/) | Pytest suite (264 tests) |
 | [`archive/`](archive/) | Optional home for superseded unreferenced artifacts |
 
 Details: [`docs/repository_map.md`](docs/repository_map.md).
@@ -129,7 +129,7 @@ Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_not
   author = {Masarrat, Bahman},
   year   = {2026},
   url    = {https://github.com/bahman2017/tdf-galaxy-tau-benchmark},
-  version = {v0.1.0-expansion20-paper}
+  version = {v0.1.5-notation-qa}
 }
 ```
 
@@ -140,6 +140,7 @@ Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_not
 
 ## Status
 
-Phase **5E/5F** publication package and Phase **5G-A** / **5G-B** notation compatibility (alias layer + regression lock) are complete. See
-[`docs/project_status.md`](docs/project_status.md), [`docs/controlled_expansion_results.md`](docs/controlled_expansion_results.md),
+Phase **5E/5F** publication package, Phase **5G** notation migration (through **`v0.1.5-notation-qa`**), and Phase **5H-A** publication readiness freeze audit are complete. See
+[`docs/project_status.md`](docs/project_status.md), [`docs/phase5h_publication_readiness_freeze.md`](docs/phase5h_publication_readiness_freeze.md),
+[`docs/controlled_expansion_results.md`](docs/controlled_expansion_results.md),
 and [`docs/theory_summary.md`](docs/theory_summary.md) (**K_g** preferred; **κ_tau** field stiffness; legacy **K_tau** in frozen outputs).

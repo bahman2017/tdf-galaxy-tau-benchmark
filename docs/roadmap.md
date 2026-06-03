@@ -12,11 +12,12 @@
 - **Phase 5G-B:** loader compatibility regression lock (**complete**; tag `v0.1.3-notation-compatibility`)
 - **Phase 5G-C-B:** internal k_g rename with legacy aliases (**complete**; tag `v0.1.4-internal-kg-rename`)
 - **Phase 5G-C-A:** internal rename audit (**complete**; `docs/phase5g_internal_rename_audit.md`)
-- **Phase 5G-D:** final notation QA (**complete**; `docs/phase5g_final_notation_qa.md`)
+- **Phase 5G-D:** final notation QA (**complete**; tag `v0.1.5-notation-qa`)
+- **Phase 5H-A:** publication readiness freeze audit (**complete**; `docs/phase5h_publication_readiness_freeze.md`)
 
 ## Current
 
-- **Phase 5G notation migration complete.** Optional **5G-C-C** (production YAML `k_g` keys) or **Phase 6** (2D τ-map) per scope change.
+- **Phase 5H-A complete.** Scientific package ready for publication/Zenodo snapshot; minor metadata blockers (LICENSE, CITATION.cff version sync). Optional **5G-C-C** or **Phase 6** per scope change.
 
 ## Planned
 
@@ -57,6 +58,14 @@
 - Migrate `configs/reconstruction.yaml` to `k_g` keys; regenerate reports under explicit rerun policy only.
 
 **Out of scope for 5G:** new fits, cohort expansion, or claim-boundary changes.
+
+### Phase 5H — publication readiness freeze
+
+#### Phase 5H-A — publication readiness audit (**complete**)
+
+- `docs/phase5h_publication_readiness_freeze.md`
+- Verdict: **ready with minor metadata blockers** (LICENSE, version metadata sync)
+- No benchmark rerun; frozen expansion_20 claims unchanged
 
 ### Phase 6 — optional 2D τ-map reconstruction
 

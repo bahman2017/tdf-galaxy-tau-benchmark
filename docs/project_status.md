@@ -2,9 +2,11 @@
 
 ## Current phase
 
-**Phase 5G-D — final notation QA** — **complete**
+**Phase 5H-A — publication readiness freeze audit** — **complete**
 
-**Phase 5G notation migration — complete** (tags `v0.1.2` through `v0.1.4`; QA in `docs/phase5g_final_notation_qa.md`).
+**Publication readiness:** **Ready with minor metadata blockers** — see `docs/phase5h_publication_readiness_freeze.md`.
+
+**Phase 5G notation migration — complete** (tags `v0.1.2`–`v0.1.5`; QA in `docs/phase5g_final_notation_qa.md`).
 
 Supporting steps (all complete):
 
@@ -15,6 +17,11 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 5H-A deliverables
+
+- `docs/phase5h_publication_readiness_freeze.md` — release stack, claim boundaries, artifact inventory, **ready with minor metadata blockers**
+- **264 tests passed**; no benchmark rerun; no frozen output changes
 
 ### Phase 5G-D deliverables
 
@@ -76,7 +83,8 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 - Phase 5F-A–F: paper scaffold, figures, LaTeX tables, manuscript PDF, scientific edit, referee readiness, pre-submission QA (`docs/pre_submission_checklist.md`).
 - Phase 5G-A: `normalize_projection_coefficient` alias layer (`src/tdf_galaxy_tau/config/notation.py`; tag `v0.1.2-notation-aliases`).
 - Phase 5G-B: compatibility regression lock (`tests/test_notation_compatibility_regression.py`; tag `v0.1.3-notation-compatibility`).
-- Phase 5G-D: final notation QA (`docs/phase5g_final_notation_qa.md`; PASS).
+- Phase 5H-A: publication readiness freeze audit (`docs/phase5h_publication_readiness_freeze.md`).
+- Phase 5G-D: final notation QA (`docs/phase5g_final_notation_qa.md`; tag `v0.1.5-notation-qa`).
 - Phase 5G-C-B: internal `k_g` field rename with `.k_tau` property aliases (tag `v0.1.4-internal-kg-rename`).
 - Phase 5G-C-A: internal rename audit (`docs/phase5g_internal_rename_audit.md`).
 - Release prep: repository cleanup audit, Git tag `v0.1.0-expansion20-paper`, Zenodo preprint DOI [10.5281/zenodo.20437254](https://doi.org/10.5281/zenodo.20437254).
@@ -88,7 +96,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 5G-C-C (optional):** migrate `configs/reconstruction.yaml` to `k_g` keys; regenerate reports only under explicit rerun policy.
+1. Sync `CITATION.cff` / `pyproject.toml` version with release tag; add root `LICENSE` (MIT).
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

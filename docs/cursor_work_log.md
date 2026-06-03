@@ -6,6 +6,30 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5H-A: publication readiness freeze audit after Phase 5G (release stack, claims, artifacts, blockers).
+
+## Files changed
+
+- `docs/phase5h_publication_readiness_freeze.md` (new)
+- `README.md`, `docs/project_status.md`, `docs/roadmap.md`, `docs/reproducibility_commands.md`, `docs/pre_submission_checklist.md`, `docs/cursor_work_log.md`
+
+## Tests run
+
+- `python3 -m pytest -q` — 264 passed
+
+## Notes
+
+- Verdict: **ready with minor metadata blockers** (LICENSE, CITATION.cff version).
+- No benchmark rerun; no frozen outputs modified.
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5G-D: final notation QA after v0.1.4-internal-kg-rename (grep audit, claim boundaries, tests).
 
 ## Files changed

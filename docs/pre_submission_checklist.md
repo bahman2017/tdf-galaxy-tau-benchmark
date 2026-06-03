@@ -36,11 +36,15 @@ python3 scripts/build_referee_readiness_report.py
 python3 scripts/compile_paper_pdf.py
 ```
 
+## Phase 5H-A note (2026-05-29)
+
+Publication readiness freeze audit: [`phase5h_publication_readiness_freeze.md`](phase5h_publication_readiness_freeze.md). Scientific package **ready**; sync `CITATION.cff` version and add root `LICENSE` before new Zenodo software deposit.
+
 ## Known remaining limitations
 
 - Controlled expansion-20 cohort only (not full SPARC)
 - Fixed baryons; no final M/L calibration
-- Legacy **K_tau** (\(K_g\)-like projection) fixed, not measured; distinct from κ_tau
+- K_tau fixed, not measured
 - Lensing not tested
 - NGC7814 canonical failure retained
 - tdf_5knot sensitivity-only
