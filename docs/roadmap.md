@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6B complete** — expansion_20 data audit + pilot selection (`docs/phase6b_*.md`). **Next:** Phase **6C** (frozen pseudo-2D map construction).
+- **Phase 6C-A complete** — DDO161 frozen pseudo-2D map (`phase6c_frozen_pseudo2d.py`). **Next:** Phase **6C-B** (remaining primary pilots).
 
 ## Planned
 
@@ -94,10 +94,18 @@
 - Primary pilots: DDO161, UGC07524, UGC08490, IC2574, NGC2403
 - True 2D and lensing remain deferred
 
-#### Phase 6C / 6D — implementation and second-channel evaluation (future)
+#### Phase 6C-A — frozen pseudo-2D map, DDO161 pilot (**complete**)
 
-- 6C: frozen-map construction from radial τ (no τ retuning)
-- 6D: second-channel scaffold metrics per `phase6a_success_failure_criteria.md`
+- `scripts/build_phase6c_frozen_pseudo2d_map.py --galaxy-id DDO161`
+- Axisymmetric τ₂D(x,y)=τ_radial(R); no refit; outputs under `outputs/maps/phase6c/`
+
+#### Phase 6C-B — remaining primary pilots (planned)
+
+- UGC07524, UGC08490, IC2574, NGC2403 with same builder
+
+#### Phase 6D — second-channel scaffold evaluation (future)
+
+- Second-channel metrics per `phase6a_success_failure_criteria.md`
 
 Requires frozen 1D benchmark and explicit scope change from Phase 5 claims.
 

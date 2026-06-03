@@ -6,6 +6,32 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6C-A: frozen axisymmetric pseudo-2D τ-map for DDO161 (no refit).
+
+## Files changed
+
+- `src/tdf_galaxy_tau/analysis/phase6c_frozen_pseudo2d.py`, `scripts/build_phase6c_frozen_pseudo2d_map.py`, tests
+- DDO161 map outputs under `outputs/maps/phase6c/`, tables, report, figure
+- docs: `project_status.md`, `roadmap.md`, `reproducibility_commands.md`, `phase6b_pilot_selection_rationale.md`
+
+## Tests run
+
+- `python3 scripts/build_phase6c_frozen_pseudo2d_map.py --galaxy-id DDO161`
+- `python3 -m pytest -q`
+
+## Notes
+
+- K_g=1.0 from frozen profile; tau_retuned=false.
+- Radial consistency PASS; smoothness FAIL reflects frozen 1D dτ/dr jumps (not map retuning).
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6B: expansion_20 data availability audit and conservative pilot selection (no fits).
 
 ## Files changed

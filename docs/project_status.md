@@ -2,11 +2,13 @@
 
 ## Current phase
 
-**Phase 6B — data availability audit & pilot selection** — **complete** (audit only; no fits)
+**Phase 6C-A — frozen pseudo-2D map (DDO161 pilot)** — **complete** (implementation; no fits)
 
 **Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
 
-**Next scientific phase:** **Phase 6C** — frozen axisymmetric pseudo-2D τ-map construction (pilots: DDO161, UGC07524, UGC08490, IC2574, NGC2403).
+**Next scientific phase:** **Phase 6C-B** — replicate frozen pseudo-2D maps for remaining primary pilots.
+
+**Phase 6B — data availability audit & pilot selection** — **complete** (audit only; no fits)
 
 **Phase 6A — 2D / frozen-map test protocol** — **complete** (design only; no fits)
 
@@ -23,6 +25,12 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 6C-A deliverables
+
+- `src/tdf_galaxy_tau/analysis/phase6c_frozen_pseudo2d.py`, `scripts/build_phase6c_frozen_pseudo2d_map.py`
+- DDO161 outputs: `outputs/maps/phase6c/DDO161_frozen_pseudo2d_tau_map.npz`, metadata/consistency tables, report, figure
+- Radial consistency **PASS** (machine precision); frozen-profile dτ/dr jump exceeds 6B smoothness gate (**reported, not retuned**)
 
 ### Phase 6B deliverables
 
@@ -131,7 +139,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 6C:** frozen axisymmetric pseudo-2D map for pilot **DDO161** (no τ retuning).
+1. **Phase 6C-B:** frozen pseudo-2D maps for UGC07524, UGC08490, IC2574, NGC2403.
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

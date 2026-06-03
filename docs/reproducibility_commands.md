@@ -95,7 +95,15 @@ Produces `outputs/tables/phase6b_expansion20_data_availability_audit.csv`,
 `outputs/tables/phase6b_pilot_candidate_ranking.csv`, and
 `outputs/reports/phase6b_pilot_selection_report.md`.
 
-**Next (Phase 6C):** frozen axisymmetric pseudo-2D τ-map for pilot DDO161.
+## Phase 6C-A frozen pseudo-2D map (DDO161; no refit)
+
+```bash
+python3 scripts/build_phase6c_frozen_pseudo2d_map.py --galaxy-id DDO161
+```
+
+Optional figure: `outputs/figures/phase6c_DDO161_frozen_pseudo2d_tau_map.png`
+
+**Next (Phase 6C-B):** same builder for remaining primary pilots.
 
 ## Expected headline artifacts
 
