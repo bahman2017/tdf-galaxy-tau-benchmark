@@ -6,6 +6,32 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6C-C: frozen dτ/dr gradient diagnostics and regularization options (no τ change).
+
+## Files changed
+
+- `phase6c_gradient_diagnostics.py`, `build_phase6c_gradient_diagnostics.py`, tests
+- `phase6c_primary_pilot_gradient_diagnostics.csv`, `phase6c_gradient_diagnostic_report.md`
+- `docs/phase6c_gradient_regularization_options.md`, status/roadmap/reproducibility
+
+## Tests run
+
+- `python3 scripts/build_phase6c_gradient_diagnostics.py`
+- `python3 -m pytest -q`
+
+## Notes
+
+- 0/5 Phase 6D ready; inner-radius instability dominant; NGC2403 sparse sampling.
+- No map regeneration or τ smoothing.
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6C-B: primary-pilot maps (4 new + DDO161) and combined smoothness audit.
 
 ## Files changed

@@ -2,11 +2,13 @@
 
 ## Current phase
 
-**Phase 6C-B — primary-pilot maps + smoothness audit** — **complete** (5 maps; no fits)
+**Phase 6C-C — frozen τ-gradient diagnostic** — **complete** (read-only; no τ change)
 
 **Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
 
-**Next scientific phase:** **Phase 6C-C** — frozen radial τ-gradient diagnostic (Phase 6D **blocked**: 0/5 pilots pass smoothness).
+**Next scientific phase:** **Phase 6C-D** — pre-registered regularization implementation (only if explicitly approved; else Phase 6D stays blocked).
+
+**Phase 6C-B — primary-pilot maps + smoothness audit** — **complete**
 
 **Phase 6C-A — frozen pseudo-2D map (DDO161 pilot)** — **complete**
 
@@ -27,6 +29,13 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 6C-C deliverables
+
+- `src/tdf_galaxy_tau/analysis/phase6c_gradient_diagnostics.py`, `scripts/build_phase6c_gradient_diagnostics.py`
+- `outputs/tables/phase6c_primary_pilot_gradient_diagnostics.csv`, `outputs/reports/phase6c_gradient_diagnostic_report.md`
+- `docs/phase6c_gradient_regularization_options.md` — options for 6C-D only (not applied)
+- Finding: **inner-radius dτ/dr instability** (τ₀=0 boundary) on 4/5 pilots; **NGC2403** also sparse Δr; **0/5** Phase 6D ready
 
 ### Phase 6C-B deliverables
 
@@ -146,7 +155,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 6C-C:** frozen radial τ-gradient diagnostic before Phase 6D (smoothness gate unmet on all primary pilots).
+1. **Phase 6C-D:** pre-register and (if approved) apply minimal regularization (R2+R6 per options doc); re-gate smoothness before Phase 6D.
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

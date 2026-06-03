@@ -118,7 +118,17 @@ python3 scripts/build_phase6c_frozen_pseudo2d_map.py --all-primary-pilots --audi
 Outputs: `outputs/tables/phase6c_primary_pilot_map_summary.csv`,  
 `outputs/reports/phase6c_primary_pilot_smoothness_audit.md`
 
-**Next (Phase 6C-C):** frozen τ-gradient diagnostic — Phase 6D blocked until smoothness passes.
+## Phase 6C-C gradient diagnostics (read-only; no τ change)
+
+```bash
+python3 scripts/build_phase6c_gradient_diagnostics.py
+```
+
+Outputs: `outputs/tables/phase6c_primary_pilot_gradient_diagnostics.csv`,  
+`outputs/reports/phase6c_gradient_diagnostic_report.md`  
+Options menu: `docs/phase6c_gradient_regularization_options.md`
+
+**Next (Phase 6C-D):** pre-registered regularization only if approved — Phase 6D remains blocked (0/5 smoothness pass).
 
 ## Expected headline artifacts
 

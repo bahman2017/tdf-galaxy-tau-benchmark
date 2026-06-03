@@ -34,7 +34,9 @@ All five maps pass **radial consistency** (machine precision vs frozen `expansio
 
 **Phase 6D is blocked** until at least one pilot passes both radial consistency and smoothness.
 
-**Recommended next step:** Phase **6C-C** — diagnostic review of frozen radial τ-gradient structure and documented regularization options (no retuning in-repo without a new pre-registered protocol).
+**Phase 6C-C complete:** see `outputs/reports/phase6c_gradient_diagnostic_report.md` and `docs/phase6c_gradient_regularization_options.md`.
+
+**Recommended next step:** Phase **6C-D** — pre-registered regularization (if approved) before Phase 6D.
 
 ---
 

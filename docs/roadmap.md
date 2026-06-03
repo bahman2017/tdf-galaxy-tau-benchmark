@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6C-B complete** — all five primary-pilot maps + smoothness audit. **Next:** Phase **6C-C** (frozen-gradient diagnostic; **6D blocked**).
+- **Phase 6C-C complete** — frozen dτ/dr gradient diagnostic + regularization options doc. **Next:** Phase **6C-D** (pre-registered fix only; **6D blocked**).
 
 ## Planned
 
@@ -104,9 +104,14 @@
 - UGC07524, UGC08490, IC2574, NGC2403 + combined audit with DDO161
 - `phase6c_primary_pilot_map_summary.csv` — radial **5/5 PASS**, smoothness **0/5 PASS**
 
-#### Phase 6C-C — frozen τ-gradient diagnostic (planned)
+#### Phase 6C-C — frozen τ-gradient diagnostic (**complete**)
 
-- Required before Phase 6D while smoothness gate fails on all primary pilots
+- `phase6c_primary_pilot_gradient_diagnostics.csv`; inner-radius jump dominance (4/5)
+- `docs/phase6c_gradient_regularization_options.md` — R1–R7 menu for 6C-D
+
+#### Phase 6C-D — regularization implementation (planned; requires pre-registration)
+
+- Apply only after explicit protocol sign-off; must not alter Phase 5 frozen benchmark
 
 #### Phase 6D — second-channel scaffold evaluation (blocked)
 
