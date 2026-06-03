@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6A complete** — frozen-map test protocol pre-registered (`docs/phase6a_*.md`). **Next:** Phase **6B** (data audit + pilot selection).
+- **Phase 6B complete** — expansion_20 data audit + pilot selection (`docs/phase6b_*.md`). **Next:** Phase **6C** (frozen pseudo-2D map construction).
 
 ## Planned
 
@@ -87,11 +87,12 @@
 - `docs/phase6a_success_failure_criteria.md` — pre-registered success/failure and claim checklist
 - **No fits** in 6A; expansion_20 1D benchmark remains prior validated result
 
-#### Phase 6B — data availability audit + pilot selection (planned)
+#### Phase 6B — data availability audit + pilot selection (**complete**)
 
-- Per-galaxy L1–L6 checklist for expansion_20 cohort
-- Ranked 3–5 pilot galaxies for axisymmetric pseudo-2D (map type A)
-- Scope statement for 6C (A/B in scope; true 2D and lensing deferred)
+- `docs/phase6b_data_availability_audit.md`, `docs/phase6b_pilot_selection_rationale.md`
+- `scripts/build_phase6b_data_availability_audit.py` + audit/ranking CSVs
+- Primary pilots: DDO161, UGC07524, UGC08490, IC2574, NGC2403
+- True 2D and lensing remain deferred
 
 #### Phase 6C / 6D — implementation and second-channel evaluation (future)
 

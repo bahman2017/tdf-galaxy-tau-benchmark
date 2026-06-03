@@ -85,7 +85,17 @@ Read-only protocol docs (no scripts in 6A):
 
 **Do not run** expansion_20 refit or modify `outputs/tables/expansion20_*` when validating Phase 6A docs.
 
-**Next (Phase 6B):** data audit and pilot selection — implementation TBD after audit sign-off.
+## Phase 6B audit (read-only; no refit)
+
+```bash
+python3 scripts/build_phase6b_data_availability_audit.py
+```
+
+Produces `outputs/tables/phase6b_expansion20_data_availability_audit.csv`,
+`outputs/tables/phase6b_pilot_candidate_ranking.csv`, and
+`outputs/reports/phase6b_pilot_selection_report.md`.
+
+**Next (Phase 6C):** frozen axisymmetric pseudo-2D τ-map for pilot DDO161.
 
 ## Expected headline artifacts
 

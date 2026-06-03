@@ -1,0 +1,21 @@
+audit_version,overall_rank,galaxy_id,pilot_tier,is_primary_pilot,pilot_rank_score,failure_mode_classification,holdout_stable_for_primary_pilot,n_radial_points,radial_coverage_kpc,tdf_3knot_holdout_rmse_kms,geometry_complete_flag,map_type_axisymmetric_pseudo_2d,selection_rationale
+phase_6b_v1,1,DDO161,tier_1_primary_candidate,True,0.7247997987505764,robust_tdf_success,True,31,12.77,0.7151289715446965,True,attemptable,Phase 6B ranked primary pilot (top 5 tier-1).
+phase_6b_v1,2,UGC07524,tier_1_primary_candidate,True,0.6621952578399305,robust_tdf_success,True,31,10.34,1.6308767927854229,True,attemptable,Phase 6B ranked primary pilot (top 5 tier-1).
+phase_6b_v1,3,UGC08490,tier_1_primary_candidate,True,0.636518848237024,robust_tdf_success,True,30,9.81,1.1335625032069097,True,attemptable,Phase 6B ranked primary pilot (top 5 tier-1).
+phase_6b_v1,4,IC2574,tier_1_primary_candidate,True,0.6226680166763582,robust_tdf_success,True,34,9.38,2.9793596786436685,True,attemptable,Phase 6B ranked primary pilot (top 5 tier-1).
+phase_6b_v1,5,NGC2403,tier_1_primary_candidate,True,0.6037136923872465,robust_tdf_success,True,73,20.71,8.658875535895875,True,attemptable,Phase 6B ranked primary pilot (top 5 tier-1).
+phase_6b_v1,6,NGC6015,tier_1_primary_candidate,False,0.5636997901412408,robust_tdf_success,True,44,28.89,7.128933674687928,True,attemptable,Conservative primary candidate: robust tdf_3knot + complete L1–L4 + stable holdout.
+phase_6b_v1,7,DDO154,tier_1_primary_candidate,False,0.5423020732594304,robust_tdf_success,True,12,5.43,2.028159188371044,True,attemptable,Conservative primary candidate: robust tdf_3knot + complete L1–L4 + stable holdout.
+phase_6b_v1,8,NGC7793,tier_1_primary_candidate,False,0.4476838102261125,robust_tdf_success,True,46,7.76,4.568115977808232,True,attemptable,Conservative primary candidate: robust tdf_3knot + complete L1–L4 + stable holdout.
+phase_6b_v1,9,NGC6503,tier_1_primary_candidate,False,0.3502010317601555,robust_tdf_success,True,31,22.74,9.328832249155612,True,attemptable,Conservative primary candidate: robust tdf_3knot + complete L1–L4 + stable holdout.
+phase_6b_v1,10,NGC0289,tier_2_diagnostic,False,,robust_tdf_success,False,28,69.62,19.81141504643472,True,attemptable,Diagnostic: robust expansion_20 success but holdout RMSE above 10.0 km/s primary-pilot gate.
+phase_6b_v1,11,NGC3198,tier_2_diagnostic,False,,robust_tdf_success,False,43,43.76,10.447553817928686,True,attemptable,Diagnostic: robust expansion_20 success but holdout RMSE above 10.0 km/s primary-pilot gate.
+phase_6b_v1,12,NGC5055,tier_2_diagnostic,False,,sensitivity_recovery,False,28,53.870000000000005,142.86189186327752,True,attemptable,Diagnostic: tdf_5knot sensitivity-recovery; not primary expansion_20 success.
+phase_6b_v1,13,UGC00128,tier_2_diagnostic,False,,mixed_result,True,22,52.5,2.997171278689861,True,attemptable,Diagnostic only: mixed near-tie holdout; not primary expansion_20 success.
+phase_6b_v1,14,UGC02953,tier_2_diagnostic,False,,robust_tdf_success,False,115,62.3,37.79618696343891,True,attemptable,Diagnostic: robust expansion_20 success but holdout RMSE above 10.0 km/s primary-pilot gate.
+phase_6b_v1,15,UGC05253,tier_2_diagnostic,False,,sensitivity_recovery,False,73,53.16,48.51663439159767,True,attemptable,Diagnostic: tdf_5knot sensitivity-recovery; not primary expansion_20 success.
+phase_6b_v1,16,UGC06787,tier_2_diagnostic,False,,robust_tdf_success,False,71,37.07,38.28669280316341,True,attemptable,Diagnostic: robust expansion_20 success but holdout RMSE above 10.0 km/s primary-pilot gate.
+phase_6b_v1,17,UGC09133,tier_2_diagnostic,False,,robust_tdf_success,False,68,107.99000000000001,33.237350285826786,True,attemptable,Diagnostic: robust expansion_20 success but holdout RMSE above 10.0 km/s primary-pilot gate.
+phase_6b_v1,18,UGC11455,tier_2_diagnostic,False,,robust_tdf_success,False,36,41.31,15.80879861186421,True,attemptable,Diagnostic: robust expansion_20 success but holdout RMSE above 10.0 km/s primary-pilot gate.
+phase_6b_v1,19,UGC12506,tier_2_diagnostic,False,,sensitivity_recovery,False,31,49.17,11.918855070426869,True,attemptable,Diagnostic: tdf_5knot sensitivity-recovery; not primary expansion_20 success.
+phase_6b_v1,20,NGC7814,tier_3_avoid_defer,False,,tdf_failure_mode,False,18,18.900000000000002,155.80246506165764,True,attemptable,Excluded from primary pilot: canonical all-TDF failure.

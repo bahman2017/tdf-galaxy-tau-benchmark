@@ -6,6 +6,35 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6B: expansion_20 data availability audit and conservative pilot selection (no fits).
+
+## Files changed
+
+- `src/tdf_galaxy_tau/analysis/phase6b_data_availability.py` (new)
+- `scripts/build_phase6b_data_availability_audit.py`, `tests/test_phase6b_data_availability_audit.py` (new)
+- `docs/phase6b_data_availability_audit.md`, `docs/phase6b_pilot_selection_rationale.md` (new)
+- `outputs/tables/phase6b_*.csv`, `outputs/reports/phase6b_pilot_selection_report.md` (new)
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/reproducibility_commands.md`
+
+## Tests run
+
+- `python3 scripts/build_phase6b_data_availability_audit.py`
+- `python3 -m pytest -q`
+
+## Notes
+
+- Primary pilots: DDO161, UGC07524, UGC08490, IC2574, NGC2403.
+- No expansion_20 rerun; Phase 5 15/20 unchanged.
+- Next: Phase 6C frozen pseudo-2D map construction.
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6A: pre-registered protocol for 2D / frozen-map effective-gravity test (design only; no fits).
 
 ## Files changed

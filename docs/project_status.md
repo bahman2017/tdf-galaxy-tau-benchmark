@@ -2,11 +2,13 @@
 
 ## Current phase
 
-**Phase 6A — 2D / frozen-map test protocol** — **complete** (design only; no fits)
+**Phase 6B — data availability audit & pilot selection** — **complete** (audit only; no fits)
 
 **Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
 
-**Next scientific phase:** **Phase 6B** — data availability audit and pilot galaxy selection for frozen-map construction.
+**Next scientific phase:** **Phase 6C** — frozen axisymmetric pseudo-2D τ-map construction (pilots: DDO161, UGC07524, UGC08490, IC2574, NGC2403).
+
+**Phase 6A — 2D / frozen-map test protocol** — **complete** (design only; no fits)
 
 **Phase 5I — v0.1.6 publication-freeze release notes** — **complete**
 
@@ -21,6 +23,14 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 6B deliverables
+
+- `docs/phase6b_data_availability_audit.md`, `docs/phase6b_pilot_selection_rationale.md`
+- `scripts/build_phase6b_data_availability_audit.py` — read-only L1–L6 audit
+- `outputs/tables/phase6b_expansion20_data_availability_audit.csv`, `phase6b_pilot_candidate_ranking.csv`
+- `outputs/reports/phase6b_pilot_selection_report.md`
+- Primary pilots (top 5): **DDO161**, **UGC07524**, **UGC08490**, **IC2574**, **NGC2403**
 
 ### Phase 6A deliverables
 
@@ -105,6 +115,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 - Phase 5F-A–F: paper scaffold, figures, LaTeX tables, manuscript PDF, scientific edit, referee readiness, pre-submission QA (`docs/pre_submission_checklist.md`).
 - Phase 5G-A: `normalize_projection_coefficient` alias layer (`src/tdf_galaxy_tau/config/notation.py`; tag `v0.1.2-notation-aliases`).
 - Phase 5G-B: compatibility regression lock (`tests/test_notation_compatibility_regression.py`; tag `v0.1.3-notation-compatibility`).
+- Phase 6B: expansion_20 data audit and pilot selection (`docs/phase6b_*.md`; audit only).
 - Phase 6A: 2D / frozen-map test protocol (`docs/phase6a_*.md`; design only).
 - Phase 5I: v0.1.6 publication-freeze release notes (`docs/release_notes_v0.1.6_publication_freeze.md`).
 - Phase 5H-B: metadata hygiene (LICENSE, CITATION.cff, pyproject.toml `0.1.6`; tag `v0.1.6-publication-freeze`).
@@ -120,7 +131,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 6B:** data availability audit and pilot galaxy selection (`docs/phase6a_data_requirements.md` §9).
+1. **Phase 6C:** frozen axisymmetric pseudo-2D map for pilot **DDO161** (no τ retuning).
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.
