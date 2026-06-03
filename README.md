@@ -104,6 +104,8 @@ Exact command list: [`docs/reproducibility_commands.md`](docs/reproducibility_co
 
 Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_notes.md).
 
+Publication-freeze release notes: [`docs/release_notes_v0.1.6_publication_freeze.md`](docs/release_notes_v0.1.6_publication_freeze.md) (**tag `v0.1.6-publication-freeze`**).
+
 ## Citation / Zenodo
 
 **Manuscript (Zenodo preprint):** [https://doi.org/10.5281/zenodo.20437254](https://doi.org/10.5281/zenodo.20437254)
@@ -140,7 +142,8 @@ Release notes template: [`docs/zenodo_release_notes.md`](docs/zenodo_release_not
 
 ## Status
 
-Phase **5E/5F** publication package, Phase **5G** notation migration, Phase **5H-A** publication readiness audit, and Phase **5H-B** metadata hygiene are complete. Target release tag: **`v0.1.6-publication-freeze`**. See
+Phase **5E/5F** publication package, Phase **5G** notation migration, Phase **5H** publication readiness, and Phase **5I** release notes are complete. Tagged snapshot: **`v0.1.6-publication-freeze`**. See
+[`docs/release_notes_v0.1.6_publication_freeze.md`](docs/release_notes_v0.1.6_publication_freeze.md),
 [`docs/project_status.md`](docs/project_status.md), [`docs/phase5h_publication_readiness_freeze.md`](docs/phase5h_publication_readiness_freeze.md),
 [`docs/controlled_expansion_results.md`](docs/controlled_expansion_results.md),
 and [`docs/theory_summary.md`](docs/theory_summary.md) (**K_g** preferred; **κ_tau** field stiffness; legacy **K_tau** in frozen outputs).

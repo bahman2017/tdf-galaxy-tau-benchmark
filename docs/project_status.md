@@ -2,11 +2,11 @@
 
 ## Current phase
 
-**Phase 5H-B — metadata hygiene for publication freeze** — **complete**
+**Phase 5I — v0.1.6 publication-freeze release notes** — **complete**
 
-**Publication readiness:** **Ready** — metadata blockers cleared; tag **`v0.1.6-publication-freeze`** recommended on this commit.
+**Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5H metadata hygiene).
 
-**Phase 5H-A** publication readiness audit: `docs/phase5h_publication_readiness_freeze.md`.
+**Next scientific phase:** **Phase 6A** — formulation of 2D / frozen-map test protocol (pre-registration before new fits).
 
 **Phase 5G notation migration — complete** (tags `v0.1.2`–`v0.1.5`; QA in `docs/phase5g_final_notation_qa.md`).
 
@@ -19,6 +19,11 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 5I deliverables
+
+- `docs/release_notes_v0.1.6_publication_freeze.md` — publication-freeze release notes
+- Updated `docs/zenodo_release_notes.md` for Zenodo software deposit
 
 ### Phase 5H-B deliverables
 
@@ -91,7 +96,8 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 - Phase 5F-A–F: paper scaffold, figures, LaTeX tables, manuscript PDF, scientific edit, referee readiness, pre-submission QA (`docs/pre_submission_checklist.md`).
 - Phase 5G-A: `normalize_projection_coefficient` alias layer (`src/tdf_galaxy_tau/config/notation.py`; tag `v0.1.2-notation-aliases`).
 - Phase 5G-B: compatibility regression lock (`tests/test_notation_compatibility_regression.py`; tag `v0.1.3-notation-compatibility`).
-- Phase 5H-B: metadata hygiene (LICENSE, CITATION.cff, pyproject.toml `0.1.6`).
+- Phase 5I: v0.1.6 publication-freeze release notes (`docs/release_notes_v0.1.6_publication_freeze.md`).
+- Phase 5H-B: metadata hygiene (LICENSE, CITATION.cff, pyproject.toml `0.1.6`; tag `v0.1.6-publication-freeze`).
 - Phase 5H-A: publication readiness freeze audit (`docs/phase5h_publication_readiness_freeze.md`).
 - Phase 5G-D: final notation QA (`docs/phase5g_final_notation_qa.md`; tag `v0.1.5-notation-qa`).
 - Phase 5G-C-B: internal `k_g` field rename with `.k_tau` property aliases (tag `v0.1.4-internal-kg-rename`).
@@ -104,7 +110,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. Tag **`v0.1.6-publication-freeze`** on `main` after this metadata commit.
+1. **Phase 6A:** formulate pre-registered 2D / frozen-map test protocol (no new fits until approved).
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

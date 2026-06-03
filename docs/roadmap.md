@@ -13,12 +13,12 @@
 - **Phase 5G-C-B:** internal k_g rename with legacy aliases (**complete**; tag `v0.1.4-internal-kg-rename`)
 - **Phase 5G-C-A:** internal rename audit (**complete**; `docs/phase5g_internal_rename_audit.md`)
 - **Phase 5G-D:** final notation QA (**complete**; tag `v0.1.5-notation-qa`)
-- **Phase 5H-B:** metadata hygiene (**complete**; LICENSE, CITATION.cff, pyproject `0.1.6`)
-- **Phase 5H-A:** publication readiness freeze audit (**complete**)
+- **Phase 5I:** v0.1.6 publication-freeze release notes (**complete**)
+- **Phase 5H-B:** metadata hygiene (**complete**; tag `v0.1.6-publication-freeze`)
 
 ## Current
 
-- **Phase 5H-B complete.** Ready to tag **`v0.1.6-publication-freeze`**. Optional **5G-C-C** or **Phase 6** per scope change.
+- **Phase 5 publication package closed** at `v0.1.6-publication-freeze`. **Next:** Phase **6A** (2D / frozen-map test formulation).
 
 ## Planned
 
@@ -73,7 +73,17 @@
 - Root MIT `LICENSE`; `CITATION.cff` `v0.1.6-publication-freeze`; `pyproject.toml` `0.1.6`
 - Metadata blockers from 5H-A cleared; ready for publication-freeze tag
 
+### Phase 5I — release notes / Zenodo documentation (**complete**)
+
+- `docs/release_notes_v0.1.6_publication_freeze.md`
+- Updated `docs/zenodo_release_notes.md` for software deposit at `v0.1.6-publication-freeze`
+
 ### Phase 6 — optional 2D τ-map reconstruction
+
+#### Phase 6A — test protocol formulation (planned)
+
+- Pre-register 2D / frozen-map validation scope before any new fits
+- Requires explicit scope change from frozen expansion_20 1D benchmark
 
 Requires frozen 1D benchmark and explicit scope change.
 

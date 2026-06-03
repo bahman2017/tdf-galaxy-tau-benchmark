@@ -6,6 +6,30 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5I: v0.1.6 publication-freeze release notes and Zenodo documentation update.
+
+## Files changed
+
+- `docs/release_notes_v0.1.6_publication_freeze.md` (new)
+- `docs/zenodo_release_notes.md`, `docs/project_status.md`, `docs/roadmap.md`, `README.md`, `docs/cursor_work_log.md`
+
+## Tests run
+
+- `python3 -m pytest -q` — 264 passed
+
+## Notes
+
+- Documentation-only; no benchmark rerun or frozen output changes.
+- Next scientific phase: Phase 6A (2D / frozen-map test formulation).
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5H-B: metadata hygiene (LICENSE, CITATION.cff, pyproject.toml) before v0.1.6-publication-freeze tag.
 
 ## Files changed
