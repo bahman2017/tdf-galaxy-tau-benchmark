@@ -1,0 +1,121 @@
+# Phase 6C-D / future implementation (6C-E) — pre-registered regularization protocol.
+# PROTOCOL ONLY: do not apply in Phase 6C-D documentation commit.
+
+protocol_version: phase_6c_d_preregistration_v1
+protocol_label: frozen_gradient_regularization_map_construction_only
+
+scope:
+  phase5_expansion20_benchmark: frozen_unchanged
+  overwrite_forbidden:
+    - outputs/tables/expansion20_tau_profiles.csv
+    - outputs/tables/expansion20_holdout_validation.csv
+    - outputs/tables/expansion20_failure_mode_summary.csv
+    - outputs/tables/controlled_expansion_final_claims.csv
+  source_profile_readonly: outputs/tables/expansion20_tau_profiles.csv
+  k_g_fixed: 1.0
+  k_g_retuning_allowed: false
+  tau_refitting_allowed: false
+  separate_halo_allowed: false
+  lensing_only_tau_fit_allowed: false
+
+primary_pilot_galaxy_ids:
+  - DDO161
+  - UGC07524
+  - UGC08490
+  - IC2574
+  - NGC2403
+
+option_r2_global_jump_cap:
+  enabled: true
+  threshold_relative_jump: 0.25
+  quantity: dtaudr_reconstructed
+  segment_definition: adjacent_radial_points_sorted_by_r_kpc
+  relative_jump_formula: "abs(dtaudr[i+1]-dtaudr[i]) / max(abs(dtaudr[i]), 1e-12)"
+  application_order: forward_pass_single_sweep
+  cap_rule: >
+    If relative_jump > threshold, adjust dtaudr[i+1] toward dtaudr[i] such that
+    relative_jump equals threshold; magnitude of adjustment is minimal (L2 on delta dtaudr).
+  preserve_sign: true
+  require_monotonic_tau: false
+  require_monotonic_dtaudr: false
+  recompute_tau_after_cap: true
+  tau_reintegration: cumulative_trapezoid_from_r_min_with_tau_at_r_min_unchanged
+  max_fraction_segments_capped: 0.40
+  fail_if_fraction_segments_capped_exceeds: 0.40
+  report_fields:
+    - n_segments_capped
+    - fraction_segments_capped
+    - sum_abs_dtaudr_correction
+    - max_abs_dtaudr_correction
+    - max_relative_jump_after_cap
+
+option_r6_boundary_trim:
+  enabled: true
+  apply_after_r2: true
+  inner_rule:
+    description: >
+      Drop innermost radial point(s) when tau_reconstructed at r_min is effectively zero
+      OR the first adjacent relative dτ/dr jump (pre-R2) exceeds threshold_relative_jump.
+    tau_zero_tolerance: 1.0e-9
+    max_inner_points_trimmed: 1
+    trigger_if_first_segment_jump_above_threshold: true
+  outer_rule:
+    description: >
+      Drop outermost radial point when the last adjacent relative dτ/dr jump (pre-trim profile)
+      exceeds threshold_relative_jump OR worst_jump_region is outer_third per Phase 6C-C.
+    max_outer_points_trimmed: 1
+    trigger_if_last_segment_jump_above_threshold: true
+  global_limits:
+    max_fraction_points_trimmed: 0.10
+    fail_if_fraction_points_trimmed_exceeds: 0.10
+    min_remaining_radial_points: 12
+    min_remaining_radial_coverage_kpc: 5.0
+  map_embedding:
+    trimmed_points_excluded_from_interpolation: true
+    valid_mask_false_outside_retained_domain: true
+    extrapolation_beyond_r_max_fraction: 0.05
+
+smoothness_gate:
+  metric: max_relative_adjacent_dtaudr_jump
+  threshold: 0.25
+  must_pass_after_r2_and_r6: true
+
+radial_consistency_gate:
+  compare_map_to: regularized_phase6_profile_not_expansion20_frozen
+  max_relative_error: 1.0e-6
+  tau_scale_floor: 1.0
+
+fidelity_to_frozen_phase5:
+  diagnostic_compare_to_expansion20: true
+  max_mean_abs_fractional_dtaudr_change: 0.15
+  fail_if_mean_change_exceeds: 0.15
+  note: >
+    Phase 5 holdout metrics are NOT recomputed in 6C-E; this gate prevents
+    regularization from wholesale replacement of the frozen profile.
+
+phase6d_readiness:
+  require_radial_consistency_pass: true
+  require_smoothness_pass: true
+  require_fidelity_gate_pass: true
+  require_correction_fractions_below_fail_limits: true
+  blocked_until_all_gates_pass: true
+
+claim_boundaries:
+  claim_no_dm_disproof: true
+  claim_no_full_sparc_validation: true
+  claim_no_lensing_confirmation: true
+  claim_no_universal_tau_profile: true
+  claim_no_true_2d_sigma_b: true
+  claim_not_successful_second_channel: true
+  claim_phase5_headline_unchanged: true
+  map_type_label: axisymmetric_pseudo_2d_regularized
+
+future_output_paths:
+  profile_template: outputs/tables/phase6d_{galaxy_id}_regularized_profile.csv
+  audit_template: outputs/tables/phase6d_{galaxy_id}_correction_audit.csv
+  map_template: outputs/maps/phase6d/{galaxy_id}_regularized_pseudo2d_tau_map.npz
+  summary: outputs/tables/phase6d_regularized_map_summary.csv
+  report: outputs/reports/phase6d_regularization_report.md
+
+implementation_phase_label: phase_6c_e_implementation
+preregistration_phase_label: phase_6c_d_preregistration

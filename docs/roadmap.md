@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6C-C complete** — frozen dτ/dr gradient diagnostic + regularization options doc. **Next:** Phase **6C-D** (pre-registered fix only; **6D blocked**).
+- **Phase 6C-D complete** — R2+R6 regularization pre-registration (`phase6d_*` protocol docs). **Next:** Phase **6C-E** (implementation); **6D blocked**.
 
 ## Planned
 
@@ -109,9 +109,14 @@
 - `phase6c_primary_pilot_gradient_diagnostics.csv`; inner-radius jump dominance (4/5)
 - `docs/phase6c_gradient_regularization_options.md` — R1–R7 menu for 6C-D
 
-#### Phase 6C-D — regularization implementation (planned; requires pre-registration)
+#### Phase 6C-D — regularization pre-registration (**complete**)
 
-- Apply only after explicit protocol sign-off; must not alter Phase 5 frozen benchmark
+- `configs/phase6d_regularization_preregistration.yaml`
+- R2 (global jump cap 0.25) + R6 (boundary trim); acceptance/failure gates
+
+#### Phase 6C-E — regularization implementation (planned)
+
+- New `phase6d_*` profiles/maps only; expansion20 frozen
 
 #### Phase 6D — second-channel scaffold evaluation (blocked)
 

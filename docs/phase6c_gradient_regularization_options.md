@@ -87,12 +87,14 @@ All five Tier-1 primary pilots pass **radial consistency** on pseudo-2D maps but
 
 ---
 
-## Recommended default for Phase 6C-D (if approved)
+## Recommended default — now pre-registered (Phase 6C-D)
 
-1. Pre-register **R2 + R6** (global jump cap + documented boundary trim) as the **minimal** intervention.  
-2. Treat **R1** as sensitivity only.  
-3. Treat **R3/R4** as **new-fit phases**, not 6C-D hotfixes.  
-4. Any applied regularization must re-run **radial consistency** and **smoothness** gates before Phase 6D.
+**R2 + R6** are pre-registered in:
+
+- `docs/phase6d_frozen_gradient_regularization_preregistration.md`
+- `configs/phase6d_regularization_preregistration.yaml`
+
+Implementation is **Phase 6C-E** (not started). R1/R3/R4/R5 remain out of scope.
 
 ---
 

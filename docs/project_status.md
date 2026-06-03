@@ -2,11 +2,13 @@
 
 ## Current phase
 
-**Phase 6C-C — frozen τ-gradient diagnostic** — **complete** (read-only; no τ change)
+**Phase 6C-D — regularization pre-registration** — **complete** (protocol only; no τ/maps)
 
 **Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
 
-**Next scientific phase:** **Phase 6C-D** — pre-registered regularization implementation (only if explicitly approved; else Phase 6D stays blocked).
+**Next scientific phase:** **Phase 6C-E** — implement R2+R6 regularized profiles/maps (only after explicit approval); **Phase 6D blocked**.
+
+**Phase 6C-C — frozen τ-gradient diagnostic** — **complete**
 
 **Phase 6C-B — primary-pilot maps + smoothness audit** — **complete**
 
@@ -29,6 +31,13 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 6C-D deliverables
+
+- `docs/phase6d_frozen_gradient_regularization_preregistration.md` — R2 jump cap + R6 boundary trim (exact rules)
+- `docs/phase6d_regularization_acceptance_criteria.md` — acceptance/failure gates for 6C-E
+- `configs/phase6d_regularization_preregistration.yaml` — machine-readable registry
+- **No** τ change; **no** map regeneration; Phase 6D remains blocked
 
 ### Phase 6C-C deliverables
 
@@ -155,7 +164,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 6C-D:** pre-register and (if approved) apply minimal regularization (R2+R6 per options doc); re-gate smoothness before Phase 6D.
+1. **Phase 6C-E:** implement pre-registered R2+R6 on copy profiles → `phase6d_*` outputs; re-gate before Phase 6D.
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

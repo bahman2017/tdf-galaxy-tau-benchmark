@@ -6,6 +6,32 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6C-D: pre-register R2+R6 regularization protocol (no τ/maps).
+
+## Files changed
+
+- `docs/phase6d_frozen_gradient_regularization_preregistration.md`
+- `docs/phase6d_regularization_acceptance_criteria.md`
+- `configs/phase6d_regularization_preregistration.yaml`
+- `tests/test_phase6d_regularization_preregistration.py`
+- status/roadmap/reproducibility updates
+
+## Tests run
+
+- `python3 -m pytest -q`
+
+## Notes
+
+- Phase 6D blocked; next implementation phase 6C-E.
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6C-C: frozen dτ/dr gradient diagnostics and regularization options (no τ change).
 
 ## Files changed

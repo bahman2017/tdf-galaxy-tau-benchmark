@@ -128,7 +128,15 @@ Outputs: `outputs/tables/phase6c_primary_pilot_gradient_diagnostics.csv`,
 `outputs/reports/phase6c_gradient_diagnostic_report.md`  
 Options menu: `docs/phase6c_gradient_regularization_options.md`
 
-**Next (Phase 6C-D):** pre-registered regularization only if approved — Phase 6D remains blocked (0/5 smoothness pass).
+## Phase 6C-D regularization pre-registration (protocol only)
+
+Config: `configs/phase6d_regularization_preregistration.yaml`  
+Docs: `docs/phase6d_frozen_gradient_regularization_preregistration.md`,  
+`docs/phase6d_regularization_acceptance_criteria.md`
+
+**No builder script in 6C-D** — implementation is Phase **6C-E**.
+
+**Phase 6D remains blocked** (0/5 frozen-map smoothness pass; 0/5 regularized until 6C-E).
 
 ## Expected headline artifacts
 
