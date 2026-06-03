@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 5 publication package closed** at `v0.1.6-publication-freeze`. **Next:** Phase **6A** (2D / frozen-map test formulation).
+- **Phase 6A complete** — frozen-map test protocol pre-registered (`docs/phase6a_*.md`). **Next:** Phase **6B** (data audit + pilot selection).
 
 ## Planned
 
@@ -78,14 +78,27 @@
 - `docs/release_notes_v0.1.6_publication_freeze.md`
 - Updated `docs/zenodo_release_notes.md` for software deposit at `v0.1.6-publication-freeze`
 
-### Phase 6 — optional 2D τ-map reconstruction
+### Phase 6 — 2D / frozen-map effective-gravity test (new scientific layer)
 
-#### Phase 6A — test protocol formulation (planned)
+#### Phase 6A — test protocol formulation (**complete**)
 
-- Pre-register 2D / frozen-map validation scope before any new fits
-- Requires explicit scope change from frozen expansion_20 1D benchmark
+- `docs/phase6a_2d_frozen_map_protocol.md` — scope, map types, frozen-map rule, math, pilot criteria
+- `docs/phase6a_data_requirements.md` — required/optional data; repo vs future gaps
+- `docs/phase6a_success_failure_criteria.md` — pre-registered success/failure and claim checklist
+- **No fits** in 6A; expansion_20 1D benchmark remains prior validated result
 
-Requires frozen 1D benchmark and explicit scope change.
+#### Phase 6B — data availability audit + pilot selection (planned)
+
+- Per-galaxy L1–L6 checklist for expansion_20 cohort
+- Ranked 3–5 pilot galaxies for axisymmetric pseudo-2D (map type A)
+- Scope statement for 6C (A/B in scope; true 2D and lensing deferred)
+
+#### Phase 6C / 6D — implementation and second-channel evaluation (future)
+
+- 6C: frozen-map construction from radial τ (no τ retuning)
+- 6D: second-channel scaffold metrics per `phase6a_success_failure_criteria.md`
+
+Requires frozen 1D benchmark and explicit scope change from Phase 5 claims.
 
 ### Phase 7 — frozen τ-map lensing / deflection prediction
 

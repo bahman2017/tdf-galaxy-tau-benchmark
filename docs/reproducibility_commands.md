@@ -75,6 +75,18 @@ Phase **5H-B** (**complete**): LICENSE, `CITATION.cff`, `pyproject.toml` version
 
 **Long commands (benchmark refit):** `run_expansion20_pipeline.py`, `run_expansion12_pipeline.py` — not required for snapshot validation.
 
+## Phase 6A protocol (documentation only — no pipeline yet)
+
+Read-only protocol docs (no scripts in 6A):
+
+- [`phase6a_2d_frozen_map_protocol.md`](phase6a_2d_frozen_map_protocol.md)
+- [`phase6a_data_requirements.md`](phase6a_data_requirements.md)
+- [`phase6a_success_failure_criteria.md`](phase6a_success_failure_criteria.md)
+
+**Do not run** expansion_20 refit or modify `outputs/tables/expansion20_*` when validating Phase 6A docs.
+
+**Next (Phase 6B):** data audit and pilot selection — implementation TBD after audit sign-off.
+
 ## Expected headline artifacts
 
 | Artifact | Path |

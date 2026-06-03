@@ -2,6 +2,32 @@
 
 ## Date/time
 
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
+Phase 6A: pre-registered protocol for 2D / frozen-map effective-gravity test (design only; no fits).
+
+## Files changed
+
+- `docs/phase6a_2d_frozen_map_protocol.md` (new)
+- `docs/phase6a_data_requirements.md` (new)
+- `docs/phase6a_success_failure_criteria.md` (new)
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/reproducibility_commands.md`, `docs/cursor_work_log.md`
+
+## Tests run
+
+- `python3 -m pytest -q` — 264 passed
+
+## Notes
+
+- Documentation-only; expansion_20 1D benchmark unchanged; Phase 6 is a new test layer.
+- Next: Phase 6B (data availability audit + pilot galaxy selection).
+
+---
+
+## Date/time
+
 Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary

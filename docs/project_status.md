@@ -2,11 +2,13 @@
 
 ## Current phase
 
+**Phase 6A — 2D / frozen-map test protocol** — **complete** (design only; no fits)
+
+**Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
+
+**Next scientific phase:** **Phase 6B** — data availability audit and pilot galaxy selection for frozen-map construction.
+
 **Phase 5I — v0.1.6 publication-freeze release notes** — **complete**
-
-**Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5H metadata hygiene).
-
-**Next scientific phase:** **Phase 6A** — formulation of 2D / frozen-map test protocol (pre-registration before new fits).
 
 **Phase 5G notation migration — complete** (tags `v0.1.2`–`v0.1.5`; QA in `docs/phase5g_final_notation_qa.md`).
 
@@ -19,6 +21,13 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 6A deliverables
+
+- `docs/phase6a_2d_frozen_map_protocol.md` — pre-registered frozen-map test protocol
+- `docs/phase6a_data_requirements.md` — L1–L6 data layers and repo feasibility
+- `docs/phase6a_success_failure_criteria.md` — success/failure metrics and claim checklist
+- **No new fits**; expansion_20 1D benchmark unchanged; Phase 6 is a **new test layer**
 
 ### Phase 5I deliverables
 
@@ -96,6 +105,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 - Phase 5F-A–F: paper scaffold, figures, LaTeX tables, manuscript PDF, scientific edit, referee readiness, pre-submission QA (`docs/pre_submission_checklist.md`).
 - Phase 5G-A: `normalize_projection_coefficient` alias layer (`src/tdf_galaxy_tau/config/notation.py`; tag `v0.1.2-notation-aliases`).
 - Phase 5G-B: compatibility regression lock (`tests/test_notation_compatibility_regression.py`; tag `v0.1.3-notation-compatibility`).
+- Phase 6A: 2D / frozen-map test protocol (`docs/phase6a_*.md`; design only).
 - Phase 5I: v0.1.6 publication-freeze release notes (`docs/release_notes_v0.1.6_publication_freeze.md`).
 - Phase 5H-B: metadata hygiene (LICENSE, CITATION.cff, pyproject.toml `0.1.6`; tag `v0.1.6-publication-freeze`).
 - Phase 5H-A: publication readiness freeze audit (`docs/phase5h_publication_readiness_freeze.md`).
@@ -110,7 +120,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 6A:** formulate pre-registered 2D / frozen-map test protocol (no new fits until approved).
+1. **Phase 6B:** data availability audit and pilot galaxy selection (`docs/phase6a_data_requirements.md` §9).
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.
