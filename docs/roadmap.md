@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6C-A complete** — DDO161 frozen pseudo-2D map (`phase6c_frozen_pseudo2d.py`). **Next:** Phase **6C-B** (remaining primary pilots).
+- **Phase 6C-B complete** — all five primary-pilot maps + smoothness audit. **Next:** Phase **6C-C** (frozen-gradient diagnostic; **6D blocked**).
 
 ## Planned
 
@@ -99,11 +99,16 @@
 - `scripts/build_phase6c_frozen_pseudo2d_map.py --galaxy-id DDO161`
 - Axisymmetric τ₂D(x,y)=τ_radial(R); no refit; outputs under `outputs/maps/phase6c/`
 
-#### Phase 6C-B — remaining primary pilots (planned)
+#### Phase 6C-B — remaining primary pilots (**complete**)
 
-- UGC07524, UGC08490, IC2574, NGC2403 with same builder
+- UGC07524, UGC08490, IC2574, NGC2403 + combined audit with DDO161
+- `phase6c_primary_pilot_map_summary.csv` — radial **5/5 PASS**, smoothness **0/5 PASS**
 
-#### Phase 6D — second-channel scaffold evaluation (future)
+#### Phase 6C-C — frozen τ-gradient diagnostic (planned)
+
+- Required before Phase 6D while smoothness gate fails on all primary pilots
+
+#### Phase 6D — second-channel scaffold evaluation (blocked)
 
 - Second-channel metrics per `phase6a_success_failure_criteria.md`
 

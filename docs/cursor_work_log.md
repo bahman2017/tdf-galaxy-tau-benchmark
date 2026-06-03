@@ -6,6 +6,31 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6C-B: primary-pilot maps (4 new + DDO161) and combined smoothness audit.
+
+## Files changed
+
+- `phase6c_frozen_pseudo2d.py` batch/audit; script `--all-primary-pilots`
+- Maps/tables/reports for UGC07524, UGC08490, IC2574, NGC2403; combined summary/audit
+- `docs/phase6c_primary_pilot_map_results.md`, tests `test_phase6c_primary_pilot_batch.py`
+
+## Tests run
+
+- Per-galaxy build commands + `python3 -m pytest -q`
+
+## Notes
+
+- 5/5 radial consistency PASS; 0/5 smoothness PASS (frozen 1D dτ/dr).
+- Phase 6D blocked; recommend 6C-C.
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6C-A: frozen axisymmetric pseudo-2D τ-map for DDO161 (no refit).
 
 ## Files changed

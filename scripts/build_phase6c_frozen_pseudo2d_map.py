@@ -5,7 +5,9 @@ from pathlib import Path
 
 from tdf_galaxy_tau.analysis.phase6c_frozen_pseudo2d import (
     MAP_VERSION,
+    PRIMARY_PILOT_GALAXY_IDS,
     build_frozen_pseudo2d_map,
+    run_phase6c_primary_pilot_batch,
     write_phase6c_outputs,
 )
 
@@ -35,7 +37,40 @@ def main() -> int:
         action="store_true",
         help="Skip optional PNG figure.",
     )
+    parser.add_argument(
+        "--all-primary-pilots",
+        action="store_true",
+        help="Build all five Tier-1 primary pilots and write combined audit.",
+    )
+    parser.add_argument(
+        "--audit-only",
+        action="store_true",
+        help="With --all-primary-pilots: skip map build, summary/audit from existing outputs.",
+    )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="With --all-primary-pilots: skip galaxies that already have NPZ maps.",
+    )
     args = parser.parse_args()
+
+    if args.all_primary_pilots:
+        batch = run_phase6c_primary_pilot_batch(
+            build_maps=not args.audit_only,
+            skip_existing=args.skip_existing,
+            write_figures=not args.no_figure,
+            grid_n=args.grid_n,
+        )
+        summary = batch["summary"]
+        print(f"Map version: {MAP_VERSION}")
+        print(f"Primary pilots: {', '.join(PRIMARY_PILOT_GALAXY_IDS)}")
+        print(f"Built: {', '.join(batch['built']) or 'none'}")
+        print(f"Skipped existing: {', '.join(batch['skipped']) or 'none'}")
+        print(f"Wrote {batch['summary_path']}")
+        print(f"Wrote {batch['audit_path']}")
+        ready = summary[summary["phase6c_ready_for_second_channel_scaffold"]]
+        print(f"Phase 6D ready: {', '.join(ready['galaxy_id'].astype(str).tolist()) or 'NONE'}")
+        return 0
 
     result = build_frozen_pseudo2d_map(
         args.galaxy_id,

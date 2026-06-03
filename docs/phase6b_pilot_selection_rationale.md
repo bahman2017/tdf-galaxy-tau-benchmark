@@ -76,9 +76,13 @@ Canonical **all-TDF failure** on expansion_20 holdout; NFW refit wins. Using it 
 
 Implement **frozen axisymmetric pseudo-2D** τ-map construction for **DDO161** first (best holdout stability + coverage), then replicate script on the other four primary pilots without τ retuning.
 
-## Phase 6C-A status (DDO161)
+## Phase 6C status (all Tier-1 pilots)
 
-Built with `python3 scripts/build_phase6c_frozen_pseudo2d_map.py --galaxy-id DDO161`.
+See [`phase6c_primary_pilot_map_results.md`](phase6c_primary_pilot_map_results.md).
 
-- Map: `outputs/maps/phase6c/DDO161_frozen_pseudo2d_tau_map.npz`
-- Report: `outputs/reports/phase6c_DDO161_frozen_pseudo2d_report.md`
+```bash
+python3 scripts/build_phase6c_frozen_pseudo2d_map.py --all-primary-pilots
+```
+
+- Five maps under `outputs/maps/phase6c/`
+- Combined audit: `outputs/reports/phase6c_primary_pilot_smoothness_audit.md`

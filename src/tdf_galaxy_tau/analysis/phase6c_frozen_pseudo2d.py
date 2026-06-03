@@ -15,10 +15,45 @@ from tdf_galaxy_tau.analysis.phase6b_data_availability import (
     PHASE6C_TAU_RADIAL_MATCH_EPS_REL,
 )
 
-MAP_VERSION = "phase_6c_a_v1"
+MAP_VERSION = "phase_6c_b_v1"
 DEFAULT_TAU_PROFILES = Path("outputs/tables/expansion20_tau_profiles.csv")
 DEFAULT_PILOT_RANKING = Path("outputs/tables/phase6b_pilot_candidate_ranking.csv")
 DEFAULT_GRID_N = 101
+
+# Tier-1 primary pilots from Phase 6B (DDO161 built in 6C-A; others in 6C-B).
+PRIMARY_PILOT_GALAXY_IDS = (
+    "DDO161",
+    "UGC07524",
+    "UGC08490",
+    "IC2574",
+    "NGC2403",
+)
+
+SUMMARY_COLUMNS = (
+    "galaxy_id",
+    "grid_nx",
+    "grid_ny",
+    "r_min_kpc",
+    "r_max_kpc",
+    "r_outer_kpc",
+    "K_g",
+    "legacy_K_tau_value",
+    "tau_retuned",
+    "kg_retuned",
+    "separate_halo_added",
+    "lensing_confirmed",
+    "true_2d_sigma_b",
+    "radial_consistency_max_relative_error",
+    "radial_consistency_pass",
+    "smoothness_metric",
+    "smoothness_dtaudr_jump",
+    "smoothness_grad_jump",
+    "smoothness_pass",
+    "smoothness_threshold",
+    "smoothness_failure_inherited_from_frozen_1d_profile",
+    "phase6c_ready_for_second_channel_scaffold",
+    "phase6c_not_ready_reason",
+)
 
 REQUIRED_NPZ_KEYS = (
     "x_kpc",
@@ -310,6 +345,11 @@ def build_frozen_pseudo2d_map(
         "smoothness_grad_jump": grad_jump,
         "smoothness_pass": smoothness_pass,
         "smoothness_threshold": PHASE6C_MAX_DTAUDR_JUMP_REL,
+        "smoothness_failure_inherited_from_frozen_1d_profile": bool(
+            (not smoothness_pass)
+            and dtaudr_jump >= PHASE6C_MAX_DTAUDR_JUMP_REL
+            and dtaudr_jump >= grad_jump
+        ),
         "cells_beyond_extrapolation_shell": beyond_extrap,
         "finite_tau_beyond_extrapolation_shell": tau_beyond,
         "extrapolation_shell_cells_in_valid_mask": extrapolated_cells,
@@ -459,3 +499,189 @@ def write_phase6c_outputs(
         if plotted is not None:
             paths["figure"] = plotted
     return paths
+
+
+def load_primary_pilot_galaxy_ids(
+    ranking_path: Path | None = None,
+    root: Path | None = None,
+) -> list[str]:
+    root = root or Path.cwd()
+    ranking_path = ranking_path or (root / DEFAULT_PILOT_RANKING)
+    ranking = pd.read_csv(ranking_path)
+    ids = ranking[ranking["is_primary_pilot"]]["galaxy_id"].astype(str).tolist()
+    if sorted(ids) != sorted(PRIMARY_PILOT_GALAXY_IDS):
+        raise ValueError(
+            f"Primary pilot list mismatch: ranking={ids}, expected={list(PRIMARY_PILOT_GALAXY_IDS)}"
+        )
+    return list(PRIMARY_PILOT_GALAXY_IDS)
+
+
+def _metadata_summary_row(metadata: dict[str, Any]) -> dict[str, Any]:
+    inherited = bool(metadata.get("smoothness_failure_inherited_from_frozen_1d_profile"))
+    radial_pass = bool(metadata["radial_consistency_pass"])
+    smooth_pass = bool(metadata["smoothness_pass"])
+    ready = radial_pass and smooth_pass
+    if ready:
+        reason = ""
+    elif not radial_pass:
+        reason = "radial consistency failed"
+    elif inherited:
+        reason = "smoothness failed: inherited frozen 1D dτ/dr jumps (no retuning)"
+    elif not smooth_pass:
+        reason = "smoothness failed: map |∇τ| jumps exceed threshold"
+    else:
+        reason = "not ready for Phase 6D scaffold"
+    return {
+        "galaxy_id": metadata["galaxy_id"],
+        "grid_nx": metadata["grid_nx"],
+        "grid_ny": metadata["grid_ny"],
+        "r_min_kpc": metadata["r_min_kpc"],
+        "r_max_kpc": metadata["r_max_kpc"],
+        "r_outer_kpc": metadata["r_outer_kpc"],
+        "K_g": metadata["K_g"],
+        "legacy_K_tau_value": metadata["legacy_K_tau_value"],
+        "tau_retuned": metadata["tau_retuned"],
+        "kg_retuned": metadata["kg_retuned"],
+        "separate_halo_added": metadata["separate_halo_added"],
+        "lensing_confirmed": metadata["lensing_confirmed"],
+        "true_2d_sigma_b": metadata["true_2d_sigma_b"],
+        "radial_consistency_max_relative_error": metadata[
+            "radial_consistency_max_relative_error"
+        ],
+        "radial_consistency_pass": radial_pass,
+        "smoothness_metric": metadata["smoothness_metric"],
+        "smoothness_dtaudr_jump": metadata["smoothness_dtaudr_jump"],
+        "smoothness_grad_jump": metadata["smoothness_grad_jump"],
+        "smoothness_pass": smooth_pass,
+        "smoothness_threshold": metadata["smoothness_threshold"],
+        "smoothness_failure_inherited_from_frozen_1d_profile": inherited,
+        "phase6c_ready_for_second_channel_scaffold": ready,
+        "phase6c_not_ready_reason": reason,
+    }
+
+
+def load_map_metadata(galaxy_id: str, root: Path | None = None) -> dict[str, Any]:
+    root = root or Path.cwd()
+    path = root / f"outputs/tables/phase6c_{galaxy_id}_frozen_pseudo2d_map_metadata.csv"
+    if not path.is_file():
+        raise FileNotFoundError(f"Missing metadata for {galaxy_id}: {path}")
+    return pd.read_csv(path).iloc[0].to_dict()
+
+
+def build_primary_pilot_summary_table(
+    galaxy_ids: list[str] | None = None,
+    *,
+    root: Path | None = None,
+) -> pd.DataFrame:
+    root = root or Path.cwd()
+    galaxy_ids = galaxy_ids or load_primary_pilot_galaxy_ids(root=root)
+    rows = [_metadata_summary_row(load_map_metadata(gid, root)) for gid in galaxy_ids]
+    return pd.DataFrame(rows, columns=list(SUMMARY_COLUMNS))
+
+
+def build_primary_pilot_smoothness_audit_report(summary: pd.DataFrame) -> str:
+    n_ready = int(summary["phase6c_ready_for_second_channel_scaffold"].sum())
+    n_pass_smooth = int(summary["smoothness_pass"].sum())
+    n_pass_radial = int(summary["radial_consistency_pass"].sum())
+    lines = [
+        "# Phase 6C primary-pilot smoothness and consistency audit",
+        "",
+        f"**Map version:** {MAP_VERSION}",
+        f"**Primary pilots:** {len(summary)} galaxies",
+        "",
+        "## Summary counts",
+        "",
+        f"- Radial consistency PASS: **{n_pass_radial}/{len(summary)}**",
+        f"- Smoothness PASS (threshold {PHASE6C_MAX_DTAUDR_JUMP_REL}): **{n_pass_smooth}/{len(summary)}**",
+        f"- Ready for Phase 6D second-channel scaffold: **{n_ready}/{len(summary)}**",
+        "",
+        "## Per-galaxy classification",
+        "",
+        summary.to_markdown(index=False),
+        "",
+        "## Phase 6D gate",
+        "",
+    ]
+    if n_ready >= 1:
+        ready_ids = summary.loc[
+            summary["phase6c_ready_for_second_channel_scaffold"], "galaxy_id"
+        ].tolist()
+        lines.append(
+            f"**Phase 6D may proceed** for: {', '.join(ready_ids)}. "
+            "Use frozen maps without τ or K_g retuning."
+        )
+    else:
+        lines.extend(
+            [
+                "**Phase 6D is blocked** — no primary pilot passes both radial consistency "
+                "and smoothness.",
+                "",
+                "**Recommended next step:** Phase **6C-C** diagnostic review of frozen "
+                "radial τ-gradient structure (regularization options documented only; "
+                "no retuning in this repo phase).",
+            ]
+        )
+    lines.extend(
+        [
+            "",
+            "## Claim boundaries",
+            "",
+            "- Axisymmetric pseudo-2D only; not true 2D Σ_b.",
+            "- No new fit; no τ smoothing; no K_g retuning.",
+            "- No lensing confirmation; does not update Phase 5 expansion_20 (15/20).",
+            "- Smoothness FAIL reflects frozen `expansion20_tau_profiles.csv` when "
+            "`smoothness_failure_inherited_from_frozen_1d_profile` is true.",
+            "",
+            "## Reproducibility",
+            "",
+            "```bash",
+            "python3 scripts/build_phase6c_frozen_pseudo2d_map.py --all-primary-pilots",
+            "```",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def run_phase6c_primary_pilot_batch(
+    *,
+    root: Path | None = None,
+    galaxy_ids: list[str] | None = None,
+    build_maps: bool = True,
+    skip_existing: bool = False,
+    write_figures: bool = True,
+    grid_n: int = DEFAULT_GRID_N,
+) -> dict[str, Any]:
+    """Build maps for primary pilots (optional) and write combined audit tables."""
+    root = root or Path.cwd()
+    galaxy_ids = galaxy_ids or load_primary_pilot_galaxy_ids(root=root)
+    built: list[str] = []
+    skipped: list[str] = []
+
+    for gid in galaxy_ids:
+        npz_path = root / f"outputs/maps/phase6c/{gid}_frozen_pseudo2d_tau_map.npz"
+        if skip_existing and npz_path.is_file():
+            skipped.append(gid)
+            continue
+        if build_maps:
+            result = build_frozen_pseudo2d_map(gid, root=root, grid_n=grid_n)
+            write_phase6c_outputs(result, root=root, write_figure=write_figures)
+            built.append(gid)
+
+    summary = build_primary_pilot_summary_table(galaxy_ids, root=root)
+    summary_path = root / "outputs/tables/phase6c_primary_pilot_map_summary.csv"
+    audit_path = root / "outputs/reports/phase6c_primary_pilot_smoothness_audit.md"
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
+    summary.to_csv(summary_path, index=False)
+    audit_path.write_text(
+        build_primary_pilot_smoothness_audit_report(summary),
+        encoding="utf-8",
+    )
+
+    return {
+        "summary": summary,
+        "summary_path": summary_path,
+        "audit_path": audit_path,
+        "built": built,
+        "skipped": skipped,
+    }
