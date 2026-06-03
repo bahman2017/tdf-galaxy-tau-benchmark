@@ -10,12 +10,13 @@
 - **Phase 5F:** publication package (manuscript, figures, tables, QA) and Zenodo preprint
 - **Phase 5G-A:** K_g / legacy K_tau config alias layer (**complete**; tag `v0.1.2-notation-aliases`)
 - **Phase 5G-B:** loader compatibility regression lock (**complete**; tag `v0.1.3-notation-compatibility`)
-- **Phase 5G-C-B:** internal k_g rename with legacy aliases (**complete**)
+- **Phase 5G-C-B:** internal k_g rename with legacy aliases (**complete**; tag `v0.1.4-internal-kg-rename`)
 - **Phase 5G-C-A:** internal rename audit (**complete**; `docs/phase5g_internal_rename_audit.md`)
+- **Phase 5G-D:** final notation QA (**complete**; `docs/phase5g_final_notation_qa.md`)
 
 ## Current
 
-- **Phase 5G-C-B complete; Phase 5G-C-C optional:** internal code prefers `k_g`; frozen CSV columns remain legacy **K_tau**.
+- **Phase 5G notation migration complete.** Optional **5G-C-C** (production YAML `k_g` keys) or **Phase 6** (2D τ-map) per scope change.
 
 ## Planned
 
@@ -44,6 +45,12 @@
 - `tdf_velocity_*`, `fit_tdf_knot_baseline`, holdout helpers: primary `k_g`; deprecated `k_tau=` kwarg
 - CSV writers still emit column **`K_tau`**; frozen tables not rewritten
 - `tests/test_phase5g_internal_kg_rename.py` + extended 5G-A/5G-B tests (264 tests)
+
+#### Phase 5G-D — final notation QA (**complete**)
+
+- Grep audit, claim-boundary check, 264 tests — **PASS**
+- `docs/phase5g_final_notation_qa.md`
+- **Phase 5G closed** for frozen expansion-20 benchmark scope
 
 #### Phase 5G-C-C — optional production config migration (future)
 

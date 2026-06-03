@@ -2,25 +2,26 @@
 
 ## Current phase
 
-**Phase 5G-C-B — internal k_g rename with legacy k_tau aliases** — **complete**
+**Phase 5G-D — final notation QA** — **complete**
 
-Supporting notation steps (also complete):
+**Phase 5G notation migration — complete** (tags `v0.1.2` through `v0.1.4`; QA in `docs/phase5g_final_notation_qa.md`).
 
-- **Phase 5G-C-A — internal K_g rename audit** — commit `0a60034`
-- **Phase 5G-A — notation alias layer (K_g / legacy K_tau)** — tag `v0.1.2-notation-aliases`
-- **Phase 5G-B — K_g / legacy K_tau compatibility regression lock** — tag `v0.1.3-notation-compatibility`
-- **Phase 5E/5F — controlled expansion-20 publication package and scientific consistency audit**
+Supporting steps (all complete):
 
-Publication package (manuscript PDF, paper figures/tables, reviewer matrix, pre-submission QA) is complete. Internal dataclass fields now use **`k_g`** as primary with read-only deprecated **`.k_tau`** property aliases. Legacy YAML keys and frozen CSV column name **`K_tau`** unchanged. **`kappa_tau` / κ_tau** is field stiffness only and is never mapped to projection.
+- **Phase 5G-C-B** — internal `k_g` rename — tag `v0.1.4-internal-kg-rename`
+- **Phase 5G-C-A** — internal rename audit — `docs/phase5g_internal_rename_audit.md`
+- **Phase 5G-B** — loader compatibility regression lock — tag `v0.1.3-notation-compatibility`
+- **Phase 5G-A** — config alias layer — tag `v0.1.2-notation-aliases`
+- **Phase 5E/5F** — controlled expansion-20 publication package
 
-### Phase 5G-C-B deliverables
+Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
 
-- `TauReconstructionConfig.k_g` and `TdfKnotConfig.k_g` primary fields; `.k_tau` read-only property aliases
-- `resolve_projection_coefficient_kwarg()` for `k_g` / deprecated `k_tau=` function parameters
-- `tests/test_phase5g_internal_kg_rename.py` — property aliases, CSV column `K_tau` unchanged
-- Frozen benchmark CSVs and reports not rewritten; no expansion20 rerun
+### Phase 5G-D deliverables
 
-### Phase 5G-C-A deliverables
+- `docs/phase5g_final_notation_qa.md` — grep audit, claim-boundary check, **PASS**
+- **264 tests passed**; no benchmark rerun; no frozen output changes
+
+### expansion_20 headline (frozen)
 
 In the pre-registered controlled **expansion_20** cohort:
 
@@ -31,12 +32,7 @@ In the pre-registered controlled **expansion_20** cohort:
 
 Authoritative claims: `docs/paper_ready_claims.md` (C20-A–C20-H), `docs/controlled_expansion_results.md`, `outputs/tables/controlled_expansion_final_claims.csv`.
 
-### Phase 5G-C-A deliverables
-
-- `docs/phase5g_internal_rename_audit.md` — classified inventory of remaining `k_tau` / `K_tau` references
-- No dataclass field rename; no benchmark rerun; no frozen output changes
-
-### Notation (Phase 5G-A / 5G-B / 5G-C-B complete; 5G-C-C optional)
+### Notation (Phase 5G complete; 5G-C-C optional)
 
 | Symbol | Role |
 | --- | --- |
@@ -44,7 +40,7 @@ Authoritative claims: `docs/paper_ready_claims.md` (C20-A–C20-H), `docs/contro
 | **κ_tau** | **Dynamical stiffness** in the mother field equation; **not** interchangeable with \(K_g\). |
 | **K_tau** (legacy) | Historical benchmark/config label and frozen CSV column name for the projection coefficient. |
 
-See `docs/theory_summary.md`, `docs/phase5g_internal_rename_audit.md`, and `docs/roadmap.md` (Phase **5G-C-B** internal rename planned).
+See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roadmap.md`.
 
 ## Completed tasks
 
@@ -80,8 +76,9 @@ See `docs/theory_summary.md`, `docs/phase5g_internal_rename_audit.md`, and `docs
 - Phase 5F-A–F: paper scaffold, figures, LaTeX tables, manuscript PDF, scientific edit, referee readiness, pre-submission QA (`docs/pre_submission_checklist.md`).
 - Phase 5G-A: `normalize_projection_coefficient` alias layer (`src/tdf_galaxy_tau/config/notation.py`; tag `v0.1.2-notation-aliases`).
 - Phase 5G-B: compatibility regression lock (`tests/test_notation_compatibility_regression.py`; tag `v0.1.3-notation-compatibility`).
-- Phase 5G-C-B: internal `k_g` field rename with `.k_tau` property aliases (`tests/test_phase5g_internal_kg_rename.py`).
-- Phase 5G-C-A: internal rename audit (`docs/phase5g_internal_rename_audit.md`; no code changes).
+- Phase 5G-D: final notation QA (`docs/phase5g_final_notation_qa.md`; PASS).
+- Phase 5G-C-B: internal `k_g` field rename with `.k_tau` property aliases (tag `v0.1.4-internal-kg-rename`).
+- Phase 5G-C-A: internal rename audit (`docs/phase5g_internal_rename_audit.md`).
 - Release prep: repository cleanup audit, Git tag `v0.1.0-expansion20-paper`, Zenodo preprint DOI [10.5281/zenodo.20437254](https://doi.org/10.5281/zenodo.20437254).
 
 ## Current blockers

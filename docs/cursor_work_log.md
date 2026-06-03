@@ -6,6 +6,31 @@ Wednesday, May 29, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 5G-D: final notation QA after v0.1.4-internal-kg-rename (grep audit, claim boundaries, tests).
+
+## Files changed
+
+- `docs/phase5g_final_notation_qa.md` (new)
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/reproducibility_commands.md`, `docs/cursor_work_log.md`
+
+## Tests run
+
+- `python3 -m pytest -q` — 264 passed
+
+## Notes
+
+- QA verdict: **PASS**; zero confusing/needs-fix legacy references.
+- Phase 5G notation migration marked **complete**.
+- No code, frozen outputs, or figures modified.
+
+---
+
+## Date/time
+
+Wednesday, May 29, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 5G-C-B: internal k_g rename with legacy k_tau property and keyword aliases.
 
 ## Files changed
