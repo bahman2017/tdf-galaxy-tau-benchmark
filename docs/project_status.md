@@ -2,15 +2,17 @@
 
 ## Current phase
 
-**Phase 6E — negative-result decision gate** — **complete** (documentation only)
+**Phase 6F — smooth reconstruction pre-registration** — **in progress** (design/docs only; branch `feature/phase6f-preregister-smooth-reconstruction`)
+
+**Phase 6E — negative-result decision gate** — **complete** (`8f4a83b`; negative cohort preserved)
 
 **Phase 6C-E — regularized pseudo-2D maps (R2+R6)** — **complete** (`7286168`; 0/5 pilots pass all gates)
 
 **Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
 
-**Phase 6D — second-channel scaffold** — **blocked** (6E decision: do not proceed; 0/5 `phase6d_candidate`).
+**Phase 6D — second-channel scaffold** — **blocked** (6E decision unchanged; 0/5 `phase6d_candidate`; no lensing on current maps)
 
-**Next scientific phase (planned):** **Phase 6F** — new reconstruction protocol with map-smoothness in primary objective/holdout (not post-hoc repair).
+**Cohort execution:** **not started** — Phase 6F implementation requires explicit approval after pre-registration merge.
 
 **Phase 6C-C — frozen τ-gradient diagnostic** — **complete**
 
@@ -35,6 +37,13 @@ Supporting steps (all complete):
 - **Phase 5E/5F** — controlled expansion-20 publication package
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
+
+### Phase 6F deliverables (pre-registration)
+
+- `docs/phase6f_smooth_reconstruction_protocol.md` — integrated reconstruction design
+- `docs/phase6f_preregistration.md` — gates, cohort policy, claim boundaries
+- `outputs/reports/phase6f_design_summary.md` — short design summary
+- **No** cohort run, code, maps, or benchmark changes in this phase
 
 ### Phase 6E deliverables
 
@@ -180,7 +189,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 6F:** pre-register reconstruction where map-smoothness is in the primary objective and holdout (see `docs/phase6e_negative_result_decision_gate.md`).
+1. Merge `feature/phase6f-preregister-smooth-reconstruction`; then approve **6F-A** (YAML + cohort script) before any fit run.
 2. Manuscript supplement: cite 6E negative result; Phase 6D/7 remain blocked on current maps.
 3. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.

@@ -6,6 +6,35 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6F: pre-register smooth τ reconstruction protocol (design only; no cohort).
+
+## Files changed
+
+- `docs/phase6f_smooth_reconstruction_protocol.md`, `docs/phase6f_preregistration.md`
+- `outputs/reports/phase6f_design_summary.md`
+- `docs/project_status.md`, `docs/roadmap.md`, `docs/reproducibility_commands.md`
+
+## Branch
+
+- `feature/phase6f-preregister-smooth-reconstruction`
+
+## Tests run
+
+- None required (documentation-only phase)
+
+## Notes
+
+- 6E negative result preserved; 6D blocked; no maps/benchmarks/code changed.
+- `planning/tasks.md` not present — not created.
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6E: consolidate 6C-E negative result and decision-gate report (docs only).
 
 ## Files changed

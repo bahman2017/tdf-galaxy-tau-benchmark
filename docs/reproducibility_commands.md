@@ -158,6 +158,33 @@ No builder script. Read:
 
 Phase 6D and lensing/deflection remain **blocked**. Next planned phase: **6F** (map-smooth reconstruction protocol design).
 
+## Phase 6F smooth reconstruction pre-registration (design only)
+
+**Branch:** `feature/phase6f-preregister-smooth-reconstruction`
+
+Read (no builder script yet):
+
+```bash
+# Documentation only — no cohort run
+cat docs/phase6f_smooth_reconstruction_protocol.md
+cat docs/phase6f_preregistration.md
+cat outputs/reports/phase6f_design_summary.md
+```
+
+**Future implementation placeholders** (do not run until 6F-A approved):
+
+```bash
+# PLACEHOLDER — not implemented at pre-registration
+# python3 scripts/run_phase6f_smooth_reconstruction_cohort.py --registry expansion20
+# python3 scripts/build_phase6f_decision_gate_report.py
+```
+
+Expected outputs when implemented: `outputs/tables/phase6f_reconstructed_tau_profiles.csv`,  
+`phase6f_smoothness_metrics.csv`, `phase6f_holdout_metrics.csv`, `phase6f_candidate_ranking.csv`,  
+`outputs/reports/phase6f_decision_gate_report.md`.
+
+**Phase 6D remains blocked.** Do not use `phase6c_*` / `phase6d_*` maps for deflection.
+
 ## Expected headline artifacts
 
 | Artifact | Path |

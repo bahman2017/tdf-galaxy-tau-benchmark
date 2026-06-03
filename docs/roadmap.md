@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6E complete** — negative-result decision gate documented. **Phase 6D blocked.** **Next:** Phase **6F** (reconstruction protocol design).
+- **Phase 6F in progress** — smooth reconstruction pre-registration (design only). **Phase 6D blocked.** Branch: `feature/phase6f-preregister-smooth-reconstruction`.
 
 ## Planned
 
@@ -125,10 +125,17 @@
 - `outputs/reports/phase6e_negative_result_summary.md`
 - Consolidates 6A–6C-E; **6D remains blocked**; no new computation
 
-#### Phase 6F — map-smooth reconstruction protocol (planned)
+#### Phase 6F — map-smooth reconstruction pre-registration (**in progress**)
 
-- Smoothness in primary fit + holdout validation; fresh pre-registration required
-- **Not** post-hoc repair on frozen `expansion20_tau_profiles.csv`
+- `docs/phase6f_smooth_reconstruction_protocol.md`, `docs/phase6f_preregistration.md`
+- `outputs/reports/phase6f_design_summary.md`
+- Smoothness in **primary objective**; fresh `phase6f_*` cohort (not repaired expansion_20)
+- **6E negative result preserved**; 6D blocked until future 6F cohort passes G1–G9
+
+#### Phase 6F-A — YAML + cohort implementation (planned, gated)
+
+- `configs/phase6f_smooth_reconstruction_preregistration.yaml` + fit script (explicit approval)
+- Outputs: `phase6f_reconstructed_tau_profiles.csv`, metrics tables, decision gate report
 
 #### Phase 6D — second-channel scaffold evaluation (**blocked**)
 
