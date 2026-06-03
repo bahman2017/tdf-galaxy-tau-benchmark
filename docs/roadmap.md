@@ -18,7 +18,7 @@
 
 ## Current
 
-- **Phase 6C-D complete** — R2+R6 regularization pre-registration (`phase6d_*` protocol docs). **Next:** Phase **6C-E** (implementation); **6D blocked**.
+- **Phase 6C-E complete** — R2+R6 regularized maps (`phase6d_*`); **0/5** pass all gates. **Phase 6D blocked.**
 
 ## Planned
 
@@ -114,11 +114,12 @@
 - `configs/phase6d_regularization_preregistration.yaml`
 - R2 (global jump cap 0.25) + R6 (boundary trim); acceptance/failure gates
 
-#### Phase 6C-E — regularization implementation (planned)
+#### Phase 6C-E — regularization implementation (**complete**)
 
-- New `phase6d_*` profiles/maps only; expansion20 frozen
+- `scripts/build_phase6d_regularized_maps.py --all-primary-pilots`
+- `docs/phase6d_regularized_map_results.md` — **0/5** `phase6d_candidate`
 
-#### Phase 6D — second-channel scaffold evaluation (blocked)
+#### Phase 6D — second-channel scaffold evaluation (**blocked**)
 
 - Second-channel metrics per `phase6a_success_failure_criteria.md`
 

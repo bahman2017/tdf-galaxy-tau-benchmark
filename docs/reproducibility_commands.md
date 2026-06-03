@@ -136,7 +136,18 @@ Docs: `docs/phase6d_frozen_gradient_regularization_preregistration.md`,
 
 **No builder script in 6C-D** — implementation is Phase **6C-E**.
 
-**Phase 6D remains blocked** (0/5 frozen-map smoothness pass; 0/5 regularized until 6C-E).
+## Phase 6C-E regularized pseudo-2D maps (R2+R6)
+
+```bash
+python3 scripts/build_phase6d_regularized_maps.py --all-primary-pilots
+python3 -m pytest -q tests/test_phase6d_regularized_maps.py
+```
+
+Outputs: `outputs/tables/phase6d_*`, `outputs/maps/phase6d/`,  
+`outputs/reports/phase6d_regularization_cohort_report.md`  
+Results: `docs/phase6d_regularized_map_results.md`
+
+**Phase 6D remains blocked** — 0/5 pilots pass all hard gates after R2+R6 (negative cohort).
 
 ## Expected headline artifacts
 

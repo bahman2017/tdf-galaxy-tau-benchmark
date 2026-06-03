@@ -2,11 +2,13 @@
 
 ## Current phase
 
-**Phase 6C-D — regularization pre-registration** — **complete** (protocol only; no τ/maps)
+**Phase 6C-E — regularized pseudo-2D maps (R2+R6)** — **complete** (0/5 pilots pass all gates)
+
+**Phase 6C-D — regularization pre-registration** — **complete** (`b4d1f34`)
 
 **Publication-freeze tag:** **`v0.1.6-publication-freeze`** → `0e4b202` (Phase 5 closed).
 
-**Next scientific phase:** **Phase 6C-E** — implement R2+R6 regularized profiles/maps (only after explicit approval); **Phase 6D blocked**.
+**Phase 6D — second-channel scaffold** — **blocked** (negative 6C-E cohort: 0/5 `phase6d_candidate`).
 
 **Phase 6C-C — frozen τ-gradient diagnostic** — **complete**
 
@@ -32,12 +34,18 @@ Supporting steps (all complete):
 
 Internal code uses **`k_g`** as the primary projection field; read-only **`.k_tau`** property and legacy YAML/CSV labels remain for backward compatibility. **`kappa_tau` / κ_tau** is field stiffness only. Frozen benchmark CSV column **`K_tau`** unchanged.
 
+### Phase 6C-E deliverables
+
+- `src/tdf_galaxy_tau/analysis/phase6d_regularized_maps.py`, `scripts/build_phase6d_regularized_maps.py`
+- `outputs/tables/phase6d_*`, `outputs/maps/phase6d/`, `outputs/reports/phase6d_*`
+- `docs/phase6d_regularized_map_results.md` — **0/5** pass all hard gates; Phase 6D blocked
+- R2+R6 on read-only copies of `expansion20_tau_profiles.csv`; Phase 5 benchmark **unchanged**
+
 ### Phase 6C-D deliverables
 
 - `docs/phase6d_frozen_gradient_regularization_preregistration.md` — R2 jump cap + R6 boundary trim (exact rules)
 - `docs/phase6d_regularization_acceptance_criteria.md` — acceptance/failure gates for 6C-E
 - `configs/phase6d_regularization_preregistration.yaml` — machine-readable registry
-- **No** τ change; **no** map regeneration; Phase 6D remains blocked
 
 ### Phase 6C-C deliverables
 
@@ -164,7 +172,7 @@ See `docs/theory_summary.md`, `docs/phase5g_final_notation_qa.md`, and `docs/roa
 
 ## Next recommended tasks
 
-1. **Phase 6C-E:** implement pre-registered R2+R6 on copy profiles → `phase6d_*` outputs; re-gate before Phase 6D.
+1. Document **6C-E negative cohort** (0/5 regularized map gates) in manuscript supplement; do **not** open Phase 6D on R2+R6 repair without new pre-registration.
 2. Author/journal formatting review of `paper/manuscript.pdf`.
 3. Optional blocked-holdout for UGC12506.
 4. Explicit bulge L_3.6 or stellar-population priors before calibrated M/L language.

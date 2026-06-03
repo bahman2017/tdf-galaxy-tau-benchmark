@@ -6,6 +6,34 @@ Wednesday, May 27, 2026 (UTC-7)
 
 ## Prompt summary
 
+Phase 6C-E: implement pre-registered R2+R6 regularized pseudo-2D maps for five primary pilots.
+
+## Files changed
+
+- `src/tdf_galaxy_tau/analysis/phase6d_regularized_maps.py`
+- `scripts/build_phase6d_regularized_maps.py`
+- `tests/test_phase6d_regularized_maps.py`
+- `outputs/tables/phase6d_*`, `outputs/maps/phase6d/`, `outputs/reports/phase6d_*`
+- `docs/phase6d_regularized_map_results.md`, status/roadmap/reproducibility updates
+
+## Tests run
+
+- `python3 scripts/build_phase6d_regularized_maps.py --all-primary-pilots`
+- `python3 -m pytest -q`
+
+## Notes
+
+- **0/5** `phase6d_candidate`; Phase 6D blocked.
+- `expansion20_tau_profiles.csv` read-only; Phase 5 unchanged.
+
+---
+
+## Date/time
+
+Wednesday, May 27, 2026 (UTC-7)
+
+## Prompt summary
+
 Phase 6C-D: pre-register R2+R6 regularization protocol (no τ/maps).
 
 ## Files changed
